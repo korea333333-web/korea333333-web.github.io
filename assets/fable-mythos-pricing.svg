@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Fable 5 and Mythos 5 pricing chart</title>
+  <desc id="desc">A simple bar chart showing input price 10 dollars and output price 50 dollars per million tokens.</desc>
+  <rect width="960" height="520" rx="28" fill="#f5f9ff"/>
+  <text x="56" y="72" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#16201c">가격 구조</text>
+  <text x="56" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5d6a64">Claude Fable 5 / Mythos 5 · per 1M tokens</text>
+  <line x1="110" y1="402" x2="820" y2="402" stroke="#dce6e1" stroke-width="2"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="180" y="322" width="190" height="80" rx="14" fill="#2457d6"/>
+    <text x="275" y="300" text-anchor="middle" font-size="42" font-weight="800" fill="#2457d6">$10</text>
+    <text x="275" y="442" text-anchor="middle" font-size="21" font-weight="700" fill="#16201c">입력 토큰</text>
+    <text x="275" y="472" text-anchor="middle" font-size="17" fill="#5d6a64">1M tokens</text>
+    <rect x="560" y="82" width="190" height="320" rx="14" fill="#18a875"/>
+    <text x="655" y="60" text-anchor="middle" font-size="42" font-weight="800" fill="#18a875">$50</text>
+    <text x="655" y="442" text-anchor="middle" font-size="21" font-weight="700" fill="#16201c">출력 토큰</text>
+    <text x="655" y="472" text-anchor="middle" font-size="17" fill="#5d6a64">1M tokens</text>
+  </g>
+  <text x="56" y="500" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5d6a64">Source: Anthropic announcement, Jun 9 2026</text>
+</svg>

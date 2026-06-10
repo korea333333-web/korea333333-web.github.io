@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Fable 5 safeguards summary</title>
+  <desc id="desc">A donut-style chart showing more than 95 percent of Fable sessions have no fallback, and less than 5 percent trigger fallback to Opus 4.8.</desc>
+  <rect width="960" height="520" rx="28" fill="#f7faf8"/>
+  <text x="56" y="72" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#16201c">안전장치 동작 방식</text>
+  <text x="56" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5d6a64">Anthropic은 평균 세션 기준 fallback 발생이 5% 미만이라고 설명</text>
+  <circle cx="280" cy="280" r="138" fill="none" stroke="#18a875" stroke-width="54"/>
+  <path d="M 280 142 A 138 138 0 0 1 322 149" fill="none" stroke="#d9951e" stroke-width="54" stroke-linecap="round"/>
+  <circle cx="280" cy="280" r="88" fill="#ffffff"/>
+  <text x="280" y="270" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="800" fill="#18a875">95%+</text>
+  <text x="280" y="306" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#5d6a64">no fallback</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="520" y="190" width="34" height="34" rx="8" fill="#18a875"/>
+    <text x="570" y="216" font-size="24" font-weight="800" fill="#16201c">Fable 5가 그대로 응답</text>
+    <text x="570" y="248" font-size="18" fill="#5d6a64">대부분의 세션</text>
+    <rect x="520" y="300" width="34" height="34" rx="8" fill="#d9951e"/>
+    <text x="570" y="326" font-size="24" font-weight="800" fill="#16201c">Opus 4.8로 fallback</text>
+    <text x="570" y="358" font-size="18" fill="#5d6a64">사이버보안, 생물·화학, distillation 관련 일부 요청</text>
+  </g>
+  <text x="56" y="500" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5d6a64">Source: Anthropic announcement, Jun 9 2026</text>
+</svg>

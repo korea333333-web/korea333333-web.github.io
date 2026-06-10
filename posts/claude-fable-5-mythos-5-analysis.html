@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fable 5와 Mythos 5가 중요한 이유 · AI 자동화 노트</title>
+    <meta name="description" content="Claude Fable 5와 Mythos 5 발표를 안전장치, 가격, 접근 방식 중심으로 정리한 분석 글입니다.">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="AI 자동화 노트 홈">
+        <span class="brand-mark">AI</span>
+        <span>AI 자동화 노트</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="../index.html#news">AI 뉴스</a>
+        <a href="../index.html#software">AI 소프트웨어</a>
+        <a href="../index.html#hardware">AI 하드웨어</a>
+        <a href="../index.html#industry">AI 산업·공장</a>
+      </nav>
+    </header>
+
+    <main class="article-shell">
+      <article class="article">
+        <a class="back-link" href="../index.html">홈으로 돌아가기</a>
+        <div class="article-meta">
+          <span>2026.06.10</span>
+          <span>AI 소프트웨어 · 분석 · Claude</span>
+        </div>
+
+        <h1>Fable 5와 Mythos 5가 중요한 이유</h1>
+        <p class="lead">
+          이 글은 Anthropic 공식 발표에서 직접 언급된 내용만 다룹니다. 하드웨어나 산업·공장 이야기는 이번 원문에
+          직접적인 핵심 내용으로 나오지 않으므로 억지로 연결하지 않습니다.
+        </p>
+
+        <h2>핵심은 “강한 모델을 어떻게 공개할 것인가”입니다</h2>
+        <p>
+          이번 발표에서 중요한 부분은 모델 이름 자체보다 공개 방식입니다. Anthropic은 같은 기반 모델을 두 가지 방식으로 나눴습니다.
+          일반 사용자에게는 안전장치를 적용한 Fable 5를 제공하고, 더 민감한 기능이 필요한 사이버 방어자와 일부 연구자에게는
+          Mythos 5를 제한적으로 제공합니다.
+        </p>
+
+        <figure class="article-figure">
+          <img src="../assets/fable-mythos-safeguards.svg" alt="Fable 5 안전장치 동작 방식 그래프">
+          <figcaption>Anthropic 발표 기준: Fable 5는 대부분의 세션에서 그대로 동작하고, 일부 민감 영역은 Opus 4.8로 fallback됩니다.</figcaption>
+        </figure>
+
+        <h2>가격은 공개 사용을 염두에 둔 구조입니다</h2>
+        <p>
+          Anthropic은 Fable 5와 Mythos 5를 입력 100만 토큰당 10달러, 출력 100만 토큰당 50달러로 제시했습니다.
+          원문은 이 가격이 Claude Mythos Preview의 절반 미만이라고 설명합니다.
+        </p>
+
+        <figure class="article-figure">
+          <img src="../assets/fable-mythos-pricing.svg" alt="Fable 5와 Mythos 5 가격 그래프">
+          <figcaption>공식 발표에 나온 토큰 가격을 단순 시각화한 그래프입니다.</figcaption>
+        </figure>
+
+        <h2>사용자가 볼 변화</h2>
+        <table class="analysis-table">
+          <caption>Fable 5 / Mythos 5 공개 방식</caption>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fable 5</td>
+              <td>일반 사용자에게 제공. 일부 민감 영역은 Opus 4.8로 fallback.</td>
+            </tr>
+            <tr>
+              <td>Mythos 5</td>
+              <td>Project Glasswing 및 신뢰 접근 프로그램 중심의 제한 접근 모델.</td>
+            </tr>
+            <tr>
+              <td>가격</td>
+              <td>입력 1M 토큰 $10, 출력 1M 토큰 $50.</td>
+            </tr>
+            <tr>
+              <td>구독 플랜</td>
+              <td>2026년 6월 22일까지 일부 플랜에 포함, 6월 23일부터 사용량 크레딧 필요.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>이번 글에서 다루지 않는 것</h2>
+        <p>
+          이 발표는 주로 모델 성능, 안전장치, 접근 권한, 가격, 연구·사이버보안 사용 사례를 다룹니다.
+          GPU, 반도체, 데이터센터, 공장 설비 같은 주제는 원문에서 중심 내용으로 직접 다루지 않기 때문에 이 글에서는 확장하지 않습니다.
+        </p>
+
+        <section class="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">출처</h2>
+          <ul>
+            <li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic, Claude Fable 5 and Claude Mythos 5</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>AI 자동화 노트</span>
+      <span>GitHub Pages 기반 블로그</span>
+    </footer>
+  </body>
+</html>
