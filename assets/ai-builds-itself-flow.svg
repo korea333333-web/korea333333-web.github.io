@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">AI builds itself concept flow</title>
+  <desc id="desc">A Korean flow diagram showing AI moving from coding assistance to experiment support to human review.</desc>
+  <rect width="960" height="420" rx="28" fill="#f7faf8"/>
+  <text x="56" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="800" fill="#16201c">원문 핵심 흐름</text>
+  <text x="56" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#5d6a64">AI가 AI 개발 과정에 더 깊게 들어오는 단계</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="70" y="170" width="170" height="120" rx="14" fill="#ffffff" stroke="#dce6e1"/>
+    <text x="155" y="214" text-anchor="middle" font-size="22" font-weight="800" fill="#16201c">코드 작성</text>
+    <text x="155" y="248" text-anchor="middle" font-size="16" fill="#5d6a64">개발 보조</text>
+    <path d="M250 230 L315 230" stroke="#2457d6" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="330" y="170" width="170" height="120" rx="14" fill="#ffffff" stroke="#dce6e1"/>
+    <text x="415" y="214" text-anchor="middle" font-size="22" font-weight="800" fill="#16201c">실험 보조</text>
+    <text x="415" y="248" text-anchor="middle" font-size="16" fill="#5d6a64">반복 개선</text>
+    <path d="M510 230 L575 230" stroke="#2457d6" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="590" y="170" width="170" height="120" rx="14" fill="#ffffff" stroke="#dce6e1"/>
+    <text x="675" y="214" text-anchor="middle" font-size="22" font-weight="800" fill="#16201c">연구 진행</text>
+    <text x="675" y="248" text-anchor="middle" font-size="16" fill="#5d6a64">속도 증가</text>
+    <path d="M770 230 L835 230" stroke="#2457d6" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="800" y="170" width="110" height="120" rx="14" fill="#e8f1ff" stroke="#2457d6"/>
+    <text x="855" y="214" text-anchor="middle" font-size="21" font-weight="800" fill="#2457d6">인간</text>
+    <text x="855" y="248" text-anchor="middle" font-size="16" fill="#5d6a64">검증</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2457d6"/>
+    </marker>
+  </defs>
+  <text x="56" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5d6a64">Source: Anthropic Institute, When AI builds itself</text>
+</svg>

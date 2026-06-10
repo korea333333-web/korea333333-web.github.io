@@ -459,6 +459,26 @@ h3 {
   background: var(--surface-soft);
 }
 
+.article-figure {
+  margin: 34px 0;
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.article-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .sources {
   padding: 22px;
 }
