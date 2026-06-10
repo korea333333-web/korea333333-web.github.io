@@ -342,7 +342,8 @@ h3 {
 
 .analysis-summary,
 .visual-panel,
-.sources {
+.sources,
+.source-callout {
   margin: 34px 0;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -469,6 +470,25 @@ h3 {
 
 .sources {
   padding: 22px;
+}
+
+.source-callout {
+  padding: 24px;
+  border-left: 4px solid var(--blue);
+  background: #f5f9ff;
+}
+
+.source-callout h2 {
+  margin: 0 0 8px;
+}
+
+.source-callout p {
+  margin: 0;
+}
+
+.source-callout a {
+  color: var(--blue);
+  font-weight: 800;
 }
 
 .sources h2 {
