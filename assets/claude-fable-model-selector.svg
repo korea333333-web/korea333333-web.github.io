@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="1120" viewBox="0 0 840 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Claude model selector showing Fable 5</title>
+  <desc id="desc">A recreated model selector graphic based on a user-provided screenshot, showing Fable 5 included until June 22, Opus 4.8, Sonnet 4.6, and Haiku 4.5.</desc>
+  <defs>
+    <linearGradient id="phoneBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111111"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .t{font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif}
+      .white{fill:#f6f6f6}
+      .muted{fill:#9d9d9d}
+      .dim{fill:#6c6c6c}
+      .line{stroke:#363636;stroke-width:2}
+      .panel{fill:#222220}
+      .badge{fill:#111111}
+    </style>
+  </defs>
+  <rect width="840" height="1120" rx="36" fill="url(#phoneBg)"/>
+  <g class="t">
+    <text x="96" y="80" font-size="34" font-weight="800" class="white">12:27</text>
+    <text x="670" y="80" font-size="30" font-weight="800" class="white">5G 63%</text>
+    <circle cx="94" cy="160" r="44" fill="#151515"/>
+    <text x="94" y="173" text-anchor="middle" font-size="40" class="muted">≡</text>
+    <circle cx="746" cy="160" r="44" fill="#151515"/>
+    <text x="746" y="173" text-anchor="middle" font-size="34" class="muted">◌</text>
+
+    <g filter="url(#shadow)">
+      <rect x="28" y="520" width="784" height="540" rx="74" class="panel"/>
+      <line x1="372" y1="536" x2="468" y2="536" stroke="#8b8b8b" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="96" cy="612" r="43" fill="none" stroke="#565656" stroke-width="2"/>
+      <path d="M78 594 L114 630 M114 594 L78 630" stroke="#f0f0f0" stroke-width="4" stroke-linecap="round"/>
+      <text x="420" y="624" text-anchor="middle" font-size="36" font-weight="800" class="white">모델 선택</text>
+
+      <text x="64" y="740" font-size="35" class="white">Fable 5</text>
+      <rect x="178" y="706" width="252" height="44" rx="22" class="badge"/>
+      <text x="304" y="736" text-anchor="middle" font-size="22" font-weight="800" class="muted">Included until June 22</text>
+      <text x="64" y="790" font-size="28" class="muted">For your toughest challenges</text>
+
+      <text x="64" y="868" font-size="35" class="white">Opus 4.8</text>
+      <text x="64" y="916" font-size="28" class="muted">For complex tasks</text>
+
+      <text x="64" y="994" font-size="35" class="white">Sonnet 4.6</text>
+      <text x="64" y="1040" font-size="26" class="muted">일상적인 작업에 가장 효율적</text>
+      <path d="M748 1002 L774 976" stroke="#6c9cff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M748 1002 L730 984" stroke="#6c9cff" stroke-width="5" stroke-linecap="round"/>
+
+      <text x="64" y="1118" font-size="35" class="white">Haiku 4.5</text>
+    </g>
+  </g>
+</svg>
