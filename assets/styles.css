@@ -92,15 +92,14 @@ main {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
-  align-items: center;
-  min-height: 620px;
-  gap: 44px;
+  min-height: 430px;
+  padding: 58px 0 46px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .hero-copy {
-  max-width: 620px;
+  max-width: 860px;
 }
 
 .eyebrow {
@@ -170,14 +169,6 @@ h3 {
 .button.secondary {
   background: white;
   color: var(--text);
-}
-
-.hero-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: var(--shadow);
 }
 
 .section {
@@ -509,13 +500,8 @@ h3 {
   }
 
   .hero {
-    grid-template-columns: 1fr;
     min-height: auto;
     padding: 42px 0 32px;
-  }
-
-  .hero-image {
-    aspect-ratio: 16 / 10;
   }
 
   .post-list,
