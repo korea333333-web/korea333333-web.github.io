@@ -479,6 +479,27 @@ h3 {
   line-height: 1.45;
 }
 
+.source-image-panel {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.source-image-panel img {
+  border: 0;
+  background: #f7faf8;
+}
+
+.source-image-panel figcaption strong {
+  color: var(--text);
+}
+
+.source-image-panel a {
+  color: var(--blue);
+  font-weight: 800;
+}
+
 .sources {
   padding: 22px;
 }
