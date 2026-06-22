@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>중국 GLM-5.2, 왜 이렇게 시끄러운가 - AI 자동화 노트</title>
-    <meta name="description" content="Z.ai의 GLM-5.2를 두고 왜 시장과 개발자 커뮤니티가 크게 반응하는지, 공식 벤치마크와 공개 리더보드 기준으로 기존 모델들과 비교해 정리한다.">
+    <title>중국 GLM-5.2, 그래프로 다시 보면 더 잘 보인다 - AI 자동화 노트</title>
+    <meta name="description" content="GLM-5.2를 텍스트보다 그래프 중심으로 다시 정리한다. Z.ai 공식 공개 그래프와 FrontierSWE·PostTrainBench 리더보드 링크를 기준으로 기존 모델들과의 격차를 한눈에 본다.">
     <link rel="stylesheet" href="../assets/styles.css">
   </head>
   <body>
@@ -16,7 +16,7 @@
       <nav class="nav" aria-label="주요 메뉴">
         <a href="../index.html#news">AI 뉴스</a>
         <a href="../index.html#software">AI 소프트웨어</a>
-        <a href="../index.html#china">중국 AI 뉴스</a>
+        <a href="../index.html#china-feed">중국 AI 뉴스</a>
       </nav>
     </header>
 
@@ -28,341 +28,156 @@
           <span>중국 AI 뉴스 · Z.ai · GLM-5.2</span>
         </div>
 
-        <h1>중국 GLM-5.2, 왜 이렇게 시끄러운가</h1>
+        <h1>중국 GLM-5.2, 그래프로 다시 보면 더 잘 보인다</h1>
         <p class="lead">
-          중국 Z.ai가 2026년 6월 17일 공개한 GLM-5.2는 단순히 "새 모델 하나"가 아니다.
-          공식 비교표에서는 GPT-5.5와 Gemini 3.1 Pro를 앞서는 항목이 적지 않았고,
-          독립 리더보드에서도 장기 코딩 과제에서 상위권을 기록했다. 그래서 지금 이 모델은
-          중국 AI의 추격 속도를 보여주는 상징처럼 다뤄지고 있다.
+          GLM-5.2는 텍스트 설명보다 그래프를 먼저 보면 훨씬 이해가 쉽다. 이번 글은 설명을 줄이고,
+          Z.ai가 공개한 핵심 그래프와 공식 리더보드 링크를 중심으로 `어디서 얼마나 강한지`, `어디서 아직 밀리는지`,
+          `왜 시장이 과하게 반응하는지`를 한 번에 보이게 다시 정리한다.
         </p>
 
-        <section class="source-callout" aria-label="왜 이 글을 쓰는가">
-          <p class="eyebrow">Why This Post</p>
-          <h2>이 글은 "진짜로 어느 벤치에서 얼마나 올라왔나"를 한 번에 보기 위해 쓴다</h2>
+        <section class="source-callout" aria-label="핵심 요약">
+          <p class="eyebrow">Quick Read</p>
+          <h2>핵심은 “모든 벤치 1위”가 아니라 “장기 코딩 과제에서 갑자기 최상위권”이다</h2>
           <p>
-            GLM-5.2 관련 반응은 많지만, 막상 비교 수치를 한곳에 모아 보면 공식 발표와 독립 벤치가 섞여 있다.
-            그래서 이번 글은 확인 가능한 공개 자료만 기준으로, 어떤 수치는 Z.ai 자체 표이고
-            어떤 수치는 외부 리더보드인지 분리해서 정리한다.
+            GLM-5.2는 범용 reasoning 전체 최강 모델은 아니다. 하지만 장시간 코딩, 에이전트형 과제,
+            긴 문맥 작업에서는 GPT-5.5와 Gemini 3.1 Pro를 위협하거나 일부 항목에서 앞서는 그림이 나온다.
+            그래서 이 모델은 “중국 오픈 모델의 질적 점프”로 읽힌다.
           </p>
         </section>
 
-        <section class="sources" aria-labelledby="quote-title">
-          <h2 id="quote-title">직접 확인한 핵심 문장</h2>
+        <section class="sources" aria-labelledby="graph-title">
+          <h2 id="graph-title">그래프만 먼저 보기</h2>
+          <p>
+            아래 4장은 이번 이슈에서 가장 중요한 그래프다. 전부 Z.ai가 Hugging Face에 올린 공식 공개 자료다.
+          </p>
+        </section>
+
+        <figure class="article-figure source-image-panel">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/2w_Hx2JZ2eZFJPoVgggvu.png" alt="GLM-5.2 장기 과제 평가 그래프">
+          <figcaption>
+            <strong>그래프 1. Long-Horizon Task Evaluation</strong>:
+            FrontierSWE, PostTrainBench, SWE-Marathon 비교. GLM-5.2가 GPT-5.5를 FrontierSWE와 PostTrainBench에서 앞서는 그림이 보인다.
+            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+          </figcaption>
+        </figure>
+
+        <figure class="article-figure source-image-panel">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/grPxoFi2PIFnuUnlW1zNK.webp" alt="GLM-5.2 LLM 성능 평가 그래프">
+          <figcaption>
+            <strong>그래프 2. LLM Performance Evaluation</strong>:
+            SWE-bench Pro, Terminal-Bench 2.1, NL2Repo, DeepSWE, ProgramBench, MCP-Atlas, Tool-Decathlon, Humanity's Last Exam 비교.
+            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+          </figcaption>
+        </figure>
+
+        <figure class="article-figure source-image-panel">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/Ldcz9AqNEaCqWPwNXfCmS.png" alt="GLM-5.2 에이전트 코딩 성능 그래프">
+          <figcaption>
+            <strong>그래프 3. Agentic Coding Performance by Effort Level</strong>:
+            effort level이 올라갈수록 GLM-5.2가 GLM-5.1보다 크게 뛰고, Claude Opus 4.7/4.8과 경쟁 가능한 구간까지 올라오는 모습이 보인다.
+            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+          </figcaption>
+        </figure>
+
+        <figure class="article-figure source-image-panel">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/beSnOOqWL0KuCMJX7vHi9.webp" alt="GLM-5.2 아키텍처 변화 그래프">
+          <figcaption>
+            <strong>그래프 4. Architecture Changes in GLM-5.2</strong>:
+            단순 점수표가 아니라, 왜 성능이 오른다고 주장하는지 보여주는 구조 설명 그래프. IndexShare, lower FLOPs, higher MTP acceptance length를 강조한다.
+            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+          </figcaption>
+        </figure>
+
+        <h2>그래프 1에서 제일 중요하게 봐야 할 것</h2>
+        <p>
+          Long-Horizon Task Evaluation 그래프는 이번 GLM-5.2 이슈의 핵심이다.
+          여기서 사람들을 놀라게 한 것은 HLE나 GPQA 같은 전통적 지식형 벤치가 아니라,
+          `FrontierSWE`, `PostTrainBench`, `SWE-Marathon`처럼 오래 걸리고 끝까지 밀어붙여야 하는 과제형 벤치다.
+        </p>
+        <p>
+          이 그래프에서 GLM-5.2는 FrontierSWE 74.4, PostTrainBench 34.3, SWE-Marathon 13.0을 기록한다.
+          숫자 자체보다 더 중요한 건 비교 방향이다. GPT-5.5를 FrontierSWE와 PostTrainBench에서 앞서고,
+          GLM-5.1과의 격차도 매우 크다. 즉 “장기 코딩 과제”에서 질적 점프가 있었다는 메시지를 가장 강하게 던지는 그래프다.
+        </p>
+
+        <h2>그래프 2는 “범용 코딩 성적표”에 가깝다</h2>
+        <p>
+          LLM Performance Evaluation 그래프는 GLM-5.2가 어디서 강하고 어디서 아직 약한지 더 균형 있게 보여준다.
+          SWE-bench Pro 62.1, Terminal-Bench 2.1 81.0, ProgramBench 63.7, MCP-Atlas 77.0은 충분히 강하다.
+          반면 NL2Repo 48.9, DeepSWE 46.2는 아직 Claude Opus 4.8과 GPT-5.5에 밀린다.
+        </p>
+        <p>
+          그래서 이 그래프만 보면 결론은 명확하다. GLM-5.2는 “모든 걸 다 이기는 만능 1위”라기보다,
+          특정 코딩·에이전트 구간에서 최상위권으로 진입한 모델이다. 오히려 이 점이 더 현실적이고,
+          과장 없는 해석에 가깝다.
+        </p>
+
+        <h2>그래프 3은 왜 다들 “갑자기 좋아졌다”고 느끼는지 보여준다</h2>
+        <p>
+          Agentic Coding Performance by Effort Level 그래프는 GLM-5.2가 GLM-5.1에서 얼마나 뛰었는지를 가장 직관적으로 보여준다.
+          Non-Thinking 구간에서도 올라가지만, High와 Max 같은 높은 effort 구간에서 점프 폭이 더 크다.
+          즉 이 모델은 짧은 단답형보다는 `길게 생각하고 툴을 써가며 끝까지 푸는` 작업에서 더 강해졌다는 인상을 준다.
+        </p>
+        <p>
+          이게 중요한 이유는 최근 개발자들이 AI 코딩 도구를 평가할 때, 단순 정답률보다
+          `긴 리포지토리에서 얼마나 버티는지`, `실패했다가 다시 시도하는지`, `출력 토큰을 길게 써도 무너지지 않는지`를 더 중요하게 보기 때문이다.
+        </p>
+
+        <h2>그래프 4는 “왜 점수가 올랐다고 주장하는지”를 설명한다</h2>
+        <p>
+          아키텍처 그래프는 기술적 설명이다. 이건 독자가 전부 이해해야 하는 그래프는 아니지만,
+          적어도 Z.ai가 단순 튜닝이 아니라 구조 변경을 통해 효율과 수용 길이를 같이 올렸다고 말하고 있다는 점은 보여준다.
+          특히 lower FLOPs, higher MTP acceptance length 같은 문구는 “같은 예산으로 더 길게, 더 효율적으로 간다”는 메시지로 읽힌다.
+        </p>
+
+        <h2>공식 그래프와 별도로 꼭 열어봐야 할 리더보드</h2>
+        <section class="sources" aria-labelledby="leaderboard-title">
+          <h2 id="leaderboard-title">리더보드 바로 열기</h2>
           <ul>
-            <li>
-              Z.ai는 GLM-5.2를
-              <strong>"our latest flagship model for long-horizon tasks"</strong>
-              라고 소개했다.
-            </li>
-            <li>
-              또
-              <strong>"Pure Open: An MIT open-source license — no regional limits"</strong>
-              라고 적었다.
-            </li>
-            <li>
-              Hugging Face 글에서는 GLM-5.2가
-              <strong>"solid 1M-token context"</strong>
-              를 제공한다고 설명했다.
-            </li>
+            <li><a href="https://www.frontierswe.com/">FrontierSWE 공식 리더보드</a></li>
+            <li><a href="https://posttrainbench.com/">PostTrainBench 공식 리더보드</a></li>
+            <li><a href="https://huggingface.co/blog/zai-org/glm-52-blog">Z.ai 공식 전체 그래프 원문</a></li>
+            <li><a href="https://huggingface.co/zai-org/GLM-5.2">GLM-5.2 모델 카드</a></li>
           </ul>
           <p>
-            위 문장은 모두 Z.ai의 GLM-5.2 공식 소개 글과 모델 페이지에서 직접 확인했다.
+            이번 글에서 이미지를 직접 넣은 건 Z.ai 공식 공개 그래프다. FrontierSWE와 PostTrainBench는
+            실제 수치 검증용으로 공식 사이트를 바로 열어보는 쪽이 더 정확하다.
           </p>
         </section>
 
-        <h2>먼저, 무엇이 달라졌나</h2>
-        <p>
-          GLM-5.2의 가장 큰 포인트는 세 가지다. 첫째, 1M 토큰 컨텍스트를 전면에 내세웠다.
-          둘째, 코딩과 장기 과제 수행 능력을 GLM-5.1 대비 크게 끌어올렸다고 주장한다.
-          셋째, MIT 라이선스의 오픈 모델이라는 점을 매우 강하게 밀고 있다.
-        </p>
-        <p>
-          특히 Z.ai는 단순한 대화형 성능이 아니라, 긴 코딩 에이전트 작업과 엔지니어링 워크플로를
-          끝까지 밀어붙이는 능력을 GLM-5.2의 중심 가치로 잡고 있다. 그래서 일반 지식 QA보다
-          SWE-bench Pro, Terminal Bench 2.1, FrontierSWE 같은 과제형 벤치에서 더 주목받는다.
-        </p>
-
-        <h2>Z.ai 공식 비교표: 공개된 수치 전체 정리</h2>
-        <p>
-          아래 표는 Z.ai가 Hugging Face 글과 모델 페이지에 공개한 비교표를 사람이 읽기 쉽게 다시 정리한 것이다.
-          비교 대상은 GLM-5.1, Qwen3.7-Max, MiniMax M3, DeepSeek-V4-Pro, Claude Opus 4.8, GPT-5.5,
-          Gemini 3.1 Pro다. 이 수치는 기본적으로 Z.ai가 제시한 값이므로, 해석할 때는
-          "공식 벤치마크 표"라는 성격을 반드시 감안해야 한다.
-        </p>
-
         <table class="analysis-table">
-          <caption>Z.ai 공식 Reasoning 비교표</caption>
+          <caption>숫자로 다시 보는 핵심 포인트</caption>
           <thead>
             <tr>
-              <th>벤치마크</th>
-              <th>GLM-5.2</th>
-              <th>GLM-5.1</th>
-              <th>Claude Opus 4.8</th>
-              <th>GPT-5.5</th>
-              <th>Gemini 3.1 Pro</th>
+              <th>항목</th>
+              <th>보는 포인트</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>HLE</td>
-              <td>40.5</td>
-              <td>31.0</td>
-              <td>49.8</td>
-              <td>41.4</td>
-              <td>45.0</td>
+              <td>FrontierSWE 74.4</td>
+              <td>GPT-5.5 72.6보다 높고, Claude Opus 4.8 75.1 바로 아래다.</td>
             </tr>
             <tr>
-              <td>HLE (with Tools)</td>
-              <td>54.7</td>
-              <td>52.3</td>
-              <td>57.9</td>
-              <td>52.2</td>
-              <td>51.4</td>
+              <td>PostTrainBench 34.3</td>
+              <td>GPT-5.5 28.6보다 높다. 장기 작업 안정성에서 강한 인상을 준다.</td>
             </tr>
             <tr>
-              <td>AIME 2026</td>
-              <td>99.2</td>
-              <td>95.3</td>
-              <td>95.7</td>
-              <td>98.3</td>
-              <td>98.2</td>
+              <td>Terminal-Bench 2.1 81.0</td>
+              <td>GLM-5.1 63.5에서 크게 뛰었다. 실제 코딩형 워크플로 개선 폭이 크다.</td>
             </tr>
             <tr>
-              <td>HMMT Nov. 2025</td>
-              <td>94.4</td>
-              <td>94.0</td>
-              <td>96.5</td>
-              <td>96.5</td>
-              <td>94.8</td>
-            </tr>
-            <tr>
-              <td>HMMT Feb. 2026</td>
-              <td>92.5</td>
-              <td>82.6</td>
-              <td>96.7</td>
-              <td>96.7</td>
-              <td>87.3</td>
-            </tr>
-            <tr>
-              <td>IMOAnswerBench</td>
-              <td>91.0</td>
-              <td>83.8</td>
-              <td>83.5</td>
-              <td>-</td>
-              <td>81.0</td>
-            </tr>
-            <tr>
-              <td>GPQA-Diamond</td>
-              <td>91.2</td>
-              <td>86.2</td>
-              <td>93.6</td>
-              <td>93.6</td>
-              <td>94.3</td>
+              <td>GLM-5.1 대비</td>
+              <td>단순 소폭 개선이 아니라 세대 업그레이드처럼 보일 정도로 점프 폭이 크다.</td>
             </tr>
           </tbody>
         </table>
 
-        <table class="analysis-table">
-          <caption>Z.ai 공식 Coding / Agentic 비교표</caption>
-          <thead>
-            <tr>
-              <th>벤치마크</th>
-              <th>GLM-5.2</th>
-              <th>GLM-5.1</th>
-              <th>Claude Opus 4.8</th>
-              <th>GPT-5.5</th>
-              <th>Gemini 3.1 Pro</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>SWE-bench Pro</td>
-              <td>62.1</td>
-              <td>58.4</td>
-              <td>69.2</td>
-              <td>58.6</td>
-              <td>54.2</td>
-            </tr>
-            <tr>
-              <td>NL2Repo</td>
-              <td>48.9</td>
-              <td>42.7</td>
-              <td>69.7</td>
-              <td>50.7</td>
-              <td>33.4</td>
-            </tr>
-            <tr>
-              <td>DeepSWE</td>
-              <td>46.2</td>
-              <td>18.0</td>
-              <td>58.0</td>
-              <td>70.0</td>
-              <td>10.0</td>
-            </tr>
-            <tr>
-              <td>ProgramBench</td>
-              <td>63.7</td>
-              <td>50.9</td>
-              <td>71.9</td>
-              <td>70.8</td>
-              <td>39.5</td>
-            </tr>
-            <tr>
-              <td>Terminal Bench 2.1</td>
-              <td>81.0</td>
-              <td>63.5</td>
-              <td>85.0</td>
-              <td>84.0</td>
-              <td>74.0</td>
-            </tr>
-            <tr>
-              <td>Terminal Bench 2.1 (Best Harness)</td>
-              <td>82.7</td>
-              <td>69.0</td>
-              <td>78.9</td>
-              <td>83.4</td>
-              <td>70.7</td>
-            </tr>
-            <tr>
-              <td>FrontierSWE (Dominance)</td>
-              <td>74.4</td>
-              <td>30.5</td>
-              <td>75.1</td>
-              <td>72.6</td>
-              <td>39.6</td>
-            </tr>
-            <tr>
-              <td>PostTrainBench</td>
-              <td>34.3</td>
-              <td>20.1</td>
-              <td>37.2</td>
-              <td>28.4</td>
-              <td>21.6</td>
-            </tr>
-            <tr>
-              <td>SWE-Marathon</td>
-              <td>13.0</td>
-              <td>1.0</td>
-              <td>26.0</td>
-              <td>12.0</td>
-              <td>4.0</td>
-            </tr>
-            <tr>
-              <td>MCP-Atlas (Public Set)</td>
-              <td>76.8</td>
-              <td>71.8</td>
-              <td>77.8</td>
-              <td>75.3</td>
-              <td>69.2</td>
-            </tr>
-            <tr>
-              <td>Tool-Decathlon</td>
-              <td>48.2</td>
-              <td>40.7</td>
-              <td>59.9</td>
-              <td>55.6</td>
-              <td>48.8</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>공식 표만 보면 무엇이 보이나</h2>
+        <h2>한 줄 결론</h2>
         <p>
-          Z.ai 공식 표 기준으로 GLM-5.2는 reasoning 전체 최강이라고 보기는 어렵다.
-          GPQA-Diamond, HLE 같은 항목에서는 여전히 Claude Opus 4.8, GPT-5.5, Gemini 3.1 Pro가 앞선다.
-          하지만 장기 코딩 과제 쪽에서는 얘기가 달라진다. SWE-bench Pro에서는 GPT-5.5와 Gemini 3.1 Pro를 넘고,
-          FrontierSWE와 PostTrainBench에서는 GPT-5.5보다 높은 점수를 제시한다.
-        </p>
-        <p>
-          참고로 일부 reasoning 세부 항목은 Z.ai의 Hugging Face 블로그와 모델 카드 사이에 숫자 표기가 완전히 같지 않은 부분이 있었다.
-          그래서 이 글에서는 그처럼 충돌하는 항목보다는 여러 공개 표에서 일관되게 확인되는 핵심 수치 위주로 정리했다.
-        </p>
-        <p>
-          더 중요한 비교는 GLM-5.1과의 격차다. Terminal Bench 2.1이 63.5에서 81.0으로, FrontierSWE가 30.5에서 74.4로,
-          SWE-Marathon이 1.0에서 13.0으로 뛴 것은 단순 미세 개선이 아니라 세대 점프에 가깝다.
-          시장이 과민 반응하는 이유도 결국 "중국 오픈 모델이 장기 코딩 에이전트 영역에서 갑자기 상위권으로 들어왔다"는 데 있다.
-        </p>
-
-        <figure class="article-figure source-image-panel">
-          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/2w_Hx2JZ2eZFJPoVgggvu.png" alt="GLM-5.2 장기 과제 벤치마크 비교 그래프">
-          <figcaption>
-            <strong>비교 이미지 1</strong>:
-            FrontierSWE, PostTrainBench, SWE-Marathon에서 GLM-5.2와 경쟁 모델을 비교한 Z.ai 공개 그래프.
-            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
-          </figcaption>
-        </figure>
-
-        <figure class="article-figure source-image-panel">
-          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/grPxoFi2PIFnuUnlW1zNK.webp" alt="GLM-5.2 일반 코딩 벤치마크 비교 그래프">
-          <figcaption>
-            <strong>비교 이미지 2</strong>:
-            SWE-bench Pro, Terminal-Bench 2.1, NL2Repo, MCP-Atlas 등에서 GLM-5.2와 경쟁 모델을 비교한 공개 그래프.
-            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
-          </figcaption>
-        </figure>
-
-        <figure class="article-figure source-image-panel">
-          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/Ldcz9AqNEaCqWPwNXfCmS.png" alt="GLM-5.2 에이전트 코딩 성능 비교 그래프">
-          <figcaption>
-            <strong>비교 이미지 3</strong>:
-            GLM-5.2와 Claude Opus 계열의 에이전트 코딩 성능을 effort level별로 비교한 공개 그래프.
-            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
-          </figcaption>
-        </figure>
-
-        <h2>독립 리더보드 1: FrontierSWE</h2>
-        <p>
-          FrontierSWE는 공개 사이트에서 리더보드를 직접 확인할 수 있다. 2026년 6월 22일 기준 페이지에는
-          Claude Opus 4.8이 Dominance 75%로 2위, GLM-5.2가 74%로 3위, GPT-5.5가 73%로 4위로 나온다.
-          이 수치는 Z.ai 공식 표의 "GLM-5.2가 GPT-5.5를 소폭 앞선다"는 주장과 대체로 맞아떨어진다.
-        </p>
-        <p>
-          또 같은 페이지에서 GLM-5.1은 Dominance 31%, DeepSeek V4 Pro는 29%, Gemini 3.1 Pro는 40%로 표시된다.
-          즉 독립 사이트에서도 GLM-5.2가 최소한 GLM-5.1 대비 크게 올라왔고, GPT-5.5 바로 아래 또는 근처라는 점은 재확인된다.
-        </p>
-
-        <h2>독립 리더보드 2: PostTrainBench</h2>
-        <p>
-          PostTrainBench도 직접 공개된 변경 로그와 표를 확인할 수 있다. 이 사이트는 2026년 6월 17일 로그에서
-          "Opus 4.8 (Max)의 평균이 37.2%에서 34.1%로 바뀌었고, 그래서 GLM 5.2가 now #1 on the leaderboard"라고 적었다.
-          즉 이 항목에서는 GLM-5.2가 적어도 6월 17일 시점 공개 리더보드 1위를 찍은 것이 맞다.
-        </p>
-        <p>
-          이 점은 공식 표의 34.3 대 37.2와는 숫자가 약간 어긋난다. 이유는 간단하다.
-          공식 표는 Opus 4.8을 37.2로 적었지만, 독립 리더보드 쪽은 재실험 후 34.1로 내려갔다.
-          이런 차이가 있기 때문에 공식 발표 수치는 항상 나중에 리더보드 갱신으로 변할 수 있다는 점도 같이 봐야 한다.
-        </p>
-
-        <h2>그럼 "난리"의 핵심은 무엇인가</h2>
-        <p>
-          첫째, 오픈 모델이라는 점이다. Z.ai는 MIT 라이선스를 전면에 내세웠고, 지역 제한이 없다고 강조했다.
-          둘째, 1M 컨텍스트와 장기 코딩 에이전트 성능을 동시에 밀어붙였다. 셋째, 최소한 공개 리더보드 일부에서는
-          GPT-5.5와 Gemini 3.1 Pro를 위협하거나 넘어서는 장면이 나왔다.
-        </p>
-        <p>
-          그래서 GLM-5.2는 "중국 모델도 괜찮다" 수준이 아니라, "중국 오픈 모델이 장기 소프트웨어 작업에서
-          이미 서구 클로즈드 모델 바로 밑 또는 일부 항목 위에 올라왔다"는 식으로 받아들여지고 있다.
-          개발자 커뮤니티가 시끄러운 이유는 여기 있고, 투자자 시선도 이 지점으로 모인다.
-        </p>
-
-        <h2>주가 반응은 어떻게 봐야 하나</h2>
-        <p>
-          이번 런에서는 GLM-5.2 공개 직후 Z.ai 주가가 몇 퍼센트 올랐는지에 대한 1차 시장 데이터나
-          신뢰도 높은 기사 문장을 직접 확보하지 못했다. 그래서 "GLM-5.2 때문에 당일 몇 퍼센트 급등했다"는 식의
-          단정은 여기서 하지 않는다.
-        </p>
-        <p>
-          다만 이번 GLM-5.2는 개발자 커뮤니티와 기술 매체 반응이 매우 강하다는 점은 별도로 확인된다.
-          즉 "주가가 들썩일 만한 서사"는 맞지만, GLM-5.2 발표일 반응 퍼센트는 발행 직전 추가 시장 기사로
-          다시 확인하는 편이 안전하다.
-        </p>
-
-        <h2>블로그 관점의 결론</h2>
-        <p>
-          GLM-5.2를 둘러싼 소란은 과장이 아니라 구조 변화에 가깝다. 모든 벤치에서 최강은 아니지만,
-          장기 코딩·에이전트 영역에서 오픈 모델이 이제 GPT-5.5와 Gemini 3.1 Pro를 실질 비교 대상으로 끌어내렸다는 점이 핵심이다.
-          특히 GLM-5.1에서 5.2로 넘어오며 점프 폭이 너무 커서, 중국 AI가 "언젠가 따라온다"가 아니라
-          "이미 특정 실전 과제에선 바로 옆까지 왔다"는 인식을 만든다.
+          GLM-5.2를 가장 잘 설명하는 방식은 “중국 오픈 모델이 모든 벤치 1위를 찍었다”가 아니다.
+          더 정확한 문장은 “장기 코딩 과제와 에이전트형 작업에서, 갑자기 프런티어 모델 바로 옆까지 올라왔다”이다.
+          그리고 그 사실은 텍스트보다 지금 붙인 그래프 4장이 훨씬 잘 보여준다.
         </p>
 
         <section class="sources" aria-labelledby="sources-title">
