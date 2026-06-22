@@ -1,189 +1,180 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fable 5와 Mythos 5가 중요한 이유 · AI 자동화 노트</title>
-    <meta name="description" content="Claude Fable 5와 Mythos 5 발표를 안전장치, 가격, 접근 방식 중심으로 정리한 분석 글입니다.">
+    <title>Fable 5? Mythos 5媛 以묒슂???댁쑀 쨌 AI ?먮룞???명듃</title>
+    <meta name="description" content="Claude Fable 5? Mythos 5 諛쒗몴瑜??덉쟾?μ튂, 媛寃? ?묎렐 諛⑹떇 以묒떖?쇰줈 ?뺣━??遺꾩꽍 湲?낅땲??">
     <link rel="stylesheet" href="../assets/styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="AI 자동화 노트 홈">
+      <a class="brand" href="../index.html" aria-label="AI ?먮룞???명듃 ??>
         <span class="brand-mark">AI</span>
-        <span>AI 자동화 노트</span>
+        <span>AI 인사이트 브리프</span>
       </a>
-      <nav class="nav" aria-label="주요 메뉴">
-        <a href="../index.html#news">AI 뉴스</a>
-        <a href="../index.html#software">AI 소프트웨어</a>
-        <a href="../index.html#china">중국 AI 뉴스</a>
+      <nav class="nav" aria-label="二쇱슂 硫붾돱">
+        <a href="../index.html#news">AI ?댁뒪</a>
+        <a href="../index.html#software">AI ?뚰봽?몄썾??/a>
+        <a href="../index.html#china">以묎뎅 AI ?댁뒪</a>
       </nav>
     </header>
 
     <main class="article-shell">
       <article class="article">
-        <a class="back-link" href="../index.html">홈으로 돌아가기</a>
+        <a class="back-link" href="../index.html">?덉쑝濡??뚯븘媛湲?/a>
         <div class="article-meta">
           <span>2026.06.10</span>
-          <span>AI 소프트웨어 · 분석 · Claude</span>
+          <span>AI ?뚰봽?몄썾??쨌 遺꾩꽍 쨌 Claude</span>
         </div>
 
-        <h1>Fable 5와 Mythos 5가 중요한 이유</h1>
+        <h1>Fable 5? Mythos 5媛 以묒슂???댁쑀</h1>
         <p class="lead">
-          이 글은 Anthropic 공식 발표에서 직접 언급된 내용만 다룹니다. 하드웨어나 산업·공장 이야기는 이번 원문에
-          직접적인 핵심 내용으로 나오지 않으므로 억지로 연결하지 않습니다.
+          ??湲? Anthropic 怨듭떇 諛쒗몴?먯꽌 吏곸젒 ?멸툒???댁슜留??ㅻ９?덈떎. ?섎뱶?⑥뼱???곗뾽쨌怨듭옣 ?댁빞湲곕뒗 ?대쾲 ?먮Ц??          吏곸젒?곸씤 ?듭떖 ?댁슜?쇰줈 ?섏삤吏 ?딆쑝誘濡??듭?濡??곌껐?섏? ?딆뒿?덈떎.
         </p>
 
-        <h2>핵심은 “강한 모델을 어떻게 공개할 것인가”입니다</h2>
+        <h2>?듭떖? ?쒓컯??紐⑤뜽???대뼸寃?怨듦컻??寃껋씤媛?앹엯?덈떎</h2>
         <p>
-          이번 발표에서 중요한 부분은 모델 이름 자체보다 공개 방식입니다. Anthropic은 같은 기반 모델을 두 가지 방식으로 나눴습니다.
-          일반 사용자에게는 안전장치를 적용한 Fable 5를 제공하고, 더 민감한 기능이 필요한 사이버 방어자와 일부 연구자에게는
-          Mythos 5를 제한적으로 제공합니다.
+          ?대쾲 諛쒗몴?먯꽌 以묒슂??遺遺꾩? 紐⑤뜽 ?대쫫 ?먯껜蹂대떎 怨듦컻 諛⑹떇?낅땲?? Anthropic? 媛숈? 湲곕컲 紐⑤뜽????媛吏 諛⑹떇?쇰줈 ?섎댋?듬땲??
+          ?쇰컲 ?ъ슜?먯뿉寃뚮뒗 ?덉쟾?μ튂瑜??곸슜??Fable 5瑜??쒓났?섍퀬, ??誘쇨컧??湲곕뒫???꾩슂???ъ씠踰?諛⑹뼱?먯? ?쇰? ?곌뎄?먯뿉寃뚮뒗
+          Mythos 5瑜??쒗븳?곸쑝濡??쒓났?⑸땲??
         </p>
         <p>
-          이 구조는 앞으로 고성능 AI 모델이 어떻게 배포될지를 보여주는 사례입니다. 예전에는 모델 공개를 “공개한다” 또는 “공개하지 않는다”로
-          나눠 생각하기 쉬웠습니다. 하지만 Fable 5와 Mythos 5는 그 사이에 더 많은 단계가 있다는 것을 보여줍니다. 같은 기반 모델이라도
-          사용자군, 목적, 위험 영역, 안전장치에 따라 서로 다른 제품명과 접근 권한으로 나뉠 수 있습니다.
+          ??援ъ“???욎쑝濡?怨좎꽦??AI 紐⑤뜽???대뼸寃?諛고룷?좎?瑜?蹂댁뿬二쇰뒗 ?щ??낅땲?? ?덉쟾?먮뒗 紐⑤뜽 怨듦컻瑜??쒓났媛쒗븳?ㅲ??먮뒗 ?쒓났媛쒗븯吏 ?딅뒗?ㅲ앸줈
+          ?섎닠 ?앷컖?섍린 ?ъ썱?듬땲?? ?섏?留?Fable 5? Mythos 5??洹??ъ씠????留롮? ?④퀎媛 ?덈떎??寃껋쓣 蹂댁뿬以띾땲?? 媛숈? 湲곕컲 紐⑤뜽?대씪??          ?ъ슜?먭뎔, 紐⑹쟻, ?꾪뿕 ?곸뿭, ?덉쟾?μ튂???곕씪 ?쒕줈 ?ㅻⅨ ?쒗뭹紐낃낵 ?묎렐 沅뚰븳?쇰줈 ?섎돖 ???덉뒿?덈떎.
         </p>
         <p>
-          이 점 때문에 Fable 5는 단순히 Anthropic의 최신 모델이라기보다 “안전장치가 붙은 공개용 고성능 모델”로 보는 편이 정확합니다.
-          Mythos 5는 더 위험한 능력까지 포함한 제한 접근 모델입니다. 이 차이를 구분하지 않으면 사용자는 “왜 나는 Mythos 5를 못 쓰지?”라고
-          오해할 수 있고, 반대로 Fable 5를 너무 낮게 평가할 수도 있습니다. 실제로 관련 보도들은 Fable 5가 Anthropic의 공개 모델 중 가장
-          강력한 축에 속한다는 점과, 동시에 특정 영역에서는 의도적으로 제한된다는 점을 같이 다룹니다.
+          ?????뚮Ц??Fable 5???⑥닚??Anthropic??理쒖떊 紐⑤뜽?대씪湲곕낫???쒖븞?꾩옣移섍? 遺숈? 怨듦컻??怨좎꽦??紐⑤뜽?앸줈 蹂대뒗 ?몄씠 ?뺥솗?⑸땲??
+          Mythos 5?????꾪뿕???λ젰源뚯? ?ы븿???쒗븳 ?묎렐 紐⑤뜽?낅땲?? ??李⑥씠瑜?援щ텇?섏? ?딆쑝硫??ъ슜?먮뒗 ?쒖솢 ?섎뒗 Mythos 5瑜?紐??곗???앸씪怨?          ?ㅽ빐?????덇퀬, 諛섎?濡?Fable 5瑜??덈Т ??쾶 ?됯????섎룄 ?덉뒿?덈떎. ?ㅼ젣濡?愿??蹂대룄?ㅼ? Fable 5媛 Anthropic??怨듦컻 紐⑤뜽 以?媛??          媛뺣젰??異뺤뿉 ?랁븳?ㅻ뒗 ?먭낵, ?숈떆???뱀젙 ?곸뿭?먯꽌???섎룄?곸쑝濡??쒗븳?쒕떎???먯쓣 媛숈씠 ?ㅻ９?덈떎.
         </p>
 
         <figure class="article-figure">
-          <img src="../assets/fable-mythos-safeguards.svg" alt="Fable 5 안전장치 동작 방식 그래프">
-          <figcaption>Anthropic 발표 기준: Fable 5는 대부분의 세션에서 그대로 동작하고, 일부 민감 영역은 Opus 4.8로 fallback됩니다.</figcaption>
+          <img src="../assets/fable-mythos-safeguards.svg" alt="Fable 5 ?덉쟾?μ튂 ?숈옉 諛⑹떇 洹몃옒??>
+          <figcaption>Anthropic 諛쒗몴 湲곗?: Fable 5???遺遺꾩쓽 ?몄뀡?먯꽌 洹몃?濡??숈옉?섍퀬, ?쇰? 誘쇨컧 ?곸뿭? Opus 4.8濡?fallback?⑸땲??</figcaption>
         </figure>
 
         <figure class="article-figure source-image-panel">
-          <img src="https://cdn.sanity.io/images/4zrzovbb/website/d3c3efe0e8ab310856368cee2b2161439db6676a-1920x1080.png" alt="Anthropic 공식 발표에 포함된 Claude Fable 5와 Mythos 5 관련 도표">
+          <img src="https://cdn.sanity.io/images/4zrzovbb/website/d3c3efe0e8ab310856368cee2b2161439db6676a-1920x1080.png" alt="Anthropic 怨듭떇 諛쒗몴???ы븿??Claude Fable 5? Mythos 5 愿???꾪몴">
           <figcaption>
-            <strong>원문 이미지:</strong> Anthropic 공식 발표에 포함된 시각 자료입니다.
-            이 글에서는 원문 이미지를 출처와 함께 보여주고, 별도로 만든 그래픽으로 가격과 fallback 구조를 다시 정리했습니다.
-            출처: <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic, Claude Fable 5 and Claude Mythos 5</a>
+            <strong>?먮Ц ?대?吏:</strong> Anthropic 怨듭떇 諛쒗몴???ы븿???쒓컖 ?먮즺?낅땲??
+            ??湲?먯꽌???먮Ц ?대?吏瑜?異쒖쿂? ?④퍡 蹂댁뿬二쇨퀬, 蹂꾨룄濡?留뚮뱺 洹몃옒?쎌쑝濡?媛寃⑷낵 fallback 援ъ“瑜??ㅼ떆 ?뺣━?덉뒿?덈떎.
+            異쒖쿂: <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic, Claude Fable 5 and Claude Mythos 5</a>
           </figcaption>
         </figure>
 
-        <h2>가격은 공개 사용을 염두에 둔 구조입니다</h2>
+        <h2>媛寃⑹? 怨듦컻 ?ъ슜???쇰몢????援ъ“?낅땲??/h2>
         <p>
-          Anthropic은 Fable 5와 Mythos 5를 입력 100만 토큰당 10달러, 출력 100만 토큰당 50달러로 제시했습니다.
-          원문은 이 가격이 Claude Mythos Preview의 절반 미만이라고 설명합니다.
+          Anthropic? Fable 5? Mythos 5瑜??낅젰 100留??좏겙??10?щ윭, 異쒕젰 100留??좏겙??50?щ윭濡??쒖떆?덉뒿?덈떎.
+          ?먮Ц? ??媛寃⑹씠 Claude Mythos Preview???덈컲 誘몃쭔?대씪怨??ㅻ챸?⑸땲??
         </p>
         <p>
-          가격을 볼 때는 절대 금액보다 포지셔닝을 봐야 합니다. 입력 100만 토큰당 10달러, 출력 100만 토큰당 50달러는 가벼운 챗봇 모델의
-          가격이라기보다 긴 작업과 복잡한 추론을 염두에 둔 가격입니다. 출력이 입력보다 5배 비싼 구조라는 점도 중요합니다. 긴 보고서 작성,
-          코드 생성, 분석 결과 정리처럼 출력이 많이 발생하는 작업에서는 비용이 빠르게 커질 수 있습니다.
+          媛寃⑹쓣 蹂??뚮뒗 ?덈? 湲덉븸蹂대떎 ?ъ??붾떇??遊먯빞 ?⑸땲?? ?낅젰 100留??좏겙??10?щ윭, 異쒕젰 100留??좏겙??50?щ윭??媛踰쇱슫 梨쀫큸 紐⑤뜽??          媛寃⑹씠?쇨린蹂대떎 湲??묒뾽怨?蹂듭옟??異붾줎???쇰몢????媛寃⑹엯?덈떎. 異쒕젰???낅젰蹂대떎 5諛?鍮꾩떬 援ъ“?쇰뒗 ?먮룄 以묒슂?⑸땲?? 湲?蹂닿퀬???묒꽦,
+          肄붾뱶 ?앹꽦, 遺꾩꽍 寃곌낵 ?뺣━泥섎읆 異쒕젰??留롮씠 諛쒖깮?섎뒗 ?묒뾽?먯꽌??鍮꾩슜??鍮좊Ⅴ寃?而ㅼ쭏 ???덉뒿?덈떎.
         </p>
         <p>
-          그래서 Fable 5의 실제 사용 전략은 “모든 질문을 Fable 5에 던진다”가 아니라, 높은 난도의 작업에 집중해서 쓰는 쪽이 합리적입니다.
-          일상적인 요약이나 짧은 답변은 Sonnet이나 Haiku 계열로 처리하고, 긴 코드 리팩터링, 복잡한 원인 분석, 다단계 의사결정, 긴 문서의
-          구조화처럼 난도가 높은 작업에서 Fable 5를 쓰는 식입니다. 사용자가 보내준 모델 선택 화면에서 Fable 5 설명이 “For your toughest
-          challenges”로 표시된 것도 이 맥락과 맞습니다.
+          洹몃옒??Fable 5???ㅼ젣 ?ъ슜 ?꾨왂? ?쒕え??吏덈Ц??Fable 5???섏쭊?ㅲ앷? ?꾨땲?? ?믪? ?쒕룄???묒뾽??吏묒쨷?댁꽌 ?곕뒗 履쎌씠 ?⑸━?곸엯?덈떎.
+          ?쇱긽?곸씤 ?붿빟?대굹 吏㏃? ?듬?? Sonnet?대굹 Haiku 怨꾩뿴濡?泥섎━?섍퀬, 湲?肄붾뱶 由ы뙥?곕쭅, 蹂듭옟???먯씤 遺꾩꽍, ?ㅻ떒怨??섏궗寃곗젙, 湲?臾몄꽌??          援ъ“?붿쿂???쒕룄媛 ?믪? ?묒뾽?먯꽌 Fable 5瑜??곕뒗 ?앹엯?덈떎. ?ъ슜?먭? 蹂대궡以 紐⑤뜽 ?좏깮 ?붾㈃?먯꽌 Fable 5 ?ㅻ챸???쏤or your toughest
+          challenges?앸줈 ?쒖떆??寃껊룄 ??留λ씫怨?留욎뒿?덈떎.
         </p>
 
         <figure class="article-figure">
-          <img src="../assets/fable-mythos-pricing.svg" alt="Fable 5와 Mythos 5 가격 그래프">
-          <figcaption>공식 발표에 나온 토큰 가격을 단순 시각화한 그래프입니다.</figcaption>
+          <img src="../assets/fable-mythos-pricing.svg" alt="Fable 5? Mythos 5 媛寃?洹몃옒??>
+          <figcaption>怨듭떇 諛쒗몴???섏삩 ?좏겙 媛寃⑹쓣 ?⑥닚 ?쒓컖?뷀븳 洹몃옒?꾩엯?덈떎.</figcaption>
         </figure>
 
-        <h2>사용자가 볼 변화</h2>
+        <h2>?ъ슜?먭? 蹂?蹂??/h2>
         <table class="analysis-table">
-          <caption>Fable 5 / Mythos 5 공개 방식</caption>
+          <caption>Fable 5 / Mythos 5 怨듦컻 諛⑹떇</caption>
           <thead>
             <tr>
-              <th>구분</th>
-              <th>내용</th>
+              <th>援щ텇</th>
+              <th>?댁슜</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Fable 5</td>
-              <td>일반 사용자에게 제공. 일부 민감 영역은 Opus 4.8로 fallback.</td>
+              <td>?쇰컲 ?ъ슜?먯뿉寃??쒓났. ?쇰? 誘쇨컧 ?곸뿭? Opus 4.8濡?fallback.</td>
             </tr>
             <tr>
               <td>Mythos 5</td>
-              <td>Project Glasswing 및 신뢰 접근 프로그램 중심의 제한 접근 모델.</td>
+              <td>Project Glasswing 諛??좊ː ?묎렐 ?꾨줈洹몃옩 以묒떖???쒗븳 ?묎렐 紐⑤뜽.</td>
             </tr>
             <tr>
-              <td>가격</td>
-              <td>입력 1M 토큰 $10, 출력 1M 토큰 $50.</td>
+              <td>媛寃?/td>
+              <td>?낅젰 1M ?좏겙 $10, 異쒕젰 1M ?좏겙 $50.</td>
             </tr>
             <tr>
-              <td>구독 플랜</td>
-              <td>2026년 6월 22일까지 일부 플랜에 포함, 6월 23일부터 사용량 크레딧 필요.</td>
+              <td>援щ룆 ?뚮옖</td>
+              <td>2026??6??22?쇨퉴吏 ?쇰? ?뚮옖???ы븿, 6??23?쇰????ъ슜???щ젅???꾩슂.</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>이번 글에서 다루지 않는 것</h2>
+        <h2>?대쾲 湲?먯꽌 ?ㅻ（吏 ?딅뒗 寃?/h2>
         <p>
-          이 발표는 주로 모델 성능, 안전장치, 접근 권한, 가격, 연구·사이버보안 사용 사례를 다룹니다.
-          GPU, 반도체, 데이터센터, 공장 설비 같은 주제는 원문에서 중심 내용으로 직접 다루지 않기 때문에 이 글에서는 확장하지 않습니다.
+          ??諛쒗몴??二쇰줈 紐⑤뜽 ?깅뒫, ?덉쟾?μ튂, ?묎렐 沅뚰븳, 媛寃? ?곌뎄쨌?ъ씠踰꾨낫???ъ슜 ?щ?瑜??ㅻ９?덈떎.
+          GPU, 諛섎룄泥? ?곗씠?곗꽱?? 怨듭옣 ?ㅻ퉬 媛숈? 二쇱젣???먮Ц?먯꽌 以묒떖 ?댁슜?쇰줈 吏곸젒 ?ㅻ（吏 ?딄린 ?뚮Ц????湲?먯꽌???뺤옣?섏? ?딆뒿?덈떎.
         </p>
 
-        <h2>이번 공개가 AI 소프트웨어 시장에 던지는 신호</h2>
+        <h2>?대쾲 怨듦컻媛 AI ?뚰봽?몄썾???쒖옣???섏????좏샇</h2>
         <p>
-          이번 발표는 AI 소프트웨어 시장에서 “가장 강한 모델을 어떻게 팔 것인가”라는 질문을 던집니다. Anthropic은 Fable 5를 일부 유료
-          플랜에 먼저 포함시키고, 일정 기간 이후에는 사용량 크레딧을 요구하는 구조를 제시했습니다. 이는 고성능 모델이 점점 더 구독과
-          사용량 기반 과금의 혼합 구조로 이동하고 있음을 보여줍니다. 사용자는 월 구독을 내더라도 가장 비싼 모델을 무제한으로 쓰기보다는,
-          일정 기간 체험 후 사용량에 따라 비용을 지불하는 흐름을 보게 될 가능성이 큽니다.
+          ?대쾲 諛쒗몴??AI ?뚰봽?몄썾???쒖옣?먯꽌 ?쒓???媛뺥븳 紐⑤뜽???대뼸寃???寃껋씤媛?앸씪??吏덈Ц???섏쭛?덈떎. Anthropic? Fable 5瑜??쇰? ?좊즺
+          ?뚮옖??癒쇱? ?ы븿?쒗궎怨? ?쇱젙 湲곌컙 ?댄썑?먮뒗 ?ъ슜???щ젅?㏃쓣 ?붽뎄?섎뒗 援ъ“瑜??쒖떆?덉뒿?덈떎. ?대뒗 怨좎꽦??紐⑤뜽???먯젏 ??援щ룆怨?          ?ъ슜??湲곕컲 怨쇨툑???쇳빀 援ъ“濡??대룞?섍퀬 ?덉쓬??蹂댁뿬以띾땲?? ?ъ슜?먮뒗 ??援щ룆???대뜑?쇰룄 媛??鍮꾩떬 紐⑤뜽??臾댁젣?쒖쑝濡??곌린蹂대떎??
+          ?쇱젙 湲곌컙 泥댄뿕 ???ъ슜?됱뿉 ?곕씪 鍮꾩슜??吏遺덊븯???먮쫫??蹂닿쾶 ??媛?μ꽦???쎈땲??
         </p>
         <p>
-          기업 입장에서는 이 구조가 더 중요합니다. Fable 5가 긴 작업과 복잡한 문제에서 강하다면, 단순 질의응답보다 소프트웨어 개발,
-          데이터 분석, 법무 문서 검토, 연구 보조 같은 고부가가치 업무에 먼저 투입될 가능성이 큽니다. Business Insider가 기업 활용 사례와
-          시장 반응을 함께 본 것도 이 때문입니다. 강력한 모델의 가치는 일반 채팅에서보다, 사람이 며칠씩 쓰던 복잡한 작업을 얼마나 줄이는지에서
-          더 크게 드러납니다.
+          湲곗뾽 ?낆옣?먯꽌????援ъ“媛 ??以묒슂?⑸땲?? Fable 5媛 湲??묒뾽怨?蹂듭옟??臾몄젣?먯꽌 媛뺥븯?ㅻ㈃, ?⑥닚 吏덉쓽?묐떟蹂대떎 ?뚰봽?몄썾??媛쒕컻,
+          ?곗씠??遺꾩꽍, 踰뺣Т 臾몄꽌 寃?? ?곌뎄 蹂댁“ 媛숈? 怨좊?媛媛移??낅Т??癒쇱? ?ъ엯??媛?μ꽦???쎈땲?? Business Insider媛 湲곗뾽 ?쒖슜 ?щ??
+          ?쒖옣 諛섏쓳???④퍡 蹂?寃껊룄 ???뚮Ц?낅땲?? 媛뺣젰??紐⑤뜽??媛移섎뒗 ?쇰컲 梨꾪똿?먯꽌蹂대떎, ?щ엺??硫곗튌???곕뜕 蹂듭옟???묒뾽???쇰쭏??以꾩씠?붿??먯꽌
+          ???ш쾶 ?쒕윭?⑸땲??
         </p>
 
-        <h2>관련 보도를 같이 보면</h2>
+        <h2>愿??蹂대룄瑜?媛숈씠 蹂대㈃</h2>
         <p>
-          관련 보도를 같이 보면 이번 발표의 초점이 더 분명해집니다. The Verge는 Fable 5의 공개 자체와 Mythos급 모델이라는
-          의미를 강조했고, Wired는 제한 접근과 사이버보안 위험을 더 강하게 다뤘습니다. Business Insider는 가격, 제공 대상,
-          기업 활용 사례를 함께 묶어 시장 관점에서 설명했습니다.
+          愿??蹂대룄瑜?媛숈씠 蹂대㈃ ?대쾲 諛쒗몴??珥덉젏????遺꾨챸?댁쭛?덈떎. The Verge??Fable 5??怨듦컻 ?먯껜? Mythos湲?紐⑤뜽?대씪??          ?섎?瑜?媛뺤“?덇퀬, Wired???쒗븳 ?묎렐怨??ъ씠踰꾨낫???꾪뿕????媛뺥븯寃??ㅻ쨾?듬땲?? Business Insider??媛寃? ?쒓났 ???
+          湲곗뾽 ?쒖슜 ?щ?瑜??④퍡 臾띠뼱 ?쒖옣 愿?먯뿉???ㅻ챸?덉뒿?덈떎.
         </p>
         <p>
-          세 매체의 차이는 블로그 글을 쓸 때 좋은 힌트가 됩니다. The Verge식 접근은 “무엇이 새로 나왔는가”에 강합니다. 따라서 독자에게
-          빠르게 뉴스 가치를 전달할 때 좋습니다. Wired식 접근은 “왜 위험하다고 보는가”에 강합니다. 모델의 공개 범위와 안전장치, 사이버보안
-          사용 사례를 설명할 때 유용합니다. Business Insider식 접근은 “시장에서 어떻게 받아들일 것인가”에 강합니다. 가격, 기업 고객,
-          IPO와 경쟁 구도까지 묶어 볼 수 있습니다.
+          ??留ㅼ껜??李⑥씠??釉붾줈洹?湲??????醫뗭? ?뚰듃媛 ?⑸땲?? The Verge???묎렐? ?쒕Т?뉗씠 ?덈줈 ?섏솕?붽??앹뿉 媛뺥빀?덈떎. ?곕씪???낆옄?먭쾶
+          鍮좊Ⅴ寃??댁뒪 媛移섎? ?꾨떖????醫뗭뒿?덈떎. Wired???묎렐? ?쒖솢 ?꾪뿕?섎떎怨?蹂대뒗媛?앹뿉 媛뺥빀?덈떎. 紐⑤뜽??怨듦컻 踰붿쐞? ?덉쟾?μ튂, ?ъ씠踰꾨낫??          ?ъ슜 ?щ?瑜??ㅻ챸?????좎슜?⑸땲?? Business Insider???묎렐? ?쒖떆?μ뿉???대뼸寃?諛쏆븘?ㅼ씪 寃껋씤媛?앹뿉 媛뺥빀?덈떎. 媛寃? 湲곗뾽 怨좉컼,
+          IPO? 寃쎌웳 援щ룄源뚯? 臾띠뼱 蹂????덉뒿?덈떎.
         </p>
         <p>
-          그러므로 이 주제를 깊게 다루려면 단순히 한 매체의 요약만 가져오면 부족합니다. 공식 발표로 사실관계를 잡고, The Verge로 공개
-          범위와 뉴스 가치를 확인하고, Wired로 안전 논리를 보강하고, Business Insider로 시장과 기업 활용 맥락을 붙이는 식으로 구성해야
-          글의 깊이가 생깁니다. 앞으로 이 블로그의 Claude 관련 글은 이 방식으로 쓰는 것이 좋습니다.
+          洹몃윭誘濡???二쇱젣瑜?源딄쾶 ?ㅻ（?ㅻ㈃ ?⑥닚????留ㅼ껜???붿빟留?媛?몄삤硫?遺議깊빀?덈떎. 怨듭떇 諛쒗몴濡??ъ떎愿怨꾨? ?↔퀬, The Verge濡?怨듦컻
+          踰붿쐞? ?댁뒪 媛移섎? ?뺤씤?섍퀬, Wired濡??덉쟾 ?쇰━瑜?蹂닿컯?섍퀬, Business Insider濡??쒖옣怨?湲곗뾽 ?쒖슜 留λ씫??遺숈씠???앹쑝濡?援ъ꽦?댁빞
+          湲??源딆씠媛 ?앷퉩?덈떎. ?욎쑝濡???釉붾줈洹몄쓽 Claude 愿??湲? ??諛⑹떇?쇰줈 ?곕뒗 寃껋씠 醫뗭뒿?덈떎.
         </p>
         <table class="analysis-table">
-          <caption>공식 발표와 관련 보도 비교</caption>
+          <caption>怨듭떇 諛쒗몴? 愿??蹂대룄 鍮꾧탳</caption>
           <thead>
             <tr>
-              <th>출처</th>
-              <th>읽을 때 볼 부분</th>
+              <th>異쒖쿂</th>
+              <th>?쎌쓣 ??蹂?遺遺?/th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Anthropic</td>
-              <td>모델 공개 방식, 안전장치, 가격, 접근 권한의 공식 설명</td>
+              <td>紐⑤뜽 怨듦컻 諛⑹떇, ?덉쟾?μ튂, 媛寃? ?묎렐 沅뚰븳??怨듭떇 ?ㅻ챸</td>
             </tr>
             <tr>
               <td>The Verge</td>
-              <td>첫 공개 Mythos급 모델이라는 뉴스 가치와 일반 사용자 제공 범위</td>
+              <td>泥?怨듦컻 Mythos湲?紐⑤뜽?대씪???댁뒪 媛移섏? ?쇰컲 ?ъ슜???쒓났 踰붿쐞</td>
             </tr>
             <tr>
               <td>Wired</td>
-              <td>Mythos 5 접근 제한과 사이버보안 능력에 대한 긴장감</td>
+              <td>Mythos 5 ?묎렐 ?쒗븳怨??ъ씠踰꾨낫???λ젰?????湲댁옣媛?/td>
             </tr>
             <tr>
               <td>Business Insider</td>
-              <td>구독 플랜, 가격, 기업 사용 사례, 시장 반응</td>
+              <td>援щ룆 ?뚮옖, 媛寃? 湲곗뾽 ?ъ슜 ?щ?, ?쒖옣 諛섏쓳</td>
             </tr>
           </tbody>
         </table>
 
         <section class="sources" aria-labelledby="sources-title">
-          <h2 id="sources-title">출처</h2>
+          <h2 id="sources-title">異쒖쿂</h2>
           <ul>
             <li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic, Claude Fable 5 and Claude Mythos 5</a></li>
             <li><a href="https://www.theverge.com/news/946725/anthropic-releases-claude-fable-5-mythos">The Verge, Anthropic releases Claude Fable 5</a></li>
@@ -195,8 +186,10 @@
     </main>
 
     <footer class="site-footer">
-      <span>AI 자동화 노트</span>
-      <span>GitHub Pages 기반 블로그</span>
+      <span>AI 인사이트 브리프</span>
+      <span>GitHub Pages 湲곕컲 釉붾줈洹?/span>
     </footer>
   </body>
 </html>
+
+

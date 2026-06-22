@@ -1,203 +1,201 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>중국 GLM-5.2, 그래프로 다시 보면 더 잘 보인다 - AI 자동화 노트</title>
-    <meta name="description" content="GLM-5.2를 텍스트보다 그래프 중심으로 다시 정리한다. Z.ai 공식 공개 그래프와 FrontierSWE·PostTrainBench 리더보드 링크를 기준으로 기존 모델들과의 격차를 한눈에 본다.">
+    <title>以묎뎅 GLM-5.2, 洹몃옒?꾨줈 ?ㅼ떆 蹂대㈃ ????蹂댁씤??- AI ?먮룞???명듃</title>
+    <meta name="description" content="GLM-5.2瑜??띿뒪?몃낫??洹몃옒??以묒떖?쇰줈 ?ㅼ떆 ?뺣━?쒕떎. Z.ai 怨듭떇 怨듦컻 洹몃옒?꾩? FrontierSWE쨌PostTrainBench 由щ뜑蹂대뱶 留곹겕瑜?湲곗??쇰줈 湲곗〈 紐⑤뜽?ㅺ낵??寃⑹감瑜??쒕늿??蹂몃떎.">
     <link rel="stylesheet" href="../assets/styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="AI 자동화 노트 홈">
+      <a class="brand" href="../index.html" aria-label="AI ?먮룞???명듃 ??>
         <span class="brand-mark">AI</span>
-        <span>AI 자동화 노트</span>
+        <span>AI 인사이트 브리프</span>
       </a>
-      <nav class="nav" aria-label="주요 메뉴">
-        <a href="../index.html#news">AI 뉴스</a>
-        <a href="../index.html#software">AI 소프트웨어</a>
-        <a href="../index.html#china-feed">중국 AI 뉴스</a>
+      <nav class="nav" aria-label="二쇱슂 硫붾돱">
+        <a href="../index.html#news">AI ?댁뒪</a>
+        <a href="../index.html#software">AI ?뚰봽?몄썾??/a>
+        <a href="../index.html#china-feed">以묎뎅 AI ?댁뒪</a>
       </nav>
     </header>
 
     <main class="article-shell">
       <article class="article">
-        <a class="back-link" href="../index.html">처음으로 돌아가기</a>
+        <a class="back-link" href="../index.html">泥섏쓬?쇰줈 ?뚯븘媛湲?/a>
         <div class="article-meta">
           <span>2026.06.22</span>
-          <span>중국 AI 뉴스 · Z.ai · GLM-5.2</span>
+          <span>以묎뎅 AI ?댁뒪 쨌 Z.ai 쨌 GLM-5.2</span>
         </div>
 
-        <h1>중국 GLM-5.2, 그래프로 다시 보면 더 잘 보인다</h1>
+        <h1>以묎뎅 GLM-5.2, 洹몃옒?꾨줈 ?ㅼ떆 蹂대㈃ ????蹂댁씤??/h1>
         <p class="lead">
-          GLM-5.2는 텍스트 설명보다 그래프를 먼저 보면 훨씬 이해가 쉽다. 이번 글은 설명을 줄이고,
-          Z.ai가 공개한 핵심 그래프와 공식 리더보드 링크를 중심으로 `어디서 얼마나 강한지`, `어디서 아직 밀리는지`,
-          `왜 시장이 과하게 반응하는지`를 한 번에 보이게 다시 정리한다.
+          GLM-5.2???띿뒪???ㅻ챸蹂대떎 洹몃옒?꾨? 癒쇱? 蹂대㈃ ?⑥뵮 ?댄빐媛 ?쎈떎. ?대쾲 湲? ?ㅻ챸??以꾩씠怨?
+          Z.ai媛 怨듦컻???듭떖 洹몃옒?꾩? 怨듭떇 由щ뜑蹂대뱶 留곹겕瑜?以묒떖?쇰줈 `?대뵒???쇰쭏??媛뺥븳吏`, `?대뵒???꾩쭅 諛由щ뒗吏`,
+          `???쒖옣??怨쇳븯寃?諛섏쓳?섎뒗吏`瑜???踰덉뿉 蹂댁씠寃??ㅼ떆 ?뺣━?쒕떎.
         </p>
 
-        <section class="source-callout" aria-label="핵심 요약">
+        <section class="source-callout" aria-label="?듭떖 ?붿빟">
           <p class="eyebrow">Quick Read</p>
-          <h2>핵심은 “모든 벤치 1위”가 아니라 “장기 코딩 과제에서 갑자기 최상위권”이다</h2>
+          <h2>?듭떖? ?쒕え??踰ㅼ튂 1?꾟앷? ?꾨땲???쒖옣湲?肄붾뵫 怨쇱젣?먯꽌 媛묒옄湲?理쒖긽?꾧텒?앹씠??/h2>
           <p>
-            GLM-5.2는 범용 reasoning 전체 최강 모델은 아니다. 하지만 장시간 코딩, 에이전트형 과제,
-            긴 문맥 작업에서는 GPT-5.5와 Gemini 3.1 Pro를 위협하거나 일부 항목에서 앞서는 그림이 나온다.
-            그래서 이 모델은 “중국 오픈 모델의 질적 점프”로 읽힌다.
+            GLM-5.2??踰붿슜 reasoning ?꾩껜 理쒓컯 紐⑤뜽? ?꾨땲?? ?섏?留??μ떆媛?肄붾뵫, ?먯씠?꾪듃??怨쇱젣,
+            湲?臾몃㎘ ?묒뾽?먯꽌??GPT-5.5? Gemini 3.1 Pro瑜??꾪삊?섍굅???쇰? ??ぉ?먯꽌 ?욎꽌??洹몃┝???섏삩??
+            洹몃옒????紐⑤뜽? ?쒖쨷援??ㅽ뵂 紐⑤뜽??吏덉쟻 ?먰봽?앸줈 ?쏀엺??
           </p>
         </section>
 
         <section class="sources" aria-labelledby="graph-title">
-          <h2 id="graph-title">그래프만 먼저 보기</h2>
+          <h2 id="graph-title">洹몃옒?꾨쭔 癒쇱? 蹂닿린</h2>
           <p>
-            아래 4장은 이번 이슈에서 가장 중요한 그래프다. 전부 Z.ai가 Hugging Face에 올린 공식 공개 자료다.
+            ?꾨옒 4?μ? ?대쾲 ?댁뒋?먯꽌 媛??以묒슂??洹몃옒?꾨떎. ?꾨? Z.ai媛 Hugging Face???щ┛ 怨듭떇 怨듦컻 ?먮즺??
           </p>
         </section>
 
         <figure class="article-figure source-image-panel">
-          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/2w_Hx2JZ2eZFJPoVgggvu.png" alt="GLM-5.2 장기 과제 평가 그래프">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/2w_Hx2JZ2eZFJPoVgggvu.png" alt="GLM-5.2 ?κ린 怨쇱젣 ?됯? 洹몃옒??>
           <figcaption>
-            <strong>그래프 1. Long-Horizon Task Evaluation</strong>:
-            FrontierSWE, PostTrainBench, SWE-Marathon 비교. GLM-5.2가 GPT-5.5를 FrontierSWE와 PostTrainBench에서 앞서는 그림이 보인다.
-            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+            <strong>洹몃옒??1. Long-Horizon Task Evaluation</strong>:
+            FrontierSWE, PostTrainBench, SWE-Marathon 鍮꾧탳. GLM-5.2媛 GPT-5.5瑜?FrontierSWE? PostTrainBench?먯꽌 ?욎꽌??洹몃┝??蹂댁씤??
+            異쒖쿂: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
           </figcaption>
         </figure>
 
         <figure class="article-figure source-image-panel">
-          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/grPxoFi2PIFnuUnlW1zNK.webp" alt="GLM-5.2 LLM 성능 평가 그래프">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/grPxoFi2PIFnuUnlW1zNK.webp" alt="GLM-5.2 LLM ?깅뒫 ?됯? 洹몃옒??>
           <figcaption>
-            <strong>그래프 2. LLM Performance Evaluation</strong>:
-            SWE-bench Pro, Terminal-Bench 2.1, NL2Repo, DeepSWE, ProgramBench, MCP-Atlas, Tool-Decathlon, Humanity's Last Exam 비교.
-            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+            <strong>洹몃옒??2. LLM Performance Evaluation</strong>:
+            SWE-bench Pro, Terminal-Bench 2.1, NL2Repo, DeepSWE, ProgramBench, MCP-Atlas, Tool-Decathlon, Humanity's Last Exam 鍮꾧탳.
+            異쒖쿂: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
           </figcaption>
         </figure>
 
         <figure class="article-figure source-image-panel">
-          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/Ldcz9AqNEaCqWPwNXfCmS.png" alt="GLM-5.2 에이전트 코딩 성능 그래프">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/Ldcz9AqNEaCqWPwNXfCmS.png" alt="GLM-5.2 ?먯씠?꾪듃 肄붾뵫 ?깅뒫 洹몃옒??>
           <figcaption>
-            <strong>그래프 3. Agentic Coding Performance by Effort Level</strong>:
-            effort level이 올라갈수록 GLM-5.2가 GLM-5.1보다 크게 뛰고, Claude Opus 4.7/4.8과 경쟁 가능한 구간까지 올라오는 모습이 보인다.
-            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+            <strong>洹몃옒??3. Agentic Coding Performance by Effort Level</strong>:
+            effort level???щ씪媛덉닔濡?GLM-5.2媛 GLM-5.1蹂대떎 ?ш쾶 ?곌퀬, Claude Opus 4.7/4.8怨?寃쎌웳 媛?ν븳 援ш컙源뚯? ?щ씪?ㅻ뒗 紐⑥뒿??蹂댁씤??
+            異쒖쿂: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
           </figcaption>
         </figure>
 
         <figure class="article-figure source-image-panel">
-          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/beSnOOqWL0KuCMJX7vHi9.webp" alt="GLM-5.2 아키텍처 변화 그래프">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/beSnOOqWL0KuCMJX7vHi9.webp" alt="GLM-5.2 ?꾪궎?띿쿂 蹂??洹몃옒??>
           <figcaption>
-            <strong>그래프 4. Architecture Changes in GLM-5.2</strong>:
-            단순 점수표가 아니라, 왜 성능이 오른다고 주장하는지 보여주는 구조 설명 그래프. IndexShare, lower FLOPs, higher MTP acceptance length를 강조한다.
-            출처: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
+            <strong>洹몃옒??4. Architecture Changes in GLM-5.2</strong>:
+            ?⑥닚 ?먯닔?쒓? ?꾨땲?? ???깅뒫???ㅻⅨ?ㅺ퀬 二쇱옣?섎뒗吏 蹂댁뿬二쇰뒗 援ъ“ ?ㅻ챸 洹몃옒?? IndexShare, lower FLOPs, higher MTP acceptance length瑜?媛뺤“?쒕떎.
+            異쒖쿂: <a href="https://huggingface.co/blog/zai-org/glm-52-blog">Hugging Face / Z.ai</a>
           </figcaption>
         </figure>
 
-        <h2>그래프 1에서 제일 중요하게 봐야 할 것</h2>
+        <h2>洹몃옒??1?먯꽌 ?쒖씪 以묒슂?섍쾶 遊먯빞 ??寃?/h2>
         <p>
-          Long-Horizon Task Evaluation 그래프는 이번 GLM-5.2 이슈의 핵심이다.
-          여기서 사람들을 놀라게 한 것은 HLE나 GPQA 같은 전통적 지식형 벤치가 아니라,
-          `FrontierSWE`, `PostTrainBench`, `SWE-Marathon`처럼 오래 걸리고 끝까지 밀어붙여야 하는 과제형 벤치다.
+          Long-Horizon Task Evaluation 洹몃옒?꾨뒗 ?대쾲 GLM-5.2 ?댁뒋???듭떖?대떎.
+          ?ш린???щ엺?ㅼ쓣 ??쇨쾶 ??寃껋? HLE??GPQA 媛숈? ?꾪넻??吏?앺삎 踰ㅼ튂媛 ?꾨땲??
+          `FrontierSWE`, `PostTrainBench`, `SWE-Marathon`泥섎읆 ?ㅻ옒 嫄몃━怨??앷퉴吏 諛?대텤?ъ빞 ?섎뒗 怨쇱젣??踰ㅼ튂??
         </p>
         <p>
-          이 그래프에서 GLM-5.2는 FrontierSWE 74.4, PostTrainBench 34.3, SWE-Marathon 13.0을 기록한다.
-          숫자 자체보다 더 중요한 건 비교 방향이다. GPT-5.5를 FrontierSWE와 PostTrainBench에서 앞서고,
-          GLM-5.1과의 격차도 매우 크다. 즉 “장기 코딩 과제”에서 질적 점프가 있었다는 메시지를 가장 강하게 던지는 그래프다.
-        </p>
-
-        <h2>그래프 2는 “범용 코딩 성적표”에 가깝다</h2>
-        <p>
-          LLM Performance Evaluation 그래프는 GLM-5.2가 어디서 강하고 어디서 아직 약한지 더 균형 있게 보여준다.
-          SWE-bench Pro 62.1, Terminal-Bench 2.1 81.0, ProgramBench 63.7, MCP-Atlas 77.0은 충분히 강하다.
-          반면 NL2Repo 48.9, DeepSWE 46.2는 아직 Claude Opus 4.8과 GPT-5.5에 밀린다.
-        </p>
-        <p>
-          그래서 이 그래프만 보면 결론은 명확하다. GLM-5.2는 “모든 걸 다 이기는 만능 1위”라기보다,
-          특정 코딩·에이전트 구간에서 최상위권으로 진입한 모델이다. 오히려 이 점이 더 현실적이고,
-          과장 없는 해석에 가깝다.
+          ??洹몃옒?꾩뿉??GLM-5.2??FrontierSWE 74.4, PostTrainBench 34.3, SWE-Marathon 13.0??湲곕줉?쒕떎.
+          ?レ옄 ?먯껜蹂대떎 ??以묒슂??嫄?鍮꾧탳 諛⑺뼢?대떎. GPT-5.5瑜?FrontierSWE? PostTrainBench?먯꽌 ?욎꽌怨?
+          GLM-5.1怨쇱쓽 寃⑹감??留ㅼ슦 ?щ떎. 利??쒖옣湲?肄붾뵫 怨쇱젣?앹뿉??吏덉쟻 ?먰봽媛 ?덉뿀?ㅻ뒗 硫붿떆吏瑜?媛??媛뺥븯寃??섏???洹몃옒?꾨떎.
         </p>
 
-        <h2>그래프 3은 왜 다들 “갑자기 좋아졌다”고 느끼는지 보여준다</h2>
+        <h2>洹몃옒??2???쒕쾾??肄붾뵫 ?깆쟻?쒋앹뿉 媛源앸떎</h2>
         <p>
-          Agentic Coding Performance by Effort Level 그래프는 GLM-5.2가 GLM-5.1에서 얼마나 뛰었는지를 가장 직관적으로 보여준다.
-          Non-Thinking 구간에서도 올라가지만, High와 Max 같은 높은 effort 구간에서 점프 폭이 더 크다.
-          즉 이 모델은 짧은 단답형보다는 `길게 생각하고 툴을 써가며 끝까지 푸는` 작업에서 더 강해졌다는 인상을 준다.
+          LLM Performance Evaluation 洹몃옒?꾨뒗 GLM-5.2媛 ?대뵒??媛뺥븯怨??대뵒???꾩쭅 ?쏀븳吏 ??洹좏삎 ?덇쾶 蹂댁뿬以??
+          SWE-bench Pro 62.1, Terminal-Bench 2.1 81.0, ProgramBench 63.7, MCP-Atlas 77.0? 異⑸텇??媛뺥븯??
+          諛섎㈃ NL2Repo 48.9, DeepSWE 46.2???꾩쭅 Claude Opus 4.8怨?GPT-5.5??諛由곕떎.
         </p>
         <p>
-          이게 중요한 이유는 최근 개발자들이 AI 코딩 도구를 평가할 때, 단순 정답률보다
-          `긴 리포지토리에서 얼마나 버티는지`, `실패했다가 다시 시도하는지`, `출력 토큰을 길게 써도 무너지지 않는지`를 더 중요하게 보기 때문이다.
-        </p>
-
-        <h2>그래프 4는 “왜 점수가 올랐다고 주장하는지”를 설명한다</h2>
-        <p>
-          아키텍처 그래프는 기술적 설명이다. 이건 독자가 전부 이해해야 하는 그래프는 아니지만,
-          적어도 Z.ai가 단순 튜닝이 아니라 구조 변경을 통해 효율과 수용 길이를 같이 올렸다고 말하고 있다는 점은 보여준다.
-          특히 lower FLOPs, higher MTP acceptance length 같은 문구는 “같은 예산으로 더 길게, 더 효율적으로 간다”는 메시지로 읽힌다.
+          洹몃옒????洹몃옒?꾨쭔 蹂대㈃ 寃곕줎? 紐낇솗?섎떎. GLM-5.2???쒕え??嫄????닿린??留뚮뒫 1?꾟앸씪湲곕낫??
+          ?뱀젙 肄붾뵫쨌?먯씠?꾪듃 援ш컙?먯꽌 理쒖긽?꾧텒?쇰줈 吏꾩엯??紐⑤뜽?대떎. ?ㅽ엳?????먯씠 ???꾩떎?곸씠怨?
+          怨쇱옣 ?녿뒗 ?댁꽍??媛源앸떎.
         </p>
 
-        <h2>공식 그래프와 별도로 꼭 열어봐야 할 리더보드</h2>
+        <h2>洹몃옒??3? ???ㅻ뱾 ?쒓컩?먭린 醫뗭븘議뚮떎?앷퀬 ?먮겮?붿? 蹂댁뿬以??/h2>
+        <p>
+          Agentic Coding Performance by Effort Level 洹몃옒?꾨뒗 GLM-5.2媛 GLM-5.1?먯꽌 ?쇰쭏???곗뿀?붿?瑜?媛??吏곴??곸쑝濡?蹂댁뿬以??
+          Non-Thinking 援ш컙?먯꽌???щ씪媛吏留? High? Max 媛숈? ?믪? effort 援ш컙?먯꽌 ?먰봽 ??씠 ???щ떎.
+          利???紐⑤뜽? 吏㏃? ?⑤떟?뺣낫?ㅻ뒗 `湲멸쾶 ?앷컖?섍퀬 ?댁쓣 ?④?硫??앷퉴吏 ?몃뒗` ?묒뾽?먯꽌 ??媛뺥빐議뚮떎???몄긽??以??
+        </p>
+        <p>
+          ?닿쾶 以묒슂???댁쑀??理쒓렐 媛쒕컻?먮뱾??AI 肄붾뵫 ?꾧뎄瑜??됯????? ?⑥닚 ?뺣떟瑜좊낫??          `湲?由ы룷吏?좊━?먯꽌 ?쇰쭏??踰꾪떚?붿?`, `?ㅽ뙣?덈떎媛 ?ㅼ떆 ?쒕룄?섎뒗吏`, `異쒕젰 ?좏겙??湲멸쾶 ?⑤룄 臾대꼫吏吏 ?딅뒗吏`瑜???以묒슂?섍쾶 蹂닿린 ?뚮Ц?대떎.
+        </p>
+
+        <h2>洹몃옒??4???쒖솢 ?먯닔媛 ?щ옄?ㅺ퀬 二쇱옣?섎뒗吏?앸? ?ㅻ챸?쒕떎</h2>
+        <p>
+          ?꾪궎?띿쿂 洹몃옒?꾨뒗 湲곗닠???ㅻ챸?대떎. ?닿굔 ?낆옄媛 ?꾨? ?댄빐?댁빞 ?섎뒗 洹몃옒?꾨뒗 ?꾨땲吏留?
+          ?곸뼱??Z.ai媛 ?⑥닚 ?쒕떇???꾨땲??援ъ“ 蹂寃쎌쓣 ?듯빐 ?⑥쑉怨??섏슜 湲몄씠瑜?媛숈씠 ?щ졇?ㅺ퀬 留먰븯怨??덈떎???먯? 蹂댁뿬以??
+          ?뱁엳 lower FLOPs, higher MTP acceptance length 媛숈? 臾멸뎄???쒓컳? ?덉궛?쇰줈 ??湲멸쾶, ???⑥쑉?곸쑝濡?媛꾨떎?앸뒗 硫붿떆吏濡??쏀엺??
+        </p>
+
+        <h2>怨듭떇 洹몃옒?꾩? 蹂꾨룄濡?瑗??댁뼱遊먯빞 ??由щ뜑蹂대뱶</h2>
         <section class="sources" aria-labelledby="leaderboard-title">
-          <h2 id="leaderboard-title">리더보드 바로 열기</h2>
+          <h2 id="leaderboard-title">由щ뜑蹂대뱶 諛붾줈 ?닿린</h2>
           <ul>
-            <li><a href="https://www.frontierswe.com/">FrontierSWE 공식 리더보드</a></li>
-            <li><a href="https://posttrainbench.com/">PostTrainBench 공식 리더보드</a></li>
-            <li><a href="https://huggingface.co/blog/zai-org/glm-52-blog">Z.ai 공식 전체 그래프 원문</a></li>
-            <li><a href="https://huggingface.co/zai-org/GLM-5.2">GLM-5.2 모델 카드</a></li>
+            <li><a href="https://www.frontierswe.com/">FrontierSWE 怨듭떇 由щ뜑蹂대뱶</a></li>
+            <li><a href="https://posttrainbench.com/">PostTrainBench 怨듭떇 由щ뜑蹂대뱶</a></li>
+            <li><a href="https://huggingface.co/blog/zai-org/glm-52-blog">Z.ai 怨듭떇 ?꾩껜 洹몃옒???먮Ц</a></li>
+            <li><a href="https://huggingface.co/zai-org/GLM-5.2">GLM-5.2 紐⑤뜽 移대뱶</a></li>
           </ul>
           <p>
-            이번 글에서 이미지를 직접 넣은 건 Z.ai 공식 공개 그래프다. FrontierSWE와 PostTrainBench는
-            실제 수치 검증용으로 공식 사이트를 바로 열어보는 쪽이 더 정확하다.
+            ?대쾲 湲?먯꽌 ?대?吏瑜?吏곸젒 ?ｌ? 嫄?Z.ai 怨듭떇 怨듦컻 洹몃옒?꾨떎. FrontierSWE? PostTrainBench??            ?ㅼ젣 ?섏튂 寃利앹슜?쇰줈 怨듭떇 ?ъ씠?몃? 諛붾줈 ?댁뼱蹂대뒗 履쎌씠 ???뺥솗?섎떎.
           </p>
         </section>
 
         <table class="analysis-table">
-          <caption>숫자로 다시 보는 핵심 포인트</caption>
+          <caption>?レ옄濡??ㅼ떆 蹂대뒗 ?듭떖 ?ъ씤??/caption>
           <thead>
             <tr>
-              <th>항목</th>
-              <th>보는 포인트</th>
+              <th>??ぉ</th>
+              <th>蹂대뒗 ?ъ씤??/th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>FrontierSWE 74.4</td>
-              <td>GPT-5.5 72.6보다 높고, Claude Opus 4.8 75.1 바로 아래다.</td>
+              <td>GPT-5.5 72.6蹂대떎 ?믨퀬, Claude Opus 4.8 75.1 諛붾줈 ?꾨옒??</td>
             </tr>
             <tr>
               <td>PostTrainBench 34.3</td>
-              <td>GPT-5.5 28.6보다 높다. 장기 작업 안정성에서 강한 인상을 준다.</td>
+              <td>GPT-5.5 28.6蹂대떎 ?믩떎. ?κ린 ?묒뾽 ?덉젙?깆뿉??媛뺥븳 ?몄긽??以??</td>
             </tr>
             <tr>
               <td>Terminal-Bench 2.1 81.0</td>
-              <td>GLM-5.1 63.5에서 크게 뛰었다. 실제 코딩형 워크플로 개선 폭이 크다.</td>
+              <td>GLM-5.1 63.5?먯꽌 ?ш쾶 ?곗뿀?? ?ㅼ젣 肄붾뵫???뚰겕?뚮줈 媛쒖꽑 ??씠 ?щ떎.</td>
             </tr>
             <tr>
-              <td>GLM-5.1 대비</td>
-              <td>단순 소폭 개선이 아니라 세대 업그레이드처럼 보일 정도로 점프 폭이 크다.</td>
+              <td>GLM-5.1 ?鍮?/td>
+              <td>?⑥닚 ?뚰룺 媛쒖꽑???꾨땲???몃? ?낃렇?덉씠?쒖쿂??蹂댁씪 ?뺣룄濡??먰봽 ??씠 ?щ떎.</td>
             </tr>
           </tbody>
         </table>
 
         <section class="sources" aria-labelledby="media-title">
-          <h2 id="media-title">영상·이미지 바로 보기</h2>
+          <h2 id="media-title">?곸긽쨌?대?吏 諛붾줈 蹂닿린</h2>
           <ul>
-            <li><a href="https://huggingface.co/blog/zai-org/glm-52-blog">Z.ai 공식 원문: 그래프와 설명 전체 보기</a></li>
-            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/2w_Hx2JZ2eZFJPoVgggvu.png">그래프 1 직접 열기: Long-Horizon Task Evaluation</a></li>
-            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/grPxoFi2PIFnuUnlW1zNK.webp">그래프 2 직접 열기: LLM Performance Evaluation</a></li>
-            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/Ldcz9AqNEaCqWPwNXfCmS.png">그래프 3 직접 열기: Agentic Coding Performance</a></li>
-            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/beSnOOqWL0KuCMJX7vHi9.webp">그래프 4 직접 열기: Architecture Changes</a></li>
-            <li><a href="https://huggingface.co/zai-org/GLM-5.2">GLM-5.2 모델 카드 바로 보기</a></li>
+            <li><a href="https://huggingface.co/blog/zai-org/glm-52-blog">Z.ai 怨듭떇 ?먮Ц: 洹몃옒?꾩? ?ㅻ챸 ?꾩껜 蹂닿린</a></li>
+            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/2w_Hx2JZ2eZFJPoVgggvu.png">洹몃옒??1 吏곸젒 ?닿린: Long-Horizon Task Evaluation</a></li>
+            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/grPxoFi2PIFnuUnlW1zNK.webp">洹몃옒??2 吏곸젒 ?닿린: LLM Performance Evaluation</a></li>
+            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/Ldcz9AqNEaCqWPwNXfCmS.png">洹몃옒??3 吏곸젒 ?닿린: Agentic Coding Performance</a></li>
+            <li><a href="https://cdn-uploads.huggingface.co/production/uploads/67066ea38a79951d7b8d4195/beSnOOqWL0KuCMJX7vHi9.webp">洹몃옒??4 吏곸젒 ?닿린: Architecture Changes</a></li>
+            <li><a href="https://huggingface.co/zai-org/GLM-5.2">GLM-5.2 紐⑤뜽 移대뱶 諛붾줈 蹂닿린</a></li>
           </ul>
           <p>
-            메모: 2026년 6월 22일 한국 시간 기준, 이번 확인 범위에서는 GLM-5.2 공개와 직접 연결된 신뢰 가능한 공식 데모 영상은 찾지 못했다.
-            대신 공식 공개 그래프 원본과 모델 카드, 리더보드 링크를 바로 열 수 있게 묶었다.
+            硫붾え: 2026??6??22???쒓뎅 ?쒓컙 湲곗?, ?대쾲 ?뺤씤 踰붿쐞?먯꽌??GLM-5.2 怨듦컻? 吏곸젒 ?곌껐???좊ː 媛?ν븳 怨듭떇 ?곕え ?곸긽? 李얠? 紐삵뻽??
+            ???怨듭떇 怨듦컻 洹몃옒???먮낯怨?紐⑤뜽 移대뱶, 由щ뜑蹂대뱶 留곹겕瑜?諛붾줈 ?????덇쾶 臾띠뿀??
           </p>
         </section>
 
-        <h2>한 줄 결론</h2>
+        <h2>??以?寃곕줎</h2>
         <p>
-          GLM-5.2를 가장 잘 설명하는 방식은 “중국 오픈 모델이 모든 벤치 1위를 찍었다”가 아니다.
-          더 정확한 문장은 “장기 코딩 과제와 에이전트형 작업에서, 갑자기 프런티어 모델 바로 옆까지 올라왔다”이다.
-          그리고 그 사실은 텍스트보다 지금 붙인 그래프 4장이 훨씬 잘 보여준다.
+          GLM-5.2瑜?媛?????ㅻ챸?섎뒗 諛⑹떇? ?쒖쨷援??ㅽ뵂 紐⑤뜽??紐⑤뱺 踰ㅼ튂 1?꾨? 李띿뿀?ㅲ앷? ?꾨땲??
+          ???뺥솗??臾몄옣? ?쒖옣湲?肄붾뵫 怨쇱젣? ?먯씠?꾪듃???묒뾽?먯꽌, 媛묒옄湲??꾨윴?곗뼱 紐⑤뜽 諛붾줈 ?녾퉴吏 ?щ씪?붾떎?앹씠??
+          洹몃━怨?洹??ъ떎? ?띿뒪?몃낫??吏湲?遺숈씤 洹몃옒??4?μ씠 ?⑥뵮 ??蹂댁뿬以??
         </p>
 
         <section class="sources" aria-labelledby="sources-title">
-          <h2 id="sources-title">출처와 확인 링크</h2>
+          <h2 id="sources-title">異쒖쿂? ?뺤씤 留곹겕</h2>
           <ul>
             <li><a href="https://huggingface.co/blog/zai-org/glm-52-blog">Z.ai on Hugging Face, GLM-5.2: Built for Long-Horizon Tasks</a></li>
             <li><a href="https://huggingface.co/zai-org/GLM-5.2">Hugging Face model card, zai-org/GLM-5.2</a></li>
@@ -210,8 +208,10 @@
     </main>
 
     <footer class="site-footer">
-      <span>AI 자동화 노트</span>
-      <span>GitHub Pages 기반 블로그</span>
+      <span>AI 인사이트 브리프</span>
+      <span>GitHub Pages 湲곕컲 釉붾줈洹?/span>
     </footer>
   </body>
 </html>
+
+
