@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="680" viewBox="0 0 1080 680" role="img" aria-labelledby="title desc">
+  <title id="title">Market capitalization comparison of Samsung Electronics, SK hynix and Hyundai Motor</title>
+  <desc id="desc">A bar chart comparing approximate market capitalizations on October 30 2025 and June 23 2026.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7faf8; }
+      .panel { fill: #ffffff; stroke: #dce6e1; stroke-width: 2; }
+      .title { fill: #16201c; font: 800 34px 'Segoe UI', Arial, sans-serif; }
+      .sub { fill: #5d6a64; font: 500 18px 'Segoe UI', Arial, sans-serif; }
+      .label { fill: #34413b; font: 700 18px 'Segoe UI', Arial, sans-serif; }
+      .small { fill: #5d6a64; font: 500 15px 'Segoe UI', Arial, sans-serif; }
+      .value { fill: #16201c; font: 800 18px 'Segoe UI', Arial, sans-serif; }
+      .axis { stroke: #dce6e1; stroke-width: 1.5; }
+      .old { fill: #9db9ff; }
+      .new { fill: #18a875; }
+      .hyundai { fill: #d9951e; }
+    </style>
+  </defs>
+  <rect class="bg" width="1080" height="680"/>
+  <rect class="panel" x="40" y="36" width="1000" height="608" rx="18"/>
+  <text class="title" x="80" y="92">젠슨 황 방한 전후, 한국 AI 관련 3사의 시총 변화</text>
+  <text class="sub" x="80" y="126">단위: 조 원, 2025-10-30 종가와 2026-06-23 장중 기준 대략치</text>
+
+  <line class="axis" x1="140" y1="540" x2="980" y2="540"/>
+  <line class="axis" x1="140" y1="160" x2="140" y2="540"/>
+  <line class="axis" x1="140" y1="445" x2="980" y2="445"/>
+  <line class="axis" x1="140" y1="350" x2="980" y2="350"/>
+  <line class="axis" x1="140" y1="255" x2="980" y2="255"/>
+  <line class="axis" x1="140" y1="160" x2="980" y2="160"/>
+
+  <text class="small" x="92" y="545">0</text>
+  <text class="small" x="80" y="450">500</text>
+  <text class="small" x="70" y="355">1,000</text>
+  <text class="small" x="70" y="260">1,500</text>
+  <text class="small" x="70" y="165">2,000</text>
+
+  <rect class="old" x="220" y="422" width="58" height="118" rx="8"/>
+  <rect class="new" x="286" y="159" width="58" height="381" rx="8"/>
+  <text class="value" x="218" y="408">621</text>
+  <text class="value" x="279" y="145">2,005</text>
+  <text class="label" x="213" y="582">삼성전자</text>
+
+  <rect class="old" x="500" y="461" width="58" height="79" rx="8"/>
+  <rect class="new" x="566" y="156" width="58" height="384" rx="8"/>
+  <text class="value" x="498" y="447">414</text>
+  <text class="value" x="559" y="142">2,023</text>
+  <text class="label" x="493" y="582">SK하이닉스</text>
+
+  <rect class="old" x="780" y="529" width="58" height="11" rx="5"/>
+  <rect class="hyundai" x="846" y="518" width="58" height="22" rx="6"/>
+  <text class="value" x="781" y="514">56</text>
+  <text class="value" x="840" y="504">114</text>
+  <text class="label" x="785" y="582">현대차</text>
+
+  <rect class="old" x="730" y="90" width="18" height="18" rx="4"/>
+  <text class="small" x="756" y="105">2025-10-30</text>
+  <rect class="new" x="860" y="90" width="18" height="18" rx="4"/>
+  <text class="small" x="886" y="105">2026-06-23</text>
+
+  <text class="small" x="80" y="620">메모: 2026년 6월 23일 수치는 장중 기준. 발행 전 장마감 기준 재확인이 필요합니다.</text>
+</svg>

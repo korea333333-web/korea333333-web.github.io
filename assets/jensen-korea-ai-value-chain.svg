@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620" role="img" aria-labelledby="title desc">
+  <title id="title">Korean AI hardware value chain around NVIDIA</title>
+  <desc id="desc">A value chain diagram showing NVIDIA GPUs connected to HBM memory, Samsung, SK hynix, robotics, Hyundai and physical AI.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7faf8; }
+      .panel { fill: #fff; stroke: #dce6e1; stroke-width: 2; }
+      .node { fill: #ffffff; stroke: #dce6e1; stroke-width: 2; }
+      .core { fill: #16201c; }
+      .green { fill: #18a875; }
+      .blue { fill: #2457d6; }
+      .amber { fill: #d9951e; }
+      .title { fill: #16201c; font: 800 34px 'Segoe UI', Arial, sans-serif; }
+      .sub { fill: #5d6a64; font: 500 18px 'Segoe UI', Arial, sans-serif; }
+      .label { fill: #16201c; font: 800 24px 'Segoe UI', Arial, sans-serif; }
+      .label-white { fill: #fff; font: 800 24px 'Segoe UI', Arial, sans-serif; }
+      .body { fill: #5d6a64; font: 500 17px 'Segoe UI', Arial, sans-serif; }
+      .body-white { fill: #ecfff7; font: 500 17px 'Segoe UI', Arial, sans-serif; }
+      .arrow { stroke: #8da29a; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#8da29a"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1080" height="620"/>
+  <rect class="panel" x="40" y="34" width="1000" height="552" rx="18"/>
+  <text class="title" x="80" y="92">젠슨 황 방한을 AI 밸류체인으로 보면</text>
+  <text class="sub" x="80" y="126">삼성·SK하이닉스·현대차는 같은 AI 뉴스 안에서도 역할이 다릅니다.</text>
+
+  <rect class="core" x="80" y="240" width="220" height="126" rx="16"/>
+  <text class="label-white" x="118" y="290">NVIDIA GPU</text>
+  <text class="body-white" x="118" y="324">AI 연산의 중심</text>
+
+  <path class="arrow" d="M305 303 C360 303 370 206 420 206"/>
+  <path class="arrow" d="M305 303 C360 303 370 398 420 398"/>
+
+  <rect class="node" x="420" y="148" width="260" height="126" rx="16"/>
+  <rect class="green" x="420" y="148" width="14" height="126" rx="7"/>
+  <text class="label" x="456" y="198">HBM 메모리</text>
+  <text class="body" x="456" y="232">GPU에 데이터를 밀어 넣는 병목</text>
+
+  <rect class="node" x="420" y="340" width="260" height="126" rx="16"/>
+  <rect class="amber" x="420" y="340" width="14" height="126" rx="7"/>
+  <text class="label" x="456" y="390">피지컬 AI</text>
+  <text class="body" x="456" y="424">로봇·자율주행·스마트팩토리</text>
+
+  <path class="arrow" d="M682 211 C725 211 735 172 770 172"/>
+  <path class="arrow" d="M682 211 C725 211 735 250 770 250"/>
+  <path class="arrow" d="M682 403 C725 403 735 403 770 403"/>
+
+  <rect class="node" x="770" y="128" width="230" height="88" rx="14"/>
+  <rect class="green" x="770" y="128" width="12" height="88" rx="6"/>
+  <text class="label" x="806" y="166">SK하이닉스</text>
+  <text class="body" x="806" y="194">가장 직접적인 HBM 프리미엄</text>
+
+  <rect class="node" x="770" y="234" width="230" height="88" rx="14"/>
+  <rect class="blue" x="770" y="234" width="12" height="88" rx="6"/>
+  <text class="label" x="806" y="272">삼성전자</text>
+  <text class="body" x="806" y="300">종합 반도체·플랫폼 축</text>
+
+  <rect class="node" x="770" y="359" width="230" height="88" rx="14"/>
+  <rect class="amber" x="770" y="359" width="12" height="88" rx="6"/>
+  <text class="label" x="806" y="397">현대차</text>
+  <text class="body" x="806" y="425">로봇과 현실 세계의 AI</text>
+
+  <text class="sub" x="80" y="536">핵심 인사이트: 시장은 AI 수혜를 '누가 AI를 쓴다'보다 '누가 AI 병목을 잡고 있나'로 가격 매기기 시작했습니다.</text>
+</svg>
