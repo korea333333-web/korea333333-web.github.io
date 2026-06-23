@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="660" viewBox="0 0 1080 660" role="img" aria-labelledby="title desc">
+  <title id="title">Planner Generator Evaluator agent loop</title>
+  <desc id="desc">A diagram showing a planner, generator and evaluator loop with artifacts, tests, traces and human approval.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7faf8; }
+      .panel { fill: #fff; stroke: #dce6e1; stroke-width: 2; }
+      .node { fill: #fff; stroke: #dce6e1; stroke-width: 2; }
+      .dark { fill: #16201c; }
+      .blue { fill: #2457d6; }
+      .green { fill: #18a875; }
+      .amber { fill: #d9951e; }
+      .title { fill: #16201c; font: 800 34px 'Segoe UI', Arial, sans-serif; }
+      .sub { fill: #5d6a64; font: 500 18px 'Segoe UI', Arial, sans-serif; }
+      .label { fill: #16201c; font: 800 25px 'Segoe UI', Arial, sans-serif; }
+      .label-white { fill: #fff; font: 800 24px 'Segoe UI', Arial, sans-serif; }
+      .body { fill: #5d6a64; font: 500 17px 'Segoe UI', Arial, sans-serif; }
+      .body-white { fill: #eaf2ff; font: 500 17px 'Segoe UI', Arial, sans-serif; }
+      .arrow { stroke: #8da29a; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #8da29a; stroke-width: 3; fill: none; stroke-dasharray: 9 8; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#8da29a"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1080" height="660"/>
+  <rect class="panel" x="40" y="34" width="1000" height="590" rx="18"/>
+  <text class="title" x="80" y="92">좋은 에이전트는 작은 조직처럼 돌아간다</text>
+  <text class="sub" x="80" y="126">한 에이전트에게 전부 맡기지 않고, 역할과 평가 기준을 분리한다.</text>
+  <rect class="dark" x="86" y="250" width="210" height="120" rx="16"/>
+  <text class="label-white" x="132" y="298">Planner</text>
+  <text class="body-white" x="122" y="330">요구사항을 스펙과</text>
+  <text class="body-white" x="122" y="354">작업 계약으로 바꿈</text>
+  <path class="arrow" d="M300 310 C348 310 358 224 410 224"/>
+  <path class="arrow" d="M620 224 C676 224 690 310 746 310"/>
+  <path class="arrow" d="M746 370 C690 450 350 450 296 370"/>
+  <rect class="node" x="410" y="164" width="210" height="120" rx="16"/>
+  <rect class="blue" x="410" y="164" width="12" height="120" rx="6"/>
+  <text class="label" x="454" y="212">Generator</text>
+  <text class="body" x="454" y="244">코드, 글, 화면을</text>
+  <text class="body" x="454" y="268">실제로 생성함</text>
+  <rect class="node" x="746" y="250" width="230" height="120" rx="16"/>
+  <rect class="green" x="746" y="250" width="12" height="120" rx="6"/>
+  <text class="label" x="790" y="298">Evaluator</text>
+  <text class="body" x="790" y="330">테스트, 브라우저, 로그로</text>
+  <text class="body" x="790" y="354">결과를 압박함</text>
+  <rect class="node" x="410" y="424" width="210" height="98" rx="14"/>
+  <rect class="amber" x="410" y="424" width="12" height="98" rx="6"/>
+  <text class="label" x="454" y="464">Artifacts</text>
+  <text class="body" x="454" y="494">스펙, 체크리스트, 트레이스</text>
+  <path class="dash" d="M515 286 C515 340 515 370 515 420"/>
+  <path class="dash" d="M746 330 C674 386 626 418 620 450"/>
+  <rect class="node" x="80" y="514" width="896" height="56" rx="12"/>
+  <text class="sub" x="112" y="550">핵심: “스스로 검사해”가 아니라, 별도 평가자가 실행 결과를 보고 루프를 다시 돌리게 만든다.</text>
+</svg>
