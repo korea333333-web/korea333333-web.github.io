@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Five Eyes AI cyber risk flow chart</title>
+  <desc id="desc">A four-step chart showing frontier AI capability, faster exploitation, leadership response, and deployment controls.</desc>
+  <rect width="1200" height="720" fill="#f7faf8"/>
+  <rect x="60" y="96" width="1080" height="528" rx="24" fill="#ffffff" stroke="#dce6e1"/>
+  <text x="100" y="160" fill="#18a875" font-family="Segoe UI, Apple SD Gothic Neo, Malgun Gothic, Arial, sans-serif" font-size="28" font-weight="700">Impact Flow</text>
+  <text x="100" y="210" fill="#16201c" font-family="Segoe UI, Apple SD Gothic Neo, Malgun Gothic, Arial, sans-serif" font-size="46" font-weight="800">Frontier AI가 사이버 리스크를 바꾸는 4단계</text>
+  <g font-family="Segoe UI, Apple SD Gothic Neo, Malgun Gothic, Arial, sans-serif">
+    <rect x="100" y="280" width="220" height="230" rx="20" fill="#f5f9ff" stroke="#dce6e1"/>
+    <circle cx="145" cy="325" r="24" fill="#2457d6"/>
+    <text x="137" y="333" fill="#ffffff" font-size="20" font-weight="800">1</text>
+    <text x="125" y="378" fill="#16201c" font-size="28" font-weight="800">성능 상승</text>
+    <text x="125" y="420" fill="#5d6a64" font-size="22">취약점 탐지와</text>
+    <text x="125" y="452" fill="#5d6a64" font-size="22">익스플로잇 생성이</text>
+    <text x="125" y="484" fill="#5d6a64" font-size="22">빨라진다</text>
+
+    <rect x="360" y="280" width="220" height="230" rx="20" fill="#f5f9ff" stroke="#dce6e1"/>
+    <circle cx="405" cy="325" r="24" fill="#2457d6"/>
+    <text x="397" y="333" fill="#ffffff" font-size="20" font-weight="800">2</text>
+    <text x="385" y="378" fill="#16201c" font-size="28" font-weight="800">격차 축소</text>
+    <text x="385" y="420" fill="#5d6a64" font-size="22">발견부터 악용까지</text>
+    <text x="385" y="452" fill="#5d6a64" font-size="22">걸리는 시간이</text>
+    <text x="385" y="484" fill="#5d6a64" font-size="22">짧아진다</text>
+
+    <rect x="620" y="280" width="220" height="230" rx="20" fill="#f5f9ff" stroke="#dce6e1"/>
+    <circle cx="665" cy="325" r="24" fill="#2457d6"/>
+    <text x="657" y="333" fill="#ffffff" font-size="20" font-weight="800">3</text>
+    <text x="645" y="378" fill="#16201c" font-size="28" font-weight="800">경영 이슈화</text>
+    <text x="645" y="420" fill="#5d6a64" font-size="22">보안은 IT 문제가</text>
+    <text x="645" y="452" fill="#5d6a64" font-size="22">아니라 사업 연속성</text>
+    <text x="645" y="484" fill="#5d6a64" font-size="22">문제가 된다</text>
+
+    <rect x="880" y="280" width="220" height="230" rx="20" fill="#f5f9ff" stroke="#dce6e1"/>
+    <circle cx="925" cy="325" r="24" fill="#2457d6"/>
+    <text x="917" y="333" fill="#ffffff" font-size="20" font-weight="800">4</text>
+    <text x="905" y="378" fill="#16201c" font-size="28" font-weight="800">배포 통제</text>
+    <text x="905" y="420" fill="#5d6a64" font-size="22">고성능 모델은</text>
+    <text x="905" y="452" fill="#5d6a64" font-size="22">더 제한적으로</text>
+    <text x="905" y="484" fill="#5d6a64" font-size="22">풀릴 수 있다</text>
+  </g>
+  <path d="M320 395h40" stroke="#18a875" stroke-width="8" stroke-linecap="round"/>
+  <path d="M580 395h40" stroke="#18a875" stroke-width="8" stroke-linecap="round"/>
+  <path d="M840 395h40" stroke="#18a875" stroke-width="8" stroke-linecap="round"/>
+</svg>
