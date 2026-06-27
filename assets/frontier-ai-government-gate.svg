@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" role="img" aria-labelledby="title desc">
+  <title id="title">Frontier AI government gate diagram</title>
+  <desc id="desc">A diagram showing government review sitting between frontier AI labs and users.</desc>
+  <rect width="980" height="460" fill="#f7faf8"/>
+  <rect x="44" y="48" width="892" height="364" rx="18" fill="#ffffff" stroke="#dce6e1" stroke-width="2"/>
+  <text x="76" y="96" fill="#16201c" font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="30" font-weight="800">Frontier AI 배포 구조가 바뀌고 있다</text>
+  <text x="76" y="128" fill="#5d6a64" font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="16">오픈 릴리스에서 정부 검토와 승인형 접근으로 이동하는 신호</text>
+  <g font-family="Segoe UI, Malgun Gothic, sans-serif">
+    <rect x="80" y="190" width="210" height="112" rx="12" fill="#e8f1ff" stroke="#2457d6" stroke-width="2"/>
+    <text x="110" y="232" fill="#16201c" font-size="21" font-weight="800">AI 연구소</text>
+    <text x="110" y="263" fill="#34413b" font-size="15">OpenAI, Anthropic</text>
+    <text x="110" y="285" fill="#34413b" font-size="15">프런티어 모델 개발</text>
+    <path d="M306 246 H400" stroke="#2457d6" stroke-width="4" stroke-linecap="round"/>
+    <path d="M400 246 l-14 -9 v18 z" fill="#2457d6"/>
+    <rect x="416" y="162" width="212" height="168" rx="14" fill="#fff7e8" stroke="#d9951e" stroke-width="2"/>
+    <text x="450" y="210" fill="#16201c" font-size="22" font-weight="800">정부 게이트</text>
+    <text x="450" y="244" fill="#34413b" font-size="15">사전 검토</text>
+    <text x="450" y="268" fill="#34413b" font-size="15">대상 제한</text>
+    <text x="450" y="292" fill="#34413b" font-size="15">보안 조건 부과</text>
+    <path d="M644 246 H738" stroke="#d9951e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M738 246 l-14 -9 v18 z" fill="#d9951e"/>
+    <rect x="754" y="190" width="150" height="112" rx="12" fill="#ecf8f3" stroke="#18a875" stroke-width="2"/>
+    <text x="784" y="232" fill="#16201c" font-size="21" font-weight="800">사용자</text>
+    <text x="784" y="263" fill="#34413b" font-size="15">기업</text>
+    <text x="784" y="285" fill="#34413b" font-size="15">개발자, 국가</text>
+  </g>
+  <g font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="15" fill="#5d6a64">
+    <text x="96" y="360">핵심 질문: 누가 가장 강한 모델에 접근할 수 있는가?</text>
+    <text x="96" y="386">소버린 AI는 모델 보유뿐 아니라 접근권과 배포권의 문제로 커지고 있다.</text>
+  </g>
+</svg>

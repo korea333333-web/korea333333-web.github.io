@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-labelledby="title desc">
+  <title id="title">AI economy revenue and infrastructure chart</title>
+  <desc id="desc">A chart summarizing AI revenue, annualized run rate, and the infrastructure payback question.</desc>
+  <rect width="980" height="500" fill="#f7faf8"/>
+  <rect x="44" y="42" width="892" height="410" rx="18" fill="#ffffff" stroke="#dce6e1" stroke-width="2"/>
+  <text x="76" y="92" fill="#16201c" font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="30" font-weight="800">State of the AI Economy 핵심 숫자</text>
+  <text x="76" y="124" fill="#5d6a64" font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="16">Exponential View, 2026년 6월 리포트 기준</text>
+  <g font-family="Segoe UI, Malgun Gothic, sans-serif">
+    <rect x="80" y="170" width="250" height="142" rx="14" fill="#e8f1ff" stroke="#2457d6" stroke-width="2"/>
+    <text x="108" y="214" fill="#2457d6" font-size="42" font-weight="900">$110B</text>
+    <text x="108" y="246" fill="#16201c" font-size="19" font-weight="800">최근 12개월 매출</text>
+    <text x="108" y="276" fill="#34413b" font-size="15">중복 제거한 최종 고객 지출</text>
+    <rect x="365" y="170" width="250" height="142" rx="14" fill="#ecf8f3" stroke="#18a875" stroke-width="2"/>
+    <text x="393" y="214" fill="#18a875" font-size="42" font-weight="900">$175B+</text>
+    <text x="393" y="246" fill="#16201c" font-size="19" font-weight="800">연율화 런레이트</text>
+    <text x="393" y="276" fill="#34413b" font-size="15">최근 월 매출을 연간화</text>
+    <rect x="650" y="170" width="250" height="142" rx="14" fill="#fff7e8" stroke="#d9951e" stroke-width="2"/>
+    <text x="678" y="214" fill="#d9951e" font-size="42" font-weight="900">6년</text>
+    <text x="678" y="246" fill="#16201c" font-size="19" font-weight="800">GPU 감가상각 가정</text>
+    <text x="678" y="276" fill="#34413b" font-size="15">인프라 회수 논리의 핵심</text>
+    <path d="M110 370 H870" stroke="#dce6e1" stroke-width="10" stroke-linecap="round"/>
+    <path d="M110 370 H595" stroke="#2457d6" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="595" cy="370" r="11" fill="#2457d6"/>
+    <text x="110" y="410" fill="#34413b" font-size="16">리포트의 결론: 매출은 실제로 빠르게 쌓이고 있지만, 인프라 비용을 넉넉하게 이긴다고 보기는 아직 이르다.</text>
+  </g>
+</svg>
