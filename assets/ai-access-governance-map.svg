@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI access and governance map</title>
+  <desc id="desc">A diagram connecting frontier AI companies, the United States, NATO allies, the UN and the global south through model access, security policy and governance.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="0.52" stop-color="#eef7f1"/>
+      <stop offset="1" stop-color="#fff7ec"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#1b2a3a" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="70" y="78" fill="#102033" font-family="Arial, sans-serif" font-size="38" font-weight="700">AI access is becoming diplomacy</text>
+  <text x="70" y="120" fill="#526274" font-family="Arial, sans-serif" font-size="19">NATO asks who gets frontier models. The UN asks who gets a voice in the rules.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="180" width="265" height="150" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="98" y="226" fill="#0f172a" font-family="Arial, sans-serif" font-size="25" font-weight="700">US frontier firms</text>
+    <text x="98" y="264" fill="#475569" font-family="Arial, sans-serif" font-size="17">OpenAI, Anthropic and</text>
+    <text x="98" y="290" fill="#475569" font-family="Arial, sans-serif" font-size="17">the top model supply chain</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="155" width="260" height="200" rx="22" fill="#102033"/>
+    <text x="505" y="214" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">United States</text>
+    <text x="505" y="258" fill="#dbeafe" font-family="Arial, sans-serif" font-size="17">Controls access, export logic,</text>
+    <text x="505" y="284" fill="#dbeafe" font-family="Arial, sans-serif" font-size="17">security review and alliances</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="870" y="180" width="260" height="150" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="900" y="226" fill="#0f172a" font-family="Arial, sans-serif" font-size="25" font-weight="700">NATO allies</text>
+    <text x="900" y="264" fill="#475569" font-family="Arial, sans-serif" font-size="17">Want reliable access to</text>
+    <text x="900" y="290" fill="#475569" font-family="Arial, sans-serif" font-size="17">AI for defense readiness</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="145" y="455" width="305" height="150" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="178" y="502" fill="#0f172a" font-family="Arial, sans-serif" font-size="25" font-weight="700">UN / ITU</text>
+    <text x="178" y="540" fill="#475569" font-family="Arial, sans-serif" font-size="17">Global dialogue, AI for Good,</text>
+    <text x="178" y="566" fill="#475569" font-family="Arial, sans-serif" font-size="17">shared infrastructure agenda</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="735" y="455" width="315" height="150" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="768" y="502" fill="#0f172a" font-family="Arial, sans-serif" font-size="25" font-weight="700">Global South</text>
+    <text x="768" y="540" fill="#475569" font-family="Arial, sans-serif" font-size="17">Needs compute, local data,</text>
+    <text x="768" y="566" fill="#475569" font-family="Arial, sans-serif" font-size="17">language coverage and agency</text>
+  </g>
+
+  <path d="M335 255 C390 255 415 255 470 255" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M730 255 C785 255 815 255 870 255" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 355 C560 410 500 450 450 505" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M450 530 C540 590 630 590 735 530" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M890 455 C820 390 755 348 690 315" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="470" y="625" width="260" height="46" rx="23" fill="#f97316"/>
+    <text x="515" y="655" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Question: who gets access?</text>
+  </g>
+</svg>
