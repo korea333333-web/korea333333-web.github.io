@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">ChatGPT Work의 업무 수행 흐름</title>
+  <desc id="desc">사용자가 목표를 주면 Plan 모드에서 계획을 검토하고 파일, 앱, 플러그인 맥락을 연결한 뒤 GPT-5.6이 도구와 브라우저를 사용해 문서, 스프레드시트, 프레젠테이션, 사이트를 만드는 흐름</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="68" y="64" fill="#16201c" font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="34" font-weight="700">ChatGPT Work는 ‘답변’보다 ‘완성된 결과물’에 가깝다</text>
+  <text x="68" y="102" fill="#5d6a64" font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="19">공식 기능 설명을 업무 흐름으로 재구성</text>
+
+  <g font-family="Segoe UI, Malgun Gothic, sans-serif">
+    <g stroke="#9fb0a8" stroke-width="4" fill="none">
+      <path d="M260 250H330"/>
+      <path d="M535 250H605"/>
+      <path d="M810 250H880"/>
+    </g>
+    <g fill="#9fb0a8">
+      <path d="M330 250l-14-9v18z"/>
+      <path d="M605 250l-14-9v18z"/>
+      <path d="M880 250l-14-9v18z"/>
+    </g>
+
+    <rect x="68" y="164" width="192" height="172" rx="8" fill="#eef5f1" stroke="#dce6e1" stroke-width="2"/>
+    <text x="92" y="205" fill="#18a875" font-size="16" font-weight="700">01 · 목표</text>
+    <text x="92" y="242" fill="#16201c" font-size="23" font-weight="700">원하는 결과</text>
+    <text x="92" y="277" fill="#34413b" font-size="17">분석 · 보고서</text>
+    <text x="92" y="304" fill="#34413b" font-size="17">운영 · 제작 · 조사</text>
+
+    <rect x="330" y="164" width="205" height="172" rx="8" fill="#f5f9ff" stroke="#c8d6fa" stroke-width="2"/>
+    <text x="354" y="205" fill="#2457d6" font-size="16" font-weight="700">02 · PLAN</text>
+    <text x="354" y="242" fill="#16201c" font-size="23" font-weight="700">계획 검토</text>
+    <text x="354" y="277" fill="#34413b" font-size="17">질문 · 단계 · 권한</text>
+    <text x="354" y="304" fill="#34413b" font-size="17">사용자가 수정·승인</text>
+
+    <rect x="605" y="164" width="205" height="172" rx="8" fill="#fff8e8" stroke="#ead8a9" stroke-width="2"/>
+    <text x="629" y="205" fill="#b77812" font-size="16" font-weight="700">03 · CONTEXT</text>
+    <text x="629" y="242" fill="#16201c" font-size="23" font-weight="700">맥락 연결</text>
+    <text x="629" y="277" fill="#34413b" font-size="17">파일 · 데스크톱 앱</text>
+    <text x="629" y="304" fill="#34413b" font-size="17">1,400+ 플러그인</text>
+
+    <rect x="880" y="164" width="252" height="172" rx="8" fill="#f4f0fb" stroke="#d7c9eb" stroke-width="2"/>
+    <text x="904" y="205" fill="#7b61b2" font-size="16" font-weight="700">04 · EXECUTE</text>
+    <text x="904" y="242" fill="#16201c" font-size="23" font-weight="700">GPT-5.6 실행</text>
+    <text x="904" y="277" fill="#34413b" font-size="17">도구 · 내장 브라우저</text>
+    <text x="904" y="304" fill="#34413b" font-size="17">반복 작업 · 병렬 처리</text>
+
+    <path d="M1006 336V408" stroke="#9fb0a8" stroke-width="4"/>
+    <path d="M1006 408l-9-14h18z" fill="#9fb0a8"/>
+
+    <rect x="188" y="430" width="824" height="160" rx="8" fill="#16201c"/>
+    <text x="224" y="474" fill="#8fe1c1" font-size="16" font-weight="700">05 · DELIVER</text>
+    <text x="224" y="516" fill="#ffffff" font-size="27" font-weight="700">편집 가능한 결과물</text>
+    <g fill="#dce6e1" font-size="18">
+      <text x="224" y="558">문서</text>
+      <text x="355" y="558">스프레드시트</text>
+      <text x="552" y="558">프레젠테이션</text>
+      <text x="766" y="558">Sites · 웹 앱</text>
+    </g>
+    <g fill="#18a875">
+      <circle cx="208" cy="552" r="5"/>
+      <circle cx="339" cy="552" r="5"/>
+      <circle cx="536" cy="552" r="5"/>
+      <circle cx="750" cy="552" r="5"/>
+    </g>
+  </g>
+
+  <text x="600" y="650" text-anchor="middle" fill="#5d6a64" font-family="Segoe UI, Malgun Gothic, sans-serif" font-size="17">사람이 계획과 권한을 검토하고, 실행이 끝난 뒤 결과물의 정확성과 공유 범위를 확인한다.</text>
+</svg>

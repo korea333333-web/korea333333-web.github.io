@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT-5.6 드디어 공개: Sol·Terra·Luna와 Ultra가 바꾼 것</title>
+    <meta name="description" content="GPT-5.6의 Sol·Terra·Luna, Ultra 병렬 에이전트, 공식 벤치마크, 가격과 한계를 정확한 수치로 분석합니다.">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈">
+        <span class="brand-mark">AI</span>
+        <span>AI 인사이트 브리프</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="../index.html#news">AI 뉴스</a>
+        <a href="../index.html#software">AI 소프트웨어</a>
+        <a href="../index.html#china-feed">중국 AI 뉴스</a>
+      </nav>
+    </header>
+
+    <main class="article-shell">
+      <article class="article">
+        <a class="back-link" href="../index.html">처음으로 돌아가기</a>
+        <div class="article-meta">
+          <span>2026.07.10</span>
+          <span>GPT-5.6 · 에이전트 · 코딩</span>
+          <span>by kikuke</span>
+        </div>
+
+        <h1>GPT-5.6 드디어 공개: Sol·Terra·Luna와 Ultra가 바꾼 것</h1>
+        <p class="lead">
+          이번 업데이트의 진짜 변화는 답변 점수가 조금 오른 데 있지 않다. GPT-5.6은 모델을 세 단계로 나누고, 어려운 업무에서는 여러 에이전트를 병렬로 움직이며, 더 적은 토큰과 시간으로 끝까지 결과물을 만드는 방향을 전면에 세웠다.
+        </p>
+
+        <figure class="article-figure source-image-panel">
+          <img src="../assets/gpt-5-6-official-hero.png" width="777" height="502" alt="GPT-5.6 공식 발표 페이지의 우주 배경과 GPT 5.6 제목 화면">
+          <figcaption><strong>공식 발표 화면.</strong> OpenAI의 <a href="https://openai.com/index/gpt-5-6/">GPT-5.6 발표 페이지</a>를 해설하기 위해 제공받은 화면 캡처다. 화면 디자인과 원본 이미지의 권리는 OpenAI에 있으며 독립 이미지로 재배포하지 않는다.</figcaption>
+        </figure>
+
+        <section class="source-callout">
+          <p class="eyebrow">핵심 요약</p>
+          <h2>한 모델이 아니라, 업무 강도에 맞춘 세 모델과 두 개의 상위 모드다</h2>
+          <p>
+            <strong>Sol</strong>은 최고 성능, <strong>Terra</strong>는 일상 업무의 균형, <strong>Luna</strong>는 속도와 비용을 맡는다. 여기에 Sol의 <code>max</code>는 더 오래 검토하고, <code>ultra</code>는 기본 네 개 에이전트를 병렬로 조율한다. ChatGPT, Codex, API에 2026년 7월 9일부터 순차 배포됐다.
+          </p>
+        </section>
+
+        <h2>왜 오늘의 메인 뉴스인가</h2>
+        <p>
+          OpenAI는 6월 26일 정부 요청에 따라 제한된 파트너만 참여하는 프리뷰를 시작했다. 이번 7월 9일 발표는 그 과거 프리뷰를 재포장한 것이 아니라, ChatGPT·Codex·API 전반의 일반 제공으로 넘어간 사건이다. Reuters는 공개 시점과 세 모델 구성을, Axios는 GPT-5.6과 ChatGPT Work의 동시 출시 및 Ultra의 병렬 위임 구조를 각각 확인했다.
+        </p>
+
+        <table class="analysis-table">
+          <caption>발행 후보 점수표 · 총점 98/100 · 판정: 확정</caption>
+          <thead>
+            <tr><th>항목</th><th>점수</th><th>판단 근거</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>영향력</td><td>30/30</td><td>ChatGPT, Codex, API의 기본 성능·비용·업무 방식에 동시에 영향</td></tr>
+            <tr><td>일반 주요 매체 확산도</td><td>18/20</td><td>Reuters, Axios, Bloomberg 보도와 CNBC 인터뷰 확인</td></tr>
+            <tr><td>신뢰도·출처 검증</td><td>20/20</td><td>공식 발표, 시스템 카드, 독립 평가 기관, 주요 매체 교차 확인</td></tr>
+            <tr><td>새로움·중복 회피</td><td>10/10</td><td>6월 제한 프리뷰와 구분되는 7월 9일 일반 제공</td></tr>
+            <tr><td>사용자 영향</td><td>10/10</td><td>모델 선택, 요금, 추론 강도, Codex 사용 경험이 즉시 변경</td></tr>
+            <tr><td>블로그 적합도</td><td>5/5</td><td>성능표와 실제 화면을 함께 설명할 수 있음</td></tr>
+            <tr><td>이미지·도표화</td><td>5/5</td><td>정확한 공개 수치와 공식 그래프가 충분함</td></tr>
+          </tbody>
+        </table>
+
+        <table class="analysis-table">
+          <caption>검증 게이트</caption>
+          <thead>
+            <tr><th>게이트</th><th>결과</th><th>확인 내용</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>원문</td><td>확정</td><td>OpenAI 발표와 GPT-5.6 시스템 카드 확인</td></tr>
+            <tr><td>독립 확인</td><td>확정</td><td>Reuters와 Axios가 출시일·세 모델·일반 공개를 교차 보도</td></tr>
+            <tr><td>전문매체</td><td>확정</td><td>TechCrunch가 제한 프리뷰, 가격, Max·Ultra 구조를 별도 해설</td></tr>
+            <tr><td>반대 확인</td><td>부분 확인</td><td>Axios가 일부 테스터의 Claude 선호 의견도 함께 소개</td></tr>
+            <tr><td>날짜</td><td>확정</td><td>제한 프리뷰 6월 26일, 일반 발표 7월 9일, 국내 화면 확인 7월 10일</td></tr>
+            <tr><td>수치</td><td>확정</td><td>본문 수치는 OpenAI 공식 표와 독립 평가 설명에 있는 값만 사용</td></tr>
+            <tr><td>이해관계</td><td>표시</td><td>벤치마크 점수·비용 추정은 OpenAI 발표이며 실제 사용 결과는 달라질 수 있음</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Sol·Terra·Luna는 무엇이 다른가</h2>
+        <table class="analysis-table">
+          <caption>GPT-5.6 제품군과 API 정가</caption>
+          <thead>
+            <tr><th>모델</th><th>역할</th><th>입력 / 100만 토큰</th><th>출력 / 100만 토큰</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>GPT-5.6 Sol</td><td>최고 성능, 복잡한 코딩·전문 업무</td><td>$5</td><td>$30</td></tr>
+            <tr><td>GPT-5.6 Terra</td><td>일상 업무와 비용의 균형</td><td>$2.50</td><td>$15</td></tr>
+            <tr><td>GPT-5.6 Luna</td><td>가장 빠르고 저렴한 대량 처리</td><td>$1</td><td>$6</td></tr>
+          </tbody>
+        </table>
+        <p>
+          이름만 다른 미니 모델 세트가 아니다. OpenAI는 Sol·Terra·Luna를 앞으로도 각자의 주기로 발전하는 지속적인 성능 계층이라고 설명한다. 사용자 입장에서는 “가장 좋은 모델 하나”를 고르는 문제보다, 업무의 가치와 시간·비용을 맞추는 일이 더 중요해졌다.
+        </p>
+
+        <h2>얼마나 강력해졌나: GPT-5.5 대비 상승폭</h2>
+        <figure class="article-figure">
+          <img src="../assets/gpt-5-6-performance-delta.svg" width="1200" height="720" loading="lazy" alt="GPT-5.6이 GPT-5.5보다 ExploitBench 25.6점, OSWorld 15.1점, BrowseComp Ultra 7.8점, Terminal-Bench Ultra 6.3점, Agents Last Exam 5.8점, Coding Agent Index 3.6점 높은 그래프">
+          <figcaption>OpenAI 공식 발표 표의 점수를 바탕으로 직접 재구성했다. Ultra 값은 기본 네 에이전트 구성이다. 높은 상승폭을 보인 대표 항목만 그렸으며 전체 능력을 하나의 순위로 일반화하지 않는다.</figcaption>
+        </figure>
+        <p>
+          가장 눈에 띄는 변화는 컴퓨터 사용과 사이버 평가다. OSWorld 2.0은 GPT-5.5의 47.5%에서 Sol 62.6%로 올랐고, ExploitBench는 47.9%에서 73.5%로 상승했다. 장시간 전문 업무를 보는 Agents' Last Exam은 46.9%에서 52.7%로, 코딩 에이전트 종합 지수는 76.4에서 80.0으로 높아졌다.
+        </p>
+
+        <h2>사용자가 보낸 세 그래프는 무엇을 말하나</h2>
+        <p>
+          아래 세 화면은 같은 Agents' Last Exam 결과를 비용, 지연시간, 출력 토큰이라는 서로 다른 축으로 본 것이다. 핵심은 최고 점수 하나가 아니라 <strong>점수-비용-시간의 전선이 동시에 이동했는가</strong>다. GPT-5.6 Sol의 점들은 경쟁 모델보다 높은 점수 구간을 더 낮은 비용과 더 적은 지연·출력 토큰으로 접근하는 모양을 보인다.
+        </p>
+
+        <figure class="article-figure narrow source-image-panel">
+          <img src="../assets/gpt-5-6-ale-cost.png" width="543" height="542" loading="lazy" alt="Agents Last Exam 점수와 API 비용을 비교한 OpenAI 공식 그래프 화면">
+          <figcaption><strong>비용 축.</strong> OpenAI 공식 발표의 인터랙티브 그래프를 제공받아 인용했다. 비용은 생산 환경을 시뮬레이션한 추정치이므로 실제 청구액과 다를 수 있다.</figcaption>
+        </figure>
+        <figure class="article-figure narrow source-image-panel">
+          <img src="../assets/gpt-5-6-ale-latency.png" width="543" height="542" loading="lazy" alt="Agents Last Exam 점수와 시뮬레이션 지연시간을 비교한 OpenAI 공식 그래프 화면">
+          <figcaption><strong>지연시간 축.</strong> 지연시간 역시 시뮬레이션 값이다. 점수만 높고 완료가 지나치게 느린 모델인지 함께 볼 수 있다.</figcaption>
+        </figure>
+        <figure class="article-figure narrow source-image-panel">
+          <img src="../assets/gpt-5-6-ale-output-tokens.png" width="544" height="542" loading="lazy" alt="Agents Last Exam 점수와 출력 토큰을 비교한 OpenAI 공식 그래프 화면">
+          <figcaption><strong>출력 토큰 축.</strong> 같은 수준의 일을 더 적은 토큰으로 끝내는지가 API 비용과 에이전트 왕복 횟수에 직접 연결된다. 세 캡처의 원출처는 <a href="https://openai.com/index/gpt-5-6/">OpenAI GPT-5.6 공식 페이지</a>다.</figcaption>
+        </figure>
+
+        <h2>Ultra는 단순히 더 오래 생각하는 모드가 아니다</h2>
+        <p>
+          <code>max</code>는 한 모델이 더 오래 탐색하고 검토하도록 계산 시간을 늘린다. <code>ultra</code>는 구조가 다르다. 기본적으로 네 에이전트가 병렬 작업 흐름을 맡고, 루트 에이전트가 결과를 종합한다. OpenAI 표에서 BrowseComp는 Sol 90.4%에서 Ultra 92.2%, Terminal-Bench 2.1은 88.8%에서 91.9%, SEC-Bench Pro는 71.2%에서 74.3%로 올라간다.
+        </p>
+        <p>
+          대가는 분명하다. 병렬 에이전트의 모든 토큰이 합산되므로 사용량이 커질 수 있다. Ultra는 이메일 한 줄이나 단순 요약을 위한 모드가 아니라, 조사·코딩·검증을 동시에 돌릴 가치가 있는 고난도 업무에 맞는다.
+        </p>
+
+        <figure class="article-figure source-image-panel">
+          <img src="../assets/gpt-5-6-codex-ultra.png" width="1003" height="670" loading="lazy" alt="Codex 데스크톱 앱에서 GPT-5.6 Sol 울트라가 선택된 실제 화면">
+          <figcaption><strong>국내 실제 배포 화면.</strong> 2026년 7월 10일 제공받은 Codex 데스크톱 캡처에서 GPT-5.6 Sol Ultra 선택 상태가 확인된다. 계정·플랜·순차 배포에 따라 메뉴는 다를 수 있다.</figcaption>
+        </figure>
+
+        <h2>반대 해석: 모든 평가를 압도한 것은 아니다</h2>
+        <p>
+          “GPT-5.6이 모든 면에서 무조건 1등”이라고 쓰면 공식 표와도 맞지 않는다. Artificial Analysis Intelligence Index v4.1에서는 Sol 58.9가 Claude Fable 5의 59.9보다 1점 낮다. FrontierMath Tier 4에서도 Sol 83.0%가 Fable 87.8%에 뒤지고, Toolathlon은 Sol 58.0%가 Fable 61.7%보다 낮다.
+        </p>
+        <p>
+          따라서 더 정확한 결론은 이렇다. GPT-5.6의 강점은 모든 단일 시험의 절대 1위가 아니라, 코딩·컴퓨터 사용·장시간 전문 업무에서 높은 성능과 비용·시간 효율을 함께 끌어올린 데 있다. 특히 실제 업무에서 모델이 끝까지 도구를 사용하고 결과물을 다듬는 능력이 이번 세대의 중심이다.
+        </p>
+
+        <h2>한국 독자에게 미치는 영향</h2>
+        <p>
+          개발자는 Sol을 항상 고정하기보다 Terra와 Luna를 작업 큐에 섞어 비용을 관리할 수 있다. 기업은 문서·스프레드시트·브라우저 자동화의 완성도가 올라가는 만큼, 파일 접근권·외부 전송·승인 절차를 더 구체적으로 설계해야 한다. 사이버 성능의 큰 상승은 방어 업무에는 기회지만, 고위험 기능에 신원 확인과 강화된 계정 보안이 붙는 이유이기도 하다.
+        </p>
+
+        <h2>시각 자료와 저작권 판단</h2>
+        <p>
+          공식 페이지의 이미지를 대량 저장하지 않았다. 이 글에는 사용자가 직접 제공한 발표 화면과 비교 그래프를 비평·해설에 필요한 범위로만 사용했고, 원출처 링크와 권리자를 캡션에 표시했다. 언론사 사진, 유료 차트, Getty·Reuters·AP 이미지는 저장하거나 재게시하지 않았다. 자체 그래프는 공식 공개 표의 수치만으로 새로 그렸다.
+        </p>
+
+        <table class="analysis-table">
+          <caption>자체 제작 그래프 5단계 검증</caption>
+          <thead><tr><th>단계</th><th>결과</th><th>확인 내용</th></tr></thead>
+          <tbody>
+            <tr><td>데이터</td><td>통과</td><td>여섯 평가의 GPT-5.6·GPT-5.5 점수를 공식 표와 대조</td></tr>
+            <tr><td>계산</td><td>통과</td><td>각 상승폭을 원점수 차이로 재계산</td></tr>
+            <tr><td>의미</td><td>통과</td><td>선택된 대표 평가임을 제목과 캡션에 명시</td></tr>
+            <tr><td>시각</td><td>통과</td><td>축·단위·원점수·상승폭을 함께 표시하고 모바일에서 축소되도록 구성</td></tr>
+            <tr><td>출처</td><td>통과</td><td>그래프 하단과 출처 섹션에 OpenAI 공식 발표를 표시</td></tr>
+          </tbody>
+        </table>
+
+        <section class="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">출처와 확인 링크</h2>
+          <ul>
+            <li><a href="https://openai.com/index/gpt-5-6/">OpenAI: GPT-5.6 공식 발표, 전체 벤치마크, 가격, 제공 범위</a></li>
+            <li><a href="https://deploymentsafety.openai.com/gpt-5-6">OpenAI Deployment Safety Hub: GPT-5.6 시스템 카드</a></li>
+            <li><a href="https://agents-last-exam.org/">Agents' Last Exam: 55개 산업의 장시간 전문 업무 평가 설명</a></li>
+            <li><a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index">Artificial Analysis: 독립 Intelligence Index 방법론과 순위</a></li>
+            <li><a href="https://www.axios.com/2026/07/09/ai-openai-gpt-release">Axios: GPT-5.6·ChatGPT Work 출시와 반대 평가</a></li>
+            <li><a href="https://www.marketscreener.com/news/openai-gets-us-approval-for-broad-gpt-5-6-rollout-axios-reports-ce7f5ed8df81f020">Reuters: GPT-5.6 일반 공개 시점과 이전 제한 배포 맥락</a></li>
+            <li><a href="https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/">TechCrunch: 제한 프리뷰, 모델 구성, 가격, 안전 맥락</a></li>
+          </ul>
+        </section>
+
+        <section class="sources" aria-labelledby="image-title">
+          <h2 id="image-title">이미지·표 참고 링크</h2>
+          <ul>
+            <li><a href="https://openai.com/index/gpt-5-6/">OpenAI 공식 인터랙티브 그래프와 전체 시각 예제</a></li>
+            <li><a href="https://agents-last-exam.org/">Agents' Last Exam 원 평가와 데이터 라이선스 안내</a></li>
+          </ul>
+        </section>
+
+        <section class="source-callout">
+          <p class="eyebrow">발행 전 확인 포인트</p>
+          <p>
+            OpenAI는 24시간에 걸친 순차 배포를 안내했다. 독자의 계정에서 Sol·Terra·Luna, Max·Ultra가 모두 보이지 않더라도 즉시 오류로 단정하지 않는다. 가격은 API 정가이며 ChatGPT 구독 한도와는 별개다. 사이버·생명과학 관련 수치는 안전장치가 줄어든 평가 환경일 수 있으므로 일반 계정의 실제 응답과 동일하다고 해석하지 않는다.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>AI 인사이트 브리프</span>
+      <span>글로벌 AI 뉴스와 해설 · by kikuke</span>
+    </footer>
+  </body>
+</html>
