@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">DeepSeek 상장 준비 보도 발행 판단</title>
+  <desc id="desc">DeepSeek의 상하이 상장 준비 보도에 대한 점수표와 검증 상태</desc>
+  <rect width="920" height="360" fill="#ffffff"/>
+  <text x="34" y="46" fill="#16201c" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">DeepSeek 상장 준비: 발행 판단</text>
+  <text x="34" y="78" fill="#5d6a64" font-family="Segoe UI, Arial, sans-serif" font-size="15">WSJ, Bloomberg 인용 보도 기준, 총점 76/100</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <g transform="translate(34 112)"><text y="0" fill="#16201c" font-weight="700">영향력</text><rect x="170" y="-15" width="300" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="240" height="18" rx="4" fill="#2457d6"/><text x="488" y="0" fill="#16201c">24/30</text></g>
+    <g transform="translate(34 152)"><text y="0" fill="#16201c" font-weight="700">일반 매체 확산도</text><rect x="170" y="-15" width="300" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="130" height="18" rx="4" fill="#18a875"/><text x="488" y="0" fill="#16201c">13/20</text></g>
+    <g transform="translate(34 192)"><text y="0" fill="#16201c" font-weight="700">출처 검증</text><rect x="170" y="-15" width="300" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="150" height="18" rx="4" fill="#18a875"/><text x="488" y="0" fill="#16201c">15/20</text></g>
+    <g transform="translate(34 232)"><text y="0" fill="#16201c" font-weight="700">새로움</text><rect x="170" y="-15" width="150" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="80" height="18" rx="4" fill="#d9951e"/><text x="338" y="0" fill="#16201c">8/10</text></g>
+    <g transform="translate(34 272)"><text y="0" fill="#16201c" font-weight="700">사용자 영향</text><rect x="170" y="-15" width="150" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="70" height="18" rx="4" fill="#d9951e"/><text x="338" y="0" fill="#16201c">7/10</text></g>
+  </g>
+  <g transform="translate(610 122)" font-family="Segoe UI, Arial, sans-serif">
+    <rect width="250" height="150" rx="8" fill="#f5f9ff" stroke="#dce6e1"/>
+    <text x="20" y="38" fill="#2457d6" font-size="15" font-weight="700">검증 게이트</text>
+    <text x="20" y="70" fill="#16201c" font-size="18" font-weight="700">확정</text>
+    <text x="20" y="102" fill="#5d6a64" font-size="14">상장 준비 자체는 2개 이상 보도</text>
+    <text x="20" y="128" fill="#5d6a64" font-size="14">평가액 수치는 범위로만 처리</text>
+  </g>
+</svg>
