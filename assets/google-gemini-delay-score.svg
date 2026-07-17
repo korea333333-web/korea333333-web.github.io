@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">Google Gemini 3.5 Pro 지연 보도 발행 판단</title>
+  <desc id="desc">Gemini 3.5 Pro 출시 지연 보도의 발행 점수와 검증 상태를 항목별 막대로 표시</desc>
+  <rect width="920" height="360" fill="#ffffff"/>
+  <text x="34" y="46" fill="#16201c" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Google Gemini 3.5 Pro 지연: 발행 판단</text>
+  <text x="34" y="78" fill="#5d6a64" font-family="Segoe UI, Arial, sans-serif" font-size="15">2026.07.16 Bloomberg 보도 및 Reuters 확인 기준, 총점 82/100</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <g transform="translate(34 112)"><text y="0" fill="#16201c" font-weight="700">영향력</text><rect x="170" y="-15" width="300" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="250" height="18" rx="4" fill="#2457d6"/><text x="488" y="0" fill="#16201c">25/30</text></g>
+    <g transform="translate(34 152)"><text y="0" fill="#16201c" font-weight="700">일반 매체 확산도</text><rect x="170" y="-15" width="300" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="270" height="18" rx="4" fill="#18a875"/><text x="488" y="0" fill="#16201c">18/20</text></g>
+    <g transform="translate(34 192)"><text y="0" fill="#16201c" font-weight="700">출처 검증</text><rect x="170" y="-15" width="300" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="255" height="18" rx="4" fill="#18a875"/><text x="488" y="0" fill="#16201c">17/20</text></g>
+    <g transform="translate(34 232)"><text y="0" fill="#16201c" font-weight="700">새로움</text><rect x="170" y="-15" width="150" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="120" height="18" rx="4" fill="#d9951e"/><text x="338" y="0" fill="#16201c">8/10</text></g>
+    <g transform="translate(34 272)"><text y="0" fill="#16201c" font-weight="700">사용자 영향</text><rect x="170" y="-15" width="150" height="18" rx="4" fill="#eef5f1"/><rect x="170" y="-15" width="120" height="18" rx="4" fill="#d9951e"/><text x="338" y="0" fill="#16201c">8/10</text></g>
+  </g>
+  <g transform="translate(610 112)" font-family="Segoe UI, Arial, sans-serif">
+    <rect width="250" height="166" rx="8" fill="#f5f9ff" stroke="#dce6e1"/>
+    <text x="20" y="38" fill="#2457d6" font-size="15" font-weight="700">검증 게이트</text>
+    <text x="20" y="72" fill="#16201c" font-size="24" font-weight="700">확정</text>
+    <text x="20" y="106" fill="#5d6a64" font-size="14">Reuters가 Google 답변 포함 보도</text>
+    <text x="20" y="132" fill="#5d6a64" font-size="14">MarketWatch, IBD가 시장 영향 확인</text>
+  </g>
+</svg>
