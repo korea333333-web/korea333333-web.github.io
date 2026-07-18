@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Meta-Anthropic 컴퓨트 협상 판단표</title>
+  <desc id="desc">Meta와 Anthropic의 AI 컴퓨트 임대 협상 보도에 대한 발행 판단 점수</desc>
+  <rect width="960" height="420" fill="#ffffff"/>
+  <text x="40" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#16201c">Meta-Anthropic: AI 컴퓨트 임대 협상</text>
+  <text x="40" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#5d6a64">점수는 기사 선정용 자체 평가입니다. 거래 체결 여부와 금액은 확정하지 않았습니다.</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#16201c">
+    <text x="40" y="140">영향력</text>
+    <rect x="220" y="122" width="250" height="24" rx="4" fill="#2457d6"/>
+    <text x="510" y="140">25 / 30</text>
+    <text x="40" y="184">주요 매체 확산도</text>
+    <rect x="220" y="166" width="160" height="24" rx="4" fill="#18a875"/>
+    <text x="510" y="184">16 / 20</text>
+    <text x="40" y="228">출처 검증</text>
+    <rect x="220" y="210" width="150" height="24" rx="4" fill="#18a875"/>
+    <text x="510" y="228">15 / 20</text>
+    <text x="40" y="272">새로움</text>
+    <rect x="220" y="254" width="80" height="24" rx="4" fill="#d9951e"/>
+    <text x="510" y="272">8 / 10</text>
+    <text x="40" y="316">사용자 영향</text>
+    <rect x="220" y="298" width="80" height="24" rx="4" fill="#d9951e"/>
+    <text x="510" y="316">8 / 10</text>
+    <text x="40" y="360">블로그/도표 적합도</text>
+    <rect x="220" y="342" width="70" height="24" rx="4" fill="#2457d6"/>
+    <text x="510" y="360">7 / 10</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="650" y="128" width="240" height="150" rx="8" fill="#eef5f1" stroke="#dce6e1"/>
+    <text x="680" y="174" font-size="18" font-weight="700" fill="#16201c">총점 79 / 100</text>
+    <text x="680" y="210" font-size="15" fill="#5d6a64">검증 게이트: 확정</text>
+    <text x="680" y="240" font-size="15" fill="#5d6a64">단, 거래는 미체결</text>
+  </g>
+</svg>
