@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">SpaceXAI and Cursor strategic coding flywheel</title>
+  <desc id="desc">A conceptual diagram connecting Cursor's developer workflow, feedback, Grok model improvement, and distribution after the reported acquisition.</desc>
+  <defs>
+    <radialGradient id="space">
+      <stop offset="0" stop-color="#1c3656"/>
+      <stop offset="1" stop-color="#08111f"/>
+    </radialGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0l10 5-10 5z" fill="#64d8cb"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="700" rx="38" fill="url(#space)"/>
+  <g fill="#fff" opacity=".5">
+    <circle cx="92" cy="134" r="2"/><circle cx="1110" cy="98" r="2"/><circle cx="1040" cy="572" r="3"/>
+    <circle cx="188" cy="596" r="2"/><circle cx="958" cy="190" r="2"/><circle cx="330" cy="92" r="2"/>
+  </g>
+  <text x="62" y="78" fill="#fff" font-family="Georgia, serif" font-size="36" font-weight="700">WHY BUY THE WORKFLOW?</text>
+  <text x="62" y="114" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="17">The reported $60B deal is a bet on distribution, user context, and a model-improvement loop.</text>
+
+  <g transform="translate(438 216)">
+    <circle cx="162" cy="132" r="127" fill="#f0b44c" opacity=".14"/>
+    <circle cx="162" cy="132" r="91" fill="#f0b44c"/>
+    <text x="162" y="118" text-anchor="middle" fill="#172030" font-family="Arial, sans-serif" font-size="17" font-weight="700">REPORTED DEAL</text>
+    <text x="162" y="161" text-anchor="middle" fill="#172030" font-family="Georgia, serif" font-size="36" font-weight="700">$60B</text>
+  </g>
+
+  <g transform="translate(62 192)">
+    <rect width="286" height="142" rx="28" fill="#132b43" stroke="#3f6781"/>
+    <text x="24" y="42" fill="#64d8cb" font-family="Arial, sans-serif" font-size="15" font-weight="700">CURSOR</text>
+    <text x="24" y="79" fill="#fff" font-family="Georgia, serif" font-size="25">Developer workflow</text>
+    <text x="24" y="109" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="14">repositories · tools · habits</text>
+  </g>
+  <path d="M350 264C405 224 430 224 475 241" fill="none" stroke="#64d8cb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(852 192)">
+    <rect width="286" height="142" rx="28" fill="#132b43" stroke="#3f6781"/>
+    <text x="24" y="42" fill="#64d8cb" font-family="Arial, sans-serif" font-size="15" font-weight="700">GROK</text>
+    <text x="24" y="79" fill="#fff" font-family="Georgia, serif" font-size="25">Coding capability</text>
+    <text x="24" y="109" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="14">model · agents · evaluation</text>
+  </g>
+  <path d="M725 241c45-17 70-17 125 23" fill="none" stroke="#64d8cb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(62 458)">
+    <rect width="286" height="142" rx="28" fill="#132b43" stroke="#3f6781"/>
+    <text x="24" y="42" fill="#64d8cb" font-family="Arial, sans-serif" font-size="15" font-weight="700">DISTRIBUTION</text>
+    <text x="24" y="79" fill="#fff" font-family="Georgia, serif" font-size="25">Daily developer use</text>
+    <text x="24" y="109" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="14">adoption · retention · revenue</text>
+  </g>
+  <path d="M475 455c-48 17-75 34-128 65" fill="none" stroke="#64d8cb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(852 458)">
+    <rect width="286" height="142" rx="28" fill="#132b43" stroke="#3f6781"/>
+    <text x="24" y="42" fill="#64d8cb" font-family="Arial, sans-serif" font-size="15" font-weight="700">FEEDBACK LOOP</text>
+    <text x="24" y="79" fill="#fff" font-family="Georgia, serif" font-size="25">Real task signals</text>
+    <text x="24" y="109" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="14">failures · preferences · evals</text>
+  </g>
+  <path d="M850 520c-53-31-80-48-125-65" fill="none" stroke="#64d8cb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <path d="M348 561c155 86 349 88 504 0" fill="none" stroke="#f0b44c" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <text x="600" y="652" text-anchor="middle" fill="#a9bdd1" font-family="Arial, sans-serif" font-size="14">Conceptual integration path; the actual data-sharing and product architecture have not been disclosed.</text>
+</svg>

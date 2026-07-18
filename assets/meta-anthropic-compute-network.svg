@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Anthropic의 다중 컴퓨트 공급망</title>
+  <desc id="desc">Meta가 새로운 컴퓨트 공급 후보로 등장하고 Amazon, Google, Microsoft, SpaceX와 함께 Anthropic의 모델 학습과 추론을 지원하는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a2c"/><stop offset="1" stop-color="#123f4a"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".2"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#68d3c0"/></marker>
+  </defs>
+  <rect width="960" height="560" rx="28" fill="url(#bg)"/>
+  <text x="54" y="65" fill="#f5fbff" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="30" font-weight="700">AI 모델 경쟁 뒤의 실제 공급망</text>
+  <text x="54" y="98" fill="#a9c4ce" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="16">Anthropic은 한 회사의 서버가 아니라 여러 칩·클라우드·지역을 조합한다</text>
+  <g filter="url(#shadow)" font-family="Pretendard, Noto Sans KR, sans-serif">
+    <rect x="350" y="205" width="260" height="142" rx="24" fill="#fff7ec"/>
+    <text x="480" y="256" text-anchor="middle" fill="#232323" font-size="28" font-weight="800">Anthropic</text>
+    <text x="480" y="290" text-anchor="middle" fill="#60584f" font-size="17">Claude 학습 · 추론 · API</text>
+    <text x="480" y="320" text-anchor="middle" fill="#b35b20" font-size="15" font-weight="700">수요 증가가 컴퓨트 조달을 확대</text>
+    <g fill="#f7fbfc" stroke="#88b9c2" stroke-width="2">
+      <rect x="55" y="150" width="220" height="82" rx="18"/><rect x="55" y="328" width="220" height="82" rx="18"/>
+      <rect x="685" y="150" width="220" height="82" rx="18"/><rect x="685" y="328" width="220" height="82" rx="18"/>
+      <rect x="370" y="435" width="220" height="78" rx="18" fill="#e4fff7" stroke="#39b99f"/>
+    </g>
+    <g fill="#17313a" text-anchor="middle">
+      <text x="165" y="184" font-size="20" font-weight="700">Amazon AWS</text><text x="165" y="210" font-size="14">Trainium · 최대 5GW</text>
+      <text x="165" y="362" font-size="20" font-weight="700">Google Cloud</text><text x="165" y="388" font-size="14">TPU · 모델 배포</text>
+      <text x="795" y="184" font-size="20" font-weight="700">Microsoft Azure</text><text x="795" y="210" font-size="14">Nvidia 기반 용량</text>
+      <text x="795" y="362" font-size="20" font-weight="700">SpaceX 계열</text><text x="795" y="388" font-size="14">Colossus GPU 용량</text>
+      <text x="480" y="466" font-size="21" font-weight="800">Meta · 협상 중</text><text x="480" y="492" font-size="14">잠재 2년 최대 100억 달러</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#68d3c0" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M275 191 C320 191 320 230 350 250"/><path d="M275 369 C320 369 320 330 350 310"/>
+    <path d="M685 191 C640 191 640 230 610 250"/><path d="M685 369 C640 369 640 330 610 310"/>
+    <path d="M480 435 L480 352"/>
+  </g>
+  <text x="54" y="535" fill="#8fb0ba" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="13">공식 발표와 2026년 7월 17일 보도 기준 · 계약 조건은 확정 전</text>
+</svg>

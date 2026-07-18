@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.2 architecture changes for one-million-token context</title>
+  <desc id="desc">A conceptual flow from long context through shared sparse-attention indexers and improved speculative decoding to long-horizon agent work.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0l10 5-10 5z" fill="#d7442f"/>
+    </marker>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#d9d0c1" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="720" rx="38" fill="#15282f"/>
+  <rect x="28" y="28" width="1144" height="664" rx="28" fill="url(#grid)" opacity=".28"/>
+  <text x="64" y="84" fill="#f8f0df" font-family="Georgia, serif" font-size="36" font-weight="700">FROM LONG CONTEXT TO LONG WORK</text>
+  <text x="64" y="119" fill="#a9c0c5" font-family="Arial, sans-serif" font-size="17">GLM-5.2 architecture claims, reconstructed from the official technical note</text>
+
+  <g transform="translate(64 174)">
+    <rect width="210" height="188" rx="26" fill="#f4efe4"/>
+    <text x="24" y="42" fill="#d7442f" font-family="Arial, sans-serif" font-size="15" font-weight="700">INPUT WINDOW</text>
+    <text x="24" y="98" fill="#15282f" font-family="Georgia, serif" font-size="48" font-weight="700">1M</text>
+    <text x="24" y="130" fill="#52616a" font-family="Arial, sans-serif" font-size="17">tokens</text>
+    <path d="M24 155h162" stroke="#d8cdbb"/>
+    <text x="24" y="178" fill="#52616a" font-family="Arial, sans-serif" font-size="13">coding-agent trajectories</text>
+  </g>
+  <path d="M286 268h56" stroke="#d7442f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(356 154)">
+    <rect width="270" height="228" rx="26" fill="#fffdf8"/>
+    <text x="24" y="42" fill="#d7442f" font-family="Arial, sans-serif" font-size="15" font-weight="700">INDEXSHARE</text>
+    <g transform="translate(24 67)">
+      <rect width="222" height="27" rx="8" fill="#d7442f"/>
+      <rect y="38" width="222" height="27" rx="8" fill="#d9b44a"/>
+      <rect y="76" width="222" height="27" rx="8" fill="#d9b44a"/>
+      <rect y="114" width="222" height="27" rx="8" fill="#d9b44a"/>
+      <path d="M18 14v114" stroke="#15282f" stroke-width="3" stroke-dasharray="5 5"/>
+    </g>
+    <text x="24" y="216" fill="#52616a" font-family="Arial, sans-serif" font-size="14">one indexer shared by 4 layers</text>
+  </g>
+  <path d="M638 268h56" stroke="#d7442f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(708 154)">
+    <rect width="210" height="228" rx="26" fill="#f4efe4"/>
+    <text x="24" y="42" fill="#d7442f" font-family="Arial, sans-serif" font-size="15" font-weight="700">COMPUTE</text>
+    <text x="24" y="104" fill="#15282f" font-family="Georgia, serif" font-size="46" font-weight="700">2.9x</text>
+    <text x="24" y="137" fill="#52616a" font-family="Arial, sans-serif" font-size="15">fewer indexer FLOPs</text>
+    <path d="M24 162h162" stroke="#d8cdbb"/>
+    <text x="24" y="190" fill="#52616a" font-family="Arial, sans-serif" font-size="14">at 1M context</text>
+  </g>
+  <path d="M930 268h56" stroke="#d7442f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1000 174)">
+    <rect width="136" height="188" rx="26" fill="#d7442f"/>
+    <text x="20" y="43" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700">MTP</text>
+    <text x="20" y="95" fill="#fff" font-family="Georgia, serif" font-size="40" font-weight="700">+20%</text>
+    <text x="20" y="126" fill="#ffe9de" font-family="Arial, sans-serif" font-size="13">acceptance</text>
+    <text x="20" y="148" fill="#ffe9de" font-family="Arial, sans-serif" font-size="13">length</text>
+  </g>
+
+  <g transform="translate(64 446)">
+    <rect width="1072" height="150" rx="28" fill="#203b44" stroke="#45616a"/>
+    <text x="30" y="45" fill="#d9b44a" font-family="Arial, sans-serif" font-size="16" font-weight="700">SERVING BOTTLENECK MOVES</text>
+    <text x="30" y="84" fill="#f8f0df" font-family="Georgia, serif" font-size="28">KV-cache capacity  +  long-context kernels  +  CPU scheduling</text>
+    <path d="M30 106h1012" stroke="#45616a"/>
+    <text x="30" y="133" fill="#a9c0c5" font-family="Arial, sans-serif" font-size="15">Architecture savings do not remove memory and orchestration costs; the inference engine still matters.</text>
+  </g>
+
+  <text x="64" y="649" fill="#a9c0c5" font-family="Arial, sans-serif" font-size="14">Source: Z.ai, “GLM-5.2: Built for Long-Horizon Tasks” · company claims under stated test conditions</text>
+</svg>

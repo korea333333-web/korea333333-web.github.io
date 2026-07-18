@@ -46,19 +46,11 @@
           </p>
         </section>
 
-        <figure class="article-figure source-image-panel">
-          <img src="https://jkf87.github.io/anthropic-agent-loop-app-builder-2026-06-22-og-image.webp" alt="Anthropic 에이전트 루프 앱 빌더 글의 대표 이미지">
-          <figcaption>
-            참고 이미지: 코난쌤 블로그의 Anthropic 에이전트 루프 글 대표 이미지.
-            <a href="https://jkf87.github.io/anthropic-agent-loop-app-builder-2026-06-22">원문 보기</a>
-          </figcaption>
-        </figure>
-
-        <section class="source-callout" aria-label="추가 업데이트">
-          <p class="eyebrow">2026.06.23 Update</p>
+        <section class="source-callout" aria-label="역할 분리">
+          <p class="eyebrow">Role Design</p>
           <h2>Anthropic식 루프의 핵심은 역할 분리다</h2>
           <p>
-            참고 글에서 가장 보강할 만한 지점은 “긴 시간 돌리는 에이전트는 한 명의 만능 작업자가 아니라 작은 조직처럼 설계된다”는 점이다.
+            긴 시간 돌리는 에이전트는 한 명의 만능 작업자가 아니라 작은 조직처럼 설계할수록 안정적이다.
             Planner는 요구를 스펙으로 바꾸고, Generator는 실제 산출물을 만들고, Evaluator는 브라우저와 테스트, 로그를 보며 결과를 압박한다.
             이 셋이 같은 기억과 같은 성격을 공유하면 자기합리화가 생기기 쉽다. 그래서 좋은 하니스는 역할, 컨텍스트, 권한, 종료 조건을 분리한다.
           </p>
@@ -67,7 +59,9 @@
         <figure class="article-figure">
           <img src="../assets/agent-loop-planner-generator-evaluator.svg" alt="Planner, Generator, Evaluator로 나뉜 에이전트 루프 구조도">
           <figcaption>
-            Planner, Generator, Evaluator를 나누면 “스스로 잘했는지 봐”가 아니라 “다른 역할이 실제 실행 결과로 검증해”가 된다.
+            <a href="https://docs.anthropic.com/en/docs/claude-code/sub-agents">Anthropic의 subagent 문서</a>와
+            <a href="https://jkf87.github.io/anthropic-agent-loop-app-builder-2026-06-22">에이전트 루프 사례</a>를 바탕으로 재구성한 자체 구조도.
+            역할을 나누면 같은 에이전트의 자기평가 대신 별도 실행 결과로 검증할 수 있다.
           </figcaption>
         </figure>
 

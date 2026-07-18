@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">G7 AI 거버넌스의 공통 최소선</title>
+  <desc id="desc">G7 국가가 안전 평가와 사고 공유, 평가기관 기준을 공통으로 두고 데이터와 조달, 군사 사용은 국가별 규칙을 유지하는 구조</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ecf4f8"/><stop offset="1" stop-color="#fff4df"/></linearGradient><filter id="s"><feDropShadow dy="7" stdDeviation="10" flood-opacity=".12"/></filter></defs>
+  <rect width="1200" height="650" rx="30" fill="url(#bg)"/>
+  <text x="65" y="78" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#1c3447">분열을 막는 현실적 방법: 같은 법보다 공통 최소선</text>
+  <text x="65" y="118" font-family="Arial, sans-serif" font-size="18" fill="#60717d">에비앙 G7의 AI 안전·개방성·상호운용성 논점을 재구성</text>
+  <g font-family="Arial, sans-serif" filter="url(#s)">
+    <rect x="70" y="190" width="310" height="170" rx="24" fill="#fff"/><text x="225" y="238" text-anchor="middle" font-size="23" font-weight="700" fill="#2c6a83">미국</text><text x="225" y="282" text-anchor="middle" font-size="17" fill="#62717a">수출통제 · 안보 검토</text><text x="225" y="316" text-anchor="middle" font-size="17" fill="#62717a">정부 조달 · 모델 접근</text>
+    <rect x="445" y="190" width="310" height="170" rx="24" fill="#fff"/><text x="600" y="238" text-anchor="middle" font-size="23" font-weight="700" fill="#936a22">유럽</text><text x="600" y="282" text-anchor="middle" font-size="17" fill="#62717a">위험 기반 법률 · 개인정보</text><text x="600" y="316" text-anchor="middle" font-size="17" fill="#62717a">투명성 · 기본권</text>
+    <rect x="820" y="190" width="310" height="170" rx="24" fill="#fff"/><text x="975" y="238" text-anchor="middle" font-size="23" font-weight="700" fill="#3e7657">일본·기타 G7</text><text x="975" y="282" text-anchor="middle" font-size="17" fill="#62717a">산업 도입 · 자율 규범</text><text x="975" y="316" text-anchor="middle" font-size="17" fill="#62717a">국가별 추가 기준</text>
+    <rect x="150" y="430" width="900" height="135" rx="28" fill="#1c3447"/><text x="600" y="474" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">G7 공통 바닥</text><text x="600" y="515" text-anchor="middle" font-size="18" fill="#d9e8f2">고위험 능력 평가 · 중대 사고 공유 · 평가기관 기준 · 콘텐츠 출처</text><text x="600" y="546" text-anchor="middle" font-size="16" fill="#a9c8da">그 위에 각국의 데이터·조달·군사 사용 규칙을 추가</text>
+  </g>
+  <g stroke="#82909a" stroke-width="5" fill="none"><path d="M225 360 V430"/><path d="M600 360 V430"/><path d="M975 360 V430"/></g><g fill="#82909a"><path d="M213 420 l12 20 12-20z"/><path d="M588 420 l12 20 12-20z"/><path d="M963 420 l12 20 12-20z"/></g>
+</svg>

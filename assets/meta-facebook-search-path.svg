@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Facebook AI Mode 검색 흐름</title>
+  <desc id="desc">공개 게시물, 그룹, 릴스가 검색 질문과 결합해 AI 답변과 후속 질문으로 이어지는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf7ff"/><stop offset="1" stop-color="#fff7e8"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1200" height="620" rx="32" fill="url(#bg)"/>
+  <text x="70" y="82" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#13213c">Facebook AI Mode는 무엇을 답변 재료로 쓰나</text>
+  <text x="70" y="122" font-family="Arial, sans-serif" font-size="19" fill="#52617a">Meta 공식 발표와 기술 매체 설명을 바탕으로 재구성</text>
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="70" y="185" width="245" height="105" rx="20" fill="#fff"/>
+    <text x="192" y="230" text-anchor="middle" font-size="22" font-weight="700" fill="#1666d8">공개 게시물</text><text x="192" y="262" text-anchor="middle" font-size="17" fill="#52617a">의견 · 경험 · 추천</text>
+    <rect x="70" y="320" width="245" height="105" rx="20" fill="#fff"/>
+    <text x="192" y="365" text-anchor="middle" font-size="22" font-weight="700" fill="#1666d8">공개 그룹</text><text x="192" y="397" text-anchor="middle" font-size="17" fill="#52617a">지역 · 취미 · 생활 정보</text>
+    <rect x="70" y="455" width="245" height="105" rx="20" fill="#fff"/>
+    <text x="192" y="500" text-anchor="middle" font-size="22" font-weight="700" fill="#1666d8">릴스와 공개 콘텐츠</text><text x="192" y="532" text-anchor="middle" font-size="17" fill="#52617a">영상 속 발견 정보</text>
+    <rect x="445" y="280" width="310" height="180" rx="28" fill="#1769e0"/>
+    <text x="600" y="342" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">자연어 질문</text><text x="600" y="382" text-anchor="middle" font-size="18" fill="#dceaff">Meta AI가 공개 정보를</text><text x="600" y="414" text-anchor="middle" font-size="18" fill="#dceaff">찾고 요약해 답변 구성</text>
+    <rect x="885" y="235" width="245" height="130" rx="22" fill="#fff"/>
+    <text x="1007" y="285" text-anchor="middle" font-size="22" font-weight="700" fill="#cf6714">대화형 답변</text><text x="1007" y="318" text-anchor="middle" font-size="17" fill="#52617a">링크 목록보다 요약 중심</text>
+    <rect x="885" y="405" width="245" height="130" rx="22" fill="#fff"/>
+    <text x="1007" y="455" text-anchor="middle" font-size="22" font-weight="700" fill="#cf6714">후속 질문</text><text x="1007" y="488" text-anchor="middle" font-size="17" fill="#52617a">조건을 좁혀 다시 탐색</text>
+  </g>
+  <g stroke="#6a7890" stroke-width="4" fill="none" stroke-linecap="round"><path d="M315 238 C390 238 395 325 445 340"/><path d="M315 372 H445"/><path d="M315 507 C390 507 395 430 445 415"/><path d="M755 350 C820 350 825 300 885 300"/><path d="M1007 365 V405"/></g>
+  <g fill="#6a7890"><path d="M438 332 l16 8 -14 11z"/><path d="M438 365 l16 8 -16 8z"/><path d="M438 407 l16 8 -14 11z"/><path d="M878 293 l16 8 -14 11z"/><path d="M999 398 l8 16 8-16z"/></g>
+</svg>

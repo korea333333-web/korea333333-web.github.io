@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">뉴욕 데이터센터 허가 중단과 정책 설계</title>
+  <desc id="desc">50메가와트 이상 신규 시설의 환경 허가를 최대 1년 멈추고 전력, 물, 환경, 지역 비용 기준을 만드는 흐름</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f0e8"/><stop offset="1" stop-color="#e8f4f2"/></linearGradient><filter id="s"><feDropShadow dy="7" stdDeviation="10" flood-opacity=".12"/></filter></defs>
+  <rect width="1200" height="650" rx="30" fill="url(#bg)"/>
+  <text x="70" y="78" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#16342f">뉴욕의 1년 멈춤은 무엇을 설계하는 시간인가</text>
+  <text x="70" y="116" font-family="Arial, sans-serif" font-size="18" fill="#596b68">2026년 7월 14일 행정명령 기준 · 50MW 이상 신규 하이퍼스케일 시설</text>
+  <g font-family="Arial, sans-serif" filter="url(#s)">
+    <rect x="70" y="195" width="280" height="250" rx="26" fill="#173f38"/>
+    <text x="210" y="250" text-anchor="middle" font-size="25" font-weight="700" fill="#fff">허가 일시 중단</text>
+    <text x="210" y="302" text-anchor="middle" font-size="20" fill="#d6ece7">신규 시설 50MW+</text>
+    <text x="210" y="342" text-anchor="middle" font-size="20" fill="#d6ece7">최대 1년</text>
+    <text x="210" y="392" text-anchor="middle" font-size="17" fill="#acd4cb">AI 개발 금지가 아니라</text>
+    <text x="210" y="421" text-anchor="middle" font-size="17" fill="#acd4cb">주 환경 허가의 멈춤</text>
+  </g>
+  <path d="M350 320 H440" stroke="#8a6b3e" stroke-width="6"/><path d="M430 307 l22 13 -22 13z" fill="#8a6b3e"/>
+  <g font-family="Arial, sans-serif" filter="url(#s)">
+    <rect x="470" y="165" width="250" height="125" rx="22" fill="#fff"/><text x="595" y="215" text-anchor="middle" font-size="22" font-weight="700" fill="#b65a22">전력망·요금</text><text x="595" y="250" text-anchor="middle" font-size="17" fill="#58635f">증설비를 누가 부담하나</text>
+    <rect x="770" y="165" width="250" height="125" rx="22" fill="#fff"/><text x="895" y="215" text-anchor="middle" font-size="22" font-weight="700" fill="#167a84">물·냉각</text><text x="895" y="250" text-anchor="middle" font-size="17" fill="#58635f">취수와 재이용 기준</text>
+    <rect x="470" y="345" width="250" height="125" rx="22" fill="#fff"/><text x="595" y="395" text-anchor="middle" font-size="22" font-weight="700" fill="#4e6f35">환경·배출</text><text x="595" y="430" text-anchor="middle" font-size="17" fill="#58635f">대기·소음·청정전력</text>
+    <rect x="770" y="345" width="250" height="125" rx="22" fill="#fff"/><text x="895" y="395" text-anchor="middle" font-size="22" font-weight="700" fill="#7950a1">지역 편익</text><text x="895" y="430" text-anchor="middle" font-size="17" fill="#58635f">세수·고용·비용 보증</text>
+    <rect x="470" y="525" width="550" height="70" rx="20" fill="#c26a2e"/><text x="745" y="568" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">1년 뒤 목표: 비용을 숨기지 않는 예측 가능한 허가 규칙</text>
+  </g>
+  <g stroke="#9a8870" stroke-width="4" fill="none"><path d="M595 290 V345"/><path d="M895 290 V345"/><path d="M595 470 V525"/><path d="M895 470 V525"/></g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">AI 가치 사슬의 두 축</title>
+  <desc id="desc">Nvidia의 데이터센터 인프라와 Apple의 소비자 기기 및 서비스 유통 구조를 비교한다</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6f0e5"/><stop offset="1" stop-color="#e5eef4"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-opacity=".16"/></filter></defs>
+  <rect width="960" height="560" rx="28" fill="url(#bg)"/>
+  <text x="50" y="62" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="30" font-weight="800" fill="#17242b">AI 가치는 한 곳에서만 만들어지지 않는다</text>
+  <text x="50" y="94" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="16" fill="#53636c">인프라를 파는 회사와 AI를 일상 제품에 연결하는 회사의 서로 다른 수익 경로</text>
+  <g font-family="Pretendard, Noto Sans KR, sans-serif" filter="url(#s)">
+    <rect x="50" y="135" width="400" height="340" rx="26" fill="#111c16"/>
+    <text x="86" y="184" fill="#8fe36c" font-size="25" font-weight="800">NVIDIA</text>
+    <text x="86" y="217" fill="#d5e8d9" font-size="17">계산 인프라의 가치</text>
+    <g fill="#1f3026" stroke="#4f7d5c"><rect x="86" y="252" width="328" height="52" rx="12"/><rect x="86" y="318" width="328" height="52" rx="12"/><rect x="86" y="384" width="328" height="52" rx="12"/></g>
+    <g fill="#f0fff4" font-size="16"><text x="108" y="285">GPU · 네트워크 · CUDA</text><text x="108" y="351">클라우드와 AI 연구소의 자본지출</text><text x="108" y="417">모델 학습과 대규모 추론</text></g>
+    <rect x="510" y="135" width="400" height="340" rx="26" fill="#ffffff"/>
+    <text x="546" y="184" fill="#20262a" font-size="25" font-weight="800">APPLE</text>
+    <text x="546" y="217" fill="#59646a" font-size="17">제품 유통의 가치</text>
+    <g fill="#f3f5f6" stroke="#c7d0d5"><rect x="546" y="252" width="328" height="52" rx="12"/><rect x="546" y="318" width="328" height="52" rx="12"/><rect x="546" y="384" width="328" height="52" rx="12"/></g>
+    <g fill="#29343a" font-size="16"><text x="568" y="285">iPhone · Mac · 자체 칩</text><text x="568" y="351">Siri AI · 앱 · 서비스 구독</text><text x="568" y="417">사용자 접점과 기기 교체</text></g>
+  </g>
+  <path d="M450 305 C475 285 485 285 510 305 M510 335 C485 355 475 355 450 335" fill="none" stroke="#d28239" stroke-width="4"/>
+  <text x="480" y="520" text-anchor="middle" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="15" fill="#5d6d75">시가총액 순위보다 중요한 질문: AI 투자 비용을 누가 반복 매출로 바꾸는가</text>
+</svg>

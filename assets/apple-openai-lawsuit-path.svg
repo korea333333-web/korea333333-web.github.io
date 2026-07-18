@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Apple과 OpenAI 영업비밀 소송의 절차</title>
+  <desc id="desc">Apple의 주장, OpenAI의 부인, 증거개시, 금지명령과 본안 판단으로 이어지는 법적 흐름</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f4f2"/><stop offset="1" stop-color="#eaf1f7"/></linearGradient><filter id="s"><feDropShadow dy="7" stdDeviation="10" flood-opacity=".13"/></filter></defs>
+  <rect width="1200" height="630" rx="30" fill="url(#bg)"/>
+  <text x="65" y="78" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#20252d">소송 제기와 사실 확정은 다르다</text>
+  <text x="65" y="118" font-family="Arial, sans-serif" font-size="18" fill="#68717d">현재 단계에서 구분해야 할 주장·항변·법원 판단</text>
+  <g font-family="Arial, sans-serif" filter="url(#s)">
+    <rect x="65" y="190" width="300" height="180" rx="24" fill="#20252d"/><text x="215" y="240" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">Apple의 주장</text><text x="215" y="288" text-anchor="middle" font-size="17" fill="#d9dde2">기밀 정보 취득·사용 유도</text><text x="215" y="320" text-anchor="middle" font-size="17" fill="#d9dde2">사용 금지·반환·손해배상 요구</text>
+    <rect x="65" y="410" width="300" height="130" rx="24" fill="#fff"/><text x="215" y="458" text-anchor="middle" font-size="23" font-weight="700" fill="#376a93">OpenAI의 항변</text><text x="215" y="500" text-anchor="middle" font-size="17" fill="#66717d">영업비밀에 관심 없으며 독자 개발</text>
+    <rect x="470" y="235" width="280" height="250" rx="26" fill="#b76a3d"/><text x="610" y="290" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">법원이 확인할 것</text><text x="610" y="342" text-anchor="middle" font-size="17" fill="#ffe7da">비밀의 구체성과 보호 조치</text><text x="610" y="378" text-anchor="middle" font-size="17" fill="#ffe7da">취득·사용과 개발 기록</text><text x="610" y="414" text-anchor="middle" font-size="17" fill="#ffe7da">회복하기 어려운 손해</text><text x="610" y="450" text-anchor="middle" font-size="17" fill="#ffe7da">양측 피해와 공익</text>
+    <rect x="855" y="190" width="280" height="160" rx="24" fill="#fff"/><text x="995" y="240" text-anchor="middle" font-size="23" font-weight="700" fill="#755126">긴급 구제</text><text x="995" y="282" text-anchor="middle" font-size="17" fill="#68717d">특정 자료 사용 금지</text><text x="995" y="314" text-anchor="middle" font-size="17" fill="#68717d">증거 보존·업무 제한 가능</text>
+    <rect x="855" y="400" width="280" height="160" rx="24" fill="#fff"/><text x="995" y="450" text-anchor="middle" font-size="23" font-weight="700" fill="#3a745b">본안 판단</text><text x="995" y="492" text-anchor="middle" font-size="17" fill="#68717d">책임·손해·영구 금지 범위</text><text x="995" y="524" text-anchor="middle" font-size="17" fill="#68717d">합의 가능성도 남음</text>
+  </g>
+  <g stroke="#7e8792" stroke-width="5" fill="none"><path d="M365 280 H470"/><path d="M365 475 C425 475 420 420 470 410"/><path d="M750 315 H855"/><path d="M750 410 C805 420 805 475 855 480"/></g><g fill="#7e8792"><path d="M460 267 l20 13 -20 13z"/><path d="M460 397 l20 13 -20 13z"/><path d="M845 302 l20 13 -20 13z"/><path d="M845 467 l20 13 -20 13z"/></g>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.2 long-horizon benchmark comparison</title>
+  <desc id="desc">Company-published results for FrontierSWE, PostTrainBench, and SWE-Marathon, comparing GLM-5.2 with GPT-5.5 and Claude Opus 4.8.</desc>
+  <rect width="1200" height="720" rx="38" fill="#f4efe4"/>
+  <path d="M0 0h1200v18H0z" fill="#d7442f"/>
+  <text x="64" y="82" fill="#1b2b34" font-family="Georgia, serif" font-size="36" font-weight="700">LONG-HORIZON WORK</text>
+  <text x="64" y="118" fill="#52616a" font-family="Arial, sans-serif" font-size="18">Three tests, one consistent comparison set</text>
+
+  <g transform="translate(64 164)">
+    <rect width="1072" height="132" rx="24" fill="#fffdf8" stroke="#d8cdbb"/>
+    <text x="28" y="40" fill="#1b2b34" font-family="Arial, sans-serif" font-size="19" font-weight="700">FrontierSWE</text>
+    <text x="28" y="69" fill="#68757b" font-family="Arial, sans-serif" font-size="14">Dominance score</text>
+    <g transform="translate(280 20)">
+      <rect width="230" height="92" rx="18" fill="#d7442f"/>
+      <text x="22" y="32" fill="#fff" font-family="Arial, sans-serif" font-size="15">GLM-5.2</text>
+      <text x="22" y="75" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700">74.4</text>
+    </g>
+    <g transform="translate(528 20)">
+      <rect width="230" height="92" rx="18" fill="#223f49"/>
+      <text x="22" y="32" fill="#dce8e8" font-family="Arial, sans-serif" font-size="15">GPT-5.5</text>
+      <text x="22" y="75" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700">72.6</text>
+    </g>
+    <g transform="translate(776 20)">
+      <rect width="268" height="92" rx="18" fill="#d9b44a"/>
+      <text x="22" y="32" fill="#382f15" font-family="Arial, sans-serif" font-size="15">Claude Opus 4.8</text>
+      <text x="22" y="75" fill="#1b2b34" font-family="Georgia, serif" font-size="38" font-weight="700">75.1</text>
+    </g>
+  </g>
+
+  <g transform="translate(64 316)">
+    <rect width="1072" height="132" rx="24" fill="#fffdf8" stroke="#d8cdbb"/>
+    <text x="28" y="40" fill="#1b2b34" font-family="Arial, sans-serif" font-size="19" font-weight="700">PostTrainBench</text>
+    <text x="28" y="69" fill="#68757b" font-family="Arial, sans-serif" font-size="14">Model-improvement task</text>
+    <g transform="translate(280 20)">
+      <rect width="230" height="92" rx="18" fill="#d7442f"/>
+      <text x="22" y="32" fill="#fff" font-family="Arial, sans-serif" font-size="15">GLM-5.2</text>
+      <text x="22" y="75" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700">34.3</text>
+    </g>
+    <g transform="translate(528 20)">
+      <rect width="230" height="92" rx="18" fill="#223f49"/>
+      <text x="22" y="32" fill="#dce8e8" font-family="Arial, sans-serif" font-size="15">GPT-5.5</text>
+      <text x="22" y="75" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700">28.4</text>
+    </g>
+    <g transform="translate(776 20)">
+      <rect width="268" height="92" rx="18" fill="#d9b44a"/>
+      <text x="22" y="32" fill="#382f15" font-family="Arial, sans-serif" font-size="15">Claude Opus 4.8</text>
+      <text x="22" y="75" fill="#1b2b34" font-family="Georgia, serif" font-size="38" font-weight="700">37.2</text>
+    </g>
+  </g>
+
+  <g transform="translate(64 468)">
+    <rect width="1072" height="132" rx="24" fill="#fffdf8" stroke="#d8cdbb"/>
+    <text x="28" y="40" fill="#1b2b34" font-family="Arial, sans-serif" font-size="19" font-weight="700">SWE-Marathon</text>
+    <text x="28" y="69" fill="#68757b" font-family="Arial, sans-serif" font-size="14">Resolution rate</text>
+    <g transform="translate(280 20)">
+      <rect width="230" height="92" rx="18" fill="#d7442f"/>
+      <text x="22" y="32" fill="#fff" font-family="Arial, sans-serif" font-size="15">GLM-5.2</text>
+      <text x="22" y="75" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700">13.0</text>
+    </g>
+    <g transform="translate(528 20)">
+      <rect width="230" height="92" rx="18" fill="#223f49"/>
+      <text x="22" y="32" fill="#dce8e8" font-family="Arial, sans-serif" font-size="15">GPT-5.5</text>
+      <text x="22" y="75" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700">12.0</text>
+    </g>
+    <g transform="translate(776 20)">
+      <rect width="268" height="92" rx="18" fill="#d9b44a"/>
+      <text x="22" y="32" fill="#382f15" font-family="Arial, sans-serif" font-size="15">Claude Opus 4.8</text>
+      <text x="22" y="75" fill="#1b2b34" font-family="Georgia, serif" font-size="38" font-weight="700">26.0</text>
+    </g>
+  </g>
+
+  <text x="64" y="657" fill="#52616a" font-family="Arial, sans-serif" font-size="15">Source: Z.ai GLM-5.2 release table · company-published results</text>
+  <text x="64" y="684" fill="#7c6c5b" font-family="Arial, sans-serif" font-size="14">Different tests use different harnesses and metrics; this is not a universal model ranking.</text>
+</svg>

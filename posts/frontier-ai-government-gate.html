@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AI 모델도 이제 정부 게이트를 지난다 - AI 인사이트 브리핑</title>
-    <meta name="description" content="OpenAI GPT-5.6 제한 공개와 Anthropic Mythos 5 제한 재개를 통해 프런티어 AI 배포권, 정부 검토, 소버린 AI의 의미를 분석합니다.">
+    <meta name="description" content="GPT-5.6의 제한 공개와 뒤이은 규제 해제, Anthropic 모델 접근 논쟁을 통해 정부 검토가 프런티어 AI 배포권과 기업 운영에 미치는 영향을 분석한다.">
     <link rel="stylesheet" href="../assets/styles.css">
   </head>
   <body>
@@ -37,7 +37,11 @@
 
         <figure class="article-figure">
           <img src="../assets/frontier-ai-government-gate.svg" alt="프런티어 AI 모델 배포에서 정부 검토가 게이트 역할을 하는 구조도">
-          <figcaption>이번 이슈의 핵심은 성능 경쟁보다 배포권과 접근권의 변화다.</figcaption>
+          <figcaption>
+            프런티어 모델이 기업의 안전 평가와 정부 협의, 제한 배포를 거쳐 공개되는 흐름을 재구성했다.
+            근거: <a href="https://www.axios.com/2026/06/25/trump-administration-openai-gpt-model-release">Axios의 초기 제한 보도</a>,
+            <a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI 공식 프리뷰</a>.
+          </figcaption>
         </figure>
 
         <section class="source-callout">
@@ -101,7 +105,72 @@
           국제 동맹 구조까지 포함하는 문제로 확장된다.
         </p>
 
-        <h2>냉정한 경고</h2>
+        <h2>7월 8일 후속 상황: 제한은 풀렸지만 전례는 남았다</h2>
+        <p>
+          이 글의 최초 발행 뒤 상황이 바뀌었다. Axios는 7월 8일 미국 행정부가 GPT-5.6의 더 넓은 공개를 허용했다고 보도했다.
+          따라서 6월의 제한을 영구적인 사전허가 제도로 묘사하면 부정확하다. 실제 사건은 초기 고객을 제한한 단계적 공개였고,
+          이후 범위가 확대된 일시적 개입에 가깝다.
+        </p>
+        <p>
+          이 후속 조치는 동시에 중요한 법적 긴장을 드러냈다. Axios 보도는 연방정부가 모델 출시를 의무적으로 사전 허가하는 상설 제도를
+          공식화한 것은 아니라고 전한다. 정부가 안보 우려를 제기하고 회사가 자발적으로 협조하는 방식과, 법률에 근거한 강제 허가제는
+          구분해야 한다.
+        </p>
+        <p>
+          그럼에도 전례는 남았다. 정부의 우려만으로 출시 일정과 초기 고객이 달라질 수 있다는 사실을 기업과 이용자가 확인했기 때문이다.
+          다음 모델에서도 비슷한 협의가 반복될지, 어떤 능력 기준에서 제한이 시작되는지, 결정에 이의를 제기할 절차가 있는지가 핵심이다.
+        </p>
+
+        <h2>왜 사이버 능력이 배포 기준을 바꾸나</h2>
+        <p>
+          프런티어 모델은 코드 작성과 취약점 분석 능력이 좋아질수록 방어와 공격 양쪽에 쓰일 수 있다. 보안팀은 패치를 빠르게 만들 수 있지만,
+          공격자는 대규모 스캔·피싱·악성코드 수정을 자동화할 수 있다. 위험은 모델이 단독으로 해킹한다는 과장보다, 숙련도가 낮은 공격자의
+          속도와 규모를 얼마나 올리는지에 있다.
+        </p>
+        <p>
+          제한 공개는 이런 능력을 실제 환경에서 시험하고 악용 징후를 관찰할 시간을 번다. 신원 확인, 사용량 제한, 위험 요청 차단, 로그 보존,
+          사고 대응 채널을 갖춘 고객에게 먼저 열면 공개 배포보다 통제하기 쉽다. 반면 소수 승인 고객만 접근하면 독립 연구자와 중소기업의
+          검증 기회가 줄고, 정부와 대기업이 성능 우위를 먼저 누리는 문제가 생긴다.
+        </p>
+
+        <h2>좋은 게이트는 기준과 종료 조건이 보여야 한다</h2>
+        <p>
+          정부 검토가 정당성을 얻으려면 ‘강력해 보여서’가 아니라 측정 가능한 능력 기준이 필요하다. 고난도 취약점 발견, 악성코드 변형,
+          생물학적 설계 지원처럼 구체적 평가에서 어느 수준을 넘으면 어떤 완화 조치를 요구하는지 공개해야 한다. 민감한 세부 시험은 감출 수
+          있어도 절차와 책임 주체까지 비밀이어서는 안 된다.
+        </p>
+        <p>
+          제한에는 종료 조건도 필요하다. 안전장치가 검증되거나 위험이 낮아지면 접근을 넓히고, 그렇지 않으면 어떤 추가 조치가 필요한지 알려야 한다.
+          기한 없이 ‘승인된 파트너’만 쓰게 하면 안전 정책이 시장 진입 장벽으로 변한다. 대기업과 정부기관만 최신 모델을 먼저 쓰는 격차가
+          누적될 수 있다.
+        </p>
+        <p>
+          독립 평가기관의 역할도 중요하다. 개발사 자체 시험만으로 출시 여부를 정하면 이해충돌이 있고, 정부만 평가하면 정치적 목적이 개입될 수 있다.
+          공인된 제3자가 표준 시험을 수행하고 결과 요약을 공개하며, 사고 발생 뒤 평가 방법을 고치는 체계가 더 지속 가능하다.
+        </p>
+
+        <h2>기업 고객은 모델 성능보다 중단 계획을 준비해야 한다</h2>
+        <p>
+          기업은 최신 모델을 핵심 업무에 연결하기 전에 지역별 이용 가능성, 버전 유지 기간, 정부 요청에 따른 중단 조항과 데이터 반출 조건을
+          계약서에서 확인해야 한다. 모델이 하루아침에 사라져도 이전 버전이나 다른 공급자로 전환할 수 있도록 프롬프트·평가셋·로그를 특정
+          플랫폼에 종속되지 않게 관리하는 편이 안전하다.
+        </p>
+        <p>
+          특히 금융·의료·공공·국방은 ‘최고 성능’ 하나를 선택하는 전략보다 임무별 대체 경로를 설계해야 한다. 제한 모델은 고난도 분석에 쓰고,
+          일상 업무는 공개 범위가 넓고 운영이 안정적인 모델로 분리하면 접근 정책 변화의 충격을 줄일 수 있다.
+        </p>
+
+        <h2>한국이 준비할 현실적인 소버린 AI</h2>
+        <p>
+          모든 프런티어 모델을 국내에서 처음부터 만드는 것은 비용과 시간이 크다. 대신 공공·산업 핵심 업무에서 국내 데이터 보관, 모델 교체,
+          독립 평가, 최소 운영 능력을 확보하는 전략이 현실적이다. 해외 모델을 적극 활용하되 접근이 제한될 때 멈추지 않는 구조를 갖추는 것이다.
+        </p>
+        <p>
+          정부는 동맹국으로서 접근 협의를 강화하는 동시에 국내 모델과 컴퓨팅을 ‘보험’으로 유지해야 한다. 기업에는 특정 공급자 종속도를 공개하도록
+          하고, 공공 조달에서는 표준 API와 데이터 이동성, 감사 로그를 요구할 수 있다. 소버린 AI의 핵심은 국적보다 최종 통제권이다.
+        </p>
+
+        <h2>내가 보는 핵심</h2>
         <p>
           이 흐름은 “AI가 폐쇄적으로 변한다”는 단순한 불만으로 끝낼 일이 아니다. 프런티어 AI가 사이버보안, 생물학, 군사,
           국가 인프라와 연결될수록 정부 개입은 더 강해질 가능성이 높다. 문제는 그 과정에서 투명한 기준이 없으면 혁신의
@@ -121,6 +190,9 @@
             <li><a href="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview">The Verge: OpenAI unveils GPT-5.6 amid US AI regulatory drama</a></li>
             <li><a href="https://www.theguardian.com/technology/2026/jun/26/openai-ai-model-release-trump-us-sam-altman-gpt-anthropic-mythos">The Guardian: OpenAI staggers AI model release after Trump administration request</a></li>
             <li><a href="https://www.wired.com/story/anthropic-restores-access-to-mythos">Wired: Trump Administration Allows Anthropic to Release Mythos to Select US Organizations</a></li>
+            <li><a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI: Previewing GPT-5.6 Sol</a></li>
+            <li><a href="https://www.axios.com/2026/07/08/openai-gpt-trump-ban-lifted">Axios: U.S. restrictions on the broader GPT-5.6 launch were lifted</a></li>
+            <li><a href="https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/">TechCrunch: the White House request and customer-by-customer preview</a></li>
           </ul>
         </section>
 

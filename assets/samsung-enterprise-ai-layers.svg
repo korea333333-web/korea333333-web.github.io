@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Samsung enterprise multi-model AI deployment layers</title>
+  <desc id="desc">A layered diagram of employee access, multiple AI models, business workflows, and enterprise governance.</desc>
+  <rect width="1200" height="700" rx="38" fill="#eef3f7"/>
+  <circle cx="1070" cy="92" r="180" fill="#0b57d0" opacity=".08"/>
+  <circle cx="95" cy="645" r="210" fill="#00a6a6" opacity=".08"/>
+  <text x="62" y="78" fill="#102a43" font-family="Georgia, serif" font-size="36" font-weight="700">ENTERPRISE AI IS A LAYER, NOT ONE APP</text>
+  <text x="62" y="114" fill="#506b7d" font-family="Arial, sans-serif" font-size="17">Samsung's announced approach combines broad access, multiple models, workflow use, and control.</text>
+
+  <g transform="translate(62 160)">
+    <rect width="1076" height="104" rx="24" fill="#102a43"/>
+    <text x="28" y="34" fill="#7de0dc" font-family="Arial, sans-serif" font-size="14" font-weight="700">WHO GETS ACCESS</text>
+    <text x="28" y="75" fill="#fff" font-family="Georgia, serif" font-size="27">Korea employees  +  global DX division</text>
+    <rect x="822" y="24" width="224" height="56" rx="16" fill="#203e55"/>
+    <text x="846" y="59" fill="#fff" font-family="Arial, sans-serif" font-size="15">scope must stay precise</text>
+  </g>
+
+  <g transform="translate(62 286)">
+    <text x="0" y="24" fill="#0b57d0" font-family="Arial, sans-serif" font-size="14" font-weight="700">MODEL ACCESS</text>
+    <g transform="translate(0 42)">
+      <rect width="328" height="112" rx="22" fill="#fff" stroke="#c9d7e1"/>
+      <text x="24" y="44" fill="#102a43" font-family="Arial, sans-serif" font-size="20" font-weight="700">ChatGPT + Codex</text>
+      <text x="24" y="76" fill="#506b7d" font-family="Arial, sans-serif" font-size="14">general work and coding</text>
+    </g>
+    <g transform="translate(374 42)">
+      <rect width="328" height="112" rx="22" fill="#fff" stroke="#c9d7e1"/>
+      <text x="24" y="44" fill="#102a43" font-family="Arial, sans-serif" font-size="20" font-weight="700">Gemini</text>
+      <text x="24" y="76" fill="#506b7d" font-family="Arial, sans-serif" font-size="14">another external model path</text>
+    </g>
+    <g transform="translate(748 42)">
+      <rect width="328" height="112" rx="22" fill="#fff" stroke="#c9d7e1"/>
+      <text x="24" y="44" fill="#102a43" font-family="Arial, sans-serif" font-size="20" font-weight="700">Claude</text>
+      <text x="24" y="76" fill="#506b7d" font-family="Arial, sans-serif" font-size="14">multi-model optionality</text>
+    </g>
+  </g>
+
+  <g transform="translate(62 474)">
+    <text x="0" y="24" fill="#00a6a6" font-family="Arial, sans-serif" font-size="14" font-weight="700">WORKFLOWS</text>
+    <g transform="translate(0 42)" font-family="Arial, sans-serif">
+      <rect width="244" height="92" rx="20" fill="#d9f1ef"/>
+      <text x="24" y="39" fill="#104b4b" font-size="18" font-weight="700">R&amp;D</text>
+      <text x="24" y="66" fill="#3e6868" font-size="13">requirements · tests</text>
+    </g>
+    <g transform="translate(270 42)" font-family="Arial, sans-serif">
+      <rect width="244" height="92" rx="20" fill="#d9f1ef"/>
+      <text x="24" y="39" fill="#104b4b" font-size="18" font-weight="700">Software</text>
+      <text x="24" y="66" fill="#3e6868" font-size="13">code · review · debug</text>
+    </g>
+    <g transform="translate(540 42)" font-family="Arial, sans-serif">
+      <rect width="244" height="92" rx="20" fill="#d9f1ef"/>
+      <text x="24" y="39" fill="#104b4b" font-size="18" font-weight="700">Operations</text>
+      <text x="24" y="66" fill="#3e6868" font-size="13">analysis · documentation</text>
+    </g>
+    <g transform="translate(810 42)" font-family="Arial, sans-serif">
+      <rect width="266" height="92" rx="20" fill="#d9f1ef"/>
+      <text x="24" y="39" fill="#104b4b" font-size="18" font-weight="700">Office work</text>
+      <text x="24" y="66" fill="#3e6868" font-size="13">research · automation</text>
+    </g>
+  </g>
+
+  <g transform="translate(62 628)">
+    <rect width="1076" height="38" rx="19" fill="#0b57d0"/>
+    <text x="24" y="25" fill="#fff" font-family="Arial, sans-serif" font-size="14">ONE CONTROL PLANE: identity · data policy · evaluation · logs · human approval · cost</text>
+  </g>
+</svg>

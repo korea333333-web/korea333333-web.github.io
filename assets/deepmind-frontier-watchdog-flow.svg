@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">프런티어 AI 사전검사 구조</title><desc id="desc">AI 연구소, 독립 표준기구, 정부 감독, 출시 조건 사이의 관계</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#e7eef5"/></linearGradient><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#315d7b"/></marker></defs>
+  <rect width="960" height="560" rx="28" fill="url(#bg)"/><g font-family="Pretendard, Noto Sans KR, sans-serif">
+    <text x="52" y="63" font-size="30" font-weight="800" fill="#142b3b">프런티어 AI는 어떤 문을 통과해야 하나</text><text x="52" y="96" font-size="16" fill="#536b7a">Hassabis가 제안한 업계 재원 + 독립 검사 + 정부 감독 모델</text>
+    <rect x="65" y="190" width="205" height="135" rx="22" fill="#1d4058"/><text x="167" y="235" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">AI 연구소</text><text x="167" y="269" text-anchor="middle" fill="#c9dce8" font-size="15">모델·평가자료 제출</text><text x="167" y="297" text-anchor="middle" fill="#c9dce8" font-size="15">검사 비용 공동 부담</text>
+    <rect x="375" y="165" width="250" height="185" rx="28" fill="#fff" stroke="#2e7095" stroke-width="3"/><text x="500" y="215" text-anchor="middle" fill="#17364a" font-size="22" font-weight="800">독립 표준기구</text><text x="500" y="252" text-anchor="middle" fill="#445f70" font-size="15">사이버 · 생물안보 · 자율성</text><text x="500" y="281" text-anchor="middle" fill="#445f70" font-size="15">공통 기준으로 사전 평가</text><rect x="424" y="304" width="152" height="28" rx="14" fill="#dff2e6"/><text x="500" y="324" text-anchor="middle" fill="#27603d" font-size="13" font-weight="700">전문가 중심 운영</text>
+    <rect x="715" y="190" width="180" height="135" rx="22" fill="#e9c46a"/><text x="805" y="235" text-anchor="middle" fill="#3d3215" font-size="21" font-weight="800">정부 감독</text><text x="805" y="269" text-anchor="middle" fill="#5b4c28" font-size="15">법적 권한·감사</text><text x="805" y="297" text-anchor="middle" fill="#5b4c28" font-size="15">시장 접근 규칙</text>
+    <path d="M270 257H370" stroke="#315d7b" stroke-width="4" marker-end="url(#a)"/><path d="M715 257H630" stroke="#315d7b" stroke-width="4" marker-end="url(#a)"/>
+    <path d="M500 350V408" stroke="#315d7b" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="235" y="420" width="530" height="82" rx="22" fill="#183c31"/><text x="500" y="454" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">출시 · 완화조치 · 지연 · 접근 제한</text><text x="500" y="482" text-anchor="middle" fill="#c9e4d9" font-size="14">처음에는 자발적 검토, 향후 의무 기준으로 발전 가능</text>
+  </g>
+</svg>

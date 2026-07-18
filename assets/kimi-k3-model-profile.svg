@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Kimi K3 모델 프로필</title>
+  <desc id="desc">Kimi K3의 2.8조 파라미터, 100만 토큰 문맥, 멀티모달 기능, 가중치 공개 계획을 정리한 도식</desc>
+  <defs><radialGradient id="bg"><stop stop-color="#29376f"/><stop offset="1" stop-color="#11172f"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="960" height="560" rx="28" fill="url(#bg)"/>
+  <g font-family="Pretendard, Noto Sans KR, sans-serif">
+    <text x="52" y="62" fill="#fff" font-size="31" font-weight="800">Kimi K3 · Open Frontier Profile</text>
+    <text x="52" y="96" fill="#aebcf1" font-size="16">공식 발표 수치와 공개 일정 기준</text>
+    <circle cx="480" cy="295" r="116" fill="#5d6cff" opacity=".2" filter="url(#glow)"/>
+    <circle cx="480" cy="295" r="90" fill="#192552" stroke="#8e9bff" stroke-width="3"/>
+    <text x="480" y="282" text-anchor="middle" fill="#fff" font-size="29" font-weight="800">KIMI K3</text>
+    <text x="480" y="317" text-anchor="middle" fill="#b9c4ff" font-size="16">Moonshot AI</text>
+    <g fill="#202c59" stroke="#6878c9" stroke-width="2">
+      <rect x="55" y="150" width="260" height="105" rx="20"/><rect x="645" y="150" width="260" height="105" rx="20"/>
+      <rect x="55" y="350" width="260" height="105" rx="20"/><rect x="645" y="350" width="260" height="105" rx="20"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="185" y="192" fill="#8df0d1" font-size="29" font-weight="800">2.8T</text><text x="185" y="226" fill="#e1e6ff" font-size="15">전체 파라미터</text>
+      <text x="775" y="192" fill="#ffcf70" font-size="29" font-weight="800">1M</text><text x="775" y="226" fill="#e1e6ff" font-size="15">토큰 컨텍스트</text>
+      <text x="185" y="392" fill="#f0a2ff" font-size="24" font-weight="800">TEXT + VISION</text><text x="185" y="426" fill="#e1e6ff" font-size="15">네이티브 멀티모달</text>
+      <text x="775" y="392" fill="#8df0d1" font-size="24" font-weight="800">JUL 27</text><text x="775" y="426" fill="#e1e6ff" font-size="15">전체 가중치 공개 예정</text>
+    </g>
+    <g stroke="#8e9bff" stroke-width="2" fill="none" stroke-dasharray="6 6"><path d="M315 205 L397 250"/><path d="M645 205 L563 250"/><path d="M315 402 L397 340"/><path d="M645 402 L563 340"/></g>
+    <rect x="260" y="493" width="440" height="38" rx="19" fill="#ffffff" opacity=".08"/>
+    <text x="480" y="518" text-anchor="middle" fill="#d9e0ff" font-size="14">코딩 · 지식 업무 · 장문 추론 · 이미지 이해</text>
+  </g>
+</svg>

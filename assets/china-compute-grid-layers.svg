@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">중국 전국 AI 컴퓨팅망의 네 층</title>
+  <desc id="desc">서부의 전력과 데이터센터, 전국 통신망과 스케줄링, 동부의 AI 수요, 국산 칩과 소프트웨어 공급망을 연결한 구조</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff4e6"/><stop offset="1" stop-color="#edf5f1"/></linearGradient><filter id="s"><feDropShadow dy="7" stdDeviation="10" flood-opacity=".13"/></filter></defs>
+  <rect width="1200" height="660" rx="30" fill="url(#bg)"/>
+  <text x="65" y="76" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#402821">중국의 AI 컴퓨팅망은 데이터센터보다 ‘조정 시스템’이 핵심</text>
+  <text x="65" y="116" font-family="Arial, sans-serif" font-size="18" fill="#735f58">보도된 2조 위안 구상과 기존 동수서산 정책을 연결한 개념도</text>
+  <g font-family="Arial, sans-serif" filter="url(#s)">
+    <rect x="70" y="190" width="240" height="300" rx="26" fill="#b95a36"/><text x="190" y="245" text-anchor="middle" font-size="25" font-weight="700" fill="#fff">서부 허브</text><text x="190" y="295" text-anchor="middle" font-size="18" fill="#ffe1d5">전력 · 토지 · 냉각</text><text x="190" y="330" text-anchor="middle" font-size="18" fill="#ffe1d5">대규모 학습</text><text x="190" y="382" text-anchor="middle" font-size="16" fill="#ffcab8">낮은 가동률과</text><text x="190" y="410" text-anchor="middle" font-size="16" fill="#ffcab8">장거리 전송이 과제</text>
+    <rect x="385" y="190" width="290" height="300" rx="26" fill="#fff"/><text x="530" y="245" text-anchor="middle" font-size="25" font-weight="700" fill="#2f5e56">전국 조정망</text><text x="530" y="295" text-anchor="middle" font-size="18" fill="#64736f">통신사 고속망</text><text x="530" y="330" text-anchor="middle" font-size="18" fill="#64736f">작업 스케줄링</text><text x="530" y="365" text-anchor="middle" font-size="18" fill="#64736f">용량 거래 · 표준</text><text x="530" y="420" text-anchor="middle" font-size="16" fill="#a15b32">서로 다른 칩과 데이터의</text><text x="530" y="448" text-anchor="middle" font-size="16" fill="#a15b32">호환성이 승부처</text>
+    <rect x="750" y="190" width="240" height="300" rx="26" fill="#377b70"/><text x="870" y="245" text-anchor="middle" font-size="25" font-weight="700" fill="#fff">동부 수요</text><text x="870" y="295" text-anchor="middle" font-size="18" fill="#d9f0eb">기업 · 연구소 · 도시</text><text x="870" y="330" text-anchor="middle" font-size="18" fill="#d9f0eb">실시간 추론</text><text x="870" y="382" text-anchor="middle" font-size="16" fill="#b9ded7">지연시간과 데이터</text><text x="870" y="410" text-anchor="middle" font-size="16" fill="#b9ded7">이동 제한이 과제</text>
+  </g>
+  <g stroke="#7f756c" stroke-width="6" fill="none"><path d="M310 340 H385"/><path d="M675 340 H750"/></g><g fill="#7f756c"><path d="M375 327 l20 13 -20 13z"/><path d="M740 327 l20 13 -20 13z"/></g>
+  <rect x="165" y="540" width="870" height="72" rx="22" fill="#342f2d"/><text x="600" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">공급 기반: 국산 AI 칩 · HBM · 서버 · 네트워크 · 컴파일러</text><text x="600" y="598" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e7d8d1">보도된 목표는 핵심 기술의 최소 80% 중국 공급망 조달</text>
+</svg>

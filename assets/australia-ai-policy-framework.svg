@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">호주 AI 국가 프레임의 세 축</title><desc id="desc">정부 조정, 데이터센터 책임, 창작자 권리를 연결한 정책 구조</desc>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#072f49"/><stop offset="1" stop-color="#11655b"/></linearGradient></defs><rect width="960" height="560" rx="28" fill="url(#sky)"/>
+  <g font-family="Pretendard, Noto Sans KR, sans-serif"><text x="52" y="64" fill="#fff" font-size="30" font-weight="800">호주가 AI 정책을 묶은 방식</text><text x="52" y="97" fill="#b7dbd4" font-size="16">모델만이 아니라 전력·물·토지·창작물의 비용까지 한 프레임으로</text>
+    <circle cx="480" cy="298" r="92" fill="#f4c85b"/><text x="480" y="286" text-anchor="middle" fill="#153c37" font-size="22" font-weight="800">Australian</text><text x="480" y="318" text-anchor="middle" fill="#153c37" font-size="22" font-weight="800">AI Framework</text>
+    <g fill="#f9fcfb"><rect x="70" y="175" width="255" height="180" rx="24"/><rect x="635" y="175" width="255" height="180" rx="24"/><rect x="352" y="410" width="256" height="100" rx="24"/></g>
+    <g fill="#173d46"><text x="197" y="220" text-anchor="middle" font-size="21" font-weight="800">정부 조정</text><text x="197" y="255" text-anchor="middle" font-size="15">Office of AI</text><text x="197" y="284" text-anchor="middle" font-size="15">국가 표준 · 인허가</text><text x="197" y="313" text-anchor="middle" font-size="15">부처 간 정책 통합</text>
+      <text x="762" y="220" text-anchor="middle" font-size="21" font-weight="800">데이터센터 책임</text><text x="762" y="255" text-anchor="middle" font-size="15">신규 전력 공급</text><text x="762" y="284" text-anchor="middle" font-size="15">연결비용 · 수요반응</text><text x="762" y="313" text-anchor="middle" font-size="15">물 효율 · 입지</text>
+      <text x="480" y="449" text-anchor="middle" font-size="20" font-weight="800">창작자 권리</text><text x="480" y="481" text-anchor="middle" font-size="15">통제권 · 가격 결정 · 저작권</text></g>
+    <g stroke="#7fd8c3" stroke-width="4" fill="none"><path d="M325 265L390 280"/><path d="M635 265L570 280"/><path d="M480 390V410"/></g>
+  </g>
+</svg>
