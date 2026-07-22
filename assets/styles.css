@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600;700&display=swap");
+
 :root {
   --bg: #f7faf8;
   --surface: #ffffff;
@@ -298,8 +300,11 @@ h3 {
 
 .article h1 {
   max-width: 820px;
-  font-size: clamp(2rem, 4.1vw, 3.25rem);
-  line-height: 1.16;
+  font-family: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-size: clamp(2.05rem, 5.5vw, 3.55rem);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
   word-break: keep-all;
   overflow-wrap: break-word;
   text-wrap: balance;
@@ -644,8 +649,8 @@ h3 {
   }
 
   .article h1 {
-    font-size: 1.85rem;
-    line-height: 1.12;
+    font-size: 2rem;
+    line-height: 1.15;
   }
 
   .analysis-table th,
