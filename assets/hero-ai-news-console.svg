@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">AI news brief background</title>
+  <desc id="desc">Abstract editorial panels and signal lines for the homepage hero.</desc>
+  <rect width="760" height="520" fill="none"/>
+  <g opacity=".96">
+    <rect x="188" y="74" width="478" height="330" rx="22" fill="#ffffff" stroke="#dce6e1"/>
+    <rect x="214" y="104" width="192" height="18" rx="9" fill="#16201c"/>
+    <rect x="214" y="142" width="372" height="10" rx="5" fill="#dce6e1"/>
+    <rect x="214" y="164" width="310" height="10" rx="5" fill="#dce6e1"/>
+    <rect x="214" y="206" width="116" height="74" rx="14" fill="#eef5f1" stroke="#dce6e1"/>
+    <rect x="352" y="206" width="116" height="74" rx="14" fill="#eef5f1" stroke="#dce6e1"/>
+    <rect x="490" y="206" width="116" height="74" rx="14" fill="#eef5f1" stroke="#dce6e1"/>
+    <path d="M236 248h72M374 248h72M512 248h72" stroke="#18a875" stroke-width="8" stroke-linecap="round"/>
+    <rect x="214" y="316" width="392" height="12" rx="6" fill="#dce6e1"/>
+    <rect x="214" y="344" width="322" height="12" rx="6" fill="#dce6e1"/>
+  </g>
+  <g opacity=".86">
+    <rect x="70" y="170" width="214" height="174" rx="20" fill="#16201c"/>
+    <path d="M110 257c25-66 58-66 82 0s57 66 82 0" fill="none" stroke="#f7faf8" stroke-width="12" stroke-linecap="round"/>
+    <rect x="110" y="292" width="88" height="10" rx="5" fill="#18a875"/>
+    <rect x="110" y="316" width="126" height="10" rx="5" fill="#f7faf8" opacity=".72"/>
+  </g>
+  <g fill="none" stroke-linecap="round" opacity=".62">
+    <path d="M92 88h74c38 0 52 21 91 21h73" stroke="#2457d6" stroke-width="4"/>
+    <path d="M498 442h-64c-44 0-58-28-104-28h-88" stroke="#18a875" stroke-width="4"/>
+    <path d="M624 98v48c0 24-18 36-18 62v32" stroke="#d9951e" stroke-width="4"/>
+  </g>
+  <g fill="#16201c" opacity=".18">
+    <circle cx="92" cy="88" r="6"/>
+    <circle cx="330" cy="109" r="6"/>
+    <circle cx="498" cy="442" r="6"/>
+    <circle cx="242" cy="414" r="6"/>
+    <circle cx="624" cy="98" r="6"/>
+    <circle cx="606" cy="240" r="6"/>
+  </g>
+</svg>
