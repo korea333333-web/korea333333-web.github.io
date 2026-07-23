@@ -6,6 +6,11 @@
     <title>AI 인사이트 브리프</title>
     <meta name="description" content="전세계 AI 뉴스와 중국 AI 뉴스를 깊게 분석하는 블로그">
     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+      .post-card-image { min-height: 0; padding: 0; overflow: hidden; }
+      .post-card-image > img { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+      .post-card-body { padding: 22px; }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -46,6 +51,38 @@
           <h2 id="ai-news-title">AI 뉴스</h2>
         </div>
         <div class="post-list">
+          <article class="post-card featured-post post-card-image">
+            <img src="assets/alphabet-ai-infrastructure-hero.png" alt="대규모 데이터센터를 표현한 편집 이미지">
+            <div class="post-card-body">
+              <div class="post-meta">
+                <span>2026.07.23</span>
+                <span>AI 인프라</span>
+              </div>
+              <h3><a href="posts/alphabet-ai-cloud-data-centers-2026-q2.html">구글은 AI를 팔기 시작했다. 이제 병목은 데이터센터다</a></h3>
+              <p>Google Cloud의 82% 성장과 최대 2,050억 달러 설비투자가 말하는 AI 인프라 경쟁을 분석합니다.</p>
+              <div class="tags" aria-label="태그">
+                <span>Alphabet</span>
+                <span>Google Cloud</span>
+                <span>데이터센터</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card featured-post post-card-image">
+            <img src="assets/openai-agent-security-hero.png" alt="네트워크와 보안 경계를 표현한 편집 이미지">
+            <div class="post-card-body">
+              <div class="post-meta">
+                <span>2026.07.23</span>
+                <span>AI 보안</span>
+              </div>
+              <h3><a href="posts/openai-huggingface-agent-security-incident-2026.html">OpenAI 보안사고가 보여준 것: AI 에이전트는 이제 사이버 보안의 변수다</a></h3>
+              <p>사건의 확인된 사실과, 에이전트 도입 기업이 점검해야 할 권한·격리·감사 통제를 정리합니다.</p>
+              <div class="tags" aria-label="태그">
+                <span>OpenAI</span>
+                <span>Hugging Face</span>
+                <span>AI 보안</span>
+              </div>
+            </div>
+          </article>
           <article class="post-card featured-post">
             <div class="post-meta">
               <span>2026.07.22</span>
