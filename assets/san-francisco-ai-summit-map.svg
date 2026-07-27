@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">샌프란시스코 AI 선언 협력 구조</title>
+  <desc id="desc">한국 정부와 국내 기업 글로벌 빅테크가 AI 공급망에서 연결되는 구조도</desc>
+  <rect width="1200" height="520" fill="#f7faf8"/>
+  <rect x="58" y="52" width="1084" height="416" rx="22" fill="#fff" stroke="#dce6e1"/>
+  <g font-family="Segoe UI, Malgun Gothic, Arial, sans-serif">
+    <text x="96" y="112" fill="#18a875" font-size="16" font-weight="800">SAN FRANCISCO AI DECLARATION</text>
+    <text x="96" y="156" fill="#16201c" font-size="34" font-weight="800">한국이 AI 공급망의 어디에 서겠다는 선언인가</text>
+  </g>
+  <g font-family="Segoe UI, Malgun Gothic, Arial, sans-serif">
+    <rect x="96" y="224" width="230" height="112" rx="16" fill="#16201c"/>
+    <text x="126" y="264" fill="#fff" font-size="20" font-weight="800">한국 정부</text>
+    <text x="126" y="294" fill="#dce6e1" font-size="15">AI 생산기지</text>
+    <text x="126" y="320" fill="#dce6e1" font-size="15">글로벌 테스트베드</text>
+    <rect x="414" y="196" width="258" height="168" rx="16" fill="#eef5f1" stroke="#dce6e1"/>
+    <text x="446" y="238" fill="#16201c" font-size="20" font-weight="800">한국 기업</text>
+    <text x="446" y="270" fill="#5d6a64" font-size="15">삼성: 메모리와 파운드리</text>
+    <text x="446" y="298" fill="#5d6a64" font-size="15">SK: HBM과 AI 팩토리</text>
+    <text x="446" y="326" fill="#5d6a64" font-size="15">현대차·네이버: 피지컬 AI</text>
+    <rect x="760" y="196" width="300" height="168" rx="16" fill="#e8f1ff" stroke="#cbd9ff"/>
+    <text x="792" y="238" fill="#16201c" font-size="20" font-weight="800">글로벌 빅테크</text>
+    <text x="792" y="270" fill="#5d6a64" font-size="15">Nvidia: GPU와 AI 팩토리</text>
+    <text x="792" y="298" fill="#5d6a64" font-size="15">OpenAI·Anthropic: 모델</text>
+    <text x="792" y="326" fill="#5d6a64" font-size="15">Broadcom: AI 칩과 ASIC</text>
+  </g>
+  <g stroke="#18a875" stroke-width="5" stroke-linecap="round"><path d="M342 280h54"/><path d="M690 280h52"/></g>
+  <g fill="#18a875"><path d="M396 270l16 10-16 10z"/><path d="M742 270l16 10-16 10z"/></g>
+  <g font-family="Segoe UI, Malgun Gothic, Arial, sans-serif" font-size="14" fill="#5d6a64">
+    <text x="96" y="410">직접 재구성: 정책브리핑·연합뉴스·ZDNet Korea·WSJ·Tom's Hardware 보도를 바탕으로 한 협력 구조도</text>
+    <text x="96" y="438">주의: 9,500억 달러는 확정 매출이 아니라 MOU·LOI·공급 협력·투자 이니셔티브가 섞인 발표 규모로 해석해야 한다.</text>
+  </g>
+</svg>
