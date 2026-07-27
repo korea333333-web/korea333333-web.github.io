@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Opus 5와 Fable 5 API 가격 비교</title>
+  <desc id="desc">100만 토큰당 Opus 5 가격은 입력 5달러, 출력 25달러이고 Fable 5는 입력 10달러, 출력 50달러다.</desc>
+  <rect width="1000" height="650" fill="#f7faf9"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; fill: #14201c; letter-spacing: 0; }
+    .muted { fill: #60706a; }
+    .track { fill: #e3ebe7; }
+    .opus { fill: #0a9b6c; }
+    .fable { fill: #d66a3f; }
+    .rule { stroke: #d6e1dc; stroke-width: 2; }
+  </style>
+  <text x="54" y="72" font-size="34" font-weight="700">가격표는 정확히 절반이다</text>
+  <text x="54" y="112" font-size="21" class="muted">Claude API 표준 가격 · 100만 토큰당 USD</text>
+  <rect x="650" y="56" width="20" height="20" class="opus"/><text x="680" y="73" font-size="19">Opus 5</text>
+  <rect x="800" y="56" width="20" height="20" class="fable"/><text x="830" y="73" font-size="19">Fable 5</text>
+
+  <text x="54" y="224" font-size="26" font-weight="700">입력 토큰</text>
+  <rect x="270" y="188" width="540" height="34" rx="4" class="track"/><rect x="270" y="188" width="270" height="34" rx="4" class="opus"/>
+  <text x="552" y="214" font-size="22" font-weight="800">$5</text>
+  <rect x="270" y="236" width="540" height="34" rx="4" class="track"/><rect x="270" y="236" width="540" height="34" rx="4" class="fable"/>
+  <text x="822" y="262" font-size="22" font-weight="800">$10</text>
+
+  <text x="54" y="394" font-size="26" font-weight="700">출력 토큰</text>
+  <rect x="270" y="358" width="540" height="34" rx="4" class="track"/><rect x="270" y="358" width="270" height="34" rx="4" class="opus"/>
+  <text x="552" y="384" font-size="22" font-weight="800">$25</text>
+  <rect x="270" y="406" width="540" height="34" rx="4" class="track"/><rect x="270" y="406" width="540" height="34" rx="4" class="fable"/>
+  <text x="822" y="432" font-size="22" font-weight="800">$50</text>
+
+  <rect x="54" y="498" width="892" height="82" rx="6" fill="#e6f4ee" stroke="#b8d9cb"/>
+  <text x="82" y="536" font-size="22" font-weight="700" class="opus">Opus 5 표준 단가 = Fable 5의 50%</text>
+  <text x="82" y="566" font-size="17" class="muted">실제 작업비는 사용 토큰과 노력 설정에 따라 달라지므로 항상 정확히 절반인 것은 아니다.</text>
+  <line x1="54" y1="606" x2="946" y2="606" class="rule"/>
+  <text x="946" y="634" text-anchor="end" font-size="16" class="muted">Source: Anthropic, Opus 5 launch page and Fable model page</text>
+</svg>

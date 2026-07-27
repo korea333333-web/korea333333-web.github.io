@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Opus 5 ARC-AGI-3 점수 비교</title>
+  <desc id="desc">Opus 5는 ARC-AGI-3에서 30.16%, GPT-5.6 Sol은 7.78%, Opus 4.8은 1.52%를 기록했다. Fable 5 점수는 공개되지 않았다.</desc>
+  <rect width="1000" height="650" fill="#f7faf9"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; fill: #14201c; letter-spacing: 0; }
+    .muted { fill: #60706a; }
+    .track { fill: #e3ebe7; }
+    .opus { fill: #0a9b6c; }
+    .other { fill: #315fca; }
+    .previous { fill: #8a9691; }
+    .note { fill: #fff0e9; stroke: #e8c4b5; }
+  </style>
+  <text x="54" y="72" font-size="34" font-weight="700">처음 보는 규칙을 푸는 능력에서 큰 도약</text>
+  <text x="54" y="112" font-size="21" class="muted">ARC-AGI-3 Relative Human Action Efficiency · 높은 값이 좋음</text>
+
+  <text x="54" y="214" font-size="23" font-weight="700">Claude Opus 5 · High</text>
+  <rect x="330" y="188" width="560" height="34" rx="4" class="track"/><rect x="330" y="188" width="483" height="34" rx="4" class="opus"/>
+  <text x="825" y="214" font-size="22" font-weight="800">30.16%</text>
+
+  <text x="54" y="312" font-size="23" font-weight="700">GPT-5.6 Sol · Max</text>
+  <rect x="330" y="286" width="560" height="34" rx="4" class="track"/><rect x="330" y="286" width="125" height="34" rx="4" class="other"/>
+  <text x="467" y="312" font-size="22" font-weight="800">7.78%</text>
+
+  <text x="54" y="410" font-size="23" font-weight="700">Claude Opus 4.8 · High</text>
+  <rect x="330" y="384" width="560" height="34" rx="4" class="track"/><rect x="330" y="384" width="24" height="34" rx="4" class="previous"/>
+  <text x="366" y="410" font-size="22" font-weight="800">1.52%</text>
+
+  <rect x="54" y="474" width="892" height="96" rx="6" class="note"/>
+  <text x="82" y="514" font-size="21" font-weight="700">Fable 5와의 직접 비교 수치는 공개되지 않았다</text>
+  <text x="82" y="546" font-size="18" class="muted">따라서 이 항목을 “Opus 5가 Fable 5를 이겼다”는 근거로 사용하지 않는다.</text>
+  <text x="946" y="620" text-anchor="end" font-size="16" class="muted">Source: ARC Prize Foundation, verified results · 2026-07-24</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1060" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Opus 5와 Fable 5 지식 업무 및 에이전트 벤치마크 비교</title>
+  <desc id="desc">검색, 도구 사용, 컴퓨터 조작, 자동화, 전문 의료 평가에서 두 모델의 점수를 비교한다.</desc>
+  <rect width="1000" height="1060" fill="#f7faf9"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; fill: #14201c; letter-spacing: 0; }
+    .muted { fill: #60706a; }
+    .track { fill: #e3ebe7; }
+    .opus { fill: #0a9b6c; }
+    .fable { fill: #d66a3f; }
+    .rule { stroke: #d6e1dc; stroke-width: 2; }
+  </style>
+  <text x="54" y="70" font-size="34" font-weight="700">일상형 에이전트 업무에서는 Opus 5 우세</text>
+  <text x="54" y="110" font-size="21" class="muted">점수 단위: %, 높은 값이 좋음</text>
+  <rect x="596" y="54" width="20" height="20" class="opus"/><text x="626" y="71" font-size="19">Opus 5</text>
+  <rect x="746" y="54" width="20" height="20" class="fable"/><text x="776" y="71" font-size="19">Fable 5</text>
+
+  <g transform="translate(0 150)">
+    <text x="54" y="28" font-size="22" font-weight="650">BrowseComp</text>
+    <rect x="330" y="0" width="560" height="24" rx="4" class="track"/><rect x="330" y="0" width="508" height="24" rx="4" class="opus"/>
+    <text x="850" y="20" font-size="18" font-weight="700">90.8</text>
+    <rect x="330" y="34" width="560" height="24" rx="4" class="track"/><rect x="330" y="34" width="489" height="24" rx="4" class="fable"/>
+    <text x="831" y="54" font-size="18" font-weight="700">87.4</text>
+  </g>
+
+  <g transform="translate(0 292)">
+    <text x="54" y="28" font-size="22" font-weight="650">HLE · 도구 없음</text>
+    <rect x="330" y="0" width="560" height="24" rx="4" class="track"/><rect x="330" y="0" width="315" height="24" rx="4" class="opus"/>
+    <text x="657" y="20" font-size="18" font-weight="700">56.3</text>
+    <rect x="330" y="34" width="560" height="24" rx="4" class="track"/><rect x="330" y="34" width="316" height="24" rx="4" class="fable"/>
+    <text x="658" y="54" font-size="18" font-weight="700">56.5</text>
+  </g>
+
+  <g transform="translate(0 434)">
+    <text x="54" y="28" font-size="22" font-weight="650">HLE · 도구 사용</text>
+    <rect x="330" y="0" width="560" height="24" rx="4" class="track"/><rect x="330" y="0" width="362" height="24" rx="4" class="opus"/>
+    <text x="704" y="20" font-size="18" font-weight="700">64.7</text>
+    <rect x="330" y="34" width="560" height="24" rx="4" class="track"/><rect x="330" y="34" width="358" height="24" rx="4" class="fable"/>
+    <text x="700" y="54" font-size="18" font-weight="700">63.9</text>
+  </g>
+
+  <g transform="translate(0 576)">
+    <text x="54" y="28" font-size="22" font-weight="650">OSWorld 2.0</text>
+    <rect x="330" y="0" width="560" height="24" rx="4" class="track"/><rect x="330" y="0" width="395" height="24" rx="4" class="opus"/>
+    <text x="737" y="20" font-size="18" font-weight="700">70.6</text>
+    <rect x="330" y="34" width="560" height="24" rx="4" class="track"/><rect x="330" y="34" width="370" height="24" rx="4" class="fable"/>
+    <text x="712" y="54" font-size="18" font-weight="700">66.1</text>
+  </g>
+
+  <g transform="translate(54 708)">
+    <rect width="892" height="82" rx="6" fill="#fff7ed" stroke="#e8c4b5"/>
+    <text x="22" y="32" font-size="20" font-weight="700">HealthBench는 직접 비교에서 제외</text>
+    <text x="22" y="62" font-size="17" class="muted">표의 66.0은 각주 11에서 Mythos 5 결과로 명시됐다.</text>
+  </g>
+
+  <g transform="translate(0 860)">
+    <text x="54" y="28" font-size="22" font-weight="650">AutomationBench</text>
+    <rect x="330" y="0" width="560" height="24" rx="4" class="track"/><rect x="330" y="0" width="146" height="24" rx="4" class="opus"/>
+    <text x="488" y="20" font-size="18" font-weight="700">26.0</text>
+    <rect x="330" y="34" width="560" height="24" rx="4" class="track"/><rect x="330" y="34" width="97" height="24" rx="4" class="fable"/>
+    <text x="439" y="54" font-size="18" font-weight="700">17.4</text>
+  </g>
+
+  <line x1="54" y1="978" x2="946" y2="978" class="rule"/>
+  <text x="54" y="1018" font-size="18" class="muted">직접 비교: Opus 5 우세 4개 · Fable 5 우세 1개</text>
+  <text x="946" y="1018" text-anchor="end" font-size="16" class="muted">Source: Anthropic System Card, Table 8.1.A</text>
+</svg>

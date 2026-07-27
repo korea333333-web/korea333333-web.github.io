@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 980" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Opus 5와 Fable 5의 13개 벤치마크 승리 항목 비교</title>
+  <desc id="desc">Anthropic Opus 5 시스템 카드에서 모델명이 확인된 13개 직접 비교 항목 중 Opus 5가 9개, Fable 5가 4개 항목에서 앞섰다.</desc>
+  <rect width="900" height="980" fill="#f7faf9"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; fill: #14201c; letter-spacing: 0; }
+    .muted { fill: #60706a; }
+    .opus { fill: #087f5b; }
+    .fable { fill: #c85c35; }
+    .rule { stroke: #d6e1dc; stroke-width: 2; }
+  </style>
+  <text x="54" y="72" font-size="34" font-weight="700">같은 표에서 직접 비교한 13개 항목</text>
+  <text x="54" y="112" font-size="21" class="muted">높은 점수를 받은 항목 수이며, 단일 종합 순위를 뜻하지 않는다</text>
+
+  <rect x="54" y="158" width="380" height="180" rx="6" fill="#e6f4ee" stroke="#b8d9cb"/>
+  <text x="86" y="206" font-size="22" font-weight="700" class="opus">CLAUDE OPUS 5</text>
+  <text x="84" y="292" font-size="92" font-weight="800" class="opus">9</text>
+  <text x="156" y="286" font-size="25" class="muted">개 항목 우세</text>
+
+  <rect x="466" y="158" width="380" height="180" rx="6" fill="#fff0e9" stroke="#e8c4b5"/>
+  <text x="498" y="206" font-size="22" font-weight="700" class="fable">CLAUDE FABLE 5</text>
+  <text x="496" y="292" font-size="92" font-weight="800" class="fable">4</text>
+  <text x="568" y="286" font-size="25" class="muted">개 항목 우세</text>
+
+  <line x1="54" y1="382" x2="846" y2="382" class="rule"/>
+  <text x="54" y="432" font-size="25" font-weight="700" class="opus">Opus 5가 앞선 항목</text>
+  <text x="466" y="432" font-size="25" font-weight="700" class="fable">Fable 5가 앞선 항목</text>
+
+  <g font-size="22">
+    <circle cx="66" cy="482" r="6" class="opus"/><text x="86" y="490">SWE-bench Multilingual</text>
+    <circle cx="66" cy="538" r="6" class="opus"/><text x="86" y="546">SWE-bench Multimodal</text>
+    <circle cx="66" cy="594" r="6" class="opus"/><text x="86" y="602">FrontierBench v0.1</text>
+    <circle cx="66" cy="650" r="6" class="opus"/><text x="86" y="658">BrowseComp</text>
+    <circle cx="66" cy="706" r="6" class="opus"/><text x="86" y="714">HLE with tools</text>
+    <circle cx="66" cy="762" r="6" class="opus"/><text x="86" y="770">OSWorld 2.0</text>
+    <circle cx="66" cy="818" r="6" class="opus"/><text x="86" y="826">GDPval-AA v2</text>
+    <circle cx="66" cy="874" r="6" class="opus"/><text x="86" y="882">AA-Briefcase</text>
+    <circle cx="66" cy="930" r="6" class="opus"/><text x="86" y="938">AutomationBench</text>
+
+    <circle cx="478" cy="482" r="6" class="fable"/><text x="498" y="490">SWE-bench Pro</text>
+    <circle cx="478" cy="538" r="6" class="fable"/><text x="498" y="546">DeepSWE v1.1</text>
+    <circle cx="478" cy="594" r="6" class="fable"/><text x="498" y="602">FrontierCode 1.1</text>
+    <circle cx="478" cy="650" r="6" class="fable"/><text x="498" y="658">HLE no tools</text>
+    <text x="478" y="714" font-size="17" class="muted">HealthBench 66.0은 각주상 Mythos 5 결과라 제외</text>
+  </g>
+  <text x="846" y="950" text-anchor="end" font-size="16" class="muted">Source: Anthropic, Claude Opus 5 System Card, Table 8.1.A</text>
+</svg>
