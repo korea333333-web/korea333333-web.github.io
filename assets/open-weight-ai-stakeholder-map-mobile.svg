@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1240" role="img" aria-labelledby="title desc">
+  <title id="title">오픈웨이트 AI를 둘러싼 네 이해관계자</title>
+  <desc id="desc">인프라 기업, 프런티어 연구소, 보안 회사, 기업 고객이 오픈웨이트 AI에서 보는 이익과 위험을 모바일 화면에 맞게 세로로 정리한 도표</desc>
+  <rect width="720" height="1240" fill="#f7f8fb"/>
+  <g font-family="Segoe UI, Malgun Gothic, sans-serif">
+    <text x="48" y="62" fill="#17231f" font-size="34" font-weight="800">누가 오픈웨이트를 원하는가,</text>
+    <text x="48" y="108" fill="#17231f" font-size="34" font-weight="800">누가 조심스러워하는가</text>
+    <text x="50" y="150" fill="#5b6762" font-size="20">회사 역할이 다르면 같은 “안전”도</text>
+    <text x="50" y="180" fill="#5b6762" font-size="20">서로 다른 제품 전략으로 번역된다.</text>
+
+    <circle cx="360" cy="278" r="72" fill="#ffffff" stroke="#17231f" stroke-width="3"/>
+    <text x="302" y="274" fill="#17231f" font-size="26" font-weight="900">오픈웨이트</text>
+    <text x="342" y="310" fill="#17231f" font-size="26" font-weight="900">AI</text>
+
+    <path d="M360 350V1090" fill="none" stroke="#b5beba" stroke-width="7" stroke-linecap="round"/>
+
+    <g>
+      <rect x="48" y="390" width="624" height="160" rx="16" fill="#ffffff" stroke="#b9d1c7" stroke-width="2"/>
+      <circle cx="84" cy="430" r="17" fill="#2f6f62"/>
+      <text x="78" y="438" fill="#ffffff" font-size="20" font-weight="800">1</text>
+      <text x="118" y="440" fill="#2f6f62" font-size="27" font-weight="800">인프라 기업</text>
+      <text x="82" y="490" fill="#46534f" font-size="22">모델이 많을수록 GPU·클라우드·추론</text>
+      <text x="82" y="526" fill="#46534f" font-size="22">수요가 함께 늘어난다</text>
+    </g>
+
+    <g>
+      <rect x="48" y="580" width="624" height="160" rx="16" fill="#ffffff" stroke="#d1c4e8" stroke-width="2"/>
+      <circle cx="84" cy="620" r="17" fill="#7357b7"/>
+      <text x="78" y="628" fill="#ffffff" font-size="20" font-weight="800">2</text>
+      <text x="118" y="630" fill="#7357b7" font-size="27" font-weight="800">프런티어 연구소</text>
+      <text x="82" y="680" fill="#46534f" font-size="22">성능과 접근 통제는 핵심 자산이며</text>
+      <text x="82" y="716" fill="#46534f" font-size="22">공개 범위를 두고 가장 신중하다</text>
+    </g>
+
+    <g>
+      <rect x="48" y="770" width="624" height="160" rx="16" fill="#ffffff" stroke="#e8c8a4" stroke-width="2"/>
+      <circle cx="84" cy="810" r="17" fill="#b0692b"/>
+      <text x="78" y="818" fill="#ffffff" font-size="20" font-weight="800">3</text>
+      <text x="118" y="820" fill="#b0692b" font-size="27" font-weight="800">보안 회사</text>
+      <text x="82" y="870" fill="#46534f" font-size="22">하네스·로그·탐지·레드팀 도구가</text>
+      <text x="82" y="906" fill="#46534f" font-size="22">새로운 보안 시장을 만든다</text>
+    </g>
+
+    <g>
+      <rect x="48" y="960" width="624" height="160" rx="16" fill="#ffffff" stroke="#cde0e8" stroke-width="2"/>
+      <circle cx="84" cy="1000" r="17" fill="#276b85"/>
+      <text x="78" y="1008" fill="#ffffff" font-size="20" font-weight="800">4</text>
+      <text x="118" y="1010" fill="#276b85" font-size="27" font-weight="800">기업 고객</text>
+      <text x="82" y="1060" fill="#46534f" font-size="22">데이터 위치·비용·감사·공급자 종속을</text>
+      <text x="82" y="1096" fill="#46534f" font-size="22">한꺼번에 계산해야 한다</text>
+    </g>
+
+    <text x="360" y="1176" text-anchor="middle" fill="#5b6762" font-size="19">같은 기술도 회사의 역할에 따라</text>
+    <text x="360" y="1206" text-anchor="middle" fill="#5b6762" font-size="19">기회, 통제, 보안, 운영 문제로 다르게 읽힌다.</text>
+  </g>
+</svg>
