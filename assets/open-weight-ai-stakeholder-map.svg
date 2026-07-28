@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+  <title id="title">오픈웨이트 AI 이해관계 지도</title>
+  <desc id="desc">인프라 기업, 보안 회사, 오픈소스 재단, 프런티어 연구소, 기업 고객이 오픈웨이트 논쟁에서 보는 이익과 위험을 지도처럼 정리</desc>
+  <rect width="1120" height="620" fill="#f7f8fb"/>
+  <g font-family="Segoe UI, Malgun Gothic, Arial, sans-serif">
+    <text x="58" y="58" fill="#17231f" font-size="30" font-weight="800">누가 오픈웨이트를 원하는가, 누가 조심스러워하는가</text>
+    <text x="62" y="94" fill="#5b6762" font-size="17">회사 역할이 다르면 같은 “안전”이라는 단어도 다른 제품 전략으로 번역된다.</text>
+    <circle cx="560" cy="340" r="92" fill="#ffffff" stroke="#17231f" stroke-width="3"/>
+    <text x="501" y="328" fill="#17231f" font-size="23" font-weight="900">오픈웨이트</text>
+    <text x="522" y="360" fill="#17231f" font-size="23" font-weight="900">AI</text>
+    <g>
+      <rect x="82" y="146" width="300" height="118" rx="18" fill="#ffffff" stroke="#b9d1c7" stroke-width="2"/>
+      <text x="116" y="190" fill="#2f6f62" font-size="22" font-weight="800">인프라 기업</text>
+      <text x="116" y="224" fill="#46534f" font-size="17">모델이 많을수록 GPU·클라우드·추론 수요가 늘어난다</text>
+    </g>
+    <g>
+      <rect x="738" y="146" width="300" height="118" rx="18" fill="#ffffff" stroke="#d1c4e8" stroke-width="2"/>
+      <text x="772" y="190" fill="#7357b7" font-size="22" font-weight="800">프런티어 연구소</text>
+      <text x="772" y="224" fill="#46534f" font-size="17">성능과 접근 통제가 핵심 자산이라 공개 범위가 민감하다</text>
+    </g>
+    <g>
+      <rect x="82" y="416" width="300" height="118" rx="18" fill="#ffffff" stroke="#e8c8a4" stroke-width="2"/>
+      <text x="116" y="460" fill="#b0692b" font-size="22" font-weight="800">보안 회사</text>
+      <text x="116" y="494" fill="#46534f" font-size="17">하네스·로그·탐지·레드팀 도구가 새 시장이 된다</text>
+    </g>
+    <g>
+      <rect x="738" y="416" width="300" height="118" rx="18" fill="#ffffff" stroke="#cde0e8" stroke-width="2"/>
+      <text x="772" y="460" fill="#276b85" font-size="22" font-weight="800">기업 고객</text>
+      <text x="772" y="494" fill="#46534f" font-size="17">데이터 위치, 비용, 감사, 공급자 종속을 함께 계산한다</text>
+    </g>
+    <path d="M382 205C454 220 490 252 518 286" fill="none" stroke="#b5beba" stroke-width="7" stroke-linecap="round"/>
+    <path d="M738 205C666 220 630 252 602 286" fill="none" stroke="#b5beba" stroke-width="7" stroke-linecap="round"/>
+    <path d="M382 474C454 458 490 428 518 394" fill="none" stroke="#b5beba" stroke-width="7" stroke-linecap="round"/>
+    <path d="M738 474C666 458 630 428 602 394" fill="none" stroke="#b5beba" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>

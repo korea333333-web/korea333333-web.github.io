@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+  <title id="title">오픈 AI 보안 스택</title>
+  <desc id="desc">오픈웨이트 모델이 모델 파일, 하네스, 평가 데이터, 취약점 공개, 기업 통제로 이어지는 과정을 계층형으로 보여 주는 도표</desc>
+  <rect width="1120" height="620" fill="#f7fbfa"/>
+  <g font-family="Segoe UI, Malgun Gothic, Arial, sans-serif">
+    <text x="58" y="58" fill="#17231f" font-size="30" font-weight="800">오픈웨이트만으로는 부족하다. 실행 스택 전체가 열려야 방어가 된다</text>
+    <text x="62" y="94" fill="#5b6762" font-size="17">NVIDIA와 Linux Foundation이 말하는 핵심은 모델 파일이 아니라, 검사하고 추적하고 고칠 수 있는 운영 기반이다.</text>
+    <g>
+      <rect x="92" y="142" width="936" height="74" rx="16" fill="#25344a"/>
+      <text x="128" y="188" fill="#ffffff" font-size="23" font-weight="800">1. 모델 가중치</text>
+      <text x="354" y="188" fill="#dfe8ff" font-size="19">자체 실행, 내부망 배치, 파일 출처와 해시 검증</text>
+    </g>
+    <g>
+      <rect x="92" y="235" width="936" height="74" rx="16" fill="#356f63"/>
+      <text x="128" y="281" fill="#ffffff" font-size="23" font-weight="800">2. 하네스와 에이전트 도구</text>
+      <text x="435" y="281" fill="#e7fff7" font-size="19">파일 접근, 테스트 실행, 로그 수집, 권한 경계</text>
+    </g>
+    <g>
+      <rect x="92" y="328" width="936" height="74" rx="16" fill="#795bb8"/>
+      <text x="128" y="374" fill="#ffffff" font-size="23" font-weight="800">3. 평가 데이터와 레드팀</text>
+      <text x="435" y="374" fill="#f1ecff" font-size="19">사이버, 생물학, 정렬, 프롬프트 주입 테스트</text>
+    </g>
+    <g>
+      <rect x="92" y="421" width="936" height="74" rx="16" fill="#b0692b"/>
+      <text x="128" y="467" fill="#ffffff" font-size="23" font-weight="800">4. 취약점 공개와 패치</text>
+      <text x="435" y="467" fill="#fff1e2" font-size="19">Akrites, OpenSSF식 공개·수정·재검증 루프</text>
+    </g>
+    <g>
+      <rect x="92" y="514" width="936" height="58" rx="16" fill="#ffffff" stroke="#d7e2de" stroke-width="2"/>
+      <text x="128" y="550" fill="#37433f" font-size="19">기업이 실제로 사는 것은 “열린 모델”이 아니라 감사 가능한 운영 체계와 사고 대응 능력이다.</text>
+    </g>
+  </g>
+</svg>

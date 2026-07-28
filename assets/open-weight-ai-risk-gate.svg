@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" role="img" aria-labelledby="title desc">
+  <title id="title">오픈웨이트 모델 공개 전 위험 게이트</title>
+  <desc id="desc">칩 통제, 증류 단속, 능력별 안전 테스트가 모델 공개 여부 판단으로 모이는 흐름도</desc>
+  <rect width="1120" height="560" fill="#fffdf8"/>
+  <g font-family="Segoe UI, Malgun Gothic, Arial, sans-serif">
+    <text x="58" y="58" fill="#17231f" font-size="30" font-weight="800">Anthropic의 처방은 전면 금지가 아니라 세 개의 좁은 게이트다</text>
+    <text x="62" y="94" fill="#5b6762" font-size="17">문제는 모델의 공개 형식이 아니라, 위험한 능력이 어떤 통제 없이 확산되는지다.</text>
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M0,0 L12,6 L0,12 z" fill="#aab4af"/>
+      </marker>
+    </defs>
+    <g>
+      <rect x="70" y="150" width="270" height="155" rx="18" fill="#e8f2ee" stroke="#b9d1c7" stroke-width="2"/>
+      <circle cx="112" cy="198" r="24" fill="#2f6f62"/>
+      <text x="102" y="207" fill="#ffffff" font-size="26" font-weight="900">1</text>
+      <text x="150" y="196" fill="#20342f" font-size="22" font-weight="800">칩 통제</text>
+      <text x="102" y="242" fill="#40514b" font-size="17">첨단 연산 자원이</text>
+      <text x="102" y="268" fill="#40514b" font-size="17">위험 주체로 흘러가는지 본다</text>
+    </g>
+    <g>
+      <rect x="425" y="150" width="270" height="155" rx="18" fill="#f2edf8" stroke="#d1c4e8" stroke-width="2"/>
+      <circle cx="467" cy="198" r="24" fill="#7357b7"/>
+      <text x="457" y="207" fill="#ffffff" font-size="26" font-weight="900">2</text>
+      <text x="505" y="196" fill="#30264d" font-size="22" font-weight="800">증류 단속</text>
+      <text x="457" y="242" fill="#4f4566" font-size="17">프런티어 모델 출력으로</text>
+      <text x="457" y="268" fill="#4f4566" font-size="17">후발 모델을 복제했는지 본다</text>
+    </g>
+    <g>
+      <rect x="780" y="150" width="270" height="155" rx="18" fill="#fff0df" stroke="#e8c8a4" stroke-width="2"/>
+      <circle cx="822" cy="198" r="24" fill="#b0692b"/>
+      <text x="812" y="207" fill="#ffffff" font-size="26" font-weight="900">3</text>
+      <text x="860" y="196" fill="#523416" font-size="22" font-weight="800">능력 테스트</text>
+      <text x="812" y="242" fill="#604a33" font-size="17">사이버·생물학·정렬 위험을</text>
+      <text x="812" y="268" fill="#604a33" font-size="17">공개 전 따로 측정한다</text>
+    </g>
+    <path d="M205 320v48h710v-48" fill="none" stroke="#aab4af" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <rect x="330" y="382" width="460" height="92" rx="22" fill="#17231f"/>
+    <text x="382" y="422" fill="#ffffff" font-size="24" font-weight="800">공개 여부와 공개 범위 결정</text>
+    <text x="382" y="454" fill="#dce7e1" font-size="17">전면 금지보다 능력·사용자·통제 수단을 나눠 판단</text>
+  </g>
+</svg>
