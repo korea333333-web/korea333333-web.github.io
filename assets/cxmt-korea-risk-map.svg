@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">CXMT가 한국 메모리에 주는 위험을 제품과 시간으로 구분한 지도</title>
+  <desc id="desc">범용 DRAM과 HBM에 대한 현재와 중기 위험을 구분해 설명한 사분면 도표</desc>
+  <rect width="1200" height="720" fill="#fbfaf7"/>
+  <g font-family="Segoe UI, Malgun Gothic, sans-serif">
+    <text x="58" y="60" fill="#18231f" font-size="32" font-weight="800">한국의 위험은 ‘HBM 즉시 붕괴’가 아니라 제품별로 다르게 온다</text>
+    <text x="58" y="94" fill="#5f6964" font-size="18">현재 확인된 경쟁력과 앞으로 성립할 수 있는 조건을 분리했다</text>
+
+    <text x="344" y="145" text-anchor="middle" fill="#355e54" font-size="21" font-weight="800">지금 확인된 영향</text>
+    <text x="836" y="145" text-anchor="middle" fill="#7d5c2f" font-size="21" font-weight="800">중기 조건부 위험</text>
+    <text x="66" y="284" fill="#18231f" font-size="21" font-weight="800">범용 DRAM</text>
+    <text x="66" y="494" fill="#18231f" font-size="21" font-weight="800">HBM</text>
+
+    <rect x="176" y="170" width="456" height="190" rx="8" fill="#fff0ec" stroke="#e6b5aa"/>
+    <text x="210" y="211" fill="#9f4038" font-size="18" font-weight="800">직접 가격 압력</text>
+    <text x="210" y="249" fill="#18231f" font-size="25" font-weight="900">이미 현실적인 경쟁 구간</text>
+    <text x="210" y="288" fill="#56615d" font-size="17">DDR5·LPDDR5X, 중국 내수 서버,</text>
+    <text x="210" y="315" fill="#56615d" font-size="17">PC·모바일용 제품에서 점유율과 가격을 압박</text>
+
+    <rect x="668" y="170" width="456" height="190" rx="8" fill="#fff6e8" stroke="#e7c798"/>
+    <text x="702" y="211" fill="#926224" font-size="18" font-weight="800">증설과 국산 장비가 작동할 때</text>
+    <text x="702" y="249" fill="#18231f" font-size="25" font-weight="900">공급 과잉 위험이 커진다</text>
+    <text x="702" y="288" fill="#56615d" font-size="17">IPO 자금이 실제 장비·웨이퍼 생산으로 이어지고</text>
+    <text x="702" y="315" fill="#56615d" font-size="17">수율이 안정되면 업황 하락기에 충격 확대</text>
+
+    <rect x="176" y="386" width="456" height="190" rx="8" fill="#edf5f3" stroke="#afd0c8"/>
+    <text x="210" y="427" fill="#2f7166" font-size="18" font-weight="800">직접 대체 근거 부족</text>
+    <text x="210" y="465" fill="#18231f" font-size="25" font-weight="900">한국 우위가 아직 큰 구간</text>
+    <text x="210" y="504" fill="#56615d" font-size="17">HBM은 적층·패키징·열·수율·고객 공동검증이</text>
+    <text x="210" y="531" fill="#56615d" font-size="17">필요해 범용 DRAM 생산능력과 같지 않다</text>
+
+    <rect x="668" y="386" width="456" height="190" rx="8" fill="#f0eff7" stroke="#c6bfdb"/>
+    <text x="702" y="427" fill="#665590" font-size="18" font-weight="800">성공 조건이 많은 추격</text>
+    <text x="702" y="465" fill="#18231f" font-size="25" font-weight="900">무시하면 안 되지만 시간 필요</text>
+    <text x="702" y="504" fill="#56615d" font-size="17">HBM 제품 인증, 첨단 패키징, 안정적 양산과</text>
+    <text x="702" y="531" fill="#56615d" font-size="17">중국 가속기 고객의 반복 주문이 확인돼야 한다</text>
+
+    <rect x="176" y="610" width="948" height="58" rx="7" fill="#1f2c28"/>
+    <text x="650" y="646" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">한국의 대응: HBM 고객 공동개발 유지 + 범용 DRAM 원가·수율 방어 + 중국 장비 검수 데이터 추적</text>
+  </g>
+</svg>
