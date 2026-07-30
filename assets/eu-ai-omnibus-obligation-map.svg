@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="900" viewBox="0 0 390 900" role="img" aria-labelledby="title desc">
+  <title id="title">EU AI 옴니버스 이후 기업 대응 지도</title>
+  <desc id="desc">기업이 지금 유지할 일, 2026년 8월에 확인할 일, 미뤄졌지만 계속 준비할 일을 세 구역으로 정리한 도표</desc>
+  <rect width="390" height="900" rx="24" fill="#f7faf8"/>
+  <g font-family="Arial, 'Malgun Gothic', sans-serif">
+    <text x="28" y="48" fill="#153128" font-size="21" font-weight="800">연기된 일정과 멈추면 안 될 일</text>
+    <text x="28" y="75" fill="#587067" font-size="14.5">한국 기업은 EU 고객 접점부터 다시 분류해야 한다</text>
+
+    <rect x="28" y="110" width="334" height="194" rx="20" fill="#e8f2ff" stroke="#bdd5f5"/>
+    <rect x="48" y="130" width="76" height="28" rx="14" fill="#2868c7"/>
+    <text x="66" y="149" fill="#ffffff" font-size="13.5" font-weight="800">지금</text>
+    <text x="48" y="188" fill="#153128" font-size="18" font-weight="800">이미 작동 중인 기반 의무</text>
+    <text x="48" y="220" fill="#40564e" font-size="14.5">• 금지된 AI 관행과 GPAI 규칙 점검</text>
+    <text x="48" y="247" fill="#40564e" font-size="14.5">• 모델·기능·사용자·데이터 흐름 목록화</text>
+    <text x="48" y="274" fill="#40564e" font-size="14.5">• AI 교육과 책임자 기록을 문서로 유지</text>
+
+    <path d="M195 316 L195 348" stroke="#91ab9f" stroke-width="4"/>
+    <path d="M187 340 L195 351 L203 340" fill="none" stroke="#91ab9f" stroke-width="4"/>
+
+    <rect x="28" y="360" width="334" height="194" rx="20" fill="#fff4e8" stroke="#f0cfaa"/>
+    <rect x="48" y="380" width="112" height="28" rx="14" fill="#c46820"/>
+    <text x="63" y="399" fill="#ffffff" font-size="13.5" font-weight="800">8월 2일부터</text>
+    <text x="48" y="438" fill="#153128" font-size="18" font-weight="800">투명성·표시 규칙 확인</text>
+    <text x="48" y="470" fill="#40564e" font-size="14.5">• 사용자가 AI와 대화함을 알리는지</text>
+    <text x="48" y="497" fill="#40564e" font-size="14.5">• 합성 콘텐츠에 기계 판독 표시가 있는지</text>
+    <text x="48" y="524" fill="#40564e" font-size="14.5">• 기존 시스템 유예 대상인지 따로 판단</text>
+
+    <path d="M195 566 L195 598" stroke="#91ab9f" stroke-width="4"/>
+    <path d="M187 590 L195 601 L203 590" fill="none" stroke="#91ab9f" stroke-width="4"/>
+
+    <rect x="28" y="610" width="334" height="218" rx="20" fill="#f2ebff" stroke="#d8c5f2"/>
+    <rect x="48" y="630" width="124" height="28" rx="14" fill="#7151a9"/>
+    <text x="63" y="649" fill="#ffffff" font-size="13.5" font-weight="800">일정은 미뤄짐</text>
+    <text x="48" y="688" fill="#153128" font-size="18" font-weight="800">고위험 준비는 계속</text>
+    <text x="48" y="720" fill="#40564e" font-size="14.5">• Annex I·III 해당 여부를 법무와 분류</text>
+    <text x="48" y="747" fill="#40564e" font-size="14.5">• 위험관리·로그·사람 감독 근거를 축적</text>
+    <text x="48" y="774" fill="#40564e" font-size="14.5">• 부문별 규칙과 AI법 중복을 함께 검토</text>
+    <text x="48" y="801" fill="#40564e" font-size="14.5">• 조달 계약의 책임·감사 조항을 재작성</text>
+
+    <text x="34" y="865" fill="#587067" font-size="13.5">규제 일정은 바뀌어도 증거를 모으는 시간은 줄지 않는다.</text>
+  </g>
+</svg>

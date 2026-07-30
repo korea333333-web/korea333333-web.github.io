@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="920" viewBox="0 0 390 920" role="img" aria-labelledby="title desc">
+  <title id="title">중국 AI 관련 하드웨어 수출 지표</title>
+  <desc id="desc">2026년 상반기 중국 산업용 로봇과 3D 프린터 수출, 로봇 생산 증가율과 수출 시장 수를 카드로 정리한 도표</desc>
+  <rect width="390" height="920" rx="24" fill="#fff9f2"/>
+  <g font-family="Arial, 'Malgun Gothic', sans-serif">
+    <text x="28" y="47" fill="#362719" font-size="21" font-weight="800">중국의 ‘AI 수출’은 기계가 됐다</text>
+    <text x="28" y="74" fill="#756252" font-size="14.5">2026년 상반기 공식 발표에서 읽어야 할 숫자</text>
+
+    <rect x="28" y="108" width="334" height="152" rx="20" fill="#ffffff" stroke="#edc99d"/>
+    <text x="50" y="141" fill="#9a4d14" font-size="14.5" font-weight="800">산업용 로봇 수출</text>
+    <text x="50" y="194" fill="#d45f16" font-size="42" font-weight="900">+18.6%</text>
+    <text x="50" y="226" fill="#544333" font-size="14.5">수출액 62.9억 위안 · 141개 국가·지역</text>
+
+    <rect x="28" y="278" width="334" height="152" rx="20" fill="#ffffff" stroke="#e8bea9"/>
+    <text x="50" y="311" fill="#9a3f23" font-size="14.5" font-weight="800">3D 프린터 수출 실적</text>
+    <text x="50" y="364" fill="#c94c2a" font-size="42" font-weight="900">+109.3%</text>
+    <text x="50" y="396" fill="#544333" font-size="14.5">국무원 브리핑의 전년 동기 대비 수치</text>
+
+    <rect x="28" y="448" width="160" height="158" rx="20" fill="#fff0d9" stroke="#ebc690"/>
+    <text x="48" y="482" fill="#815018" font-size="14" font-weight="800">국내 생산</text>
+    <text x="48" y="533" fill="#a85b12" font-size="35" font-weight="900">+28%</text>
+    <text x="48" y="565" fill="#544333" font-size="14">산업용 로봇</text>
+    <text x="48" y="586" fill="#544333" font-size="14">상반기 생산 증가</text>
+
+    <rect x="202" y="448" width="160" height="158" rx="20" fill="#f7eadf" stroke="#e0c5af"/>
+    <text x="222" y="482" fill="#815018" font-size="14" font-weight="800">서비스 로봇</text>
+    <text x="222" y="533" fill="#9c5523" font-size="35" font-weight="900">+11.9%</text>
+    <text x="222" y="565" fill="#544333" font-size="14">상반기 생산</text>
+    <text x="222" y="586" fill="#544333" font-size="14">전년 동기 대비</text>
+
+    <rect x="28" y="632" width="334" height="204" rx="20" fill="#3b2b20"/>
+    <text x="50" y="670" fill="#ffd8a8" font-size="17" font-weight="800">숫자가 말해 주지 않는 것</text>
+    <text x="50" y="708" fill="#ffffff" font-size="14.5">• 109.3%가 가격과 물량 중 무엇 때문인지</text>
+    <text x="50" y="737" fill="#ffffff" font-size="14.5">  공식 요약만으로는 분해할 수 없다</text>
+    <text x="50" y="774" fill="#ffffff" font-size="14.5">• 로봇 수출 증가가 곧 고급 제어기·감속기</text>
+    <text x="50" y="803" fill="#ffffff" font-size="14.5">  기술 우위를 뜻하는 것도 아니다</text>
+
+    <text x="32" y="876" fill="#756252" font-size="13.5">핵심 변화: 모델 성능 경쟁이 제조 장비 수출로 번지고 있다.</text>
+  </g>
+</svg>

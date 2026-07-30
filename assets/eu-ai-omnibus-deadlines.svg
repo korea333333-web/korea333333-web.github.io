@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="980" viewBox="0 0 390 980" role="img" aria-labelledby="title desc">
+  <title id="title">EU AI 옴니버스 적용 일정</title>
+  <desc id="desc">2026년 7월 27일 발효부터 2028년 8월 2일 제품 내장형 고위험 AI 규칙 적용까지의 일정을 세로형으로 정리한 도표</desc>
+  <rect width="390" height="980" rx="24" fill="#f5f8ff"/>
+  <g font-family="Arial, 'Malgun Gothic', sans-serif">
+    <text x="30" y="48" fill="#12213d" font-size="22" font-weight="800">EU AI법 일정이 다시 짜였다</text>
+    <text x="30" y="76" fill="#52617a" font-size="14.5">미뤄진 규칙과 그대로 오는 규칙을 분리해야 한다</text>
+    <line x1="52" y1="122" x2="52" y2="866" stroke="#aab9dd" stroke-width="4"/>
+
+    <circle cx="52" cy="142" r="11" fill="#2d5bd1"/>
+    <rect x="78" y="105" width="282" height="116" rx="16" fill="#ffffff" stroke="#ced8ef"/>
+    <text x="98" y="136" fill="#2d5bd1" font-size="15" font-weight="800">2026.07.27</text>
+    <text x="98" y="164" fill="#12213d" font-size="17" font-weight="800">AI 옴니버스 발효</text>
+    <text x="98" y="190" fill="#52617a" font-size="14">EU AI법의 첫 공식 개정안이</text>
+    <text x="98" y="211" fill="#52617a" font-size="14">관보 게재 사흘 뒤 효력을 얻었다</text>
+
+    <circle cx="52" cy="286" r="11" fill="#e27b37"/>
+    <rect x="78" y="245" width="282" height="132" rx="16" fill="#ffffff" stroke="#f0d5c0"/>
+    <text x="98" y="276" fill="#b65419" font-size="15" font-weight="800">2026.08.02</text>
+    <text x="98" y="304" fill="#12213d" font-size="17" font-weight="800">투명성 규칙은 예정대로</text>
+    <text x="98" y="330" fill="#52617a" font-size="14">AI 상호작용 고지와 합성 콘텐츠</text>
+    <text x="98" y="351" fill="#52617a" font-size="14">표시 의무 등 Article 50이 시작된다</text>
+
+    <circle cx="52" cy="450" r="11" fill="#b24c7b"/>
+    <rect x="78" y="409" width="282" height="132" rx="16" fill="#ffffff" stroke="#ecd0df"/>
+    <text x="98" y="440" fill="#9e3567" font-size="15" font-weight="800">2026.12.02</text>
+    <text x="98" y="468" fill="#12213d" font-size="17" font-weight="800">새 금지와 짧은 유예 종료</text>
+    <text x="98" y="494" fill="#52617a" font-size="14">비동의 성적 딥페이크 생성 금지,</text>
+    <text x="98" y="515" fill="#52617a" font-size="14">기존 합성 콘텐츠 시스템 유예 종료</text>
+
+    <circle cx="52" cy="615" r="11" fill="#3b8b6f"/>
+    <rect x="78" y="573" width="282" height="132" rx="16" fill="#ffffff" stroke="#c9e2d8"/>
+    <text x="98" y="604" fill="#26755b" font-size="15" font-weight="800">2027.12.02</text>
+    <text x="98" y="632" fill="#12213d" font-size="17" font-weight="800">독립형 고위험 AI 적용</text>
+    <text x="98" y="658" fill="#52617a" font-size="14">채용·교육·신용평가 등 Annex III</text>
+    <text x="98" y="679" fill="#52617a" font-size="14">일정이 16개월 뒤로 이동했다</text>
+
+    <circle cx="52" cy="780" r="11" fill="#6750a4"/>
+    <rect x="78" y="737" width="282" height="132" rx="16" fill="#ffffff" stroke="#dad0ef"/>
+    <text x="98" y="768" fill="#6750a4" font-size="15" font-weight="800">2028.08.02</text>
+    <text x="98" y="796" fill="#12213d" font-size="17" font-weight="800">제품 내장형 고위험 AI</text>
+    <text x="98" y="822" fill="#52617a" font-size="14">기계·완구·승강기 등 Annex I은</text>
+    <text x="98" y="843" fill="#52617a" font-size="14">부문별 안전 규칙과 함께 적용된다</text>
+
+    <rect x="30" y="902" width="330" height="48" rx="14" fill="#12213d"/>
+    <text x="49" y="932" fill="#ffffff" font-size="14.5" font-weight="700">핵심: ‘전부 연기’가 아니라 의무별 일정 분리</text>
+  </g>
+</svg>
