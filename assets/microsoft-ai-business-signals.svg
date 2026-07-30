@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="820" viewBox="0 0 620 820" role="img" aria-labelledby="title desc">
+  <title id="title">마이크로소프트 2026 회계연도 AI 사업 신호</title>
+  <desc id="desc">Azure 연간 매출, Microsoft 365 Copilot 유료 좌석, Azure 분기 성장률, Microsoft Cloud 분기 매출을 네 개의 카드로 정리한 도표</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="1" stop-color="#102a43"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f8cff"/>
+      <stop offset="1" stop-color="#63d3ff"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19b58f"/>
+      <stop offset="1" stop-color="#77e2ba"/>
+    </linearGradient>
+  </defs>
+  <rect width="620" height="820" rx="28" fill="url(#bg)"/>
+  <circle cx="560" cy="70" r="92" fill="#2d80ff" opacity=".10"/>
+  <circle cx="72" cy="742" r="118" fill="#2ce0a2" opacity=".08"/>
+
+  <text x="40" y="62" fill="#7dd3fc" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">FY2026 · Q4 OFFICIAL RESULTS</text>
+  <text x="40" y="105" fill="#ffffff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31" font-weight="800">AI 투자가 만든 네 가지</text>
+  <text x="40" y="143" fill="#ffffff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31" font-weight="800">사업 신호</text>
+  <text x="40" y="178" fill="#b9cbe0" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17">규모·채택·성장·계약을 서로 다른 지표로 읽어야 한다</text>
+
+  <rect x="40" y="218" width="540" height="132" rx="20" fill="#0d2238" stroke="#2f5373"/>
+  <rect x="40" y="218" width="10" height="132" rx="5" fill="url(#blue)"/>
+  <text x="72" y="252" fill="#8fc7ff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700">규모 · AZURE FY2026</text>
+  <text x="72" y="301" fill="#ffffff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="800">연간 매출 1,000억 달러+</text>
+  <text x="72" y="330" fill="#b9cbe0" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">처음으로 연간 1,000억 달러 선을 넘어섰다</text>
+
+  <rect x="40" y="370" width="540" height="132" rx="20" fill="#0d2238" stroke="#2f5373"/>
+  <rect x="40" y="370" width="10" height="132" rx="5" fill="url(#green)"/>
+  <text x="72" y="404" fill="#79e0bd" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700">채택 · MICROSOFT 365 COPILOT</text>
+  <text x="72" y="453" fill="#ffffff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="800">유료 좌석 3,000만 개+</text>
+  <text x="72" y="482" fill="#b9cbe0" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">3개월 전 2,000만 개 이상에서 한 단계 상승</text>
+
+  <rect x="40" y="522" width="260" height="174" rx="20" fill="#0d2238" stroke="#2f5373"/>
+  <text x="64" y="558" fill="#8fc7ff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" font-weight="700">성장 · AZURE Q4</text>
+  <text x="64" y="611" fill="#ffffff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="42" font-weight="800">+43%</text>
+  <text x="64" y="642" fill="#b9cbe0" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">전년 동기 대비</text>
+  <text x="64" y="669" fill="#b9cbe0" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">클라우드 서비스 매출</text>
+
+  <rect x="320" y="522" width="260" height="174" rx="20" fill="#0d2238" stroke="#2f5373"/>
+  <text x="344" y="558" fill="#79e0bd" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" font-weight="700">플랫폼 · MS CLOUD Q4</text>
+  <text x="344" y="611" fill="#ffffff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="800">593억 달러</text>
+  <text x="344" y="642" fill="#b9cbe0" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">전년 동기 대비 +27%</text>
+  <text x="344" y="669" fill="#b9cbe0" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">Azure 외 제품도 포함</text>
+
+  <path d="M90 734 H530" stroke="#35536f" stroke-width="1"/>
+  <text x="40" y="772" fill="#9fb3c8" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="14">출처: Microsoft FY2026 Q4 실적 발표</text>
+  <text x="40" y="797" fill="#9fb3c8" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="14">주의: Azure·Microsoft Cloud·Copilot은 범위가 서로 다른 지표다</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="310" viewBox="0 0 620 310" role="img" aria-labelledby="title desc">
+  <title id="title">마이크로소프트 AI 매출과 현금 투자의 반전</title>
+  <desc id="desc">Azure 연 매출 1,000억 달러 이상, Microsoft 365 Copilot 유료 좌석 3,000만 개 이상, 설비 현금지출과 지출 뒤 잔액 변화를 요약한 대표 도표</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071d31"/>
+      <stop offset="1" stop-color="#132d4c"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="620" height="310" rx="20" fill="url(#bg)"/>
+  <circle cx="566" cy="52" r="92" fill="#1d4f7a" opacity=".34"/>
+  <circle cx="55" cy="302" r="86" fill="#0f766e" opacity=".18"/>
+
+  <g font-family="Segoe UI, Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+    <text x="32" y="34" fill="#67e8f9" font-size="16" font-weight="800" letter-spacing="1.2">MICROSOFT FY2026 Q4</text>
+    <text x="32" y="75" fill="#ffffff" font-size="29" font-weight="850">AI 매출은 뛰었고</text>
+    <text x="32" y="109" fill="#ffffff" font-size="29" font-weight="850">현금 여유는 줄었다</text>
+    <text x="32" y="137" fill="#bad0e5" font-size="16">수요의 증명과 자본효율의 질문을 함께 읽는다</text>
+
+    <rect x="32" y="158" width="172" height="106" rx="14" fill="#0c2943" stroke="#2c6288"/>
+    <rect x="32" y="158" width="5" height="106" rx="3" fill="url(#cyan)"/>
+    <text x="51" y="184" fill="#7dd3fc" font-size="16" font-weight="800">AZURE FY2026</text>
+    <text x="51" y="221" fill="#ffffff" font-size="25" font-weight="850">1,000억 달러+</text>
+    <text x="51" y="247" fill="#bad0e5" font-size="16">연간 매출 첫 돌파</text>
+
+    <rect x="218" y="158" width="155" height="106" rx="14" fill="#0c2943" stroke="#3b6d72"/>
+    <rect x="218" y="158" width="5" height="106" rx="3" fill="#34d399"/>
+    <text x="237" y="184" fill="#6ee7b7" font-size="16" font-weight="800">COPILOT</text>
+    <text x="237" y="221" fill="#ffffff" font-size="27" font-weight="850">3,000만+</text>
+    <text x="237" y="247" fill="#bad0e5" font-size="16">유료 좌석</text>
+
+    <rect x="387" y="158" width="201" height="106" rx="14" fill="#241c45" stroke="#6952a4"/>
+    <rect x="387" y="158" width="5" height="106" rx="3" fill="url(#violet)"/>
+    <text x="406" y="184" fill="#c4b5fd" font-size="16" font-weight="800">현금의 반전</text>
+    <text x="406" y="215" fill="#ffffff" font-size="17" font-weight="750">설비 171 → 358억 달러</text>
+    <text x="406" y="243" fill="#5eead4" font-size="17" font-weight="750">잔액 256 → 196억 달러</text>
+
+    <text x="32" y="292" fill="#9fb7cc" font-size="16">Microsoft 공식 실적·현금흐름표 기반 자체 재구성</text>
+  </g>
+</svg>
