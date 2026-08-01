@@ -1,0 +1,54 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="1290" viewBox="0 0 390 1290" role="img" aria-labelledby="title desc">
+  <title id="title">애플의 AI 소유권 스택</title>
+  <desc id="desc">애플이 소유해야 할 사용자 관계와 협력할 수 있는 모델 및 인프라 영역</desc>
+  <defs><linearGradient id="hero2" x1="0" x2="1"><stop stop-color="#1d4ed8"/><stop offset="1" stop-color="#7c3aed"/></linearGradient><linearGradient id="own2" x1="0" x2="1"><stop stop-color="#0f766e"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+  <rect width="390" height="1290" rx="24" fill="#08111f"/>
+  <rect x="16" y="16" width="358" height="184" rx="21" fill="url(#hero2)"/>
+  <text x="36" y="51" fill="#dbeafe" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="800">THE AI OWNERSHIP QUESTION</text>
+  <text x="36" y="89" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="900">두뇌는 협력할 수 있다</text>
+  <text x="36" y="122" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="900">하지만 관계는</text>
+  <text x="36" y="155" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="900">넘겨주면 안 된다</text>
+  <text x="36" y="183" fill="#d8e6ff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15">하이브리드 AI 전략을 소유권으로 읽는 법</text>
+
+  <text x="24" y="244" fill="#67e8f9" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16" font-weight="800">APPLE이 끝까지 가져야 할 층</text>
+  <rect x="24" y="264" width="342" height="164" rx="18" fill="url(#own2)"/>
+  <text x="46" y="302" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" font-weight="900">① 최종 사용자 경험</text>
+  <text x="46" y="338" fill="#d8fbff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16">
+    <tspan x="46" dy="0">Siri의 대화, 앱 실행, 알림·화면·</tspan>
+    <tspan x="46" dy="23">기기 사이의 연결. 누가 답을 만들든</tspan>
+    <tspan x="46" dy="23">사용자는 ‘애플 경험’으로 느낀다.</tspan>
+  </text>
+  <rect x="24" y="446" width="342" height="164" rx="18" fill="#0e3a50" stroke="#1a6987"/>
+  <text x="46" y="484" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" font-weight="900">② 맥락·허락·행동 권한</text>
+  <text x="46" y="520" fill="#caeaf5" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16">
+    <tspan x="46" dy="0">일정·메일·사진·위치 같은 개인 맥락,</tspan>
+    <tspan x="46" dy="23">어떤 데이터를 쓸지 정하는 허락, 실제</tspan>
+    <tspan x="46" dy="23">앱 행동을 끝내는 실행 권한</tspan>
+  </text>
+  <rect x="24" y="628" width="342" height="164" rx="18" fill="#102c43" stroke="#285473"/>
+  <text x="46" y="666" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" font-weight="900">③ 기기·프라이버시 실행층</text>
+  <text x="46" y="702" fill="#cbddeb" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16">
+    <tspan x="46" dy="0">Apple silicon, 온디바이스 모델,</tspan>
+    <tspan x="46" dy="23">Private Cloud Compute로 속도·전력·</tspan>
+    <tspan x="46" dy="23">보안·데이터 경계를 제품에서 통제한다.</tspan>
+  </text>
+
+  <text x="24" y="850" fill="#c4b5fd" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16" font-weight="800">성능을 위해 협력할 수 있는 층</text>
+  <rect x="24" y="870" width="342" height="136" rx="18" fill="#24203d" stroke="#5b4b8a"/>
+  <text x="46" y="908" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="900">모델 공동 개발</text>
+  <text x="46" y="942" fill="#ddd6fe" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16">
+    <tspan x="46" dy="0">AFM 3 세대는 Google과 맞춤 설계됐다.</tspan>
+    <tspan x="46" dy="23">‘전부 외부 모델’인 구조는 아니다.</tspan>
+  </text>
+  <rect x="24" y="1024" width="342" height="136" rx="18" fill="#24203d" stroke="#5b4b8a"/>
+  <text x="46" y="1062" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="21" font-weight="900">클라우드 인프라</text>
+  <text x="46" y="1096" fill="#ddd6fe" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16">
+    <tspan x="46" dy="0">상위 서버 모델에는 NVIDIA GPU와</tspan>
+    <tspan x="46" dy="23">Google Cloud를 쓰되 PCC 경계는 설계한다.</tspan>
+  </text>
+  <rect x="24" y="1180" width="342" height="62" rx="16" fill="#3b1f35" stroke="#7f3659"/>
+  <text x="46" y="1205" fill="#fbcfe8" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="800">실패 신호</text>
+  <text x="46" y="1228" fill="#ffe4ee" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15">외부 모델이 인터페이스와 관계까지 차지할 때</text>
+  <text x="24" y="1270" fill="#718096" font-family="Arial,'Noto Sans KR',sans-serif" font-size="13">자료: Apple ML Research·Newsroom · 자체 재구성</text>
+</svg>

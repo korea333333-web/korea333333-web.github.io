@@ -1,0 +1,58 @@
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="1250" viewBox="0 0 390 1250" role="img" aria-labelledby="title desc">
+  <title id="title">애플의 세 리더십 시대</title>
+  <desc id="desc">1997년 스티브 잡스 복귀, 2011년 팀 쿡 CEO 취임, 2026년 존 터너스 CEO 전환을 비교한 타임라인</desc>
+  <rect width="390" height="1250" rx="24" fill="#07111f"/>
+  <circle cx="344" cy="42" r="105" fill="#12345a" opacity=".5"/>
+  <text x="24" y="45" fill="#7dd3fc" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="800">APPLE LEADERSHIP · 1997—2026</text>
+  <text x="24" y="84" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="26" font-weight="900">세 번의 전환</text>
+  <text x="24" y="114" fill="#d6e2ef" font-family="Arial,'Noto Sans KR',sans-serif" font-size="17">제품 회복 → 규모의 제도화 → AI 재설계</text>
+  <line x1="33" y1="170" x2="33" y2="1108" stroke="#36536f" stroke-width="4"/>
+
+  <circle cx="33" cy="214" r="12" fill="#f59e0b" stroke="#07111f" stroke-width="5"/>
+  <rect x="54" y="158" width="312" height="280" rx="18" fill="#0d2035" stroke="#264863"/>
+  <text x="76" y="193" fill="#fbbf24" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="800">1997 · STEVE JOBS RETURNS</text>
+  <text x="76" y="229" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="23" font-weight="900">무엇을 만들지</text>
+  <text x="76" y="258" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="23" font-weight="900">다시 정하다</text>
+  <text x="76" y="296" fill="#d4dfec" font-family="Arial,'Noto Sans KR',sans-serif" font-size="17">
+    <tspan x="76" dy="0">복잡한 제품군을 줄이고, 제품·</tspan>
+    <tspan x="76" dy="24">소프트웨어·경험을 하나의 통합된</tspan>
+    <tspan x="76" dy="24">설계 문제로 묶었다.</tspan>
+  </text>
+  <rect x="76" y="376" width="128" height="38" rx="19" fill="#172c43"/>
+  <text x="90" y="401" fill="#e7edf5" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="700">매출 70.81억 달러</text>
+  <rect x="212" y="376" width="132" height="38" rx="19" fill="#3b1d2d"/>
+  <text x="224" y="401" fill="#fecdd3" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="700">순손실 10.45억</text>
+
+  <circle cx="33" cy="518" r="12" fill="#38bdf8" stroke="#07111f" stroke-width="5"/>
+  <rect x="54" y="462" width="312" height="300" rx="18" fill="#0d2035" stroke="#264863"/>
+  <text x="76" y="497" fill="#7dd3fc" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="800">2011 · TIM COOK BECOMES CEO</text>
+  <text x="76" y="533" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="23" font-weight="900">성공을 반복 가능한</text>
+  <text x="76" y="562" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="23" font-weight="900">시스템으로</text>
+  <text x="76" y="600" fill="#d4dfec" font-family="Arial,'Noto Sans KR',sans-serif" font-size="17">
+    <tspan x="76" dy="0">공급망·실리콘·서비스·설치 기반을</tspan>
+    <tspan x="76" dy="24">연결해 제품 회사를 세계적 플랫폼</tspan>
+    <tspan x="76" dy="24">기업으로 키웠다.</tspan>
+  </text>
+  <rect x="76" y="680" width="268" height="38" rx="19" fill="#172c43"/>
+  <text x="90" y="705" fill="#e7edf5" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="700">매출 1,082.49억 · 순이익 259.22억</text>
+
+  <circle cx="33" cy="842" r="12" fill="#a78bfa" stroke="#07111f" stroke-width="5"/>
+  <rect x="54" y="786" width="312" height="334" rx="18" fill="#0d2035" stroke="#264863"/>
+  <text x="76" y="821" fill="#c4b5fd" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="800">2026 · JOHN TERNUS CEO</text>
+  <text x="76" y="857" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="23" font-weight="900">AI 시대의 사용 경험을</text>
+  <text x="76" y="886" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="23" font-weight="900">다시 묻다</text>
+  <text x="76" y="924" fill="#d4dfec" font-family="Arial,'Noto Sans KR',sans-serif" font-size="17">
+    <tspan x="76" dy="0">9월 1일 CEO 전환 예정. 팀 쿡은</tspan>
+    <tspan x="76" dy="24">이사회 의장으로 남는다. 터너스의</tspan>
+    <tspan x="76" dy="24">성과와 리더십은 아직 검증 전이다.</tspan>
+  </text>
+  <rect x="76" y="1004" width="268" height="40" rx="20" fill="#2a2346"/>
+  <text x="90" y="1030" fill="#ddd6fe" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="700">2026.09.01 전환 · 과제: AI 인터페이스</text>
+
+  <text x="24" y="1180" fill="#93a4b8" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15">자료: Apple 연차보고서·공식 CEO 전환 발표</text>
+  <text x="24" y="1206" fill="#718096" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15">각 회계연도 기준</text>
+  <text x="24" y="1232" fill="#718096" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15">AI 인사이트 브리프 재구성</text>
+</svg>

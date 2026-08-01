@@ -1,0 +1,45 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="1130" viewBox="0 0 390 1130" role="img" aria-labelledby="title desc">
+  <title id="title">팀 쿡 시대 애플의 규모와 수익 구조</title>
+  <desc id="desc">2011년과 2025년 매출 및 순이익, 2025년 제품과 서비스 매출총이익률 계산값 비교</desc>
+  <rect width="390" height="1130" rx="24" fill="#f6f2e9"/>
+  <path d="M0 0H390V190C310 148 248 225 168 182C94 143 52 190 0 172Z" fill="#13283e"/>
+  <text x="24" y="45" fill="#7dd3fc" font-family="Arial,'Noto Sans KR',sans-serif" font-size="15" font-weight="800">COOK ERA · SCALE AND ECONOMICS</text>
+  <text x="24" y="84" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="900">잘 만든 제품을</text>
+  <text x="24" y="115" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="900">거대한 체계로</text>
+  <text x="24" y="148" fill="#c9d5e2" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16">2011년과 2025 회계연도 비교</text>
+
+  <text x="24" y="236" fill="#1f3347" font-family="Arial,'Noto Sans KR',sans-serif" font-size="19" font-weight="900">① 회사 전체 규모</text>
+  <rect x="24" y="258" width="342" height="174" rx="18" fill="#fff" stroke="#d7d1c5"/>
+  <text x="46" y="291" fill="#64748b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16" font-weight="700">연간 매출</text>
+  <text x="46" y="330" fill="#0f253b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" font-weight="900">2011  $108.249B</text>
+  <path d="M46 350H104" stroke="#7ba7c2" stroke-width="11" stroke-linecap="round"/>
+  <text x="46" y="391" fill="#0f253b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" font-weight="900">2025  $416.161B</text>
+  <path d="M46 411H340" stroke="#167da4" stroke-width="11" stroke-linecap="round"/>
+
+  <rect x="24" y="450" width="342" height="174" rx="18" fill="#fff" stroke="#d7d1c5"/>
+  <text x="46" y="483" fill="#64748b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16" font-weight="700">연간 순이익</text>
+  <text x="46" y="522" fill="#0f253b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" font-weight="900">2011  $25.922B</text>
+  <path d="M46 542H104" stroke="#82b4a8" stroke-width="11" stroke-linecap="round"/>
+  <text x="46" y="583" fill="#0f253b" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" font-weight="900">2025  $112.010B</text>
+  <path d="M46 603H340" stroke="#16806f" stroke-width="11" stroke-linecap="round"/>
+
+  <rect x="24" y="642" width="342" height="94" rx="18" fill="#e5f0f3"/>
+  <text x="46" y="674" fill="#245066" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16" font-weight="700">14년 동안</text>
+  <text x="46" y="711" fill="#102b40" font-family="Arial,'Noto Sans KR',sans-serif" font-size="24" font-weight="900">매출 3.84배 · 순이익 4.32배</text>
+
+  <text x="24" y="788" fill="#1f3347" font-family="Arial,'Noto Sans KR',sans-serif" font-size="19" font-weight="900">② 2025년 수익 구조</text>
+  <rect x="24" y="810" width="342" height="220" rx="20" fill="#13283e"/>
+  <text x="46" y="849" fill="#dbeafe" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16" font-weight="700">제품 매출총이익률 · 계산값</text>
+  <rect x="46" y="865" width="294" height="25" rx="12" fill="#253e56"/>
+  <rect x="46" y="865" width="108" height="25" rx="12" fill="#60a5fa"/>
+  <text x="46" y="925" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="900">36.8%</text>
+  <text x="174" y="925" fill="#d1fae5" font-family="Arial,'Noto Sans KR',sans-serif" font-size="16" font-weight="700">서비스</text>
+  <rect x="174" y="941" width="166" height="25" rx="12" fill="#253e56"/>
+  <rect x="174" y="941" width="125" height="25" rx="12" fill="#34d399"/>
+  <text x="174" y="1005" fill="#fff" font-family="Arial,'Noto Sans KR',sans-serif" font-size="25" font-weight="900">75.4%</text>
+
+  <text x="24" y="1067" fill="#5e6873" font-family="Arial,'Noto Sans KR',sans-serif" font-size="14">자료: Apple 2011·2025 연결재무제표</text>
+  <text x="24" y="1091" fill="#5e6873" font-family="Arial,'Noto Sans KR',sans-serif" font-size="14">매출총이익률은 부문 매출·원가로 계산한 값</text>
+  <text x="24" y="1115" fill="#8a8175" font-family="Arial,'Noto Sans KR',sans-serif" font-size="14">AI 인사이트 브리프 재구성</text>
+</svg>
