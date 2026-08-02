@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DeepSeek V4-Flash-0731, 값싼 코딩 에이전트의 시험대</title>
+    <meta name="description" content="DeepSeek가 V4-Flash-0731 API 공개 베타를 시작했다. 공식 벤치마크, 가격, 모델 범위와 아직 독립적으로 확인되지 않은 지점을 구분해 개발자가 실제로 볼 기준을 정리한다.">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/article-tools.js" defer></script>
+    <style>
+      .article-figure { margin:2.4rem auto; max-width:820px; }
+      .benchmark-wrap { border:1px solid #ded8eb; border-radius:18px; padding:20px; background:#fbf9ff; overflow:hidden; }
+      .benchmark-wrap h3 { margin:0 0 7px; color:#3c266b; font-size:1.2rem; }
+      .benchmark-wrap > p { margin:0 0 16px; color:#564b68; }
+      .benchmark-table { width:100%; border-collapse:collapse; table-layout:fixed; background:#fff; }
+      .benchmark-table th, .benchmark-table td { border:1px solid #ded8eb; padding:12px 10px; text-align:left; vertical-align:top; line-height:1.48; overflow-wrap:anywhere; word-break:keep-all; }
+      .benchmark-table th { background:#efe9fa; color:#34205f; }
+      .benchmark-table th:nth-child(1), .benchmark-table td:nth-child(1) { width:32%; }
+      .benchmark-table th:nth-child(2), .benchmark-table td:nth-child(2) { width:18%; text-align:center; font-variant-numeric:tabular-nums; }
+      .benchmark-table th:nth-child(3), .benchmark-table td:nth-child(3) { width:50%; }
+      .article-figure figcaption { margin-top:10px; line-height:1.55; }
+      @media (max-width:620px) {
+        .benchmark-wrap { padding:14px; }
+        .benchmark-table, .benchmark-table tbody, .benchmark-table tr, .benchmark-table th, .benchmark-table td { display:block; width:100% !important; }
+        .benchmark-table thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+        .benchmark-table tr { border:1px solid #ded8eb; border-radius:12px; margin:0 0 12px; overflow:hidden; background:#fff; }
+        .benchmark-table td { border:0; border-bottom:1px solid #eee8f7; padding:10px 12px 10px 41%; position:relative; min-height:44px; text-align:left !important; }
+        .benchmark-table td:last-child { border-bottom:0; }
+        .benchmark-table td::before { content:attr(data-label); position:absolute; left:12px; top:10px; width:35%; font-weight:750; color:#4a3473; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed">중국 AI 뉴스</a></nav></header>
+    <main class="article-shell">
+      <article class="article">
+        <a class="back-link" href="../index.html">처음으로 돌아가기</a>
+        <div class="article-meta"><span>2026.08.02</span><span>중국 AI 뉴스 · DeepSeek · 코딩 에이전트</span><span>by kikuke</span></div>
+        <h1>DeepSeek V4-Flash-0731, 값싼 코딩 에이전트의 시험대</h1>
+        <p class="lead">DeepSeek가 7월 31일 V4-Flash API의 새 버전 ‘DeepSeek-V4-Flash-0731’을 공개 베타로 전환했다. 회사는 코딩과 도구 사용 성능이 V4-Pro-Preview를 크게 앞선다고 주장했고, 기존 모델 이름을 그대로 써도 새 버전에 연결되도록 했다. 숫자만 보면 에이전트 시장의 가격 질서를 다시 흔들 만하다. 그러나 아직 공개되지 않은 전용 하네스, 내부 시험 세트, API에만 한정된 업데이트를 떼어 보면 지금 확인된 것은 ‘저렴한 유력 후보’이지 모든 개발 환경에서의 우승자가 아니다.</p>
+
+        <p><a href="https://api-docs.deepseek.com/updates/">DeepSeek 공식 변경 기록</a>에 따르면 개발자는 기존처럼 <code>deepseek-v4-flash</code> 모델 이름을 호출하면 최신 버전을 사용할 수 있다. Responses API를 네이티브로 지원하고 Codex용 설정도 제공한다. 새 엔드포인트를 따로 찾을 필요가 없다는 점은 마이그레이션 비용을 줄이지만, 같은 이름의 동작이 바뀌었다는 뜻이기도 하다.</p>
+        <p>이번 변화는 완전히 새로운 구조의 모델 출시가 아니다. 회사는 4월에 공개한 V4-Flash-Preview와 아키텍처와 크기가 같고, 사후학습만 다시 했다고 밝혔다. <a href="https://api-docs.deepseek.com/news/news260424/">4월 V4 공개 자료</a>는 Flash를 전체 2,840억 매개변수 가운데 토큰당 130억 개가 활성화되는 혼합전문가 모델로 설명한다. 하드웨어 부담을 줄이는 구조적 기반은 유지한 채 에이전트 행동을 다듬은 업데이트로 읽는 편이 정확하다.</p>
+        <p>적용 범위도 분명히 나눠야 한다. 7월 31일 변경은 Flash API만 대상으로 하며 V4-Pro API, DeepSeek 앱, 웹 서비스의 모델은 그대로다. 일반 이용자가 웹 채팅을 열어 곧바로 같은 성능 변화를 체감한다고 말할 수 없다. 회사는 V4-Pro 정식 버전을 추후 공개하겠다고 예고했지만 날짜는 밝히지 않았다.</p>
+        <p>공식 발표에서 가장 눈에 띄는 수치는 Terminal Bench 2.1의 82.7이다. 저장소 수정과 명령줄 도구 사용을 함께 요구하는 여러 시험에서도 높은 점수를 제시했다. 다만 점수는 모델 자체만의 능력이 아니라 에이전트 실행 틀, 도구 설명, 반복 횟수, 토큰 예산, 샘플링 설정이 결합된 결과다.</p>
+
+        <figure class="article-figure" id="visual-deepseek-benchmarks">
+          <div class="benchmark-wrap">
+            <h3>공식 에이전트 시험 결과</h3>
+            <p>서로 다른 과제의 점수이므로 행끼리 직접 높고 낮음을 비교하면 안 된다.</p>
+            <table class="benchmark-table">
+              <thead><tr><th>시험</th><th>공식 점수</th><th>읽을 때의 조건</th></tr></thead>
+              <tbody>
+                <tr><td data-label="시험">Terminal Bench 2.1</td><td data-label="공식 점수">82.7</td><td data-label="조건">명령줄 환경 과제. 전용 하네스와 최대 노력 설정이 포함됐다.</td></tr>
+                <tr><td data-label="시험">NL2Repo</td><td data-label="공식 점수">54.2</td><td data-label="조건">자연어 요구를 저장소 코드로 옮기는 능력을 본다.</td></tr>
+                <tr><td data-label="시험">Cybergym</td><td data-label="공식 점수">76.7</td><td data-label="조건">사이버 과제 결과이며 일반 코딩 품질과 같은 지표가 아니다.</td></tr>
+                <tr><td data-label="시험">DeepSWE</td><td data-label="공식 점수">54.4</td><td data-label="조건">소프트웨어 수정 과제. 회사 발표값의 독립 재현이 더 필요하다.</td></tr>
+                <tr><td data-label="시험">Toolathlon verified</td><td data-label="공식 점수">70.3</td><td data-label="조건">도구 사용 능력. 실행 환경과 허용 도구가 결과에 영향을 준다.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figcaption><a href="https://api-docs.deepseek.com/updates/">DeepSeek 2026년 7월 31일 변경 기록</a>의 공개 시험 수치를 재구성한 HTML 표. 회사 자체 측정치이며 시험마다 척도가 다르다.</figcaption>
+        </figure>
+
+        <h2>높은 점수보다 먼저 봐야 할 실행 조건</h2>
+        <p>DeepSeek는 공개 코딩 시험에 아직 배포하지 않은 ‘DeepSeek Harness’의 최소 모드를 사용했다고 적었다. 노력 수준은 최대, top-p는 0.95, 온도는 1.0이었다. 모델을 다른 에이전트 틀에 연결하거나 더 작은 예산을 주면 같은 점수가 나오지 않을 수 있다. 하네스 공개 전에는 제3자가 발표 조건을 완전히 복제하기도 어렵다.</p>
+        <p>회사가 함께 제시한 DSBench-FullStack 68.7과 DSBench-Hard 59.6은 내부 시험 세트다. 실제 제품 개발에 가까운 과제를 만들었다는 설명은 흥미롭지만 문제 구성, 오염 가능성, 채점 방식이 공개되지 않은 숫자는 독립 비교의 기준으로 쓰기 어렵다. 공개 시험 결과와 내부 숫자를 한 묶음으로 평균 내는 방식은 피해야 한다.</p>
+        <p><a href="https://www.ithome.com/0/984/116.htm">IT之家의 출시 보도</a>는 API 베타의 범위와 회사가 밝힌 점수를 확인했다. 이어 <a href="https://www.ithome.com/0/984/417.htm">8월 1일 보도</a>는 Artificial Analysis와 프런트엔드 코딩 아레나의 초기 순위가 크게 올랐다고 전했다. 이 수치는 출시 직후의 스냅샷이며 평가 기관의 설정과 참여 모델이 바뀌면 순위도 움직인다.</p>
+        <p>벤치마크의 개선이 실제 저장소의 유지보수 능력과 같은지도 살펴야 한다. 기업 코드는 오래된 의존성, 비공개 문서, 불완전한 시험, 다국어 주석을 포함한다. 정답이 명확한 공개 과제에서 높은 점수를 얻는 것과 조직의 규칙을 읽고 안전하게 수정한 뒤 설명을 남기는 일은 겹치지만 동일하지 않다.</p>
+        <p>보안 과제 점수도 양면적이다. Cybergym 76.7은 취약점 분석과 도구 사용 능력이 강해졌다는 신호일 수 있지만, 같은 능력은 오용 가능성도 키운다. 기업이 코딩 에이전트를 도입할 때는 코드 생성 품질뿐 아니라 네트워크 접근, 비밀정보 노출, 외부 패키지 게시 권한을 함께 제한해야 한다.</p>
+
+        <h2>가격은 강력하지만 전체 비용은 따로 계산해야 한다</h2>
+        <p><a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek의 현재 API 가격표</a>는 100만 토큰당 캐시 미적중 입력 0.14달러, 출력 0.28달러를 제시한다. 캐시 적중 입력은 0.0028달러로 더 낮다. 반복되는 시스템 프롬프트와 저장소 문맥이 캐시에 잘 걸리는 작업이라면 비용 차이가 크게 벌어질 수 있다. 가격은 수시로 바뀔 수 있으므로 실제 도입 시점의 표를 다시 확인해야 한다.</p>
+        <p>싼 토큰이 싼 작업을 자동으로 보장하지는 않는다. 모델이 같은 문제를 여러 번 시도하거나 긴 저장소를 반복해서 읽으면 총 토큰이 늘어난다. 높은 노력 설정으로만 발표 점수에 가까워진다면 대기시간과 호출량이 함께 올라갈 수 있다. 비교 대상은 100만 토큰의 단가가 아니라 병합 가능한 수정 한 건의 평균 비용이어야 한다.</p>
+        <p>캐시 가격도 특히 조심해서 해석해야 한다. 모든 입력이 캐시에 적중하는 것은 아니고 코드가 자주 바뀌거나 세션이 분리되면 미적중 비율이 높아진다. 프롬프트 템플릿이 안정적인 대량 작업과 매번 다른 저장소를 여는 일회성 작업의 경제성은 크게 다르다.</p>
+        <p>중국 모델을 선택할 때는 데이터 처리와 공급망 조건도 총비용에 포함된다. 어떤 코드와 로그가 외부 API로 전송되는지, 보존 정책은 무엇인지, 장애 때 다른 모델로 전환할 수 있는지 검토해야 한다. 단가가 낮아도 법무·보안 검토와 이중화 비용이 커지면 전체 비용 우위가 줄어든다.</p>
+        <p>오픈 가중치 여부도 API 업데이트와 분리해서 봐야 한다. V4 계열의 공개 모델 자산과 회사가 운영하는 최신 API는 같은 이름 아래 있어도 실행 최적화와 사후학습 버전이 다를 수 있다. <a href="https://huggingface.co/deepseek-ai">DeepSeek의 Hugging Face 조직 페이지</a>에서 배포된 체크포인트와 라이선스를 확인하고, API 발표 성능을 로컬 모델에 그대로 대입하지 않아야 한다.</p>
+
+        <p>간단한 비용 예시도 차이를 보여 준다. 한 작업이 캐시 미적중 입력 20만 토큰과 출력 5만 토큰을 쓴다면 현재 표시 가격으로 토큰 비용은 약 0.042달러다. 하지만 에이전트가 다섯 번 실패해 같은 문맥을 다시 읽고, 캐시가 기대대로 작동하지 않으면 작업당 비용은 곧 몇 배가 된다. 여기에 실행용 컴퓨팅, 테스트 환경, 사람의 검토시간을 더해야 한다.</p>
+        <p>Responses API 지원은 장기 실행과 도구 호출을 다루는 개발자에게 편의가 될 수 있다. 그렇더라도 기존 OpenAI 호환 형식과 완전히 같은 동작을 가정해서는 안 된다. 스트리밍 이벤트, 오류 형식, 도구 결과의 순서, 중단 뒤 재개가 사내 오케스트레이터와 맞는지 작은 통합 시험을 먼저 해야 한다.</p>
+        <p>모델 이름을 유지한 채 서버 버전이 바뀌는 방식은 운영상 장단점이 있다. 호출 코드를 수정하지 않아도 개선을 받지만, 어제 통과한 회귀시험이 오늘 다른 출력을 낼 수 있다. 재현성이 중요한 팀은 요청 시점의 모델 식별자와 응답 메타데이터를 저장하고, 공급사가 고정 버전이나 이전 버전 보존 정책을 제공하는지 확인해야 한다.</p>
+        <p>100만 토큰 문맥창도 그대로 실용 능력으로 읽으면 안 된다. 긴 저장소를 한 번에 넣을 수 있는 최대 길이와, 그 안에서 서로 떨어진 요구사항과 코드를 정확히 연결하는 능력은 다르다. 파일 검색과 요약을 먼저 하는 에이전트가 전체 저장소를 무작정 넣는 방식보다 비용과 정확도에서 나을 수 있다.</p>
+        <p>또 하나의 변수는 서비스 용량이다. 공개 베타에는 사용자가 몰릴 때 지연시간과 오류율이 흔들릴 수 있다. 평균 응답속도뿐 아니라 95·99백분위 지연, 시간대별 성공률, 긴 작업의 중도 종료 비율을 기록해야 한다. 코딩 에이전트는 한 번의 호출보다 연속된 여러 단계가 중요해 작은 실패율도 최종 완료율을 크게 낮출 수 있다.</p>
+
+        <h2>한국 개발팀이 해볼 현실적인 평가</h2>
+        <p>첫 단계는 공개 벤치마크를 다시 돌리는 일이 아니라 팀의 최근 이슈 30~50개를 익명화해 작은 시험 세트를 만드는 것이다. 오류 수정, 테스트 작성, 리팩터링, 문서 갱신을 섞고 사람이 실제로 병합했는지를 기준으로 삼아야 한다. 성공률과 함께 검토시간, 잘못 건드린 파일 수, 재시도 횟수를 기록하면 단가의 착시를 줄일 수 있다.</p>
+        <p>두 번째는 같은 에이전트 틀에서 모델만 바꾸는 대조다. DeepSeek가 쓴 하네스와 다른 도구를 사용한다면 그 차이를 조건으로 명시해야 한다. 토큰 예산, 제한시간, 테스트 실행 횟수, 인터넷 접근 권한을 맞춰야 모델 비교가 된다. 한쪽에만 더 많은 반복 기회를 주면 결과는 가격도 품질도 왜곡된다.</p>
+        <p>세 번째는 코드 외부 행동을 별도 채점하는 것이다. 패키지 설치, 셸 명령, 브랜치 생성, 외부 문서 검색이 필요한 순간마다 권한을 구분하고 로그를 남겨야 한다. 높은 성공률보다 허용되지 않은 변경을 하지 않는 능력이 운영환경에서는 더 중요할 수 있다.</p>
+        <p>한국어 요구사항과 주석 처리도 직접 확인할 필요가 있다. 공개 영어 중심 코딩 시험은 국내 조직의 변수명 관행, 전자정부 프레임워크, 사내 문서의 혼합 언어를 충분히 반영하지 않는다. 요구를 정확히 이해했는지, 수정 이유를 한국어로 설명할 수 있는지, 인코딩을 깨뜨리지 않는지를 독립 항목으로 두는 편이 좋다.</p>
+        <p>조달과 계약 단계에서는 모델 국적만 묻는 체크리스트보다 실제 데이터 흐름을 그리는 편이 유용하다. 소스코드가 어느 지역의 서버로 전송되는지, 하청 인프라가 있는지, 입력이 학습에 쓰이는지, 삭제와 감사 요청에 어떻게 응답하는지를 문서로 받아야 한다. 같은 공급사의 웹 서비스와 API도 약관이 다를 수 있으므로 계약 대상을 정확히 특정해야 한다.</p>
+        <p>파일럿 결과를 경영진에게 보고할 때도 평균 성공률 하나만 제시하지 않는 편이 좋다. 가장 자주 실패한 작업 유형, 사람이 되돌린 변경, 비밀정보를 읽으려 한 횟수, 서비스 장애 때 멈춘 단계까지 함께 보여 줘야 한다. 그래야 낮은 토큰 가격이 실제 개발주기 단축으로 이어졌는지 판단할 수 있다. 결과를 월별로 반복해 모델 변경과 서비스 혼잡이 품질에 미치는 영향도 분리해야 한다.</p>
+        <p>앞으로 볼 신호는 세 가지다. DeepSeek Harness가 약속대로 공개되는지, 독립 기관이 비슷한 조건에서 수치를 재현하는지, V4-Pro 정식판이 Flash와 어떤 가격·성능 관계를 만드는지다. 공개 베타 동안 오류율과 지연시간, 가용성에 관한 장기 자료도 쌓여야 한다.</p>
+        <p><a href="https://arxiv.org/abs/2601.11868">Terminal-Bench 2.0 연구</a>가 강조하듯 터미널 기반 에이전트 평가는 실제 환경을 향하지만 실행 설정에 민감하다. 단일 리더보드 숫자는 후보를 고르는 필터로는 유용해도 구매 결정을 대신하지 못한다. 특히 모델 공급사가 직접 최적화한 하네스 결과는 가장 좋은 가능성을 보여 주는 상한에 가깝다.</p>
+        <p>DeepSeek V4-Flash-0731의 의미는 세계 최고라는 선언보다, 에이전트 기능과 매우 낮은 API 가격을 한 상품에 묶었다는 데 있다. 이 조합은 경쟁사에 가격 인하와 경량 에이전트 개선 압력을 줄 수 있다. 동시에 벤치마크를 모델·하네스·예산의 결합물로 읽어야 한다는 과제도 더 선명해졌다.</p>
+        <p>필자의 판단은 ‘바로 전환’도 ‘중국 모델이라 배제’도 아니다. 민감하지 않은 내부 시험에서 동일한 작업비용과 병합 품질을 비교할 가치가 충분한 후보다. 다만 공개 베타, 비공개 하네스, 내부 시험이라는 세 단서를 지우는 순간 기사는 광고문이 된다. 실제 우위는 각 팀의 저장소와 안전 경계 안에서만 확인할 수 있다.</p>
+
+        <section class="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">출처와 더 읽을 자료</h2>
+          <ul>
+            <li><a href="https://api-docs.deepseek.com/updates/">DeepSeek API Change Log: 2026-07-31 V4-Flash Update</a></li>
+            <li><a href="https://api-docs.deepseek.com/news/news260424/">DeepSeek: V4 model announcement and technical details</a></li>
+            <li><a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek API: Models &amp; Pricing</a></li>
+            <li><a href="https://www.ithome.com/0/984/116.htm">IT之家: DeepSeek V4-Flash-0731 API beta report</a></li>
+            <li><a href="https://www.ithome.com/0/984/417.htm">IT之家: early independent benchmark snapshots</a></li>
+            <li><a href="https://huggingface.co/deepseek-ai">DeepSeek AI on Hugging Face</a></li>
+            <li><a href="https://arxiv.org/abs/2601.11868">Terminal-Bench 2.0 research paper</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer"><span>AI 인사이트 브리프</span><span>중국 AI 뉴스와 해설 · by kikuke</span></footer>
+  </body>
+</html>
