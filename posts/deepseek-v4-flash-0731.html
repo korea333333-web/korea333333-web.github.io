@@ -3,111 +3,115 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DeepSeek V4-Flash-0731, 값싼 코딩 에이전트의 시험대</title>
-    <meta name="description" content="DeepSeek가 V4-Flash-0731 API 공개 베타를 시작했다. 공식 벤치마크, 가격, 모델 범위와 아직 독립적으로 확인되지 않은 지점을 구분해 개발자가 실제로 볼 기준을 정리한다.">
+    <title>DeepSeek V4-Flash-0731, Claude Opus 4.8의 89분의 1 출력 단가로 어디까지 왔나</title>
+    <meta name="description" content="DeepSeek V4-Flash-0731의 독립 성능 평가, Claude Opus 4.8 대비 API 비용, MIT 오픈웨이트와 중국 LLM 전략을 공식 자료로 분석한다.">
     <link rel="stylesheet" href="../assets/styles.css">
     <script src="../assets/article-tools.js" defer></script>
     <style>
-      .article-figure { margin:2.4rem auto; max-width:820px; }
-      .benchmark-wrap { border:1px solid #ded8eb; border-radius:18px; padding:20px; background:#fbf9ff; overflow:hidden; }
-      .benchmark-wrap h3 { margin:0 0 7px; color:#3c266b; font-size:1.2rem; }
-      .benchmark-wrap > p { margin:0 0 16px; color:#564b68; }
-      .benchmark-table { width:100%; border-collapse:collapse; table-layout:fixed; background:#fff; }
-      .benchmark-table th, .benchmark-table td { border:1px solid #ded8eb; padding:12px 10px; text-align:left; vertical-align:top; line-height:1.48; overflow-wrap:anywhere; word-break:keep-all; }
-      .benchmark-table th { background:#efe9fa; color:#34205f; }
-      .benchmark-table th:nth-child(1), .benchmark-table td:nth-child(1) { width:32%; }
-      .benchmark-table th:nth-child(2), .benchmark-table td:nth-child(2) { width:18%; text-align:center; font-variant-numeric:tabular-nums; }
-      .benchmark-table th:nth-child(3), .benchmark-table td:nth-child(3) { width:50%; }
-      .article-figure figcaption { margin-top:10px; line-height:1.55; }
-      @media (max-width:620px) {
-        .benchmark-wrap { padding:14px; }
-        .benchmark-table, .benchmark-table tbody, .benchmark-table tr, .benchmark-table th, .benchmark-table td { display:block; width:100% !important; }
-        .benchmark-table thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
-        .benchmark-table tr { border:1px solid #ded8eb; border-radius:12px; margin:0 0 12px; overflow:hidden; background:#fff; }
-        .benchmark-table td { border:0; border-bottom:1px solid #eee8f7; padding:10px 12px 10px 41%; position:relative; min-height:44px; text-align:left !important; }
-        .benchmark-table td:last-child { border-bottom:0; }
-        .benchmark-table td::before { content:attr(data-label); position:absolute; left:12px; top:10px; width:35%; font-weight:750; color:#4a3473; }
-      }
+      .article-figure{margin:2.5rem auto;max-width:880px}.performance-board,.price-board,.strategy-board{border:1px solid #d9ddea;border-radius:22px;padding:22px;background:#f7f9fc;color:#202636;overflow:hidden}.performance-board h3,.price-board h3,.strategy-board h3{margin:0 0 8px;font-size:1.24rem;line-height:1.4}.visual-deck{margin:0 0 18px;color:#5f6878;line-height:1.62}.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.model-card{min-width:0;border:1px solid #dbe0ea;border-radius:17px;padding:18px;background:#fff}.model-card.deepseek{border-color:#82c9bd;background:#f2fbf8}.model-card .model-name{display:block;margin-bottom:10px;color:#334155;font-weight:800}.model-card .score{display:block;color:#14213d;font-size:2.25rem;font-weight:900;line-height:1}.model-card .score small{font-size:.9rem;color:#64748b}.score-track{height:14px;margin:15px 0 12px;border-radius:999px;background:#e7ebf2;overflow:hidden}.score-fill{display:block;height:100%;border-radius:inherit;background:#5865b8}.deepseek .score-fill{background:#178b78}.model-card p{margin:0;color:#596374;line-height:1.55}.gap-note{margin:15px 0 0;padding:13px 15px;border-radius:13px;background:#e9edf7;color:#343c56;line-height:1.55}.price-table{display:grid;gap:14px}.price-row{display:grid;grid-template-columns:145px minmax(0,1fr) 118px;gap:12px;align-items:center}.price-label{font-weight:850;color:#30384a}.price-bars{display:grid;gap:8px}.price-bar{position:relative;min-height:32px;border-radius:10px;background:#e5e9f0;overflow:hidden}.price-bar::before{content:"";position:absolute;inset:0 auto 0 0;width:var(--fill);min-width:5px;border-radius:10px;background:#178b78}.price-bar span{position:relative;z-index:1;display:flex;align-items:center;min-height:32px;padding:0 10px;color:#1f2937;font-weight:800;white-space:nowrap}.price-bar.claude::before{background:#7356b7}.price-bar.claude span{color:#fff}.price-ratio{text-align:right;color:#433a65;font-weight:900}.price-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.price-chip{border:1px solid #dbe0ea;border-radius:14px;padding:14px;background:#fff}.price-chip b{display:block;margin-bottom:5px;color:#16223a;font-size:1.35rem}.price-chip span{display:block;color:#657083;line-height:1.5}.strategy-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.strategy-card{position:relative;min-width:0;border:1px solid #dce1ea;border-radius:16px;padding:16px;background:#fff;overflow-wrap:anywhere;word-break:keep-all}.strategy-card em{display:inline-flex;width:30px;height:30px;margin-bottom:10px;align-items:center;justify-content:center;border-radius:50%;background:#173b59;color:#fff;font-style:normal;font-weight:900}.strategy-card b{display:block;margin-bottom:7px;color:#26354d}.strategy-card span{display:block;color:#5c6677;line-height:1.55}.strategy-card:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:50%;z-index:2;color:#63708a;font-size:1.25rem;font-weight:900}.article-figure figcaption{margin-top:10px;line-height:1.62}.fact-box{margin:2rem 0;padding:18px 20px;border-left:4px solid #178b78;border-radius:0 14px 14px 0;background:#eef8f6}.sources li{margin:.55rem 0}
+      @media(max-width:760px){.strategy-grid{grid-template-columns:1fr 1fr}.strategy-card:nth-child(2)::after{display:none}.price-summary{grid-template-columns:1fr}.price-row{grid-template-columns:112px minmax(0,1fr) 92px}}
+      @media(max-width:560px){.performance-board,.price-board,.strategy-board{padding:16px}.model-grid,.strategy-grid{grid-template-columns:1fr}.strategy-card::after{display:none}.price-row{grid-template-columns:1fr}.price-ratio{text-align:left}.price-bar{min-height:35px}.model-card .score{font-size:2rem}}
     </style>
   </head>
   <body>
-    <header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed">중국 AI 뉴스</a></nav></header>
+    <header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed-feed">중국 AI 뉴스</a></nav></header>
     <main class="article-shell">
       <article class="article">
         <a class="back-link" href="../index.html">처음으로 돌아가기</a>
-        <div class="article-meta"><span>2026.08.02</span><span>중국 AI 뉴스 · DeepSeek · 코딩 에이전트</span><span>by kikuke</span></div>
-        <h1>DeepSeek V4-Flash-0731, 값싼 코딩 에이전트의 시험대</h1>
-        <p class="lead">DeepSeek가 7월 31일 V4-Flash API의 새 버전 ‘DeepSeek-V4-Flash-0731’을 공개 베타로 전환했다. 회사는 코딩과 도구 사용 성능이 V4-Pro-Preview를 크게 앞선다고 주장했고, 기존 모델 이름을 그대로 써도 새 버전에 연결되도록 했다. 숫자만 보면 에이전트 시장의 가격 질서를 다시 흔들 만하다. 그러나 아직 공개되지 않은 전용 하네스, 내부 시험 세트, API에만 한정된 업데이트를 떼어 보면 지금 확인된 것은 ‘저렴한 유력 후보’이지 모든 개발 환경에서의 우승자가 아니다.</p>
+        <div class="article-meta"><span>2026.08.05</span><span>중국 AI 뉴스 · 모델 성능 · 오픈웨이트</span><span>by kikuke</span></div>
+        <h1>DeepSeek V4-Flash-0731, Claude Opus 4.8의 89분의 1 출력 단가로 어디까지 왔나</h1>
+        <p class="lead">DeepSeek의 새 V4-Flash-0731은 ‘Claude Opus 4.8과 똑같은 모델’은 아니다. 같은 독립 평가에서 50점으로 Opus 4.8의 56점에 6점 뒤진다. 하지만 100만 토큰당 공식 출력 가격은 0.28달러로 Claude의 25달러보다 약 89배 싸고, 입력 가격도 약 36배 낮다. 여기에 MIT 라이선스의 공개 가중치까지 겹치면서 성능 1점보다 비용 1달러가 더 중요한 대규모 에이전트 시장의 계산법을 바꾸고 있다.</p>
 
-        <p><a href="https://api-docs.deepseek.com/updates/">DeepSeek 공식 변경 기록</a>에 따르면 개발자는 기존처럼 <code>deepseek-v4-flash</code> 모델 이름을 호출하면 최신 버전을 사용할 수 있다. Responses API를 네이티브로 지원하고 Codex용 설정도 제공한다. 새 엔드포인트를 따로 찾을 필요가 없다는 점은 마이그레이션 비용을 줄이지만, 같은 이름의 동작이 바뀌었다는 뜻이기도 하다.</p>
-        <p>이번 변화는 완전히 새로운 구조의 모델 출시가 아니다. 회사는 4월에 공개한 V4-Flash-Preview와 아키텍처와 크기가 같고, 사후학습만 다시 했다고 밝혔다. <a href="https://api-docs.deepseek.com/news/news260424/">4월 V4 공개 자료</a>는 Flash를 전체 2,840억 매개변수 가운데 토큰당 130억 개가 활성화되는 혼합전문가 모델로 설명한다. 하드웨어 부담을 줄이는 구조적 기반은 유지한 채 에이전트 행동을 다듬은 업데이트로 읽는 편이 정확하다.</p>
-        <p>적용 범위도 분명히 나눠야 한다. 7월 31일 변경은 Flash API만 대상으로 하며 V4-Pro API, DeepSeek 앱, 웹 서비스의 모델은 그대로다. 일반 이용자가 웹 채팅을 열어 곧바로 같은 성능 변화를 체감한다고 말할 수 없다. 회사는 V4-Pro 정식 버전을 추후 공개하겠다고 예고했지만 날짜는 밝히지 않았다.</p>
-        <p>공식 발표에서 가장 눈에 띄는 수치는 Terminal Bench 2.1의 82.7이다. 저장소 수정과 명령줄 도구 사용을 함께 요구하는 여러 시험에서도 높은 점수를 제시했다. 다만 점수는 모델 자체만의 능력이 아니라 에이전트 실행 틀, 도구 설명, 반복 횟수, 토큰 예산, 샘플링 설정이 결합된 결과다.</p>
+        <p>가장 먼저 구분할 것은 평가의 출처다. <a href="https://artificialanalysis.ai/models/deepseek-v4-flash">Artificial Analysis의 0731 독립 평가</a>에서 DeepSeek V4-Flash-0731의 최대 추론 노력 점수는 Intelligence Index 50이다. 같은 기관의 <a href="https://artificialanalysis.ai/models/claude-opus-4-8/">Claude Opus 4.8 최대 노력 평가</a>는 56이다. 서로 다른 회사가 자기 모델에 유리한 시험을 골라 적은 숫자가 아니라, 같은 기관의 현재 지수와 실행 방법을 적용한 비교라는 점에서 출발점으로 쓸 만하다.</p>
+        <p>6점 차이를 ‘동급’이라고 단정하면 과장이다. 이 지수는 실제 업무형 과제, 도구 사용, 터미널 코딩, 과학 추론, 어려운 지식, 장문 추론 등 아홉 평가를 묶는다. 모델마다 강점이 다르고 6점이 모든 업무에서 같은 격차를 뜻하지도 않는다. 정확한 표현은 DeepSeek가 최고 폐쇄형 모델 바로 아래의 상위권에 진입했지만, 종합 점수에서는 아직 Opus 4.8이 앞선다는 것이다.</p>
 
-        <figure class="article-figure" id="visual-deepseek-benchmarks">
-          <div class="benchmark-wrap">
-            <h3>공식 에이전트 시험 결과</h3>
-            <p>서로 다른 과제의 점수이므로 행끼리 직접 높고 낮음을 비교하면 안 된다.</p>
-            <table class="benchmark-table">
-              <thead><tr><th>시험</th><th>공식 점수</th><th>읽을 때의 조건</th></tr></thead>
-              <tbody>
-                <tr><td data-label="시험">Terminal Bench 2.1</td><td data-label="공식 점수">82.7</td><td data-label="조건">명령줄 환경 과제. 전용 하네스와 최대 노력 설정이 포함됐다.</td></tr>
-                <tr><td data-label="시험">NL2Repo</td><td data-label="공식 점수">54.2</td><td data-label="조건">자연어 요구를 저장소 코드로 옮기는 능력을 본다.</td></tr>
-                <tr><td data-label="시험">Cybergym</td><td data-label="공식 점수">76.7</td><td data-label="조건">사이버 과제 결과이며 일반 코딩 품질과 같은 지표가 아니다.</td></tr>
-                <tr><td data-label="시험">DeepSWE</td><td data-label="공식 점수">54.4</td><td data-label="조건">소프트웨어 수정 과제. 회사 발표값의 독립 재현이 더 필요하다.</td></tr>
-                <tr><td data-label="시험">Toolathlon verified</td><td data-label="공식 점수">70.3</td><td data-label="조건">도구 사용 능력. 실행 환경과 허용 도구가 결과에 영향을 준다.</td></tr>
-              </tbody>
-            </table>
+        <figure class="article-figure" id="visual-deepseek-performance-gap">
+          <div class="performance-board" role="img" aria-label="Artificial Analysis Intelligence Index에서 DeepSeek V4-Flash-0731 50점과 Claude Opus 4.8 56점을 비교한 두 카드">
+            <h3>같은 독립 평가에서 본 성능 간격</h3>
+            <p class="visual-deck">최대 추론 노력 설정끼리 비교했다. 막대의 기준은 60점이며 점수가 높을수록 좋다.</p>
+            <div class="model-grid">
+              <div class="model-card deepseek"><span class="model-name">DeepSeek V4-Flash-0731</span><span class="score">50 <small>/ 60</small></span><div class="score-track"><span class="score-fill" style="width:83.33%"></span></div><p>오픈웨이트 모델. 7월 31일 사후학습 업데이트가 반영된 최대 노력 모드다.</p></div>
+              <div class="model-card"><span class="model-name">Claude Opus 4.8</span><span class="score">56 <small>/ 60</small></span><div class="score-track"><span class="score-fill" style="width:93.33%"></span></div><p>폐쇄형 모델. 같은 지수의 적응형 추론·최대 노력 모드다.</p></div>
+            </div>
+            <p class="gap-note"><strong>읽는 법:</strong> DeepSeek가 6점 뒤진다. ‘완전한 동급’보다 ‘선두권에 근접한 저비용 모델’이 현재 근거에 맞는 결론이다.</p>
           </div>
-          <figcaption><a href="https://api-docs.deepseek.com/updates/">DeepSeek 2026년 7월 31일 변경 기록</a>의 공개 시험 수치를 재구성한 HTML 표. 회사 자체 측정치이며 시험마다 척도가 다르다.</figcaption>
+          <figcaption><a href="https://artificialanalysis.ai/models/deepseek-v4-flash">Artificial Analysis의 DeepSeek 평가</a>와 <a href="https://artificialanalysis.ai/models/claude-opus-4-8/">Claude Opus 4.8 평가</a>를 바탕으로 직접 재구성한 HTML 도표. 2026년 8월 5일 확인한 Intelligence Index v4.1 수치이며 평가판 변경에 따라 점수는 달라질 수 있다.</figcaption>
         </figure>
 
-        <h2>높은 점수보다 먼저 봐야 할 실행 조건</h2>
-        <p>DeepSeek는 공개 코딩 시험에 아직 배포하지 않은 ‘DeepSeek Harness’의 최소 모드를 사용했다고 적었다. 노력 수준은 최대, top-p는 0.95, 온도는 1.0이었다. 모델을 다른 에이전트 틀에 연결하거나 더 작은 예산을 주면 같은 점수가 나오지 않을 수 있다. 하네스 공개 전에는 제3자가 발표 조건을 완전히 복제하기도 어렵다.</p>
-        <p>회사가 함께 제시한 DSBench-FullStack 68.7과 DSBench-Hard 59.6은 내부 시험 세트다. 실제 제품 개발에 가까운 과제를 만들었다는 설명은 흥미롭지만 문제 구성, 오염 가능성, 채점 방식이 공개되지 않은 숫자는 독립 비교의 기준으로 쓰기 어렵다. 공개 시험 결과와 내부 숫자를 한 묶음으로 평균 내는 방식은 피해야 한다.</p>
-        <p><a href="https://www.ithome.com/0/984/116.htm">IT之家의 출시 보도</a>는 API 베타의 범위와 회사가 밝힌 점수를 확인했다. 이어 <a href="https://www.ithome.com/0/984/417.htm">8월 1일 보도</a>는 Artificial Analysis와 프런트엔드 코딩 아레나의 초기 순위가 크게 올랐다고 전했다. 이 수치는 출시 직후의 스냅샷이며 평가 기관의 설정과 참여 모델이 바뀌면 순위도 움직인다.</p>
-        <p>벤치마크의 개선이 실제 저장소의 유지보수 능력과 같은지도 살펴야 한다. 기업 코드는 오래된 의존성, 비공개 문서, 불완전한 시험, 다국어 주석을 포함한다. 정답이 명확한 공개 과제에서 높은 점수를 얻는 것과 조직의 규칙을 읽고 안전하게 수정한 뒤 설명을 남기는 일은 겹치지만 동일하지 않다.</p>
-        <p>보안 과제 점수도 양면적이다. Cybergym 76.7은 취약점 분석과 도구 사용 능력이 강해졌다는 신호일 수 있지만, 같은 능력은 오용 가능성도 키운다. 기업이 코딩 에이전트를 도입할 때는 코드 생성 품질뿐 아니라 네트워크 접근, 비밀정보 노출, 외부 패키지 게시 권한을 함께 제한해야 한다.</p>
+        <p>DeepSeek 자체 시험은 에이전트 성향을 더 자세히 보여 준다. <a href="https://api-docs.deepseek.com/updates/">7월 31일 공식 변경 기록</a>에서 회사는 Terminal Bench 2.1 82.7, NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon verified 70.3을 제시했다. 이전 Flash Preview와 V4-Pro Preview보다 코딩·도구 사용 성능이 크게 개선됐다는 주장이다.</p>
+        <p>다만 회사 수치에는 공개되지 않은 DeepSeek Harness와 최대 노력 설정이 들어갔다. 하네스, 토큰 예산, 반복 횟수는 에이전트 점수에 큰 영향을 준다. 따라서 82.7을 Claude의 다른 하네스 점수 옆에 바로 놓고 승패를 선언하기보다, 독립 기관이 같은 틀에서 얻은 50 대 56을 종합 비교에 사용하고 회사 표는 개선 방향을 읽는 보조 자료로 보는 편이 안전하다.</p>
+        <p>성능보다 더 극적인 숫자는 가격이다. <a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek 공식 가격표</a>는 V4-Flash-0731의 100만 토큰당 캐시 미적중 입력 0.14달러, 출력 0.28달러를 제시한다. 캐시 적중 입력은 0.0028달러다. <a href="https://www.anthropic.com/research/claude-opus-4-8">Anthropic의 Opus 4.8 발표</a>에 적힌 일반 API 가격은 입력 5달러, 출력 25달러다.</p>
 
-        <h2>가격은 강력하지만 전체 비용은 따로 계산해야 한다</h2>
-        <p><a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek의 현재 API 가격표</a>는 100만 토큰당 캐시 미적중 입력 0.14달러, 출력 0.28달러를 제시한다. 캐시 적중 입력은 0.0028달러로 더 낮다. 반복되는 시스템 프롬프트와 저장소 문맥이 캐시에 잘 걸리는 작업이라면 비용 차이가 크게 벌어질 수 있다. 가격은 수시로 바뀔 수 있으므로 실제 도입 시점의 표를 다시 확인해야 한다.</p>
-        <p>싼 토큰이 싼 작업을 자동으로 보장하지는 않는다. 모델이 같은 문제를 여러 번 시도하거나 긴 저장소를 반복해서 읽으면 총 토큰이 늘어난다. 높은 노력 설정으로만 발표 점수에 가까워진다면 대기시간과 호출량이 함께 올라갈 수 있다. 비교 대상은 100만 토큰의 단가가 아니라 병합 가능한 수정 한 건의 평균 비용이어야 한다.</p>
-        <p>캐시 가격도 특히 조심해서 해석해야 한다. 모든 입력이 캐시에 적중하는 것은 아니고 코드가 자주 바뀌거나 세션이 분리되면 미적중 비율이 높아진다. 프롬프트 템플릿이 안정적인 대량 작업과 매번 다른 저장소를 여는 일회성 작업의 경제성은 크게 다르다.</p>
-        <p>중국 모델을 선택할 때는 데이터 처리와 공급망 조건도 총비용에 포함된다. 어떤 코드와 로그가 외부 API로 전송되는지, 보존 정책은 무엇인지, 장애 때 다른 모델로 전환할 수 있는지 검토해야 한다. 단가가 낮아도 법무·보안 검토와 이중화 비용이 커지면 전체 비용 우위가 줄어든다.</p>
-        <p>오픈 가중치 여부도 API 업데이트와 분리해서 봐야 한다. V4 계열의 공개 모델 자산과 회사가 운영하는 최신 API는 같은 이름 아래 있어도 실행 최적화와 사후학습 버전이 다를 수 있다. <a href="https://huggingface.co/deepseek-ai">DeepSeek의 Hugging Face 조직 페이지</a>에서 배포된 체크포인트와 라이선스를 확인하고, API 발표 성능을 로컬 모델에 그대로 대입하지 않아야 한다.</p>
+        <figure class="article-figure" id="visual-deepseek-price-gap">
+          <div class="price-board" role="img" aria-label="100만 토큰당 DeepSeek V4-Flash-0731과 Claude Opus 4.8의 공식 API 입력 및 출력 가격 차이">
+            <h3>100만 토큰 가격은 얼마나 벌어졌나</h3>
+            <p class="visual-deck">일반 API 정가를 비교했다. 막대는 각 항목에서 Claude 가격을 100%로 놓은 상대 길이다.</p>
+            <div class="price-table">
+              <div class="price-row"><div class="price-label">입력</div><div class="price-bars"><div class="price-bar" style="--fill:2.8%"><span>DeepSeek $0.14</span></div><div class="price-bar claude" style="--fill:100%"><span>Claude $5.00</span></div></div><div class="price-ratio">약 35.7배</div></div>
+              <div class="price-row"><div class="price-label">출력</div><div class="price-bars"><div class="price-bar" style="--fill:1.12%"><span>DeepSeek $0.28</span></div><div class="price-bar claude" style="--fill:100%"><span>Claude $25.00</span></div></div><div class="price-ratio">약 89.3배</div></div>
+            </div>
+            <div class="price-summary"><div class="price-chip"><b>$0.0028</b><span>DeepSeek 캐시 적중 입력 100만 토큰</span></div><div class="price-chip"><b>1M</b><span>두 모델이 공통으로 내세우는 최대 문맥 길이</span></div><div class="price-chip"><b>주의</b><span>DeepSeek는 향후 베이징 피크 시간대 2배 요금제를 예고했다.</span></div></div>
+          </div>
+          <figcaption><a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek 가격표</a>와 <a href="https://www.anthropic.com/research/claude-opus-4-8">Anthropic 공식 발표</a>의 일반 API 가격을 이용해 직접 계산·재구성한 HTML 도표. 배치 할인, 프롬프트 캐시, 제공자별 할인은 제외했으며 가격은 변경될 수 있다.</figcaption>
+        </figure>
 
-        <p>간단한 비용 예시도 차이를 보여 준다. 한 작업이 캐시 미적중 입력 20만 토큰과 출력 5만 토큰을 쓴다면 현재 표시 가격으로 토큰 비용은 약 0.042달러다. 하지만 에이전트가 다섯 번 실패해 같은 문맥을 다시 읽고, 캐시가 기대대로 작동하지 않으면 작업당 비용은 곧 몇 배가 된다. 여기에 실행용 컴퓨팅, 테스트 환경, 사람의 검토시간을 더해야 한다.</p>
-        <p>Responses API 지원은 장기 실행과 도구 호출을 다루는 개발자에게 편의가 될 수 있다. 그렇더라도 기존 OpenAI 호환 형식과 완전히 같은 동작을 가정해서는 안 된다. 스트리밍 이벤트, 오류 형식, 도구 결과의 순서, 중단 뒤 재개가 사내 오케스트레이터와 맞는지 작은 통합 시험을 먼저 해야 한다.</p>
-        <p>모델 이름을 유지한 채 서버 버전이 바뀌는 방식은 운영상 장단점이 있다. 호출 코드를 수정하지 않아도 개선을 받지만, 어제 통과한 회귀시험이 오늘 다른 출력을 낼 수 있다. 재현성이 중요한 팀은 요청 시점의 모델 식별자와 응답 메타데이터를 저장하고, 공급사가 고정 버전이나 이전 버전 보존 정책을 제공하는지 확인해야 한다.</p>
-        <p>100만 토큰 문맥창도 그대로 실용 능력으로 읽으면 안 된다. 긴 저장소를 한 번에 넣을 수 있는 최대 길이와, 그 안에서 서로 떨어진 요구사항과 코드를 정확히 연결하는 능력은 다르다. 파일 검색과 요약을 먼저 하는 에이전트가 전체 저장소를 무작정 넣는 방식보다 비용과 정확도에서 나을 수 있다.</p>
-        <p>또 하나의 변수는 서비스 용량이다. 공개 베타에는 사용자가 몰릴 때 지연시간과 오류율이 흔들릴 수 있다. 평균 응답속도뿐 아니라 95·99백분위 지연, 시간대별 성공률, 긴 작업의 중도 종료 비율을 기록해야 한다. 코딩 에이전트는 한 번의 호출보다 연속된 여러 단계가 중요해 작은 실패율도 최종 완료율을 크게 낮출 수 있다.</p>
+        <p>가격 배수는 단가만 비교한 결과다. 에이전트가 같은 일을 끝내기 위해 더 많은 사고 토큰과 재시도를 쓰면 작업당 격차는 줄어든다. 반대로 반복되는 시스템 지시와 저장소 문맥이 캐시에 잘 적중하면 DeepSeek의 비용 우위는 더 커질 수 있다. 구매자가 기록해야 할 값은 100만 토큰 표의 숫자뿐 아니라 성공한 수정 한 건의 총 토큰, 대기시간, 재시도, 사람 검토시간이다.</p>
+        <p>DeepSeek 가격표에는 중요한 단서도 새로 붙었다. 회사는 베이징 시간 오전 9시~정오와 오후 2시~6시에 모든 과금 항목을 정가의 두 배로 받을 피크 요금제를 예고했다. 시행일은 아직 발표되지 않았다. 두 배가 되어도 Claude와의 격차는 크지만, ‘항상 0.14달러와 0.28달러’라고 고정해 예산을 세우면 안 된다.</p>
+        <p>모델 구조가 이 경제성을 뒷받침한다. <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash">공식 모델 카드</a>에 따르면 V4-Flash는 전체 2,840억 매개변수 가운데 토큰마다 130억 개를 활성화하는 희소 혼합전문가 모델이다. 문맥 길이는 100만 토큰이며, 전문가 가중치는 FP4, 나머지 일부는 FP8을 섞어 배포한다. 모든 가중치를 매 토큰 계산에 쓰지 않는 구조가 낮은 추론비의 기반이다.</p>
+        <p>‘오픈소스’라는 말은 한 단계 더 정확히 써야 한다. 가중치와 실행 안내가 공개됐고 <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/blob/main/LICENSE">저장소 라이선스는 MIT</a>라서 사용·수정·배포·상업 이용의 폭이 넓다. 그러나 32조 토큰이 넘는 전체 학습 데이터와 모든 데이터 정제 과정이 공개된 것은 아니다. 이 글에서는 검증 가능한 범위를 가리키기 위해 ‘MIT 오픈웨이트’라고 부른다.</p>
+        <p>또 하나의 구분은 0731 API와 내려받는 체크포인트다. 7월 31일 발표는 기존 구조를 유지한 사후학습 업데이트이며 DeepSeek API의 <code>deepseek-v4-flash</code>가 새 버전을 가리킨다. 공개 저장소의 체크포인트가 같은 날 같은 사후학습 상태로 갱신됐는지, 로컬 추론 엔진에서 API와 같은 동작을 내는지는 파일 버전과 모델 카드를 따로 확인해야 한다.</p>
 
-        <h2>한국 개발팀이 해볼 현실적인 평가</h2>
-        <p>첫 단계는 공개 벤치마크를 다시 돌리는 일이 아니라 팀의 최근 이슈 30~50개를 익명화해 작은 시험 세트를 만드는 것이다. 오류 수정, 테스트 작성, 리팩터링, 문서 갱신을 섞고 사람이 실제로 병합했는지를 기준으로 삼아야 한다. 성공률과 함께 검토시간, 잘못 건드린 파일 수, 재시도 횟수를 기록하면 단가의 착시를 줄일 수 있다.</p>
-        <p>두 번째는 같은 에이전트 틀에서 모델만 바꾸는 대조다. DeepSeek가 쓴 하네스와 다른 도구를 사용한다면 그 차이를 조건으로 명시해야 한다. 토큰 예산, 제한시간, 테스트 실행 횟수, 인터넷 접근 권한을 맞춰야 모델 비교가 된다. 한쪽에만 더 많은 반복 기회를 주면 결과는 가격도 품질도 왜곡된다.</p>
-        <p>세 번째는 코드 외부 행동을 별도 채점하는 것이다. 패키지 설치, 셸 명령, 브랜치 생성, 외부 문서 검색이 필요한 순간마다 권한을 구분하고 로그를 남겨야 한다. 높은 성공률보다 허용되지 않은 변경을 하지 않는 능력이 운영환경에서는 더 중요할 수 있다.</p>
-        <p>한국어 요구사항과 주석 처리도 직접 확인할 필요가 있다. 공개 영어 중심 코딩 시험은 국내 조직의 변수명 관행, 전자정부 프레임워크, 사내 문서의 혼합 언어를 충분히 반영하지 않는다. 요구를 정확히 이해했는지, 수정 이유를 한국어로 설명할 수 있는지, 인코딩을 깨뜨리지 않는지를 독립 항목으로 두는 편이 좋다.</p>
-        <p>조달과 계약 단계에서는 모델 국적만 묻는 체크리스트보다 실제 데이터 흐름을 그리는 편이 유용하다. 소스코드가 어느 지역의 서버로 전송되는지, 하청 인프라가 있는지, 입력이 학습에 쓰이는지, 삭제와 감사 요청에 어떻게 응답하는지를 문서로 받아야 한다. 같은 공급사의 웹 서비스와 API도 약관이 다를 수 있으므로 계약 대상을 정확히 특정해야 한다.</p>
-        <p>파일럿 결과를 경영진에게 보고할 때도 평균 성공률 하나만 제시하지 않는 편이 좋다. 가장 자주 실패한 작업 유형, 사람이 되돌린 변경, 비밀정보를 읽으려 한 횟수, 서비스 장애 때 멈춘 단계까지 함께 보여 줘야 한다. 그래야 낮은 토큰 가격이 실제 개발주기 단축으로 이어졌는지 판단할 수 있다. 결과를 월별로 반복해 모델 변경과 서비스 혼잡이 품질에 미치는 영향도 분리해야 한다.</p>
-        <p>앞으로 볼 신호는 세 가지다. DeepSeek Harness가 약속대로 공개되는지, 독립 기관이 비슷한 조건에서 수치를 재현하는지, V4-Pro 정식판이 Flash와 어떤 가격·성능 관계를 만드는지다. 공개 베타 동안 오류율과 지연시간, 가용성에 관한 장기 자료도 쌓여야 한다.</p>
-        <p><a href="https://arxiv.org/abs/2601.11868">Terminal-Bench 2.0 연구</a>가 강조하듯 터미널 기반 에이전트 평가는 실제 환경을 향하지만 실행 설정에 민감하다. 단일 리더보드 숫자는 후보를 고르는 필터로는 유용해도 구매 결정을 대신하지 못한다. 특히 모델 공급사가 직접 최적화한 하네스 결과는 가장 좋은 가능성을 보여 주는 상한에 가깝다.</p>
-        <p>DeepSeek V4-Flash-0731의 의미는 세계 최고라는 선언보다, 에이전트 기능과 매우 낮은 API 가격을 한 상품에 묶었다는 데 있다. 이 조합은 경쟁사에 가격 인하와 경량 에이전트 개선 압력을 줄 수 있다. 동시에 벤치마크를 모델·하네스·예산의 결합물로 읽어야 한다는 과제도 더 선명해졌다.</p>
-        <p>필자의 판단은 ‘바로 전환’도 ‘중국 모델이라 배제’도 아니다. 민감하지 않은 내부 시험에서 동일한 작업비용과 병합 품질을 비교할 가치가 충분한 후보다. 다만 공개 베타, 비공개 하네스, 내부 시험이라는 세 단서를 지우는 순간 기사는 광고문이 된다. 실제 우위는 각 팀의 저장소와 안전 경계 안에서만 확인할 수 있다.</p>
+        <div class="fact-box"><strong>핵심 판단:</strong> DeepSeek의 경쟁력은 ‘오픈이면서 싸다’ 하나가 아니다. 상위권 에이전트 성능, 희소 구조, 공격적인 API 가격, 공개 가중치가 한 모델 안에서 연결됐다는 점이 중요하다. 어느 하나만 떼면 중국 LLM 전략의 윤곽이 흐려진다.</div>
+
+        <h2>DeepSeek가 보여 주는 중국 LLM 전략의 네 단계</h2>
+        <p>이번 모델을 중국의 공식 국가정책 그 자체라고 부를 수는 없다. DeepSeek는 민간 기업이고 가격과 공개 범위는 회사가 정한다. 다만 국가의 AI Plus 방향, 지방정부의 오픈소스 생태계 계획, 국내 가속기 호환, 중국 연구소들의 반복된 공개 가중치 출시를 겹쳐 보면 산업 전략의 윤곽은 비교적 선명하다.</p>
+
+        <figure class="article-figure" id="visual-china-llm-strategy">
+          <div class="strategy-board" role="img" aria-label="중국 LLM 산업 전략을 효율, 저가 API, 오픈웨이트 생태계, 산업과 하드웨어 확산의 네 단계로 정리한 구조도">
+            <h3>한 모델에서 읽히는 중국 LLM 산업 전략</h3>
+            <p class="visual-deck">아래는 DeepSeek 제품 사실과 중국의 공개 정책 자료를 연결해 정리한 기사 해석이다.</p>
+            <div class="strategy-grid">
+              <div class="strategy-card"><em>1</em><b>효율을 먼저 설계</b><span>희소 MoE와 압축된 주의 구조로 제한된 컴퓨팅의 생산성을 높인다.</span></div>
+              <div class="strategy-card"><em>2</em><b>API 가격을 낮춤</b><span>대량 도구 호출과 에이전트 실험의 진입비용을 빠르게 떨어뜨린다.</span></div>
+              <div class="strategy-card"><em>3</em><b>가중치를 공개</b><span>연구자·클라우드·기기 업체가 파생 모델과 최적화를 만들게 한다.</span></div>
+              <div class="strategy-card"><em>4</em><b>산업으로 확산</b><span>AI Plus, 국내 가속기, 산업별 모델과 단말로 수요를 넓힌다.</span></div>
+            </div>
+          </div>
+          <figcaption><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash">DeepSeek 모델 카드</a>, <a href="https://english.www.gov.cn/2026special/2026npcandcpcc/202603/05/content_WS69a92040c6d00ca5f9a09916.html">중국 정부의 2026년 AI Plus 방향</a>, <a href="https://english.scio.gov.cn/pressroom/2026-01/04/content_118247563.html">베이징 오픈소스 생태계 계획</a>을 바탕으로 직접 재구성한 HTML 구조도. 정부 문서가 특정 회사의 가격을 지시했다는 뜻은 아니다.</figcaption>
+        </figure>
+
+        <p>첫 단계는 컴퓨팅 제약을 제품 설계 문제로 바꾸는 것이다. V4-Flash는 2,840억이라는 큰 저장 규모를 유지하면서 토큰당 활성 매개변수를 130억으로 줄였다. <a href="https://api-docs.deepseek.com/news/news260424/">DeepSeek의 V4 기술 설명</a>은 100만 토큰 문맥에서 이전 V3.2보다 단일 토큰 추론 연산과 KV 캐시를 크게 줄였다고 밝힌다. 미국의 최상위 칩 공급이 제한된 환경에서 성능당 연산량은 곧 제품 경쟁력이다.</p>
+        <p>둘째는 최고 성능을 독점적인 고가 API에만 묶지 않는 것이다. DeepSeek의 단가는 개발자가 더 많은 도구 호출과 긴 작업을 시도하게 만들고, 경쟁사에도 가격 인하 압력을 준다. 최근 <a href="https://www.axios.com/2026/08/01/deepseek-model-cheap-ai-price-war">Axios</a>가 새 버전을 AI의 ‘바닥을 향한 가격 경쟁’으로 해석한 이유다. 값싼 모델이 충분히 좋아지는 순간 최고점보다 작업량이 시장을 넓힌다.</p>
+        <p>셋째는 공개 가중치를 유통 전략으로 쓰는 것이다. 모델을 내려받은 클라우드와 하드웨어 회사는 각자 더 싼 추론 서비스를 만들 수 있고, 연구자는 양자화·파인튜닝·안전 평가를 붙인다. 이는 API 매출 일부를 포기하는 대신 표준과 개발자 습관을 넓히는 선택이다. 폐쇄형 모델과 달리 공급사 정책이 바뀌어도 체크포인트를 보유한 조직은 자체 배포를 이어갈 수 있다.</p>
+        <p>넷째는 모델을 산업과 하드웨어 정책에 연결하는 것이다. 중국의 2026년 정부 업무보고는 AI Plus를 확대하고 에이전트와 지능형 단말의 대규모 상용화를 추진한다고 밝혔다. 베이징의 2026~2028년 오픈소스 생태계 계획은 국내 오픈소스 프로젝트와 산업별 대형 모델, 모델 개발과 컴퓨팅 스케줄링을 잇는 플랫폼을 목표로 한다. 이 문맥에서 오픈웨이트는 홍보가 아니라 응용 확산용 인프라다.</p>
+        <p>그러나 개방 전략이 무조건적인 개방을 뜻하지는 않는다. 중국 내 공개 생성형 AI 서비스는 콘텐츠·데이터·보안 규제를 받으며, 모델이 정치적으로 민감한 질문에 어떻게 답하는지는 별도 위험이다. 가중치를 내려받을 수 있다는 사실은 편향과 검열 가능성을 없애지 않는다. 자체 호스팅을 하더라도 한국어·중국어 정치 문항, 출처 제시, 거부 패턴을 별도로 감사해야 한다.</p>
+        <p>하드웨어 자립도 아직 완성된 사실로 읽으면 안 된다. <a href="https://apnews.com/article/d2ed33f2521917193616e061674d5f92">AP의 V4 출시 보도</a>는 Huawei 가속기 지원이 미국 칩 의존도를 줄이는 신호라고 전했다. 호환과 대규모 훈련·추론의 경제성은 다른 문제다. 실제 처리량, 장애율, 소프트웨어 도구, 공급량이 따라와야 모델과 국산 칩의 결합이 상업적 대안이 된다.</p>
+
+        <h2>한국 기업이 지금 확인할 세 가지</h2>
+        <p>첫째, 같은 에이전트 안에서 업무당 비용을 재야 한다. 최근 완료한 개발 이슈 30~50개를 익명화하고 DeepSeek와 Claude에 같은 도구, 시간, 토큰 예산을 준다. 성공률, 병합 가능한 수정, 재시도, 잘못 건드린 파일, 사람 검토시간을 함께 기록하면 36배·89배의 단가 차이가 실제 업무에서 얼마나 남는지 알 수 있다.</p>
+        <p>둘째, 배포 경로별 데이터 위험을 나눠야 한다. DeepSeek 공식 API, 제3자 클라우드, 자체 호스팅은 같은 모델 이름을 써도 로그 보존, 지역, 업데이트, 장애 대응이 다르다. 민감한 소스코드와 개인정보가 있다면 가장 싼 API보다 데이터가 어디로 가고 누가 운영하는지를 먼저 확정해야 한다.</p>
+        <p>셋째, 공개 가중치의 운영비를 빠뜨리지 말아야 한다. 2,840억 매개변수 전체를 저장하고 여러 가속기에 나누는 비용, 추론 엔진 최적화, 보안 패치, 회귀시험, 모니터링은 무료가 아니다. 요청량이 작으면 공식 API가 더 싸고, 높은 사용량과 데이터 통제가 중요할 때 자체 배포가 의미를 가질 수 있다.</p>
+        <p>텍스트 전용이라는 제한도 분명하다. Claude Opus 4.8은 이미지 입력을 지원하지만 V4-Flash는 공식 모델 카드상 텍스트 입력·텍스트 출력 모델이다. 화면을 보고 클릭하거나 도면과 사진을 함께 분석하는 업무에서는 별도의 비전 모델과 오케스트레이션이 필요하다. 종합 지수 6점 차이보다 이 기능 차이가 구매 결정에 더 중요할 수 있다.</p>
+        <p>앞으로 볼 지표는 독립 평가의 유지 여부, 0731 체크포인트와 API의 일치, 피크 요금제 시행일, V4-Pro 업데이트, 제공자별 속도와 장애율이다. Artificial Analysis 지수가 다시 바뀌면 이전 50 대 56을 고정된 진리로 인용하지 말고 평가 버전과 날짜를 함께 적어야 한다.</p>
+        <p>필자의 결론은 DeepSeek가 Claude Opus 4.8을 완전히 따라잡았다는 것이 아니다. 더 중요한 변화는 독립 종합 지수에서 50 대 56까지 간격을 좁힌 오픈웨이트 모델이 출력 단가를 약 89분의 1로 낮췄다는 점이다. 중국 LLM 전략은 가장 큰 모델 한 번으로 승부하기보다 효율, 가격, 공개 가중치, 산업 확산을 한 고리로 묶는 쪽으로 선명해지고 있다. 이 고리가 유지된다면 다음 경쟁의 기준은 ‘누가 1등인가’에서 ‘누가 충분히 좋은 지능을 가장 넓게 배포하는가’로 이동할 가능성이 크다.</p>
 
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">출처와 더 읽을 자료</h2>
           <ul>
-            <li><a href="https://api-docs.deepseek.com/updates/">DeepSeek API Change Log: 2026-07-31 V4-Flash Update</a></li>
-            <li><a href="https://api-docs.deepseek.com/news/news260424/">DeepSeek: V4 model announcement and technical details</a></li>
-            <li><a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek API: Models &amp; Pricing</a></li>
-            <li><a href="https://www.ithome.com/0/984/116.htm">IT之家: DeepSeek V4-Flash-0731 API beta report</a></li>
-            <li><a href="https://www.ithome.com/0/984/417.htm">IT之家: early independent benchmark snapshots</a></li>
-            <li><a href="https://huggingface.co/deepseek-ai">DeepSeek AI on Hugging Face</a></li>
-            <li><a href="https://arxiv.org/abs/2601.11868">Terminal-Bench 2.0 research paper</a></li>
+            <li><a href="https://api-docs.deepseek.com/updates/">DeepSeek API: 2026년 7월 31일 V4-Flash 업데이트</a></li>
+            <li><a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek API: 모델 사양과 가격</a></li>
+            <li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash">DeepSeek: V4-Flash 공식 모델 카드와 가중치</a></li>
+            <li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/blob/main/LICENSE">DeepSeek V4-Flash MIT 라이선스</a></li>
+            <li><a href="https://artificialanalysis.ai/models/deepseek-v4-flash">Artificial Analysis: DeepSeek V4-Flash-0731 독립 평가</a></li>
+            <li><a href="https://artificialanalysis.ai/models/claude-opus-4-8/">Artificial Analysis: Claude Opus 4.8 독립 평가</a></li>
+            <li><a href="https://www.anthropic.com/research/claude-opus-4-8">Anthropic: Claude Opus 4.8 발표와 가격</a></li>
+            <li><a href="https://apnews.com/article/d2ed33f2521917193616e061674d5f92">AP: DeepSeek V4 출시와 중국 AI 경쟁</a></li>
+            <li><a href="https://english.www.gov.cn/2026special/2026npcandcpcc/202603/05/content_WS69a92040c6d00ca5f9a09916.html">중국 정부: 2026년 AI Plus와 에이전트 상용화 방향</a></li>
+            <li><a href="https://english.scio.gov.cn/pressroom/2026-01/04/content_118247563.html">SCIO: 베이징 오픈소스 생태계 계획</a></li>
+            <li><a href="https://www.axios.com/2026/08/01/deepseek-model-cheap-ai-price-war">Axios: DeepSeek와 AI 가격 경쟁</a></li>
           </ul>
         </section>
       </article>
     </main>
-    <footer class="site-footer"><span>AI 인사이트 브리프</span><span>중국 AI 뉴스와 해설 · by kikuke</span></footer>
   </body>
 </html>
