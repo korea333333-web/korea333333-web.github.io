@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grok 4.6, 코딩 실력과 ‘많은 크레딧’의 실체</title>
+    <meta name="description" content="2026년 8월 12일 공개된 Grok 4.6의 코딩 벤치마크, 요금과 주간 사용량, Colossus 인프라, Cursor 협업, 이미지·영상·Companion 기능을 검증한다.">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/article-tools.js" defer></script>
+    <style>
+      .article h1{font-size:clamp(2.05rem,4.35vw,3.45rem);word-break:keep-all}.article-figure{margin:2.7rem auto;max-width:940px}.visual-board{overflow:hidden;border:1px solid #d7d9df;border-radius:24px;padding:24px;word-break:keep-all}.visual-board h3{margin:0 0 8px;font-size:1.3rem;line-height:1.42}.visual-deck{margin:0 0 19px;line-height:1.62}.release-board{background:linear-gradient(145deg,#11151d,#202838 58%,#29344b);color:#fff}.release-board h3{color:#fff}.release-board .visual-deck{color:#dce4f4}.release-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.release-card{min-width:0;padding:18px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(255,255,255,.08);overflow-wrap:anywhere}.release-card em{display:block;color:#8ed7ff;font-size:.82rem;font-style:normal;font-weight:900;letter-spacing:.05em}.release-card b{display:block;margin:9px 0 7px;color:#fff;line-height:1.42}.release-card span{display:block;color:#dce4f4;font-size:.9rem;line-height:1.58}.benchmark-board{background:#f3f5f8}.benchmark-board h3{color:#1c3048}.benchmark-board .visual-deck{color:#5c6d82}.benchmark-wrap{overflow-x:auto;border-radius:16px}.benchmark-table{width:100%;min-width:700px;border-collapse:separate;border-spacing:0;background:#fff}.benchmark-table th,.benchmark-table td{padding:14px 13px;border-right:1px solid #dde3ea;border-bottom:1px solid #dde3ea;text-align:center;line-height:1.48}.benchmark-table th:first-child,.benchmark-table td:first-child{text-align:left}.benchmark-table th{background:#23344d;color:#fff;font-size:.86rem}.benchmark-table tr:last-child td{border-bottom:0}.benchmark-table th:last-child,.benchmark-table td:last-child{border-right:0}.benchmark-table .grok{background:#e9f5ff;color:#103a5c;font-weight:900}.bench-note{margin:14px 0 0;color:#637184;font-size:.88rem;line-height:1.62}.usage-board{background:#fff8e9}.usage-board h3{color:#503c12}.usage-board .visual-deck{color:#71613f}.usage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.usage-card{min-width:0;padding:18px;border:1px solid #e5d9b8;border-radius:18px;background:#fff;overflow-wrap:anywhere}.usage-card em{display:block;margin-bottom:7px;color:#9b6713;font-size:.82rem;font-style:normal;font-weight:900}.usage-card b{display:block;margin-bottom:8px;color:#503c12;line-height:1.42}.usage-card p{margin:0;color:#746444;font-size:.9rem;line-height:1.58}.usage-warning{margin:14px 0 0;padding:15px 17px;border-left:4px solid #be7b17;border-radius:0 14px 14px 0;background:#ffefc8;color:#654a18;line-height:1.62}.system-board{background:#eff8f4}.system-board h3{color:#173f35}.system-board .visual-deck{color:#536e67}.system-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.system-card{position:relative;min-width:0;padding:18px;border:1px solid #c9ddd6;border-radius:18px;background:#fff;overflow-wrap:anywhere}.system-card em{display:block;margin-bottom:7px;color:#2b7865;font-size:.82rem;font-style:normal;font-weight:900}.system-card b{display:block;margin-bottom:8px;color:#173f35;line-height:1.42}.system-card p{margin:0;color:#557068;font-size:.9rem;line-height:1.58}.system-note{margin:14px 0 0;color:#5d746d;font-size:.88rem;line-height:1.62}.fact-box{margin:2rem 0;padding:18px 20px;border-left:4px solid #2a6d8d;border-radius:0 14px 14px 0;background:#eaf5fa;line-height:1.68}.sources li{margin:.58rem 0}.article-figure figcaption{margin-top:10px;line-height:1.62}
+      @media(max-width:860px){.release-grid{grid-template-columns:1fr}.usage-grid,.system-grid{grid-template-columns:1fr 1fr}.system-card::after{display:none}}
+      .article-share{position:relative;margin-top:48px;padding:28px;overflow:hidden;border:1px solid #cfded7;border-radius:18px;background:radial-gradient(circle at 92% 12%,rgba(24,168,117,.17),transparent 34%),linear-gradient(135deg,#f9fcfa 0%,#edf6f1 100%)}.article-share::after{position:absolute;right:-32px;bottom:-52px;width:150px;height:150px;border:1px solid rgba(36,87,214,.16);border-radius:50%;content:""}.article-share__copy{position:relative;z-index:1;max-width:720px}.article-share__copy h2{margin:2px 0 8px}.article-share__copy p:last-child{margin:0;color:var(--muted)}.share-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.share-button{display:inline-flex;min-height:46px;align-items:center;gap:9px;padding:9px 15px 9px 10px;border:0;border-radius:999px;box-shadow:0 8px 22px rgba(22,32,28,.1);cursor:pointer;font:inherit;font-size:.93rem;font-weight:800}.share-button__mark{display:inline-grid;width:28px;height:28px;place-items:center;border-radius:50%;background:rgba(255,255,255,.82);font-family:Georgia,serif}.share-button--kakao{background:#fee500;color:#191919}.share-button--facebook{background:#1877f2;color:#fff}.share-button--instagram{background:linear-gradient(120deg,#f9ce34,#ee2a7b 48%,#6228d7);color:#fff}.share-button--copy{border:1px solid #c9d7d0;background:#fff;color:var(--text)}.share-status{position:relative;z-index:1;min-height:1.6em;margin:12px 0 0;color:var(--muted);font-size:.88rem;font-weight:650}.comments-shell{margin-top:42px;padding:24px;border:1px solid var(--line);border-radius:10px;background:var(--surface-soft)}.comments-shell h2{margin-bottom:12px}.comments-note{margin:0 0 18px;color:var(--muted);font-size:.94rem}.comments-shell .utterances{max-width:100%}
+      @media(max-width:560px){.visual-board{padding:16px}.usage-grid,.system-grid{grid-template-columns:1fr}.release-card,.usage-card,.system-card{padding:16px}.benchmark-wrap{overflow:visible}.benchmark-table{min-width:0;background:transparent}.benchmark-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.benchmark-table tbody{display:grid;gap:12px}.benchmark-table tr{display:grid;grid-template-columns:1fr 1fr;border:1px solid #d8e0e8;border-radius:14px;overflow:hidden;background:#fff}.benchmark-table td{padding:11px 12px;border-right:1px solid #dde3ea;border-bottom:1px solid #dde3ea;text-align:left;font-size:.86rem}.benchmark-table td:nth-child(odd){border-right:0}.benchmark-table td:first-child{grid-column:1/-1;border-right:0;background:#23344d;color:#fff;font-weight:900}.benchmark-table td:last-child{grid-column:1/-1;border-right:0;border-bottom:0}.benchmark-table td::before{content:attr(data-label);display:block;margin-bottom:4px;color:#6a7685;font-size:.7rem;font-weight:900;letter-spacing:.03em}.benchmark-table td:first-child::before{color:#cdd8e8}.benchmark-table .grok{background:#e9f5ff}}
+          @media(max-width:580px){.share-actions{display:grid;grid-template-columns:1fr 1fr}.article-share,.comments-shell{padding:20px}}
+      @media(max-width:380px){.share-actions{grid-template-columns:1fr}}
+    </style>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed">중국 AI 뉴스</a></nav></header>
+    <main class="article-shell">
+      <article class="article">
+        <a class="back-link" href="../index.html">처음으로 돌아가기</a>
+        <div class="article-meta"><span>2026.08.14</span><span>글로벌 AI 뉴스 · Grok · 코딩</span><span>by kikuke</span></div>
+        <h1>Grok 4.6, 코딩 실력과 ‘많은 크레딧’의 실체</h1>
+        <p class="lead">Grok이 갑자기 코딩을 잘한다는 평가는 단순한 입소문만은 아니다. SpaceXAI는 8월 12일 Grok 4.6을 공개했고, 실제 CursorBench 3.2에서 최고 설정이 70.8%로 1위에 올랐다. 그러나 저렴한 월 구독이 경쟁사의 고가 요금제만큼 많은지, Colossus가 그 사용량을 보장하는지, Cursor 인수 덕분인지에 대해서는 공개 자료가 말해 주는 범위가 서로 다르다.</p>
+
+        <p><a href="https://x.ai/news/grok-4-6">공식 발표일은 2026년 8월 12일</a>이다. 7월 8일 나온 Grok 4.5에서 불과 다섯 주 만의 후속판이다. 회사는 이름 뒤의 0.1보다 긴 작업을 끝까지 붙드는 능력, 여러 파일을 오가는 코딩 에이전트, 대화형·시각적 프로젝트의 첫 결과물을 더 크게 강조했다.</p>
+        <p>업데이트 방식도 흥미롭다. SpaceXAI는 4.5보다 긴 추가 훈련을 했고, 고급 기술·추론 데이터와 엔지니어링 데이터를 보강했으며 최적화 방식도 바꿨다고 밝혔다. 4.5가 만든 작업 궤적을 추론 강도와 에이전트 실행 환경별로 다시 생성하고, 문제가 있는 궤적은 모델 검사로 걸러 냈다. 여기에 일반 코딩, 커널 최적화, 웹 개발, CAD 같은 에이전트 강화학습 과제를 더했다.</p>
+        <p>그래서 개선의 핵심은 “코드를 한 번 잘 쓰는 모델”보다 “코드를 읽고, 도구를 부르고, 테스트하고, 실패를 고치는 모델”에 가깝다. 공식 설명에는 긴 작업에서 자기 테스트와 검증이 더 자주 나타났다고 적혀 있다. 사용자가 체감하는 향상도 단일 답변의 문법보다 오래 걸리는 기능 구현과 디버깅에서 먼저 나타날 가능성이 크다.</p>
+
+        <figure class="article-figure" id="visual-release-timeline">
+          <div class="visual-board release-board" role="img" aria-label="2026년 7월 31일 Imagine Video 1.5 References, 8월 7일 Image 2.0, 8월 12일 Grok 4.6 공개를 시간순으로 보여주는 도표">
+            <h3>세 번의 업데이트가 만든 ‘요즘 Grok’</h3>
+            <p class="visual-deck">코딩 모델만 바뀐 것이 아니다. 이미지와 영상 제품도 12일 전후에 별도 업데이트됐다.</p>
+            <div class="release-grid">
+              <div class="release-card"><em>JUL 31</em><b>Imagine Video 1.5 References</b><span>텍스트·이미지·음성 참조와 네이티브 1080p, 최대 7개 이미지 참조</span></div>
+              <div class="release-card"><em>AUG 7</em><b>Imagine Image 2.0</b><span>지시 이행과 편집 보존, 부분 선택·배경 제거·최대 5개 입력 이미지</span></div>
+              <div class="release-card"><em>AUG 12</em><b>Grok 4.6</b><span>긴 코딩·지식 작업, 자기 테스트, 시각적 앱의 강한 첫 결과물</span></div>
+            </div>
+          </div>
+          <figcaption><a href="https://x.ai/news/grok-imagine-video-1-5-references">Video 1.5 공식 발표</a>, <a href="https://x.ai/news/grok-imagine-image-2">Image 2.0 공식 발표</a>, <a href="https://x.ai/news/grok-4-6">Grok 4.6 공식 발표</a>의 공개일과 기능을 직접 재구성한 HTML 타임라인.</figcaption>
+        </figure>
+
+        <h2>코딩 성능은 정말 상위권인가</h2>
+        <p>가장 강한 근거는 <a href="https://cursor.com/cursorbench">CursorBench 3.2 공개 순위</a>다. 실제 Cursor 사용 세션에서 뽑은 모호한 다중 파일 작업을 평가하며, 코드를 이해한 뒤 편집·도구 사용·지시 이행을 함께 본다. 8월 14일 확인한 표에서 Grok 4.6 Extra High는 70.8%, Grok 4.6 High는 69.9%였다.</p>
+        <p>점수만큼 비용과 단계 수도 눈에 띈다. Extra High는 작업당 평균 2.81달러와 46단계를 썼고, Fable 5 Max는 70.5%에 17.32달러와 72단계를 썼다. High는 69.9%에 2.34달러와 39단계였다. Cursor는 각 모델의 공개 토큰 가격을 실제 사용 토큰에 적용해 작업당 비용을 계산하며, 작은 점수 차이는 통계적으로 의미가 없을 수 있다고 직접 경고한다.</p>
+        <p>따라서 70.8과 70.5의 0.3%포인트 차이로 승자를 단정하는 것보다, 비슷한 완수율을 훨씬 적은 비용과 단계로 냈다는 쪽이 실용적인 뉴스다. 에이전트가 덜 헤매고 더 빨리 작업을 끝낸다면 사용자는 토큰 생성 속도가 같아도 전체 작업이 빠르다고 느낀다.</p>
+
+        <figure class="article-figure" id="visual-coding-benchmarks">
+          <div class="visual-board benchmark-board">
+            <h3>Grok 4.6은 ‘전 종목 1위’가 아니라 균형이 좋아졌다</h3>
+            <p class="visual-deck">각 행은 시험과 단위가 다르므로 행 사이 숫자를 직접 비교하지 않는다. 같은 행에서만 모델을 비교해야 한다.</p>
+            <div class="benchmark-wrap">
+              <table class="benchmark-table" aria-label="Grok 4.6 High, GPT-5.6 Sol Max, Fable 5 Max의 코딩과 에이전트 벤치마크 비교">
+                <thead><tr><th>평가</th><th>Grok 4.6 High</th><th>GPT-5.6 Sol Max</th><th>Fable 5 Max</th><th>읽는 법</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="평가">CursorBench 3.2</td><td class="grok" data-label="Grok 4.6 High">69.9%</td><td data-label="GPT-5.6 Sol Max">67.2%</td><td data-label="Fable 5 Max">70.5%</td><td data-label="읽는 법">실사용형 다중 파일 코딩</td></tr>
+                  <tr><td data-label="평가">DeepSWE 1.1</td><td class="grok" data-label="Grok 4.6 High">65.9%</td><td data-label="GPT-5.6 Sol Max">73.0%</td><td data-label="Fable 5 Max">70.0%</td><td data-label="읽는 법">Grok이 아직 뒤지는 영역</td></tr>
+                  <tr><td data-label="평가">FrontierCode 1.1 Extended</td><td class="grok" data-label="Grok 4.6 High">61.3%</td><td data-label="GPT-5.6 Sol Max">60.6%</td><td data-label="Fable 5 Max">63.6%</td><td data-label="읽는 법">상위권이지만 선두는 아님</td></tr>
+                  <tr><td data-label="평가">Terminal-Bench 3.0</td><td class="grok" data-label="Grok 4.6 High">26.0%</td><td data-label="GPT-5.6 Sol Max">34.6%</td><td data-label="Fable 5 Max">34.1%</td><td data-label="읽는 법">터미널 과제는 약점</td></tr>
+                  <tr><td data-label="평가">AA Intelligence Index</td><td class="grok" data-label="Grok 4.6 High">61</td><td data-label="GPT-5.6 Sol Max">61</td><td data-label="Fable 5 Max">62</td><td data-label="읽는 법">9개 평가의 종합 지수</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="bench-note">Extra High의 CursorBench 70.8%는 별도 최고 설정이다. 다른 행은 xAI가 공개한 High 대 경쟁사의 Max 비교이며, 경쟁사 수치는 각 회사 자체 보고 또는 공개 리더보드 중 최고값을 사용했다.</p>
+          </div>
+          <figcaption><a href="https://x.ai/news/grok-4-6">SpaceXAI 평가표</a>와 <a href="https://cursor.com/cursorbench">CursorBench 3.2 공개 표</a>를 대조해 재구성한 HTML 표. 평가 환경과 추론 강도가 달라 절대 순위로 합산하지 않았다.</figcaption>
+        </figure>
+
+        <p>반대 근거도 분명하다. xAI의 비교표에서 DeepSWE 1.1은 Grok 4.6 High 65.9%로 GPT-5.6 Sol Max 73%와 Fable 5 Max 70%에 뒤진다. Terminal-Bench 3.0도 26%로 두 경쟁 모델의 34%대보다 낮다. 저장소 수정에 강해졌지만 모든 터미널·소프트웨어 공학 과제를 평정한 모델은 아니다.</p>
+        <p>또한 CursorBench는 이제 SpaceXAI와 긴밀하게 협업하는 Cursor가 만든 시험이다. 벤치마크가 실제 사용에 가깝다는 장점과, 특정 실행 도구에 맞춘 최적화가 점수에 섞일 수 있다는 한계가 동시에 있다. 독립 평가기관처럼 완전히 떨어진 제3자로 볼 수는 없다.</p>
+        <p><a href="https://www.axios.com/newsletters/axios-am-bd5f21b3-41b2-48fc-829c-4be50402e91d">Axios는 8월 13일 Grok 4.6이 Artificial Analysis 종합 지수에서 GPT-5.6 Sol Max와 사실상 동률이고 Fable 5 Max 바로 뒤라고 전했다</a>. 이것은 xAI의 발표 방향과 일치한다. 다만 출시 직후라 장기간의 독립 버그 수정 성공률, 회귀 발생률, 대형 저장소 안정성 데이터는 아직 부족하다.</p>
+
+        <h2>“3만원 요금제가 15만원 요금제만큼 많다”는 말</h2>
+        <p>여기서 가장 먼저 구분할 것은 구독 사용량과 API 가격이다. <a href="https://docs.x.ai/developers/pricing">공식 API 가격표</a>에서 Grok 4.6은 20만 토큰 미만 문맥 기준 입력 100만 토큰당 2달러, 캐시 입력 0.50달러, 출력 6달러다. 20만 토큰 이상 긴 문맥은 각각 4달러, 1달러, 12달러가 적용된다. 빠른 변형은 기본 가격의 두 배다.</p>
+        <p>이 가격은 월 구독에 들어 있는 “크레딧 몇 개”와 같은 단위가 아니다. API는 토큰을 계량해 돈을 내고, Grok 웹·앱의 유료 구독은 주간 공용 사용량 풀을 받는다. Cursor 구독에서 Grok을 호출하는 양도 Cursor가 정한 포함 사용량과 가격 정책을 따른다. 세 숫자를 한 표에서 바로 환산하면 잘못된 결론이 나온다.</p>
+        <p><a href="https://docs.x.ai/grok/faq">SpaceXAI 소비자용 FAQ</a>는 2026년 6월부터 Chat, Imagine, Voice, Build가 하나의 주간 풀을 함께 쓴다고 설명한다. 사용량은 토큰이나 고정 횟수가 아니라 퍼센트로 표시되고, 긴 코딩 작업이나 고품질 영상은 일반 채팅보다 더 많은 컴퓨트를 소비한다. 매주 설정 화면에 표시된 시각에 초기화되며, 소진 후에는 최소 5달러부터 추가 크레딧을 살 수 있다.</p>
+        <p>그러나 공개 FAQ에는 각 요금제의 주간 풀을 토큰·달러·영상 초 단위로 환산한 고정표가 없다. 웹, 앱스토어, 지역과 프로모션에 따라 표시 가격도 달라질 수 있다. 그래서 “월 3만원이면 타사 15만원보다 정확히 몇 배”라는 주장은 공개 자료만으로 검증할 수 없다. 체감이 매우 좋을 수는 있지만 계정별 사용 화면과 동일 작업 기록 없이는 객관적 비교가 아니다.</p>
+
+        <figure class="article-figure" id="visual-usage-layers">
+          <div class="visual-board usage-board" role="img" aria-label="Grok 소비자 구독의 주간 공용 풀, Grok Build 포함 사용량, API 토큰 과금, Cursor 구독을 서로 다른 네 가지 사용량 체계로 설명하는 구조도">
+            <h3>‘Grok 크레딧’이라고 부르는 네 가지는 서로 다르다</h3>
+            <p class="visual-deck">같은 모델을 써도 결제 통로마다 측정 단위와 운영 주체가 달라진다.</p>
+            <div class="usage-grid">
+              <div class="usage-card"><em>GROK WEB · APP</em><b>주간 공용 풀</b><p>Chat·Imagine·Voice·Build가 공유한다. 공개 고정량 없이 퍼센트로 표시된다.</p></div>
+              <div class="usage-card"><em>GROK BUILD</em><b>구독 포함 사용량</b><p>코딩 작업도 공용 풀을 쓴다. 4.6 출시 첫 주에는 포함 사용량 2배 프로모션이 적용됐다.</p></div>
+              <div class="usage-card"><em>SPACEXAI API</em><b>토큰 종량제</b><p>기본 문맥 입력 $2, 캐시 $0.50, 출력 $6/100만 토큰. 빠른 변형은 2배다.</p></div>
+              <div class="usage-card"><em>CURSOR</em><b>별도 구독·정책</b><p>Cursor 안의 포함 사용량과 모델 선택 정책은 Grok 소비자 구독과 별개다.</p></div>
+            </div>
+            <p class="usage-warning"><strong>출시 효과:</strong> SpaceXAI가 공식 확인한 ‘많아진 사용량’은 첫 주 Grok Build와 Cursor의 2배 포함 사용량이다. 이를 상시 기본 한도로 해석하면 안 된다.</p>
+          </div>
+          <figcaption><a href="https://docs.x.ai/grok/faq">소비자 사용량 FAQ</a>, <a href="https://docs.x.ai/developers/pricing">API 가격표</a>, <a href="https://x.ai/news/grok-4-6">4.6 출시 프로모션</a>을 구분해 직접 재구성한 HTML 구조도.</figcaption>
+        </figure>
+
+        <p>그럼에도 “가성비가 놀랍다”는 체감에는 근거가 있다. CursorBench에서 비슷한 완수율을 낸 Grok 4.6 Extra High의 작업당 비용 2.81달러는 Fable 5 Max 17.32달러의 약 16%다. High 2.34달러는 GPT-5.6 Sol Max 5.69달러보다 낮다. 이것은 소비자 구독 가치의 증명은 아니지만, 작업을 완수하는 데 들어간 모델 비용이 경쟁력 있다는 신호다.</p>
+        <p>다만 지금은 출시 첫 주 2배 프로모션이 겹친 시점이다. 평소보다 넉넉하다고 느낀 사용자가 있다면 모델의 효율, 주간 공용 풀 정책, 프로모션이 동시에 작용했을 수 있다. 상시 한도를 평가하려면 2배 기간이 끝난 뒤 같은 저장소와 같은 추론 강도로 일주일간 사용 비율을 기록해야 한다.</p>
+
+        <h2>Colossus가 많고 빠른 사용량을 가능하게 했나</h2>
+        <p>기반 시설의 우위는 실제다. <a href="https://x.ai/colossus">SpaceXAI의 Colossus 소개</a>는 단일 상호연결 클러스터에 H100 GPU 20만 개를 구축했고, 2025년 2월에 20만 개 규모에 도달했다고 밝힌다. 2026년 1월 자금조달 발표에서는 Colossus I·II가 2025년 말 H100 환산 100만 개를 넘었다고 회사가 주장했다. 훈련과 추론에 쓸 수 있는 선택지가 큰 것은 분명한 구조적 장점이다.</p>
+        <p>그러나 “자체 GPU가 많다”와 “저가 요금제에 무제한에 가까운 사용량을 준다”는 같은 문장이 아니다. SpaceXAI는 5월 Colossus 1 접근권을 Anthropic에 제공했고, 공식 자료는 22만 개가 넘는 H100·H200·GB200을 훈련·미세조정·추론에 쓸 수 있다고 설명한다. 회사는 일부 컴퓨트를 내부 Grok과 외부 임대 사이에서 배분해 수익화한다.</p>
+        <p>대규모 인프라는 단위 비용과 대기시간을 낮출 가능성이 있다. 더 많은 동시 사용자를 받아 내고, 피크 시간에 여유를 두며, 긴 추가 훈련을 빠르게 돌릴 수 있기 때문이다. 하지만 Grok 4.6 전용 GPU 수, 구독 등급별 추론 예산, 한국 사용자의 평균 대기시간은 공개되지 않았다. Colossus가 체감 속도와 한도의 유력한 배경이라는 판단은 가능하지만 직접적인 인과는 확인되지 않았다.</p>
+
+        <figure class="article-figure" id="visual-system-chain">
+          <div class="visual-board system-board" role="img" aria-label="Colossus 컴퓨트, Grok 4.6 훈련, Cursor 실행 환경, Grok Build와 API 배포가 이어지는 구조를 보여주는 도표">
+            <h3>성능 향상은 인수 한 건보다 ‘컴퓨트-데이터-도구-배포’의 결합</h3>
+            <p class="visual-deck">공식 문서로 확인되는 연결과 아직 공개되지 않은 인과를 분리했다.</p>
+            <div class="system-grid">
+              <div class="system-card"><em>COMPUTE</em><b>Colossus</b><p>대규모 훈련·미세조정·추론 용량. 일부는 Anthropic 등 외부에도 제공한다.</p></div>
+              <div class="system-card"><em>TRAINING</em><b>Grok 4.6</b><p>더 긴 추가 훈련, 엔지니어링 데이터, 에이전트 RL, 4.5 궤적 재생성.</p></div>
+              <div class="system-card"><em>HARNESS</em><b>Cursor 협업</b><p>실제 코드베이스형 실행 환경과 배포 채널. 법적 인수 종결과는 구분해야 한다.</p></div>
+              <div class="system-card"><em>PRODUCT</em><b>Build · Cursor · API</b><p>한 모델을 코딩 도구와 개발자 API로 동시에 배포하고 사용 피드백을 얻는다.</p></div>
+            </div>
+            <p class="system-note">SpaceXAI는 각 요소의 기여율을 공개하지 않았다. 따라서 “Cursor가 성능 향상의 몇 퍼센트를 만들었다”는 계산은 불가능하다.</p>
+          </div>
+          <figcaption><a href="https://x.ai/colossus">Colossus 소개</a>, <a href="https://x.ai/news/grok-4-6">Grok 4.6 훈련 설명</a>, <a href="https://apnews.com/article/spacex-cursor-acquisition-vibe-coding-a5c60fcbaaca262cf107d30f1de899ef">AP의 Cursor 거래 보도</a>를 바탕으로 직접 재구성한 HTML 구조도.</figcaption>
+        </figure>
+
+        <h2>Cursor ‘인수 효과’는 어디까지 말할 수 있나</h2>
+        <p><a href="https://apnews.com/article/spacex-cursor-acquisition-vibe-coding-a5c60fcbaaca262cf107d30f1de899ef">SpaceX는 6월 16일 Cursor 운영사 Anysphere를 600억 달러 상당의 주식으로 인수하는 옵션을 행사했다</a>. 하지만 당시 규제 문서는 3분기 거래 종결 뒤 Cursor가 완전자회사가 된다고 설명했다. 8월 14일 현재 확인한 공개 자료에서 거래 종결 공시는 찾지 못했다. “인수하고 나서”보다 “인수 계약과 협업을 진행하면서”가 정확한 표현이다.</p>
+        <p>제품 협업은 거래 종결 전부터 진행됐다. SpaceX 공모 문서는 4월 19일 Cursor와 컴퓨트·공동 개발 계약을 맺었다고 밝힌다. <a href="https://www.axios.com/2026/07/08/spacexai-grok-new-model">Axios는 Grok 4.5가 Cursor와 함께 훈련됐고 Cursor 모든 요금제에서 출시됐다고 보도했다</a>. 4.6 역시 여러 에이전트 실행 환경에서 훈련됐고 출시 당일 Cursor에 들어갔다.</p>
+        <p>따라서 Cursor 효과는 세 가지로 보는 편이 타당하다. 실제 개발자 작업 형태를 훈련·평가 데이터에 더 잘 반영하고, 저장소를 탐색하고 도구를 부르는 실행 환경을 다듬으며, 대규모 개발자에게 곧바로 배포해 피드백을 받는 효과다. 반면 모델의 가중치 개선 중 얼마가 Cursor 데이터이고 얼마가 Colossus 추가 훈련인지는 공개되지 않았다.</p>
+        <p>법적 소유권보다 중요한 것은 이미 기술적 결합이 시작됐다는 점이다. CursorBench 1위와 동시 출시, 첫 주 2배 포함 사용량은 모델과 코딩 제품을 하나의 성장 고리로 묶으려는 전략을 보여 준다. 다만 Cursor가 다른 회사 모델도 계속 제공하는 만큼, Grok 점수만으로 600억 달러 거래의 경제성을 평가할 수는 없다.</p>
+
+        <h2>이미지·영상·Companion은 별도의 강점이다</h2>
+        <p>이미지는 8월 7일 Imagine Image 2.0으로 바뀌었다. 회사는 Quality Mode가 글자와 복잡한 레이아웃을 더 정확히 만들고, 편집 때 원본 요소를 더 잘 유지한다고 설명한다. 부분 영역 편집, 정밀 선택, 배경 제거, 최대 5개 입력 이미지, 비율에 맞춘 확장 기능도 추가됐다. 이미지 생성·편집 순위 세계 2위라는 수치는 8월 7일 Arena 리더보드를 인용한 회사 주장이다.</p>
+        <p>영상은 7월 31일 Video 1.5 References가 공개됐다. 텍스트만으로 영상 생성, 네이티브 1080p, 인물 이미지와 목소리 참조, 최대 7개 이미지 참조가 핵심이다. API 가격은 Video 1.5 기준 480p 초당 0.08달러, 720p 0.14달러, 1080p 0.25달러다. 소비자 주간 풀에서는 해상도와 길이에 따라 사용 비율이 다르게 빠질 수 있다.</p>
+        <p>Companion은 Grok만의 소비자 경험을 만드는 요소다. <a href="https://apps.apple.com/us/app/grok-ai/id6670324846">미국 앱스토어 설명</a>에는 Ani, Rudi, Valentine과 대화하는 애니메이션 캐릭터 기능이 현재 적혀 있다. 단순 음성 모드보다 캐릭터의 표정과 관계 설정을 앞세워, 생산성 도구와 감정적 사용을 한 앱 안에 묶는다.</p>
+        <p>접근 범위는 생각보다 좁다. 공식 FAQ는 Companion이 iOS 전용이며 웹이나 Android에 제공할 계획이 없다고 밝힌다. 지역·연령·스토어 정책에 따라서도 보이는 캐릭터가 달라질 수 있다. 코딩 모델의 경쟁력과 Companion의 만족도는 같은 성능 축이 아니므로, 구독을 고를 때는 업무 가치와 오락·관계 경험을 따로 평가해야 한다.</p>
+
+        <div class="fact-box"><strong>핵심 판단:</strong> Grok 4.6은 8월 12일 공개됐고, 코딩 에이전트의 완수율·비용·단계 수에서 실제로 강한 신호를 냈다. Colossus와 Cursor 협업은 이 개선을 가능하게 한 유력한 시스템적 배경이지만, 저가 구독의 정확한 상시 한도나 각 요소의 기여율은 공개되지 않았다. 지금 체감되는 풍부함에는 모델 효율과 첫 주 2배 프로모션도 함께 들어 있다.</div>
+
+        <h2>한국 사용자가 직접 확인할 네 가지</h2>
+        <p>첫째, 자신의 설정 화면에서 결제 경로와 주간 초기화 시각을 확인해야 한다. 같은 SuperGrok 이름이어도 웹과 앱스토어 가격이 다를 수 있고, X Premium+ 연결 혜택도 계정 연결 상태에 따라 달라진다. 원화 가격만 비교하지 말고 실제 포함 기능을 같이 적어 두는 편이 좋다.</p>
+        <p>둘째, 2배 프로모션 종료 전후에 같은 작업을 반복해야 한다. 중간 규모 저장소에서 기능 하나 구현, 테스트 수정, 코드 리뷰를 각각 시키고 주간 사용 비율과 걸린 시간, 수정 후 회귀를 기록하면 “많다”와 “빠르다”를 자기 업무 기준으로 검증할 수 있다.</p>
+        <p>셋째, 추론 강도를 맞춰야 한다. Grok 4.6 Extra High를 경쟁사의 기본·중간 모드와 비교하거나 반대로 경쟁사 Max와 Grok Low를 비교하면 가격과 품질 결론이 뒤틀린다. 완수율뿐 아니라 작업당 비용, 단계 수, 사람이 고친 시간까지 묶어서 봐야 한다.</p>
+        <p>넷째, 실제 배포 전에는 터미널·보안 작업을 따로 검증해야 한다. Grok 4.6은 CursorBench에서 강하지만 Terminal-Bench에서는 경쟁 모델보다 낮았다. 권한, 데이터베이스 변경, 배포 스크립트처럼 실패 비용이 큰 일은 자동 실행보다 변경 검토와 테스트 승인을 남기는 편이 안전하다.</p>
+        <p>필자의 결론은 “Grok이 싸기만 한 2군 모델”이라는 평가는 이번 4.6으로 낡았다는 것이다. 코딩 에이전트에서는 최상위권과 같은 테이블에 들어왔고 작업당 비용은 눈에 띄게 낮다. 다만 월 구독의 넉넉함을 Colossus 한 단어로 설명하거나 아직 종결 여부가 확인되지 않은 Cursor 인수의 단독 효과로 돌리면 과장이다. 지금 Grok의 진짜 강점은 거대한 컴퓨트, 빠른 추가 훈련, 코딩 도구와의 공동 최적화, 낮은 API 가격, 이미지·영상·캐릭터 경험을 한 제품군으로 동시에 밀어붙이는 속도에 있다.</p>
+
+        <section class="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">출처와 더 읽을 자료</h2>
+          <ul>
+            <li><a href="https://x.ai/news/grok-4-6">SpaceXAI: Introducing Grok 4.6, 2026년 8월 12일</a></li>
+            <li><a href="https://cursor.com/cursorbench">Cursor: CursorBench 3.2 공개 순위·비용·토큰·단계</a></li>
+            <li><a href="https://docs.x.ai/developers/pricing">SpaceXAI Docs: Grok 4.6·Imagine API 가격</a></li>
+            <li><a href="https://docs.x.ai/grok/faq">SpaceXAI Docs: SuperGrok 주간 사용량 풀과 추가 크레딧 FAQ</a></li>
+            <li><a href="https://x.ai/colossus">SpaceXAI: Colossus 인프라 소개</a></li>
+            <li><a href="https://x.ai/news/anthropic-compute-partnership">SpaceXAI: Anthropic과 Colossus 1 컴퓨트 계약</a></li>
+            <li><a href="https://apnews.com/article/spacex-cursor-acquisition-vibe-coding-a5c60fcbaaca262cf107d30f1de899ef">AP: SpaceX의 Cursor 인수 옵션 행사와 3분기 종결 계획</a></li>
+            <li><a href="https://www.axios.com/newsletters/axios-am-bd5f21b3-41b2-48fc-829c-4be50402e91d">Axios: Grok 4.6의 Artificial Analysis 상위권 평가</a></li>
+            <li><a href="https://www.axios.com/2026/07/08/spacexai-grok-new-model">Axios: Grok 4.5와 Cursor 공동 훈련·가격 맥락</a></li>
+            <li><a href="https://x.ai/news/grok-imagine-image-2">SpaceXAI: Imagine Image 2.0</a></li>
+            <li><a href="https://x.ai/news/grok-imagine-video-1-5-references">SpaceXAI: Imagine Video 1.5 with References</a></li>
+            <li><a href="https://apps.apple.com/us/app/grok-ai/id6670324846">Apple App Store: Grok Companion 현재 설명</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
