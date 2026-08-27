@@ -251,8 +251,43 @@ h3 {
 }
 
 .post-card {
+  position: relative;
   min-height: 230px;
   padding: 22px;
+}
+
+.post-list > .post-card:has(h3 > a) {
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.post-list > .post-card :is(a, button, input, select, textarea, summary) {
+  position: relative;
+  z-index: 2;
+}
+
+.post-list > .post-card h3 > a {
+  position: static;
+}
+
+.post-list > .post-card h3 > a::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  content: "";
+}
+
+.post-list > .post-card:has(h3 > a):hover {
+  border-color: rgba(36, 87, 214, 0.52);
+  box-shadow: 0 16px 38px rgba(36, 87, 214, 0.12);
+}
+
+.post-list > .post-card:focus-within {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.post-list > .post-card h3 > a:focus-visible {
+  outline: none;
 }
 
 .featured-post {
