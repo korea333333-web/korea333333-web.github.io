@@ -11,6 +11,10 @@
       .post-card-image { min-height: 0; padding: 0; overflow: hidden; }
       .post-card-image > img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 8; object-fit: cover; }
       .post-card-body { padding: 22px; }
+      #post-claude-cowork-browser-boundary { align-self: start; }
+      @media (min-width: 1000px) {
+        #post-qwen38-flash-next-open-weights h3 { font-size: 1.12rem; letter-spacing: -.025em; }
+      }
     </style>
   </head>
   <body>
@@ -52,6 +56,13 @@
           <h2 id="ai-news-title">AI 뉴스</h2>
         </div>
         <div class="post-list">
+          <article class="post-card featured-post" id="post-claude-cowork-browser-boundary">
+            <div class="post-meta"><span>2026.08.27</span><span>글로벌 AI 뉴스 · Claude · 브라우저 에이전트</span></div>
+            <h3><a href="posts/global-claude-cowork-browser-boundary.html">Claude가 내 브라우저와 일하는 브라우저를 나눴다</a></h3>
+            <p>Cowork의 전용 브라우저와 Claude in Chrome을 권한 경계로 나눠, 웹 자동화에 필요한 계정·행동·기록 설계를 설명했습니다.</p>
+            <div class="tags" aria-label="태그"><span>Claude</span><span>Cowork</span><span>Browser Agent</span></div>
+          </article>
+
           <article class="post-card featured-post post-card-image" id="post-slack-code-multiplayer-agents">
             <img src="assets/slack-code-multiplayer-hero.jpg" width="1774" height="887" alt="여러 AI 코딩 작업자가 공동 코드 화면에 연결되고 사람이 최종 승인을 내리는 협업 장면">
             <div class="post-card-body">
@@ -817,6 +828,13 @@
           <h2 id="china-feed-title">중국 AI 뉴스</h2>
         </div>
         <div class="post-list">
+          <article class="post-card featured-post" id="post-qwen38-flash-next-open-weights">
+            <div class="post-meta"><span>2026.08.27</span><span>중국 AI 뉴스 · Qwen · 오픈웨이트</span></div>
+            <h3><a href="posts/china-qwen38-flash-next-open-weights.html">Qwen의 125B 모델은 매번 6B만 일한다</a></h3>
+            <p>125B 전체 가중치와 토큰당 6B 활성의 차이를 풀고, 긴 문맥 비용과 저장 공간·상업 라이선스의 실제 조건을 분석했습니다.</p>
+            <div class="tags" aria-label="태그"><span>Qwen3.8-Flash-Next</span><span>Open Weights</span><span>Qwen4</span></div>
+          </article>
+
           <article class="post-card featured-post" id="post-pony-ai-q2-robotaxi-commercialization">
             <div class="post-meta"><span>2026.08.19</span><span>중국 AI 뉴스 · 자율주행 · 로보택시</span></div>
             <h3><a href="posts/china-pony-ai-q2-robotaxi-commercialization.html">Pony.ai 로보택시 매출 8배, 이제는 운행 경제성 시험대다</a></h3>
