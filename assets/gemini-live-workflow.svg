@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1500" viewBox="0 0 700 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Gemini Live에 말한 부탁이 실제 작업으로 이어지는 순서</title>
+  <desc id="desc">Gemini Live가 사용자의 말을 듣고 Gmail, Daily Brief, Spark 가운데 알맞은 도구로 요청을 연결하는 구조를 보여준다.</desc>
+  <rect width="700" height="1500" rx="34" fill="#f4f2ed"/>
+  <text x="48" y="72" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#24343d">말로 한 부탁이</text>
+  <text x="48" y="118" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#24343d">실제 작업이 되는 순서</text>
+  <rect x="48" y="184" width="604" height="164" rx="30" fill="#dfe8f5" stroke="#c4d3e5" stroke-width="3"/>
+  <text x="350" y="246" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="32" font-weight="700" fill="#35547b">Gemini Live</text>
+  <text x="350" y="298" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#3d4b54">사람의 말을 듣고 필요한 도구를 구분</text>
+  <path d="M350 348 L350 404" stroke="#7b8c93" stroke-width="6" stroke-linecap="round"/>
+  <path d="M338 391 L350 407 L362 391" fill="none" stroke="#7b8c93" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="48" y="430" width="604" height="250" rx="26" fill="#fff" stroke="#e3dad0" stroke-width="3"/>
+  <circle cx="92" cy="490" r="28" fill="#d77458"/>
+  <text x="92" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">1</text>
+  <text x="136" y="492" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#8c402d">Gmail · 바로 처리하는 일</text>
+  <text x="88" y="548" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#33454d">메일 찾기 · 요약 · 별표 · 보관 · 삭제</text>
+  <text x="88" y="602" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#69757a">예: “학교에서 온 중요한 메일을</text>
+  <text x="88" y="640" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#69757a">찾아줘”</text>
+  <rect x="48" y="710" width="604" height="250" rx="26" fill="#fff" stroke="#d4e4db" stroke-width="3"/>
+  <circle cx="92" cy="770" r="28" fill="#51916f"/>
+  <text x="92" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">2</text>
+  <text x="136" y="772" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#3e7559">Daily Brief · 오늘 할 일</text>
+  <text x="88" y="828" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#33454d">Gmail + Calendar + Gemini 대화를</text>
+  <text x="88" y="866" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#33454d">묶어 오늘 중요한 일만 브리핑</text>
+  <text x="88" y="910" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#69757a">현재 미국 18세 이상</text>
+  <text x="88" y="944" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#69757a">Google AI Plus·Pro·Ultra부터 순차 배포</text>
+  <rect x="48" y="990" width="604" height="250" rx="26" fill="#fff" stroke="#ddd9e9" stroke-width="3"/>
+  <circle cx="92" cy="1050" r="28" fill="#7565a4"/>
+  <text x="92" y="1060" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">3</text>
+  <text x="136" y="1052" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#5f538b">Spark · 오래 이어지는 일</text>
+  <text x="88" y="1108" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#33454d">Docs · Sheets · Drive · 웹을 오가며 작업</text>
+  <text x="88" y="1162" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#69757a">며칠·몇 주 이어지는 예약 작업도 가능</text>
+  <rect x="48" y="1320" width="604" height="3" fill="#d7cec2"/>
+  <text x="48" y="1374" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#68757a">자료: Google 공식 발표와 도움말</text>
+  <text x="48" y="1414" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#68757a">기능별 작업 흐름을 편집부가 재구성</text>
+</svg>

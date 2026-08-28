@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1740" viewBox="0 0 700 1740" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.3 공개 파일의 규모와 라이선스 조건</title>
+  <desc id="desc">7530억 파라미터, 756GB, 141개 가중치 조각의 뜻과 대형 모델 서비스 사업자에게 적용되는 보안 검토 조건을 설명한다.</desc>
+  <rect width="700" height="1740" rx="34" fill="#eef3f0"/>
+  <text x="48" y="72" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#20343b">파일을 받는 것과</text>
+  <text x="48" y="118" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#20343b">바로 실행하는 것은 다르다</text>
+  <text x="48" y="180" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#345f59">공개 저장소에서 확인되는 세 숫자</text>
+
+  <rect x="48" y="216" width="604" height="142" rx="24" fill="#f4e8d8"/>
+  <text x="84" y="274" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700" fill="#8c5424">약 7,530억</text>
+  <text x="84" y="320" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#4d5d61">Hugging Face가 표시한 전체 파라미터</text>
+  <rect x="48" y="382" width="604" height="142" rx="24" fill="#dcece8"/>
+  <text x="84" y="440" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700" fill="#27685f">756GB</text>
+  <text x="84" y="486" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#4d5d61">공개 저장소 전체 크기</text>
+  <rect x="48" y="548" width="604" height="142" rx="24" fill="#e6e6f2"/>
+  <text x="84" y="606" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700" fill="#52558c">141개</text>
+  <text x="84" y="652" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#4d5d61">서로 다른 AI가 아니라 한 모델을 나눈 가중치 조각</text>
+  <rect x="48" y="724" width="604" height="176" rx="24" fill="#fff7e9" stroke="#ead8b6" stroke-width="3"/>
+  <text x="84" y="780" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="29" font-weight="700" fill="#8a5a1f">저장 용량 ≠ 실행에 필요한 전체 장비</text>
+  <text x="84" y="830" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#3d4b50">실행에는 고속 메모리·계산 장치와</text>
+  <text x="84" y="868" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#3d4b50">추가 작업 공간이 더 필요하다.</text>
+  <rect x="48" y="936" width="604" height="656" rx="28" fill="#fff" stroke="#d4dfd9" stroke-width="3"/>
+  <text x="84" y="990" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#345f59">별도 GLM-5.3 라이선스의 추가 문턱</text>
+  <rect x="82" y="1024" width="536" height="116" rx="22" fill="#e5f1ee"/>
+  <text x="350" y="1071" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" font-weight="700" fill="#265e57">외부 고객이 입력·파라미터 등에</text>
+  <text x="350" y="1110" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" font-weight="700" fill="#265e57">실질적 통제권을 갖는 모델 서비스</text>
+  <circle cx="350" cy="1178" r="26" fill="#f0ece5"/>
+  <text x="350" y="1188" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#756d62">+</text>
+  <rect x="82" y="1222" width="536" height="136" rx="22" fill="#ecebf5"/>
+  <text x="350" y="1270" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26" font-weight="700" fill="#555787">관계사 합산 매출이</text>
+  <text x="350" y="1309" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26" font-weight="700" fill="#555787">연속 12개월 동안 100억 달러 초과</text>
+  <path d="M350 1374 L350 1410" stroke="#647276" stroke-width="5" stroke-linecap="round"/>
+  <path d="M339 1399 L350 1413 L361 1399" fill="none" stroke="#647276" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="82" y="1430" width="536" height="52" rx="18" fill="#dfe9d9"/>
+  <text x="350" y="1465" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" font-weight="700" fill="#476440">둘 다 해당하면 상업 이용 전 Z.ai 보안 검토</text>
+  <text x="350" y="1522" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#65726d">일반 제품에 내장된 기능은 제외</text>
+  <text x="350" y="1560" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#65726d">타사 모델을 단순 중계하는 서비스도 제외</text>
+  <text x="48" y="1660" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#667479">자료: Hugging Face 파일 목록</text>
+  <text x="48" y="1700" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#667479">GLM-5.3 License, 편집부 재구성</text>
+</svg>

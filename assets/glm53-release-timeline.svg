@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1390" viewBox="0 0 700 1390" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.3 발표부터 모델 가중치 공개까지의 과정</title>
+  <desc id="desc">8월 14일 모델 발표, 8월 19일 API 정식 제공 발표, 8월 28일 756GB 가중치 공개를 세 단계로 보여준다.</desc>
+  <rect width="700" height="1390" rx="34" fill="#f7f2e9"/>
+  <text x="48" y="72" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#20313a">발표만 했던 AI가</text>
+  <text x="48" y="118" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#20313a">실제 다운로드 파일이 되기까지</text>
+  <text x="48" y="164" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#5b696f">발표·API 정식 제공·가중치 공개는</text>
+  <text x="48" y="198" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#5b696f">서로 다른 사건이다</text>
+  <line x1="66" y1="250" x2="66" y2="1110" stroke="#c7b9a5" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="66" cy="318" r="30" fill="#d46b4c"/>
+  <text x="66" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">1</text>
+  <rect x="112" y="218" width="540" height="258" rx="26" fill="#fff" stroke="#eadfd1" stroke-width="3"/>
+  <text x="148" y="274" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#9f422c">8월 14일 · 모델 발표</text>
+  <text x="148" y="326" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">코딩·보안 능력이 커진</text>
+  <text x="148" y="364" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">GLM-5.3을 공개</text>
+  <text x="148" y="414" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">가중치는 안전 검토 뒤 공개한다고 예고</text>
+  <circle cx="66" cy="618" r="30" fill="#3b7780"/>
+  <text x="66" y="628" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">2</text>
+  <rect x="112" y="518" width="540" height="258" rx="26" fill="#fff" stroke="#d7e5e5" stroke-width="3"/>
+  <text x="148" y="574" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#23636b">8월 19일 · API 정식 제공 발표</text>
+  <text x="148" y="626" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">개발자가 호스팅된 모델을 호출</text>
+  <text x="148" y="676" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">파일을 받아 자체 서버에서</text>
+  <text x="148" y="714" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">돌릴 수는 없었음</text>
+  <circle cx="66" cy="918" r="30" fill="#52764b"/>
+  <text x="66" y="928" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">3</text>
+  <rect x="112" y="818" width="540" height="258" rx="26" fill="#fff" stroke="#d9e6d3" stroke-width="3"/>
+  <text x="148" y="874" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#3f6738">8월 28일 · 가중치 공개</text>
+  <text x="148" y="926" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">Hugging Face에 756GB 가중치 공개</text>
+  <text x="148" y="976" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">독립 시험과 자체 서버 배포가</text>
+  <text x="148" y="1014" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#263a43">가능해짐</text>
+  <rect x="48" y="1190" width="604" height="3" fill="#d8caba"/>
+  <text x="48" y="1244" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#68757a">자료: Z.ai 공식 발표·API 정식 제공 보도</text>
+  <text x="48" y="1284" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#68757a">Hugging Face 커밋 기록, 편집부 재구성</text>
+</svg>

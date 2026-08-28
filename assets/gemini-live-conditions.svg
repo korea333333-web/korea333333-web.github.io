@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1580" viewBox="0 0 700 1580" role="img" aria-labelledby="title desc">
+  <title id="title">Gemini Live 새 기능별 이용 조건</title>
+  <desc id="desc">기본 음성 대화, Spark, Daily Brief, Live 개인화가 각각 어떤 계정과 지역에서 열리는지 구분한다.</desc>
+  <rect width="700" height="1580" rx="34" fill="#eef2f7"/>
+  <text x="48" y="72" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#23343f">유료 가입만 하면</text>
+  <text x="48" y="118" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="36" font-weight="700" fill="#23343f">모든 기능이 열리는 것은 아니다</text>
+  <text x="48" y="164" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#64727a">계정·요금제·지역 조건이 기능마다 다르다</text>
+  <rect x="48" y="206" width="604" height="224" rx="26" fill="#fff" stroke="#d5dfea" stroke-width="3"/>
+  <text x="84" y="266" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#35567a">Gemini Live 기본 대화</text>
+  <text x="84" y="320" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26" fill="#35464f">무료 계정에서도 가능</text>
+  <text x="84" y="372" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">새 연결 기능은 계정별로 순차 배포</text>
+  <rect x="48" y="462" width="604" height="264" rx="26" fill="#fff" stroke="#d8e5dc" stroke-width="3"/>
+  <text x="84" y="522" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#416d52">Gemini Spark</text>
+  <text x="84" y="568" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" fill="#35464f">개인 계정 · 18세 이상</text>
+  <text x="84" y="610" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#35464f">발표·상세 도움말: AI Pro 또는 Ultra</text>
+  <text x="84" y="652" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">Keep Activity 필요 · 일반 회사·학교 계정은 불가</text>
+  <text x="84" y="694" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">공식 소개 문구 일부 달라 실제 계정에서 확인</text>
+  <rect x="48" y="758" width="604" height="232" rx="26" fill="#fff" stroke="#eadfce" stroke-width="3"/>
+  <text x="84" y="818" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#886134">Daily Brief</text>
+  <text x="84" y="872" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26" fill="#35464f">Google AI Plus·Pro·Ultra 가입자</text>
+  <text x="84" y="914" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">현재 미국의 18세 이상부터 순차 배포</text>
+  <text x="84" y="956" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">Personal Intelligence의 Workspace·Memory 필요</text>
+  <rect x="48" y="1022" width="604" height="276" rx="26" fill="#fff" stroke="#ded9e9" stroke-width="3"/>
+  <text x="84" y="1082" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="29" font-weight="700" fill="#64598f">Live의 Personal Intelligence</text>
+  <text x="84" y="1134" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#35464f">개인 계정 · 18세 이상</text>
+  <text x="84" y="1176" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#35464f">Live 개인화: 현재 미국 · 영어 지원</text>
+  <text x="84" y="1218" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">회사·학교 Workspace 계정은 대상 아님</text>
+  <text x="84" y="1260" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">한국어 Live가 된다고 개인화까지</text>
+  <text x="84" y="1292" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#6a767c">열린 것은 아니다</text>
+  <rect x="48" y="1390" width="604" height="3" fill="#cbd5df"/>
+  <text x="48" y="1444" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#68757a">2026년 8월 29일 Google 공식 도움말 기준</text>
+  <text x="48" y="1484" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" fill="#68757a">지역과 계정별 순차 배포</text>
+</svg>
