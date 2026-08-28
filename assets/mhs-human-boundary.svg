@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1050" viewBox="0 0 720 1050" role="img" aria-labelledby="title desc">
+  <title id="title">AI가 장비를 움직여도 안전 기준은 사람이 먼저 정한다</title>
+  <desc id="desc">사람이 실험 목적과 안전 한계를 정하고 도입 기관이 고위험 행동의 승인과 중지 기준을 별도로 설계하며, MHS가 장비에 선언된 제한을 강제하고 AI가 반복 작업을 조정하는 구조</desc>
+  <rect width="720" height="1050" rx="34" fill="#faf9f6"/>
+  <text x="40" y="64" fill="#17252b" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="700">
+    <tspan x="40" dy="0">AI가 장비를 움직여도</tspan>
+    <tspan x="40" dy="48">안전 기준은 사람이 먼저 정한다</tspan>
+  </text>
+
+  <rect x="40" y="154" width="640" height="194" rx="24" fill="#fff3df" stroke="#d7a45d" stroke-width="3"/>
+  <text x="72" y="205" fill="#4f3518" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700">사람 · 도입 통제책</text>
+  <text x="72" y="258" fill="#65471f" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28">
+    <tspan x="72" dy="0">실험 목표와 허용 범위를 정한다.</tspan>
+    <tspan x="72" dy="39">승인·중지 기준과 책임자를 따로 정한다.</tspan>
+  </text>
+  <rect x="502" y="184" width="142" height="54" rx="27" fill="#9a5c13"/>
+  <text x="573" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26" font-weight="700">별도 설계</text>
+
+  <path d="M360 360v38" stroke="#687980" stroke-width="6" stroke-linecap="round"/>
+  <path d="M344 385l16 18 16-18" fill="none" stroke="#687980" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="40" y="416" width="640" height="184" rx="24" fill="#e8f5f1" stroke="#71aaa3" stroke-width="3"/>
+  <text x="72" y="467" fill="#184b48" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700">MHS · 장비 수준의 안전선</text>
+  <text x="72" y="520" fill="#285a57" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28">
+    <tspan x="72" dy="0">선언된 범위·출력 상한을 적용한다.</tspan>
+    <tspan x="72" dy="39">인터록·비상 정지는 장비 앞에서 작동한다.</tspan>
+  </text>
+
+  <path d="M360 612v38" stroke="#687980" stroke-width="6" stroke-linecap="round"/>
+  <path d="M344 637l16 18 16-18" fill="none" stroke="#687980" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="40" y="668" width="640" height="184" rx="24" fill="#f0edfa" stroke="#9d90cc" stroke-width="3"/>
+  <text x="72" y="719" fill="#403276" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700">AI · 반복 작업과 조건 조정</text>
+  <text x="72" y="772" fill="#504383" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28">
+    <tspan x="72" dy="0">장비 상태를 읽고 다음 순서를 고른다.</tspan>
+    <tspan x="72" dy="39">측정 결과에 따라 조건을 바꿔 다시 실행한다.</tspan>
+  </text>
+
+  <rect x="40" y="884" width="640" height="112" rx="22" fill="#fbecee" stroke="#c8848f" stroke-width="3"/>
+  <text x="72" y="929" fill="#7f3440" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700">전문가 개입이 필요한 대표 영역</text>
+  <text x="72" y="970" fill="#713c45" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26">물리적 고장 · 예상 밖 시료 · 안전 판단</text>
+
+</svg>

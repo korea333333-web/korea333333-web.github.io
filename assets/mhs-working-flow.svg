@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1180" viewBox="0 0 720 1180" role="img" aria-labelledby="title desc">
+  <title id="title">AI가 여러 실험 장비를 움직이기까지</title>
+  <desc id="desc">사람이 목표와 금지선, 고위험 행동의 승인과 중지 기준을 정하고, MHS 드라이버가 장비 정보를 공통 형식으로 번역하며, AI가 작업 순서를 고른 뒤 여러 장비가 실행하고 상태를 돌려주는 흐름</desc>
+  <rect width="720" height="1180" rx="34" fill="#f7faf8"/>
+  <text x="40" y="66" fill="#17252b" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="700">
+    <tspan x="40" dy="0">AI가 여러 실험 장비를</tspan>
+    <tspan x="40" dy="48">움직이기까지</tspan>
+  </text>
+  <text x="40" y="144" fill="#5a6b71" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26">MHS는 AI와 기계 사이의 공통 통역기다</text>
+
+  <rect x="40" y="184" width="640" height="178" rx="24" fill="#fff3df" stroke="#d7a45d" stroke-width="3"/>
+  <circle cx="87" cy="231" r="27" fill="#9a5c13"/>
+  <text x="87" y="241" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="700">1</text>
+  <text x="132" y="236" fill="#4f3518" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700">사람이 목표와 금지선을 정한다</text>
+  <text x="72" y="292" fill="#65471f" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28">
+    <tspan x="72" dy="0">무엇을 실험할지, 어느 범위까지 움직일지,</tspan>
+    <tspan x="72" dy="39">고위험 행동의 승인·중지 기준도 정한다.</tspan>
+  </text>
+
+  <path d="M360 374v42" stroke="#687980" stroke-width="6" stroke-linecap="round"/>
+  <path d="M344 403l16 18 16-18" fill="none" stroke="#687980" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="40" y="434" width="640" height="206" rx="24" fill="#e8f5f1" stroke="#71aaa3" stroke-width="3"/>
+  <circle cx="87" cy="481" r="27" fill="#0d6e68"/>
+  <text x="87" y="491" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="700">2</text>
+  <text x="132" y="486" fill="#184b48" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700">MHS가 장비 정보를 번역한다</text>
+  <text x="72" y="542" fill="#285a57" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28">
+    <tspan x="72" dy="0">측정값·조정값·물리적 특징·안전 한계를</tspan>
+    <tspan x="72" dy="39">같은 형식으로 정리하고 장비별 명령을</tspan>
+    <tspan x="72" dy="39">읽기·쓰기 같은 공통 동작으로 바꾼다.</tspan>
+  </text>
+
+  <path d="M360 652v42" stroke="#687980" stroke-width="6" stroke-linecap="round"/>
+  <path d="M344 681l16 18 16-18" fill="none" stroke="#687980" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="40" y="712" width="640" height="178" rx="24" fill="#f0edfa" stroke="#9d90cc" stroke-width="3"/>
+  <circle cx="87" cy="759" r="27" fill="#6250a8"/>
+  <text x="87" y="769" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="700">3</text>
+  <text x="132" y="764" fill="#403276" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700">AI가 작업 순서를 조정한다</text>
+  <text x="72" y="820" fill="#504383" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28">
+    <tspan x="72" dy="0">각 장비의 상태를 읽고 다음 명령을 고른다.</tspan>
+    <tspan x="72" dy="39">빠른 반복은 검사 가능한 코드로 묶는다.</tspan>
+  </text>
+
+  <path d="M360 902v42" stroke="#687980" stroke-width="6" stroke-linecap="round"/>
+  <path d="M344 931l16 18 16-18" fill="none" stroke="#687980" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="40" y="962" width="640" height="160" rx="24" fill="#edf3f5" stroke="#93a8b1" stroke-width="3"/>
+  <circle cx="87" cy="1009" r="27" fill="#49636d"/>
+  <text x="87" y="1019" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="700">4</text>
+  <text x="132" y="1014" fill="#2b424a" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700">장비가 실행하고 상태를 돌려준다</text>
+  <text x="72" y="1070" fill="#415a63" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28">
+    <tspan x="72" dy="0">현미경·로봇팔·판독기가 움직이고,</tspan>
+    <tspan x="72" dy="39">측정 결과와 오류가 다시 AI로 돌아간다.</tspan>
+  </text>
+
+</svg>

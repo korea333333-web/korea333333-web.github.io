@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1120" viewBox="0 0 900 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Code의 일반 모드, 샌드박스, 제한 모드 비교</title>
+  <desc id="desc">명령 실행 가능 여부와 컴퓨터 접근 범위가 세 방식에서 어떻게 달라지는지 설명하는 세로형 비교 도표</desc>
+  <rect width="900" height="1120" rx="34" fill="#f7f4ec"/>
+  <text x="70" y="86" fill="#18242e" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="800">같은 Claude Code라도</text>
+  <text x="70" y="136" fill="#18242e" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="800">컴퓨터 열쇠를 쥐는 범위가 다르다</text>
+  <text x="70" y="184" fill="#5a6872" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">‘물어보고 실행’과 ‘기본 실행 도구 없음’은 다르다</text>
+
+  <rect x="60" y="235" width="780" height="220" rx="24" fill="#fff" stroke="#d8d3c7" stroke-width="2"/>
+  <rect x="86" y="263" width="145" height="42" rx="21" fill="#5e4ab6"/>
+  <text x="158" y="294" text-anchor="middle" fill="#fff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31" font-weight="800">일반 모드</text>
+  <text x="86" y="346" fill="#1c2933" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="800">명령은 할 수 있고, 중요한 순간에 묻는다</text>
+  <text x="86" y="391" fill="#52616c" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">• 파일을 읽고 고치며, 명령과 테스트도 가능</text>
+  <text x="86" y="430" fill="#52616c" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">• 중요한 행동은 사람이나 분류기가 승인</text>
+
+  <rect x="60" y="480" width="780" height="220" rx="24" fill="#eaf5f1" stroke="#9fc9bd" stroke-width="2"/>
+  <rect x="86" y="508" width="145" height="42" rx="21" fill="#167267"/>
+  <text x="158" y="539" text-anchor="middle" fill="#fff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31" font-weight="800">샌드박스</text>
+  <text x="86" y="591" fill="#1c2933" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="800">명령은 하되, 울타리 안에서 움직인다</text>
+  <text x="86" y="636" fill="#52616c" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">• 명령 실행 도구는 그대로 있음</text>
+  <text x="86" y="675" fill="#52616c" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">• 파일·인터넷 접근을 격리 규칙으로 좁힘</text>
+
+  <rect x="60" y="725" width="780" height="292" rx="24" fill="#fff0dd" stroke="#e0b872" stroke-width="2"/>
+  <rect x="86" y="753" width="165" height="42" rx="21" fill="#a45a12"/>
+  <text x="168" y="784" text-anchor="middle" fill="#fff" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31" font-weight="800">제한 모드</text>
+  <text x="86" y="836" fill="#1c2933" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="800">명령을 내릴 도구부터 빼고 시작한다</text>
+  <text x="86" y="881" fill="#52616c" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">• 명령·코드 실행 도구와 WebFetch 제거</text>
+  <text x="86" y="922" fill="#52616c" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">• 파일 도구는 작업 폴더 안으로 제한</text>
+  <text x="86" y="963" fill="#52616c" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="31">• 사용자·프로젝트·로컬 설정 무시, 권한 우회 거부</text>
+</svg>
