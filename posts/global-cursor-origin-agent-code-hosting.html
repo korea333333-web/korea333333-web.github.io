@@ -4,8 +4,16 @@
     <meta charset="utf-8">
     <link rel="icon" href="data:,">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cursor Origin이 열린 날, AI 코딩은 저장소까지 내려왔다</title>
-    <meta name="description" content="Cursor의 코드 호스팅 Origin 얼리 베타가 무엇을 바꾸는지, GitHub 동기화와 에이전트 통합, 보안·종속성·도입 판단 관점에서 분석한다.">
+    <title>Cursor, AI가 짠 코드를 저장하고 팀이 바로 검토하는 ‘Origin’ 공개</title>
+    <meta name="description" content="Cursor의 새 서비스 Origin은 AI가 고친 코드를 저장하고, 바뀐 부분을 동료와 검토하는 일을 Cursor 안에서 이어서 하게 해준다. GitHub와 무엇이 다른지 쉽게 풀었다.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cursor, AI가 짠 코드를 저장하고 팀이 바로 검토하는 ‘Origin’ 공개">
+    <meta property="og:description" content="AI가 고친 코드를 GitHub로 옮기지 않고 Cursor 안에서 저장·비교·검토할 수 있게 됐다. 무엇이 달라지고 무엇은 아직 불확실한지 쉽게 설명한다.">
+    <meta property="og:url" content="https://korea333333-web.github.io/posts/global-cursor-origin-agent-code-hosting.html">
+    <meta property="og:image" content="https://korea333333-web.github.io/assets/cursor-origin-shared-repository-hero.jpg">
+    <meta property="og:image:width" content="1774">
+    <meta property="og:image:height" content="887">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="../assets/styles.css">
     <script src="../assets/article-tools.js" defer></script>
     <style>
@@ -27,92 +35,101 @@
     <main class="article-shell">
       <article class="article">
         <a class="back-link" href="../index.html">처음으로 돌아가기</a>
-        <div class="article-meta"><span>2026.08.19</span><span>글로벌 AI 뉴스 · 개발 도구 · 코드 호스팅</span><span>by kikuke</span></div>
-        <h1>Cursor Origin이 열린 날, AI 코딩은 저장소까지 내려왔다</h1>
-        <p class="lead">AI 코딩 도구 Cursor가 자체 코드 호스팅 서비스 ‘Origin’을 유료 이용자에게 얼리 베타로 열었다. 6월에 예고한 제품이 실제 저장소 생성, 풀 리퀘스트, 코드 탐색, GitHub 양방향 동기화까지 갖추고 사용자 손에 들어온 것이다. 편집기 안의 보조 기능이던 에이전트가 이제 코드가 보관되고 검토되고 배포되는 관문까지 차지하기 시작했다.</p>
+        <div class="article-meta"><span>2026.08.19</span><span>글로벌 AI 뉴스 · 개발 도구 · 코드 보관 서비스</span><span>by kikuke</span></div>
+        <h1>Cursor, AI가 짠 코드를 저장하고 팀이 바로 검토하는 ‘Origin’ 공개</h1>
+        <p class="lead">지금까지 Cursor에서 AI에게 코드를 고치게 한 뒤 팀원에게 보여 주려면 GitHub를 다시 열어야 했다. 새 서비스 ‘Origin’을 쓰면 Cursor 안에서 코드를 저장하고, 무엇이 바뀌었는지 비교하고, 동료에게 “원본에 합쳐도 될지” 검토를 요청할 수 있다. 한마디로 AI가 코드를 짜는 곳과 팀이 보관·검토하는 곳이 하나가 된 것이다. 다만 아직 시험 단계라 중요한 프로젝트를 곧바로 옮기기보다는 GitHub 원본을 남겨 둔 채 써보는 편이 안전하다.</p>
 
-        <p><a href="https://cursor.com/changelog/origin-code-hosting">Cursor는 8월 17일 공식 변경 기록에서 Origin을 모든 유료 플랜 이용자에게 순차적으로 제공한다고 발표했다</a>. 엔터프라이즈 조직은 관리자가 사용을 거부할 수 있다. ‘출시’라는 말에는 범위가 붙는다. 정식 일반 제공이 아니라 기능과 운영 정책이 바뀔 수 있는 얼리 베타다.</p>
-        <p>이번에 새로 가능해진 일은 구체적이다. 이용자는 Cursor의 Codebase 탭에서 저장소를 만들고 전용 명령줄 도구로 기존 프로젝트를 밀어 넣을 수 있다. 저장된 코드를 탐색하고 검색하며, 풀 리퀘스트의 커밋과 검사 결과, 변경 파일을 보고 댓글을 남기거나 병합할 수도 있다.</p>
-        <p>Origin 자체가 처음 세상에 알려진 날은 아니다. Cursor는 6월 개발자 행사 Compile에서 에이전트 시대의 Git 호스팅을 예고했다. 따라서 이번 뉴스의 정확한 변화는 ‘새 아이디어 발표’가 아니라 ‘대기 명단 제품이 실제 유료 계정으로 풀리기 시작했다’는 데 있다.</p>
+        <figure class="article-figure article-hero-media" id="visual-origin-hero">
+          <img src="../assets/cursor-origin-shared-repository-hero.jpg" width="1774" height="887" alt="AI 도우미가 만든 작업물을 공동 보관함에 넣고 세 명의 팀원이 함께 확인하는 장면">
+          <figcaption>AI가 만든 코드를 한곳에 보관하고 팀원이 함께 검토하는 변화를 표현한 편집부 제작 AI 콘셉트 이미지. 실제 Cursor 제품 화면이 아니다.</figcaption>
+        </figure>
+
+        <h2>Cursor Origin이 정확히 뭔데?</h2>
+        <p>AI에게 쇼핑몰의 결제 버튼 오류를 고치라고 했다고 하자. 지금까지는 Cursor에서 수정이 끝난 뒤 GitHub를 열어 바뀐 파일을 확인하고, 팀원에게 검토를 부탁해야 했다. GitHub는 코드와 수정 기록을 보관하고 함께 검토하는 대표 서비스다.</p>
+        <p>Origin은 이 사이의 이동을 줄인다. Cursor 안에서 ‘저장소’를 만들 수 있는데, 저장소란 한 프로젝트의 코드와 수정 기록을 모아 두는 온라인 공간이다. 누가 무엇을 바꿨는지 살펴보고, 변경한 코드를 원본에 합칠지도 같은 화면에서 결정할 수 있다.</p>
+        <p>새 프로젝트는 Cursor의 Codebase(코드 모음) 화면에서 바로 만들 수 있고, 이미 진행 중인 프로젝트도 가져올 수 있다. 그 뒤에는 코드를 검색하고, AI가 바꾼 파일을 전후로 비교하고, 자동 검사 결과를 보며, 팀원이 댓글을 남긴 뒤 원본에 합칠 수 있다.</p>
+        <p>Cursor는 6월 개발자 행사 Compile에서 이 구상을 처음 소개했다. 이어 <a href="https://cursor.com/changelog/origin-code-hosting">8월 17일 공식 변경 기록</a>을 통해 모든 유료 플랜 이용자에게 Origin을 차례로 열겠다고 밝혔다. 기업용 계정은 관리자가 Origin 사용을 막을 수도 있다.</p>
+        <p>다만 지금은 ‘얼리 베타’, 즉 정식 출시 전에 실제 이용자에게 먼저 시험을 맡기는 단계다. 기능과 가격, 운영 방식이 달라질 수 있다. 현재 확인된 것은 저장소를 만들고 코드를 검색하며 팀의 검토 요청을 확인하는 기본 기능이다. GitHub를 완전히 대신할 서비스라고 판단하기에는 아직 이르다.</p>
 
         <figure class="article-figure" id="visual-origin-launch">
           <div class="visual-board launch-board" role="img" aria-label="Cursor Origin이 6월 공개 예고에서 8월 얼리 베타로 전환되고 GitHub 동기화와 에이전트 기능으로 이어지는 흐름을 보여주는 도표">
             <h3>Origin이 이번 주 실제로 바꾼 범위</h3>
             <p class="visual-deck">6월의 제품 예고와 8월의 사용 가능 상태를 구분하고, 현재 기능과 앞으로의 약속도 나눴다.</p>
             <div class="launch-grid">
-              <div class="launch-card"><em>JUN 16</em><b>제품 방향 공개</b><span>Compile 행사에서 에이전트용 Git 호스팅 구상을 처음 선보였다.</span></div>
-              <div class="launch-card"><em>AUG 17</em><b>얼리 베타 개방</b><span>유료 플랜에 저장소 생성, 탐색, 풀 리퀘스트 기능을 순차 제공한다.</span></div>
-              <div class="launch-card"><em>NOW</em><b>GitHub와 병행</b><span>기존 저장소는 실시간으로 복제하며 GitHub를 원본으로 유지할 수 있다.</span></div>
-              <div class="launch-card"><em>NEXT</em><b>에이전트 네이티브</b><span>대규모 에이전트 작업에 맞춘 기능은 공식 문서상 ‘곧 제공’ 영역이다.</span></div>
+              <div class="launch-card"><em>6월 16일</em><b>제품 방향 공개</b><span>Compile 행사에서 AI가 만든 코드를 보관·검토하는 구상을 처음 선보였다.</span></div>
+              <div class="launch-card"><em>8월 17일</em><b>얼리 베타 개방</b><span>유료 플랜에 코드 보관 공간 생성, 검색, 팀 검토 기능을 차례로 제공한다.</span></div>
+              <div class="launch-card"><em>현재</em><b>GitHub와 병행</b><span>기존 저장소는 실시간으로 복제하며 GitHub를 원본으로 유지할 수 있다.</span></div>
+              <div class="launch-card"><em>앞으로</em><b>여러 AI를 위한 기능</b><span>여러 AI가 동시에 일하도록 돕는 기능은 공식 문서상 ‘곧 제공’ 영역이다.</span></div>
             </div>
-            <p class="launch-note"><strong>핵심:</strong> 지금 확인된 제품은 기본 Git 호스팅과 Cursor 통합이다. 기존 GitHub 생태계를 곧바로 대체했다거나 에이전트 규모의 성능이 검증됐다고 해석하면 앞서간다.</p>
+            <p class="launch-note"><strong>핵심:</strong> 지금 확인된 제품은 기본 코드 보관·검토 기능과 Cursor의 연결이다. 기존 GitHub 생태계를 곧바로 대체했다거나 여러 AI가 동시에 일할 때의 성능이 검증됐다고 해석하면 앞서간다.</p>
           </div>
-          <figcaption><a href="https://cursor.com/changelog/origin-code-hosting">Cursor 공식 변경 기록</a>과 <a href="https://cursor.com/docs/origin/overview">Origin 문서</a>를 바탕으로 직접 재구성한 HTML 흐름도.</figcaption>
+          <figcaption><a href="https://cursor.com/changelog/origin-code-hosting">Cursor 공식 변경 기록</a>과 <a href="https://cursor.com/docs/origin/overview">Origin 문서</a>를 바탕으로 이 글을 위해 직접 재구성한 흐름도.</figcaption>
         </figure>
 
-        <h2>코드 편집기와 저장소가 붙으면 무엇이 달라지나</h2>
-        <p>지금까지 Cursor의 에이전트가 코드를 고쳐도 협업의 최종 기록은 대개 GitHub나 GitLab에 남았다. 계정 권한을 연결하고, 브랜치를 만들고, 풀 리퀘스트를 열고, 검사 결과를 다시 읽는 과정에서 제품 경계가 여러 번 바뀌었다. Origin은 그 경계를 한 회사의 데이터와 화면 안으로 당긴다.</p>
-        <p>Cursor는 각 저장소에서 에이전트에게 질문하고, 변경을 만들고, 풀 리퀘스트를 갱신하거나 새 브랜치를 밀어 넣을 수 있다고 설명한다. 사람의 편집 화면과 에이전트 실행 환경, 검토 이력이 같은 객체를 바라보면 문맥을 전달하는 비용이 줄어든다. 특히 여러 에이전트가 동시에 브랜치를 만드는 팀에서는 누가 어떤 근거로 무엇을 바꿨는지 연결하는 기능이 중요해진다.</p>
-        <p>그렇다고 Git이 사라지는 것은 아니다. Origin도 저장소와 브랜치, 커밋, 풀 리퀘스트라는 익숙한 단위를 사용한다. 변화는 버전 관리 형식보다 운영 주체에 있다. 소스 코드가 보관되는 곳과 AI가 코드를 읽고 쓰는 곳이 한 플랫폼으로 합쳐진다.</p>
-        <p>배포와 지속적 통합도 붙는다. 공식 발표에는 Vercel 미리보기 배포, Depot와 Buildkite의 검사 실행 연동이 포함됐다. 기존 GitHub Actions 워크플로는 Depot나 Buildkite를 거쳐 실행할 수 있다. 아직 GitHub Actions를 Origin이 그대로 호스팅한다는 뜻은 아니므로 실행 사업자와 비용 조건을 따로 확인해야 한다.</p>
+        <h2>AI가 고친 코드, 팀은 어떤 순서로 확인하나?</h2>
+        <p>팀 개발에는 원본을 바로 고치지 않는 안전장치가 있다. 먼저 ‘브랜치’, 즉 원본과 떨어진 작업용 복사본에서 수정한다. 그다음 ‘풀 리퀘스트(PR)’, 즉 “이 변경을 원본에 합쳐도 되는지 봐 달라”는 검토 요청을 보낸다. 다른 사람이 내용을 확인하고 문제가 없다고 판단해야 원본에 합친다.</p>
+        <p>기존에는 Cursor에서 AI에게 일을 맡긴 뒤 GitHub로 가서 브랜치와 검토 요청을 확인해야 했다. Origin에서는 AI에게 수정을 맡기고, 달라진 파일을 읽고, 팀원의 의견을 주고받는 흐름을 한 화면에서 이어 갈 수 있다. 같은 설명을 여러 도구에 반복해서 입력하는 수고도 줄어든다.</p>
+        <p>여러 AI가 동시에 다른 일을 할 때는 기록이 더 중요하다. 결과만 보면 왜 그런 수정을 했는지 알기 어려울 수 있다. AI가 받은 지시와 수정 내용, 사람의 검토 의견이 한 프로젝트에 함께 남으면 문제가 생겼을 때 원인을 찾기 쉬워진다.</p>
+        <p>Origin이 코드 관리의 기본 원리까지 바꾸는 것은 아니다. Git이라는 변경 기록 방식, 작업용 복사본, 검토 요청은 그대로 쓴다. 달라지는 점은 코드를 만드는 AI와 코드를 보관하는 서비스를 Cursor가 함께 운영한다는 것이다.</p>
+        <p>자동 검사와 시험용 공개도 가까워진다. 코드를 바꿀 때마다 오류가 없는지 자동으로 확인하는 방식을 ‘지속적 통합(CI)’이라고 한다. Cursor는 Depot·Buildkite를 통한 자동 검사와 Vercel의 미리보기 페이지 연결을 안내했다. 다만 GitHub가 제공하던 자동 검사 기능 전체가 Origin으로 그대로 옮겨오는 것은 아니며, 외부 서비스 비용도 따로 확인해야 한다.</p>
 
-        <h2>왜 GitHub를 버리지 않고 먼저 복제하나</h2>
-        <p>Origin의 가장 현실적인 기능은 ‘GitHub 동기화’다. 조직을 연결하고 저장소를 선택하면 Cursor가 사본을 가져온다. 사용자는 Origin에서 코드를 찾아보고 당겨 올 수 있지만, GitHub에서 시작된 저장소의 푸시는 계속 GitHub로 가며 GitHub가 원본 기록을 유지한다.</p>
-        <p>풀 리퀘스트 댓글과 반응도 양방향으로 동기화된다. Cursor에서 댓글을 달면 GitHub에 올라가고, GitHub에서 남긴 답변은 Cursor에 나타난다. 기존 권한, 자동화, 감사 이력, 오픈소스 커뮤니티를 한 번에 옮기지 않고 에이전트 통합만 시험할 수 있게 한 완충 장치다.</p>
-        <p>이 접근은 GitHub의 거대한 네트워크를 인정한다. <a href="https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/">GitHub는 2025년 Octoverse에서 1억8천만 명이 넘는 개발자가 플랫폼을 사용한다고 밝혔다</a>. 저장소 주소만 옮기는 것으로 이슈, 릴리스, Actions, 앱, 보안 규칙, 외부 링크까지 이동하는 것은 아니다.</p>
-        <p>동시에 Cursor에는 데이터를 자기 화면으로 끌어올 이유가 있다. 에이전트가 코드를 만들고 검토하는 순간을 더 많이 관찰하면 어느 변경이 통과했고 어디서 되돌아갔는지 학습할 수 있다. 저장소는 단순 파일 보관함이 아니라 AI 작업의 입력, 실행 기록, 평가 결과가 만나는 장소가 된다.</p>
+        <h2>그럼 GitHub를 바로 없애도 될까?</h2>
+        <p>아니다. 가장 안전한 시험 방법은 GitHub를 그대로 두고 Origin을 연결하는 것이다. 팀이 기존 GitHub 저장소를 연결하면 Cursor가 그 사본을 가져온다. Origin에서 코드를 찾아보고 검토할 수 있지만, 새 수정 기록을 올리는 최종 목적지와 원본은 계속 GitHub로 유지할 수 있다.</p>
+        <p>검토 요청에 남긴 댓글도 양쪽에 반영된다. Cursor에서 쓴 의견이 GitHub에 나타나고, GitHub에서 단 답변도 Cursor로 들어온다. 팀은 기존 권한과 자동화, 과거 기록을 한꺼번에 옮기지 않고도 Origin이 정말 편한지 시험할 수 있다.</p>
+        <p>이 선택은 GitHub가 단순한 파일 보관함이 아니기 때문에 중요하다. <a href="https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/">GitHub는 2025년 Octoverse에서 1억8천만 명이 넘는 개발자가 플랫폼을 사용한다고 밝혔다</a>. 문제 신고, 새 버전 공개, 보안 규칙, 다른 서비스와의 연결까지 오랜 시간 쌓여 있다. 저장소 주소 하나를 바꾼다고 이 생태계 전체가 함께 이동하지는 않는다.</p>
+        <p>Cursor 입장에서도 이 연결은 중요하다. AI가 만든 수정 가운데 무엇이 승인되고 무엇이 거절됐는지를 같은 화면에서 볼 수 있기 때문이다. 그러나 이용자 입장에서는 그만큼 코드와 검토 기록이 한 회사에 더 많이 모인다는 뜻이기도 하다. 편리함과 데이터 통제를 함께 따져야 한다.</p>
 
         <figure class="article-figure" id="visual-origin-choices">
-          <div class="visual-board choice-board" role="img" aria-label="Origin 자체 호스팅, GitHub 동기화, 기존 GitHub 유지의 장점과 확인할 위험을 비교하는 도표">
+          <div class="visual-board choice-board" role="img" aria-label="Origin에 직접 보관하기, GitHub와 동기화하기, 기존 서비스를 유지하기의 장점과 위험을 비교하는 표">
             <h3>팀이 선택할 수 있는 세 가지 도입 경로</h3>
             <p class="visual-deck">얼리 베타에서는 이전보다 되돌릴 수 있는 실험이 중요하다. 저장소 유형에 따라 출발점을 다르게 잡을 수 있다.</p>
             <div class="choice-grid">
-              <div class="choice-card accent"><em>LOW-RISK PILOT</em><b>GitHub 저장소 동기화</b><p>원본과 푸시는 GitHub에 둔 채 Cursor의 탐색·검토·에이전트 흐름을 비교한다. 가장 되돌리기 쉽다.</p></div>
-              <div class="choice-card"><em>NEW PROJECT</em><b>Origin 자체 호스팅</b><p>새 내부 도구처럼 의존성이 적은 저장소로 권한, 백업, 내보내기, 장애 대응을 시험한다.</p></div>
-              <div class="choice-card"><em>STAY PUT</em><b>기존 호스팅 유지</b><p>규제·고객 계약·감사 요구가 큰 저장소는 보안 문서와 서비스 약정이 충분해질 때까지 기다린다.</p></div>
+              <div class="choice-card accent"><em>가장 안전한 시험</em><b>GitHub 프로젝트 동기화</b><p>원본 수정 기록은 GitHub에 둔 채 Cursor의 검색·검토·AI 작업 흐름을 비교한다. 가장 되돌리기 쉽다.</p></div>
+              <div class="choice-card"><em>새 프로젝트</em><b>Origin에 직접 보관</b><p>새 내부 도구처럼 다른 서비스와 덜 얽힌 프로젝트로 권한, 백업, 내보내기와 장애 대응을 시험한다.</p></div>
+              <div class="choice-card"><em>지금은 기다리기</em><b>기존 서비스 유지</b><p>규제·고객 계약·감사 요구가 큰 프로젝트는 보안 문서와 서비스 약정이 충분해질 때까지 기다린다.</p></div>
             </div>
-            <p class="choice-note">공통 점검 항목: 원본 저장소의 위치, 풀 리퀘스트 이력 내보내기, 앱 권한, 비밀정보 처리, 데이터 보존, 장애 때 로컬 Git로 복구하는 절차.</p>
+            <p class="choice-note">공통 점검 항목: 원본 코드의 위치, 팀 검토 이력 내려받기, 연결 앱 권한, 비밀정보 처리, 데이터 보존, 장애 때 컴퓨터의 사본으로 복구하는 절차.</p>
           </div>
-          <figcaption><a href="https://cursor.com/docs/origin/mirror-github">Cursor의 GitHub 미러링 문서</a>와 <a href="https://cursor.com/security">Cursor 보안 설명</a>을 바탕으로 직접 재구성한 HTML 비교도.</figcaption>
+          <figcaption><a href="https://cursor.com/docs/origin/mirror-github">Cursor의 GitHub 동기화 문서</a>와 <a href="https://cursor.com/security">Cursor 보안 설명</a>을 바탕으로 이 글을 위해 직접 재구성한 비교표.</figcaption>
         </figure>
 
-        <h2>하필 GitHub 장애 직후였다는 의미</h2>
-        <p>Origin 개방은 GitHub가 8월 17일 몇 시간 동안 광범위한 장애를 겪은 시점과 겹쳤다. <a href="https://www.androidcentral.com/apps-software/a-massive-github-outage-just-crippled-software-pipelines-worldwide">Android Central은 웹, 코드 리뷰, 자동화와 Copilot이 영향을 받았고 원시 파일 다운로드 오류율이 한때 약 50%에 이르렀다고 전했다</a>. 발표 타이밍이 개발자 관심을 끌기에 더없이 좋았던 이유다.</p>
-        <p>하지만 그 장애가 Origin 출시의 원인이었다고 볼 근거는 없다. 제품은 두 달 전에 이미 공개됐고 코드 호스팅은 며칠 만에 만들 수 있는 서비스가 아니다. 우연한 시간적 겹침과 인과관계를 구분해야 한다.</p>
-        <p>GitHub도 문제를 숨기지 않는다. <a href="https://github.blog/news-insights/company-news/an-update-on-github-availability/">GitHub는 저장소 생성과 API, 자동화, 대형 저장소 부하가 빠르게 늘어 2025년 10월부터 용량을 열 배 키우는 계획을 진행 중이라고 밝혔다</a>. 5월 가용성 보고서는 AI 보조·에이전트 개발이 트래픽 증가의 큰 원인이라고 설명했다.</p>
-        <p>이 대목에서 Origin의 주장은 설득력을 얻는다. 사람 한 명이 하루에 몇 번 푸시하던 체계와 수십 개 에이전트가 계속 브랜치를 만들고 검사를 요청하는 체계는 부하 모양이 다르다. 그러나 ‘에이전트용’이라는 문구만으로 안정성과 처리량이 입증되지는 않는다. 공개 벤치마크, 실제 장애 기록, 서비스 수준 약정이 필요하다.</p>
+        <h2>GitHub 장애와 같은 날 나왔는데, 관련이 있나?</h2>
+        <p>직접적인 관련은 확인되지 않았다. Cursor는 두 달 전에 이미 Origin을 예고했고, 이런 서비스를 며칠 만에 만들어 내놓을 수도 없다. 두 사건이 같은 날 벌어졌다는 사실과 원인·결과 관계는 구분해야 한다.</p>
+        <p>다만 Origin이 열린 8월 17일 GitHub가 몇 시간 동안 큰 장애를 겪은 것은 맞다. <a href="https://www.androidcentral.com/apps-software/a-massive-github-outage-just-crippled-software-pipelines-worldwide">Android Central은 웹 화면, 코드 검토, 자동화 기능과 Copilot이 영향을 받았고 원본 파일 다운로드 오류율이 한때 약 50%에 이르렀다고 전했다</a>. GitHub 대안을 찾는 관심이 커질 만한 날이었다.</p>
+        <p>AI 때문에 코드 서비스가 감당해야 할 일이 늘고 있는 것은 사실이다. <a href="https://github.blog/news-insights/company-news/an-update-on-github-availability/">GitHub는 저장소 생성과 자동화 요청, 큰 프로젝트의 사용량이 빠르게 늘어 2025년 10월부터 용량을 열 배 키우는 계획을 진행 중이라고 밝혔다</a>. GitHub는 5월 서비스 안정성 보고서에서 AI 보조 도구와 AI 에이전트의 활동도 트래픽 증가 요인으로 들었다.</p>
+        <p>사람 한 명이 하루에 몇 번 코드를 올리는 것과 여러 AI가 계속 수정본을 만들고 검사를 요청하는 것은 부담의 크기가 다르다. Origin이 이런 시대를 겨냥했다는 설명은 이해할 만하다. 다만 “AI 에이전트용”이라는 이름만으로 더 빠르고 안정적이라고 볼 수는 없다. 실제 이용 기록과 장애 대응 약속이 나와야 판단할 수 있다.</p>
 
-        <h2>경쟁자는 GitHub 하나가 아니다</h2>
-        <p>AI 시대의 코드 호스팅을 다시 만들려는 시도는 Cursor만의 것이 아니다. 전 GitHub CEO 토마스 돔케가 만든 Entire는 에이전트 세션과 코드 변경의 이유를 함께 기록하는 네트워크를 개발하고 있다. <a href="https://www.theregister.com/ai-and-ml/2026/07/08/former-github-ceo-launches-competitor-designed-for-the-age-of-vibe-coding/5268694">The Register는 Entire가 GitHub 저장소 미러와 독립 브랜치를 제공하며 향후 네트워크를 오픈소스로 공개할 계획이라고 보도했다</a>.</p>
-        <p>GitLab, Bitbucket, Codeberg와 자체 호스팅 Git도 이미 존재한다. Origin의 차별점은 저장소 기능의 새로움보다 Cursor 에이전트와의 결합 강도다. 경쟁의 질문도 “누가 Git을 구현했나”가 아니라 “에이전트의 생성·검토·승인·감사 과정을 누가 가장 안전하게 연결하나”로 바뀐다.</p>
-        <p>여기에는 이해 충돌이 있다. 코드를 만드는 에이전트와 그 코드를 평가하는 검토 도구, 기록을 보관하는 호스트가 모두 같은 회사에 있으면 통합은 매끄럽다. 반대로 한 계층의 오류나 정책 변경이 전체 개발 흐름에 번질 수 있다. 독립된 검사와 외부 백업이 더 중요해지는 이유다.</p>
+        <h2>왜 Cursor는 코드 보관까지 직접 하려는 걸까?</h2>
+        <p>AI 시대에 맞는 코드 보관 서비스를 만들려는 회사는 Cursor뿐이 아니다. 전 GitHub CEO 토마스 돔케가 만든 Entire는 AI가 어떤 지시를 받고 왜 코드를 바꿨는지까지 기록하는 서비스를 개발하고 있다. <a href="https://www.theregister.com/ai-and-ml/2026/07/08/former-github-ceo-launches-competitor-designed-for-the-age-of-vibe-coding/5268694">The Register는 Entire가 GitHub 저장소의 사본과 별도 작업 공간을 제공하며, 앞으로 핵심 네트워크를 오픈소스로 공개할 계획이라고 보도했다</a>.</p>
+        <p>GitLab, Bitbucket, Codeberg처럼 코드를 보관하는 다른 서비스도 이미 있다. Origin의 차이는 새로운 저장 방식을 발명했다는 데 있지 않다. Cursor의 AI가 코드를 만들고, 사람이 검토하고, 승인 결과를 남기는 과정을 얼마나 자연스럽게 이어 주느냐가 핵심이다.</p>
+        <p>한 회사가 코드 작성 AI와 검토 화면, 보관 장소를 모두 운영하면 편리하다. 반면 그 회사의 오류나 정책 변경이 전체 작업에 영향을 줄 수도 있다. 따라서 다른 도구로 다시 검사하고, 외부에 정기적으로 사본을 보관하는 안전장치는 여전히 필요하다.</p>
 
-        <h2>아직 확인되지 않은 것</h2>
-        <p>첫째는 가격이다. 현재 발표는 유료 플랜에 포함된 얼리 베타라고만 설명한다. 저장 용량, 네트워크 전송, 조직 좌석, CI 실행, 앱 사용량이 정식 출시 뒤 어떻게 과금될지 공개 정보가 충분하지 않다. 기존 Cursor 구독료만으로 장기 운영된다고 가정하면 안 된다.</p>
-        <p>둘째는 운영 보증이다. 베타 제품의 가용성 목표, 백업 주기, 데이터 복구 시간, 지역 선택, 고객별 암호화 키, 법적 보존 정책은 대기업 이전을 결정할 핵심 정보다. 일반적인 Cursor 보안 문서가 Origin 전용 서비스 약정의 빈칸을 자동으로 채우지는 않는다.</p>
-        <p>셋째는 데이터 사용이다. <a href="https://cursor.com/security">Cursor는 개인정보 보호 모드에서 코드 데이터를 모델 공급자가 저장하거나 학습에 쓰지 않도록 한다고 설명한다</a>. 다만 Origin 자체 호스팅 저장소의 코드, Git 이력, 풀 리퀘스트와 에이전트 로그에 어떤 보존·학습 정책이 적용되는지는 계약 문서에서 저장소별로 확인해야 한다.</p>
-        <p>넷째는 내보내기다. Git 커밋과 브랜치는 다른 호스트로 밀어 넣기 쉽지만 풀 리퀘스트 댓글, 검사 이력, 앱 설정, 에이전트의 작업 이유는 Git 객체가 아니다. 팀이 떠날 때 무엇을 어떤 형식으로 가져갈 수 있는지가 실제 종속 비용을 결정한다.</p>
+        <h2>돈·장애·내 코드·떠날 때 자료, 네 가지를 확인해야 한다</h2>
+        <p>첫째는 가격이다. 현재 Cursor는 Origin이 유료 플랜에 포함된 시험 서비스라고만 설명한다. 정식 출시 뒤 저장 공간, 데이터 전송량, 팀원 수와 자동 검사 횟수에 어떤 비용이 붙을지는 충분히 공개되지 않았다. 지금 내는 Cursor 구독료가 앞으로의 전체 비용이라고 단정할 수 없다.</p>
+        <p>둘째는 장애와 복구 약속이다. 서비스가 얼마나 자주 정상 작동해야 하는지, 백업을 얼마나 자주 만드는지, 문제가 생겼을 때 몇 시간 안에 되살리는지 확인해야 한다. 큰 기업이라면 어느 나라의 서버에 코드가 저장되는지, 회사별 암호화 열쇠를 쓸 수 있는지, 법에 따라 자료를 얼마나 보관하는지도 중요하다.</p>
+        <p>셋째는 데이터 사용 범위다. <a href="https://cursor.com/security">Cursor는 개인정보 보호 모드에서 코드 데이터를 모델 공급자가 저장하거나 학습에 쓰지 않도록 한다고 설명한다</a>. 그러나 Origin에 맡긴 코드, 수정 기록, 팀의 댓글과 AI 작업 기록을 얼마나 오래 보관하고 어떻게 쓰는지는 별도 계약에서 다시 확인해야 한다.</p>
+        <p>넷째는 다른 서비스로 옮길 수 있는가다. 코드와 기본 수정 기록은 비교적 쉽게 옮길 수 있다. 그러나 팀의 댓글, 자동 검사 결과, 앱 설정과 AI가 남긴 작업 이유는 함께 이동하지 않을 수 있다. 이 자료를 어떤 형식으로 내려받을 수 있는지가 실제 종속 위험을 결정한다.</p>
 
-        <div class="fact-box"><strong>핵심 판단:</strong> Origin은 GitHub를 하루아침에 대체한 제품이 아니라, Cursor가 편집기·에이전트에서 코드 보관과 검토 계층으로 내려온 사건이다. 현재 가장 가치 있는 사용법은 중요한 저장소를 즉시 이전하는 것이 아니라 GitHub 동기화로 통합 효과와 데이터 경계를 검증하는 것이다.</div>
+        <div class="fact-box"><strong>한 문장 판단:</strong> Origin은 GitHub를 당장 대신하는 완성품이 아니라, Cursor가 코드 작성뿐 아니라 보관과 팀 검토까지 맡기 시작한 시험 서비스다. 중요한 프로젝트를 바로 옮기기보다 GitHub 원본을 남겨 둔 채 편리함과 위험을 함께 확인하는 편이 안전하다.</div>
 
-        <h2>한국 개발팀이 바로 해볼 실험</h2>
-        <p>첫 실험은 비핵심 저장소 하나를 GitHub와 동기화하는 것이다. 같은 작업을 기존 GitHub 화면과 Origin에서 각각 수행하고, 에이전트가 만든 브랜치와 풀 리퀘스트 댓글이 양쪽에 얼마나 빨리 정확하게 반영되는지 기록한다. 기능 데모보다 되돌리기 가능성을 먼저 본다.</p>
-        <p>두 번째는 권한표 작성이다. Cursor 계정, GitHub 앱, 조직 관리자, 저장소 읽기·쓰기, 배포 앱과 CI가 어떤 토큰을 공유하는지 그린다. 에이전트가 코드를 수정할 권한과 프로덕션 배포를 승인할 권한은 분리해야 한다.</p>
-        <p>세 번째는 장애 훈련이다. Origin에 접속할 수 없을 때 로컬 복제본에서 새 브랜치를 만들고 다른 원격 저장소로 푸시할 수 있는지 확인한다. GitHub 동기화가 멈췄을 때 어느 쪽 기록이 원본인지, 충돌한 풀 리퀘스트 댓글을 어떻게 처리할지도 정해야 한다.</p>
-        <p>네 번째는 품질 대조다. 같은 코드 변경을 Cursor 에이전트가 만들고 독립된 검사 도구가 검토하게 해 통합 플랫폼의 자기평가 편향을 줄인다. 자동 병합은 테스트 통과만이 아니라 보안 규칙, 코드 소유자 승인, 변경 규모 한도를 함께 만족할 때만 허용하는 편이 안전하다.</p>
+        <h2>한국 팀은 어떻게 시험하면 될까?</h2>
+        <p>가장 안전한 시험은 회사의 핵심 서비스가 아닌 작은 저장소 하나를 GitHub와 연결하는 것이다. 같은 작업을 GitHub와 Origin에서 각각 해 보고, AI가 만든 작업용 복사본과 팀 댓글이 양쪽에 빠르고 정확하게 반영되는지 기록한다. 문제가 생기면 GitHub로 돌아갈 수 있는지도 함께 확인한다.</p>
+        <p>누가 어떤 권한을 갖는지도 한눈에 정리해야 한다. Cursor 계정, GitHub 연결 앱, 팀 관리자, 자동 검사와 공개 서비스가 어떤 열쇠를 쓰는지 확인한다. AI는 코드를 고칠 수 있어도, 실제 고객이 쓰는 서비스에 올리는 최종 승인권은 사람이 갖도록 나누는 편이 안전하다.</p>
+        <p>장애 상황도 미리 연습할 수 있다. Origin에 접속하지 못할 때 컴퓨터에 내려받은 사본에서 작업을 계속하고, 다른 저장 장소로 보낼 수 있는지 시험한다. GitHub와의 동기화가 멈췄을 때 어느 쪽 기록을 기준으로 삼을지도 정해 둔다.</p>
+        <p>AI가 만든 코드는 Cursor 밖의 도구로 한 번 더 확인하는 것이 좋다. 같은 회사의 AI가 만들고 같은 회사의 검토 도구가 평가하면 놓치는 문제가 비슷할 수 있기 때문이다. 오류 검사, 보안 규칙, 담당자의 승인이 모두 끝난 뒤에만 원본에 자동으로 합치도록 설정해야 한다.</p>
 
-        <h2>저장소 성격에 따라 답이 달라진다</h2>
-        <p>오픈소스 프로젝트는 가장 신중해야 한다. 저장소 주소는 단순 보관 장소가 아니라 이슈 검색, 기여자 평판, 릴리스 다운로드, 문서 링크가 모인 공공 광장이다. Origin의 에이전트 기능이 편리해도 외부 기여자가 새 계정과 검토 화면을 배워야 한다면 프로젝트 전체의 거래비용은 오히려 커질 수 있다. 공개 프로젝트는 GitHub 원본을 유지한 채 관리자만 동기화 기능을 시험하는 방식이 현실적이다.</p>
-        <p>금융·의료·공공처럼 규제와 감사가 중요한 조직은 기능 목록보다 증거를 먼저 요구해야 한다. 어느 지역에 코드와 로그가 저장되는지, 하위 처리자는 누구인지, 관리자 열람과 삭제가 감사 기록으로 남는지, 보안 사고 통지가 몇 시간 안에 이뤄지는지가 도입 여부를 좌우한다. 일반 편집기 계약에 저장소 호스팅 책임이 자동으로 포함된다고 가정하지 말고 Origin 전용 조항을 확인해야 한다.</p>
-        <p>반대로 짧게 쓰고 버리는 내부 자동화나 새 실험 프로젝트는 좋은 시험장이 될 수 있다. 기존 앱과 커뮤니티 의존성이 적어 실패해도 이동 비용이 낮고, 에이전트가 만든 변경을 저장소 화면에서 바로 검토하는 이점을 빠르게 측정할 수 있다. 다만 시험 프로젝트라도 운영 비밀이나 실제 고객 데이터를 넣지 않아야 기능 평가와 보안 승인을 분리할 수 있다.</p>
-        <p>대형 모노레포와 다수 에이전트 팀은 처리량보다 충돌 관리부터 봐야 한다. 같은 파일을 여러 에이전트가 고치면 푸시 속도가 빨라도 사람의 검토 대기열이 쌓이고, 서로의 전제를 모른 채 만든 변경이 테스트를 반복해서 깨뜨릴 수 있다. Origin이 작업 의존성과 코드 소유권, 우선순위를 얼마나 잘 표시하는지가 단순 커밋 수보다 중요한 생산성 지표다.</p>
-        <p>구매 계약에는 종료 절차를 넣을 필요가 있다. 서비스가 중단되거나 가격이 바뀔 때 저장소와 풀 리퀘스트, 댓글, 검사 결과, 에이전트 로그를 어느 기간 안에 어떤 형식으로 받을 수 있는지 정한다. 정기적인 외부 미러와 복구 훈련을 계약상 권리로 남기면 플랫폼 통합의 편의성을 누리면서도 협상력을 잃지 않을 수 있다.</p>
+        <h2>모든 프로젝트를 같은 속도로 옮길 필요는 없다</h2>
+        <p>누구나 참여하는 공개 프로젝트는 GitHub의 검색, 문제 신고, 참여자 기록과 다운로드 주소가 큰 자산이다. 외부 참여자에게 새 계정과 새 화면을 요구하면 Origin의 편리함보다 불편이 더 커질 수 있다. 이런 프로젝트는 GitHub를 원본으로 유지하고 관리자만 Origin을 시험하는 방식이 현실적이다.</p>
+        <p>금융·의료·공공 분야는 더 조심해야 한다. 코드와 작업 기록이 어느 나라에 저장되는지, Cursor가 데이터 처리를 맡기는 협력사는 누구인지, 관리자 열람과 삭제 기록이 남는지, 사고가 나면 언제 알려 주는지가 중요하다. Cursor 편집기의 일반 계약만으로 코드 보관 서비스의 책임까지 확인됐다고 볼 수는 없다.</p>
+        <p>반대로 짧게 쓰는 내부 도구나 새 실험 프로젝트는 좋은 시험 대상이다. 다른 서비스와 얽힌 부분이 적어 실패해도 옮기기 쉽다. 다만 실제 고객 정보, 비밀번호와 회사의 중요한 비밀은 넣지 않아야 기능 시험과 보안 검토를 분리할 수 있다.</p>
+        <p>아주 큰 프로젝트에서 여러 AI를 동시에 쓰는 팀은 속도보다 충돌을 먼저 살펴야 한다. 여러 AI가 같은 파일을 고치면 수정본은 빨리 늘어도 사람의 검토가 밀릴 수 있다. 누가 어느 부분을 맡는지, 어떤 작업을 먼저 해야 하는지 분명히 정하는 것이 단순한 수정 횟수보다 중요하다.</p>
+        <p>어떤 프로젝트든 나가는 방법을 준비해야 한다. 가격이 오르거나 서비스가 멈췄을 때 코드, 팀 댓글, 자동 검사 결과와 AI 작업 기록을 언제 어떤 파일로 받을 수 있는지 확인한다. 외부 사본을 정기적으로 만들고 복구 연습을 해 두면 편리함을 누리면서도 선택권을 지킬 수 있다.</p>
 
-        <h2>앞으로 볼 지표</h2>
-        <p>가장 먼저 볼 것은 베타 접근 범위와 가격표다. 무료 플랜 지원, 엔터프라이즈 지역, 저장·전송 한도, 서비스 수준 약정이 공개되면 취미 프로젝트가 아닌 조직용 호스트로서 위치를 가늠할 수 있다.</p>
-        <p>다음은 에이전트 네이티브 기능의 실체다. 동시 작업 수, 브랜치 충돌 해결, 실패한 검사 자동 수정, 사람 승인 지점, 작업 이유 보존이 실제 제품으로 제공돼야 ‘AI 시대의 Git 포지’라는 표현이 마케팅을 넘어선다.</p>
-        <p>마지막은 이동성이다. GitHub 양방향 동기화가 오래 유지되는지, 자체 호스팅 저장소를 다른 서비스로 옮기는 도구가 나오는지, 풀 리퀘스트와 감사 로그까지 내보낼 수 있는지 봐야 한다. 가장 좋은 에이전트 플랫폼은 사용자를 붙잡는 곳이 아니라 떠날 수 있다는 확신을 주면서 남게 하는 곳이다.</p>
-        <p>필자의 결론은 Origin의 진짜 경쟁 상대가 GitHub 화면이 아니라 개발 과정의 분절이라는 것이다. 저장소와 에이전트가 붙으면 속도는 빨라질 수 있다. 그 속도를 믿을 수 있는 기록, 분리된 승인, 복구 가능한 데이터로 바꾸는 팀만이 이번 변화를 생산성으로 가져갈 수 있다.</p>
+        <h2>Origin의 성패는 편리함보다 ‘되돌아갈 수 있느냐’가 가른다</h2>
+        <p>앞으로 공개될 가격표와 운영 약속이 Origin의 첫 성적표가 된다. 무료 플랜 지원 여부, 기업 데이터가 저장되는 지역, 저장 한도, 장애 때 보상 기준이 나와야 회사용 서비스로 믿을 수 있는지 판단할 수 있다.</p>
+        <p>AI 여러 개가 동시에 일할 때 충돌을 얼마나 잘 풀어 주는지도 확인해야 한다. 실패한 검사를 스스로 고치는지, 사람의 승인을 반드시 거치는지, 왜 그런 수정을 했는지 기록이 남는지가 실제 가치다. 이 기능이 현장에서 안정적으로 작동해야 “AI 시대의 코드 보관 서비스”라는 설명이 마케팅을 넘어선다.</p>
+        <p>마지막 기준은 이동성이다. GitHub와의 양방향 동기화가 오래 유지되고, Origin에서 만든 저장소도 다른 서비스로 쉽게 옮길 수 있어야 한다. 코드뿐 아니라 팀 댓글과 검사 기록까지 내보낼 수 있다면 이용자는 떠날 수 있다는 확신을 가진 채 Origin을 선택할 수 있다.</p>
+        <p>Origin은 Cursor와 GitHub 사이를 오가던 불편을 줄여 준다. 그러나 편해진 출입문이 비상구까지 막아서는 안 된다. 원본을 따로 남기고, 최종 승인은 사람이 맡고, 언제든 복구할 수 있게 준비한 팀만이 이 새 기능을 안전한 생산성으로 바꿀 수 있다.</p>
 
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">출처와 더 읽을 자료</h2>
@@ -122,8 +139,8 @@
             <li><a href="https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/">TechCrunch: Cursor의 Origin 얼리 베타와 GitHub 경쟁 구도</a></li>
             <li><a href="https://www.androidcentral.com/apps-software/a-massive-github-outage-just-crippled-software-pipelines-worldwide">Android Central: 8월 17일 GitHub 장애 범위</a></li>
             <li><a href="https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/">GitHub Octoverse 2025: 1억8천만 개발자와 활동 지표</a></li>
-            <li><a href="https://github.blog/news-insights/company-news/an-update-on-github-availability/">GitHub: 가용성 개선과 10배 용량 확대 계획</a></li>
-            <li><a href="https://www.theregister.com/ai-and-ml/2026/07/08/former-github-ceo-launches-competitor-designed-for-the-age-of-vibe-coding/5268694">The Register: Entire와 에이전트용 코드 호스팅 경쟁</a></li>
+            <li><a href="https://github.blog/news-insights/company-news/an-update-on-github-availability/">GitHub: 서비스 안정성 개선과 10배 용량 확대 계획</a></li>
+            <li><a href="https://www.theregister.com/ai-and-ml/2026/07/08/former-github-ceo-launches-competitor-designed-for-the-age-of-vibe-coding/5268694">The Register: Entire와 AI용 코드 보관 서비스 경쟁</a></li>
             <li><a href="https://cursor.com/security">Cursor: 보안, 코드 처리와 개인정보 보호 모드</a></li>
           </ul>
         </section>
