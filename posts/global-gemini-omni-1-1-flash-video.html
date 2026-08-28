@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>구글 영상 AI, 시작과 끝 장면을 정하고 최대 40초까지 이어 붙인다</title>
+    <meta name="description" content="구글 Gemini Omni 1.1 Flash가 3~10초 구간을 연장해 누적 최대 40초 영상을 만들고, 시작·끝 화면 지정과 360p부터 4K까지 해상도 선택을 지원한다. 각 숫자의 정확한 범위를 설명한다.">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/article-tools.js" defer></script>
+    <style>
+      .article-gemini-omni h1{font-size:clamp(2.02rem,4.2vw,3.36rem);word-break:keep-all}
+      .article-gemini-omni .article-figure{margin:2.7rem auto;max-width:940px}
+      .article-gemini-omni .article-figure img{display:block;width:100%;height:auto}
+      .article-gemini-omni .article-figure figcaption{margin-top:10px;line-height:1.64}
+      .article-gemini-omni .fact-box{margin:2rem 0;padding:18px 20px;border-left:4px solid #6c57b7;border-radius:0 14px 14px 0;background:#f1effa;line-height:1.7}
+      .article-gemini-omni .sources li{margin:.58rem 0}
+    </style>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed">중국 AI 뉴스</a></nav></header>
+    <main class="article-shell">
+      <article class="article article-gemini-omni">
+        <a class="back-link" href="../index.html">처음으로 돌아가기</a>
+        <div class="article-meta"><span>2026.08.28</span><span>글로벌 AI 뉴스 · 영상 생성 · 구글</span><span>by kikuke</span></div>
+        <h1>구글 영상 AI, 시작과 끝 장면을 정하고 최대 40초까지 이어 붙인다</h1>
+        <p class="lead">구글이 영상 생성·편집 AI ‘Gemini Omni 1.1 Flash’를 공개했다. 사용자는 기존 영상 뒤에 3~10초짜리 구간을 이어 붙일 수 있고, 구글 발표 기준 누적 길이는 최대 40초다. 시작 화면과 끝 화면을 지정해 그 사이 움직임을 만들고 360p부터 4K까지 출력 해상도도 고를 수 있다. 다만 360p 초안과 고해상도 결과가 같은 장면으로 유지된다는 보장은 없다.</p>
+
+        <figure class="article-figure" id="visual-gemini-omni-hero">
+          <img src="../assets/gemini-omni-hero.png" width="1774" height="887" alt="짧은 영상 장면 여러 개가 한 줄로 이어지고 사람이 마지막 장면을 선택하는 미니어처 영상 편집 작업대">
+          <figcaption>짧은 장면을 시험하고 이어 붙인 뒤 최종 출력 해상도를 고르는 과정을 표현한 편집부 제작 AI 콘셉트 이미지. 실제 Google 제품 화면이 아니며 저해상도와 고해상도 결과의 장면 동일성을 뜻하지 않는다.</figcaption>
+        </figure>
+
+        <p>Gemini Omni는 구글 딥마인드가 만든 영상용 AI다. 말로 장면을 설명하거나 사진과 짧은 영상을 참고 자료로 주면 새로운 영상을 만들고, 이미 만든 영상도 대화하듯 수정한다. 이름에 익숙한 Gemini가 들어가지만 질문에 글로 답하는 챗봇이 아니라 영상과 소리를 함께 만드는 모델이다.</p>
+        <p><a href="https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash?hl=en">구글의 모델 문서</a>에 따르면 한 번에 나오는 영상은 3~10초이며 초당 24장으로 구성된다. 360p·720p·1080p·4K를 고를 수 있다. 따라서 발표에 나온 ‘최대 40초’는 40초 영상을 버튼 한 번으로 만드는 길이가 아니다.</p>
+        <p>광고용 커피 장면을 만든다고 생각하면 차이가 분명하다. 먼저 원두가 쏟아지는 짧은 장면을 만들고, 다음 요청에서 카메라가 컵으로 이동하는 3~10초 구간을 붙인다. 그다음 사람이 컵을 드는 장면을 이어 붙이는 식이다. 짧은 결과를 매번 처음부터 다시 뽑는 대신 같은 이야기의 다음 장면을 계속 만드는 방식이다.</p>
+
+        <h2>3~10초짜리 장면을 고쳐 쓰듯 이어 붙인다</h2>
+        <p><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/">구글은 8월 27일 공식 발표</a>에서 장면 연장 기능이 앞부분의 맥락을 더 많이 본다고 설명했다. 이전 버전은 영상의 마지막 1초만 참고했지만, 1.1은 끝나기 전 최대 10초를 살펴보고 다음 장면을 만든다. 인물의 옷과 조명, 카메라 움직임을 다음 장면까지 더 잘 이어가기 위한 변화다.</p>
+        <p>최신 API 문서는 한 번의 연장 구간을 3~10초로 설명한다. 구글 발표문은 이를 10초 단위로 이어 누적 최대 40초까지 확장한다고 요약한다. 두 문서를 함께 보면 핵심은 40초를 한 번에 만드는 것이 아니라 짧은 구간을 반복해 붙이는 기능이라는 점이다. 연결을 자연스럽게 만들기 위해 입력 영상의 마지막 몇 장면이 조금 수정될 수도 있으므로 단순 접합과도 다르다.</p>
+        <p>직접 올린 외부 영상에는 조건이 더 있다. 연장용으로 업로드하는 영상은 10초 이하여야 하고, 새 장면은 영상의 끝에만 붙일 수 있다. 시작 부분 앞에 장면을 넣거나 가운데를 늘리는 기능은 지원하지 않는다. 누군가 말하는 외부 영상을 올려 대사를 더 이어 말하게 하는 것도 현재는 제한된다.</p>
+        <p>반대로 Gemini Omni가 앞 단계에서 만든 영상을 대화 기록과 함께 이어 갈 때는 음성 대화 연장이 가능하다. 같은 ‘영상 연장’이라도 사용자가 올린 외부 영상과 AI가 바로 전에 만든 영상의 조건이 다르다. 이 구분을 빼면 실제 사용 범위를 크게 오해하게 된다.</p>
+
+        <figure class="article-figure" id="visual-gemini-omni-workflow">
+          <img src="../assets/gemini-omni-workflow.svg" width="900" height="1200" alt="참고 장면과 360p 초안을 시험하고 시작·끝 화면이나 연장 구간을 지시한 뒤 최종 요청의 출력 해상도를 고르는 네 단계 흐름">
+          <figcaption><a href="https://ai.google.dev/gemini-api/docs/omni">Google Gemini API의 생성·연장·해상도 문서</a>를 바탕으로 편집부가 재구성한 작업 흐름도.</figcaption>
+        </figure>
+
+        <h2>시작 화면과 끝 화면을 주면 그 사이를 움직인다</h2>
+        <p>새로운 첫·끝 화면 지정은 두 장의 사진 사이를 영상으로 채우는 기능이다. 첫 사진에는 정면을 보는 사람이 있고 마지막 사진에는 카메라가 옆으로 돌아간 모습이 있다면, AI가 그 사이의 카메라 이동과 인물 움직임을 만든다. 구글은 이를 두 핵심 화면 사이를 잇는 영상 보간이라고 부른다.</p>
+        <p>이 기능은 원하는 결말을 미리 정할 수 있다는 점이 중요하다. 기존 영상 생성은 첫 장면을 줘도 마지막에 어디에 도착할지 통제하기 어려웠다. 이제 상품이 화면 중앙으로 들어오는 장면, 처음과 끝이 같은 반복 영상, 방에서 방으로 이동하는 카메라 움직임처럼 도착 지점을 지정할 수 있다.</p>
+        <p>짧은 참고 영상도 쓸 수 있다. <a href="https://ai.google.dev/gemini-api/docs/omni#limitations">API 문서의 제한 사항</a>은 참고 영상을 최대 3개, 각각 최대 3초까지 받을 수 있다고 설명한다. 춤 동작이나 인물의 생김새를 참고시키는 용도이며, 참고 영상의 소리는 사용되지 않는다. 여러 긴 영상을 한꺼번에 이해해 새로운 줄거리로 합치는 기능과는 다르다.</p>
+
+        <h2>360p 초안은 완성본이 아니라 싼 스케치다</h2>
+        <p>제작비를 줄이는 핵심은 360p 초안이다. 360p는 720p보다 픽셀 수가 적은 저해상도 출력 단계라 큰 화면용 완성본보다 초안 확인에 적합하다. 화면 방향에 따라 실제 가로·세로 치수는 달라지므로 ‘세로 픽셀 수가 언제나 360개’라고 이해하면 안 된다.</p>
+        <p>가격은 출력 영상 1초 기준으로 360p가 0.03달러, 기본 720p가 0.10달러, 1080p가 0.15달러, 4K가 0.30달러다. 단순 계산하면 10초 결과 하나는 각각 0.30달러, 1달러, 1.50달러, 3달러다. 이는 출력 영상료만 계산한 값이며 입력 글·이미지·영상·오디오의 토큰 비용은 별도다. 실패해 버린 초안과 다시 만든 횟수까지 더하면 실제 완성본 비용은 더 커진다.</p>
+        <p>구글은 360p 생성이 기본 720p보다 최대 60% 빠르고 비용은 약 3분의 1이라고 밝혔다. 여기서 속도는 한 이용자가 기다리는 시간이 반드시 60% 줄어든다는 보장이 아니다. 회사가 밝힌 측정 기준은 같은 시간에 시스템이 처리한 영상량, 즉 전체 처리량이다.</p>
+        <p>실용적인 사용법은 360p로 프롬프트와 구도를 여러 번 비교한 뒤 최종 요청에서 높은 해상도를 선택하는 것이다. 처음부터 모든 후보를 4K로 만들면 10초당 출력 명목 비용이 360p의 열 배다. 다만 새로 요청한 고해상도 결과가 360p 초안과 장면 단위로 완전히 같다고 보장된 것은 아니다.</p>
+
+        <h2>4K 출력은 4K로 처음부터 그린다는 뜻이 아니다</h2>
+        <p>1080p와 4K에는 중요한 단서가 붙는다. 공식 개발 문서는 두 해상도를 모두 ‘업스케일된 출력’이라고 명시한다. 문서가 확인해 주는 범위는 네이티브 4K 생성으로 설명되지 않는다는 점까지다. 어떤 내부 처리로 확대하는지, 기존 360p 결과를 그대로 다시 출력하는 전용 기능인지까지는 공개 문서만으로 단정할 수 없다.</p>
+        <p>업스케일은 큰 화면에서 보기 좋은 결과를 만드는 데 도움이 된다. 그러나 잘못 그린 손가락, 장면 사이에서 바뀐 얼굴, 틀린 간판 글자를 자동으로 바로잡는 보증은 아니다. 픽셀 수가 늘어난 것과 장면의 내용이 정확한 것은 서로 다른 문제다.</p>
+        <p>해상도와 화면 방향도 따로 고른다. 공식 API는 가로 16대 9와 세로 9대 16을 지원하며 기본은 가로형이다. 인스타그램 릴스나 유튜브 쇼츠용 세로 영상을 만들 생각이라면 360p 초안부터 세로 비율로 시험해야 한다. 가로 초안을 완성한 뒤 해상도만 높인다고 세로 구도가 저절로 만들어지지는 않는다.</p>
+
+        <p><a href="https://deepmind.google/models/model-cards/gemini-omni-flash/">구글 딥마인드 모델 카드</a>도 편집을 거치며 완전한 일관성을 유지하는 일, 복잡한 움직임을 만드는 일, 정확한 글자를 넣는 일이 여전히 어렵다고 적는다. 모든 생성 영상에는 AI 생성물 여부를 확인하기 위한 비가시성 SynthID가 들어가지만, 그것도 영상 내용이 사실이라는 인증은 아니다. 공식 기술 설명상 영어는 완전 지원하지만 다른 언어는 아직 평가되지 않아 결과가 달라질 수 있다.</p>
+        <p>이런 오류는 장면을 이어 붙일 때마다 쌓일 수 있다. 최종 해상도로 키우기 전 각 연결 지점을 재생해 얼굴과 손, 배경 물체, 소리의 이어짐을 확인해야 낮은 해상도에서 놓친 문제까지 줄일 수 있다.</p>
+
+        <figure class="article-figure" id="visual-gemini-omni-costs">
+          <img src="../assets/gemini-omni-costs.svg" width="900" height="1320" alt="360p부터 4K까지 초당 가격과 10초 명목 비용을 비교하고 최대 40초·최대 60%·4K의 정확한 뜻을 구분한 도표">
+          <figcaption><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/">Google 공식 발표의 가격표와 속도 조건</a>, <a href="https://ai.google.dev/gemini-api/docs/omni#output-resolution">공식 해상도 문서</a>를 바탕으로 편집부가 재구성했다. 10초 비용은 출력 영상의 초당 가격을 단순 곱한 명목값이며 입력 토큰 비용은 별도다.</figcaption>
+        </figure>
+
+        <p>독립 보도도 같은 경계를 짚었다. <a href="https://the-decoder.com/googles-gemini-omni-1-1-flash-makes-ai-video-generation-cheaper-and-more-flexible/">The Decoder</a>는 40초가 10초 단위의 누적 연장이라고 정리했고, <a href="https://www.watch.impress.co.jp/docs/news/2136430.html">일본 Impress Watch</a>는 최대 60% 속도가 시스템 처리량 기준이며 1080p·4K는 업스케일이라고 구분했다. 숫자는 크지만 각각 가리키는 기능이 다르다.</p>
+
+        <h2>장면이 길어질수록 연결 부위를 더 많이 확인한다</h2>
+        <p>3~10초 구간을 이어 붙이는 방식은 길이를 늘리지만 확인할 지점도 함께 늘린다. 첫 장면에서 들고 있던 컵의 색이 다음 장면에서 바뀌거나, 창문의 위치와 그림자 방향이 달라질 수 있다. 구글이 마지막 최대 10초를 참고한다는 말은 이런 변화가 완전히 사라진다는 보증이 아니라 일관성을 높이기 위해 보는 문맥이 넓어졌다는 뜻이다.</p>
+        <p>시작과 끝 화면을 정해도 그 사이의 모든 움직임이 사람이 상상한 경로를 따르는 것은 아니다. 같은 두 장을 넣어도 카메라가 돌아가는 방향이나 물체가 움직이는 방식은 결과마다 달라질 수 있다. 중요한 장면일수록 낮은 해상도 초안을 여러 개 만든 뒤 손과 얼굴, 글자, 배경의 연결을 구간별로 확인하는 편이 현실적이다.</p>
+        <p>40초의 명목 비용도 해상도에 따라 크게 달라진다. 재생성 없이 출력 영상 40초를 모두 새로 만들었다고 단순 계산하면 360p는 1.20달러, 720p는 4달러, 1080p는 6달러, 4K는 12달러다. 입력 토큰 비용과 환율·세금·플랫폼 수수료는 넣지 않은 값이다. 실제 작업에서는 마음에 들지 않아 버린 결과와 다시 만든 장면도 생기므로 최종 재생시간만으로 전체 비용을 잡으면 부족하다.</p>
+        <p>그래서 제작 도구를 만드는 회사는 ‘영상 1초 가격’ 외에 채택률을 봐야 한다. 초안 열 개 가운데 실제로 쓰는 장면이 두 개라면 나머지 여덟 개도 비용과 대기시간을 썼다. 한 편을 완성할 때 생성한 총 영상 길이, 버린 초안 수, 장면을 다시 만든 횟수를 함께 기록해야 새 모델이 기존 방식보다 경제적인지 알 수 있다.</p>
+
+        <h2>한국 창작자에게는 ‘많이 뽑고 하나만 키우는’ 흐름이 유용하다</h2>
+        <p>짧은 광고와 교육 영상, 세로형 소셜 영상을 만드는 사람에게 가장 현실적인 변화는 초안과 최종 요청의 비용을 나눠 볼 수 있다는 점이다. 360p로 프롬프트와 구도를 시험하고, 시작·끝 화면으로 장면의 도착점을 잡은 뒤, 최종 요청에서 필요한 해상도를 선택할 수 있다. 다만 고해상도 요청에서는 장면이 달라질 가능성까지 검토해야 한다.</p>
+        <p>대한민국은 Google AI Studio와 Gemini API 지원 지역이다. 모델 코드 <code>gemini-omni-1.1-flash</code>는 Gemini API 유료 티어와 Gemini Enterprise Agent Platform에서 제공된다. Google AI Plus·Pro·Ultra 구독자는 전 세계 Flow에서 모델을 이용할 수 있고, Gemini 앱에서는 장면 연장 기능을 쓸 수 있다. 제품마다 지원 기능과 사용량이 같다고 가정하면 안 된다.</p>
+        <p>처음 시험할 때는 짧은 장면 하나가 적당하다. 같은 프롬프트를 360p로 세 가지 만들고 인물과 배경이 얼마나 유지되는지 비교한 뒤, 같은 재료로 1080p 최종 요청을 해 본다. 두 결과가 완전히 같을 것이라고 전제하지 말고 구도와 움직임을 다시 확인해야 한다.</p>
+        <p>사람의 확인은 마지막까지 남는다. 제품 이름과 가격, 의료·교육 정보처럼 틀리면 문제가 되는 글자는 영상 안에 직접 생성하지 말고 편집 프로그램에서 따로 넣는 편이 안전하다. 실제 인물과 상표를 참고 자료로 올릴 때는 초상권과 저작권, 회사 자료의 외부 전송 허용 범위도 먼저 확인해야 한다.</p>
+
+        <div class="fact-box"><strong>핵심 판단:</strong> Gemini Omni 1.1 Flash의 변화는 40초와 4K라는 큰 숫자 자체가 아니다. 짧고 싼 초안으로 방향을 시험하고, 시작과 끝을 통제하며, 장면을 여러 차례 이어 붙인 뒤 최종 요청의 해상도를 따로 선택할 수 있게 된 작업 순서가 핵심이다.</div>
+
+        <h2>영상 AI가 생성기에서 간단한 편집 도구로 이동했다</h2>
+        <p>이전의 영상 AI는 한 문장을 넣고 결과가 마음에 들기를 기다리는 복권에 가까웠다. 이번 업데이트는 장면의 출발점과 도착점, 다음 3~10초 구간, 참고 동작, 출력 해상도를 사람이 나눠 지정하게 한다. 결과를 한 번에 얻기보다 작은 결정을 이어 가는 방식이다.</p>
+        <p>그렇다고 40초짜리 완성 영화를 한 번에 만들거나, 4K를 선택하면 모든 오류가 사라지는 것은 아니다. 구글이 실제로 내놓은 것은 짧은 영상을 더 싸게 시험하고 더 구체적으로 이어 가는 도구다. 영상 AI가 유용해지는 지점도 화려한 한 번의 생성보다 이 반복 가능한 편집 과정에 있다.</p>
+
+        <section class="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">출처와 더 읽을 자료</h2>
+          <ul>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/">Google 공식 발표: Gemini Omni 1.1 Flash의 새 기능·속도 조건·가격·제공 범위</a></li>
+            <li><a href="https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash?hl=en">Google AI for Developers: 모델 코드, 입력·출력 형식, 영상 길이와 해상도</a></li>
+            <li><a href="https://ai.google.dev/gemini-api/docs/omni">Google Gemini API: 생성·첫/끝 화면·연장·참고 영상·제한 사항</a></li>
+            <li><a href="https://deepmind.google/models/model-cards/gemini-omni-flash/">Google DeepMind 모델 카드: 학습 개요, 알려진 한계, 안전과 SynthID</a></li>
+            <li><a href="https://the-decoder.com/googles-gemini-omni-1-1-flash-makes-ai-video-generation-cheaper-and-more-flexible/">The Decoder: 기능·가격·이전 버전과의 차이 정리</a></li>
+            <li><a href="https://www.watch.impress.co.jp/docs/news/2136430.html">Impress Watch: 해상도별 가격, 처리량 기준 속도와 제공 경로 확인</a></li>
+            <li><a href="https://xenospectrum.com/en/google-gemini-omni-flash/">XenoSpectrum: 40초 누적 연장과 4K 업스케일 구분</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

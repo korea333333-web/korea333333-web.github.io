@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1320" viewBox="0 0 900 1320" role="img" aria-labelledby="title desc">
+  <title id="title">Gemini Omni 1.1 Flash의 해상도별 가격과 숫자의 정확한 뜻</title>
+  <desc id="desc">360p, 720p, 1080p, 4K의 초당 가격과 10초 명목 비용을 비교하고 최대 40초, 최대 60퍼센트, 4K의 조건을 설명하는 도표</desc>
+  <rect width="900" height="1320" rx="34" fill="#182235"/>
+  <text x="60" y="78" fill="#ffffff" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="54" font-weight="800">해상도별 출력 가격</text>
+  <text x="60" y="132" fill="#cbd6e8" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="34" font-weight="500">출력 영상 1초 가격과 10초 결과의 명목 비용</text>
+  <rect x="60" y="180" width="780" height="130" rx="24" fill="#dff6ef"/>
+  <text x="90" y="228" fill="#12644f" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="800">360p · 초안</text><text x="90" y="275" fill="#263849" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="36" font-weight="600">초당 $0.03</text><text x="525" y="258" fill="#12644f" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="44" font-weight="900">10초 $0.30</text>
+  <rect x="60" y="330" width="780" height="130" rx="24" fill="#eef2f8"/>
+  <text x="90" y="378" fill="#3f5574" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="800">720p · 기본</text><text x="90" y="425" fill="#263849" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="36" font-weight="600">초당 $0.10</text><text x="525" y="408" fill="#3f5574" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="44" font-weight="900">10초 $1.00</text>
+  <rect x="60" y="480" width="780" height="130" rx="24" fill="#fff1dc"/>
+  <text x="90" y="528" fill="#9b5819" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="800">1080p · 업스케일</text><text x="90" y="575" fill="#3d352c" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="36" font-weight="600">초당 $0.15</text><text x="525" y="558" fill="#9b5819" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="44" font-weight="900">10초 $1.50</text>
+  <rect x="60" y="630" width="780" height="130" rx="24" fill="#f1e7fb"/>
+  <text x="90" y="678" fill="#684295" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="800">4K · 업스케일</text><text x="90" y="725" fill="#382f43" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="36" font-weight="600">초당 $0.30</text><text x="525" y="708" fill="#684295" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="44" font-weight="900">10초 $3.00</text>
+  <text x="60" y="815" fill="#ffffff" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="46" font-weight="800">큰 숫자를 그대로 읽으면 생기는 오해</text>
+  <rect x="60" y="855" width="780" height="120" rx="20" fill="#26344d" stroke="#4b6387" stroke-width="2"/>
+  <text x="90" y="900" fill="#91ccff" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="800">최대 40초</text><text x="90" y="948" fill="#ffffff" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="38" font-weight="600">발표상 누적 길이 · 한 번 3~10초</text>
+  <rect x="60" y="995" width="780" height="120" rx="20" fill="#26344d" stroke="#4b6387" stroke-width="2"/>
+  <text x="90" y="1040" fill="#8ce1c8" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="800">최대 60%</text><text x="90" y="1088" fill="#ffffff" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="600">개별 대기시간 보장이 아닌 처리량 기준</text>
+  <rect x="60" y="1135" width="780" height="120" rx="20" fill="#26344d" stroke="#4b6387" stroke-width="2"/>
+  <text x="90" y="1180" fill="#e0b4ff" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="800">1080p·4K</text><text x="90" y="1228" fill="#ffffff" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="40" font-weight="600">원본 생성이 아닌 업스케일 출력</text>
+  <text x="60" y="1300" fill="#aebbd0" font-family="Pretendard, 'Noto Sans KR', sans-serif" font-size="34" font-weight="500">출력 영상료 기준 · 입력 토큰 비용 별도</text>
+</svg>

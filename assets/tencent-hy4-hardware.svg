@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1600" viewBox="0 0 1000 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Hy4 백본의 활성량, 체크포인트 크기, 장비와 긴 문맥을 구분하는 도표</title>
+  <desc id="desc">백본에서 매 토큰 약 490억 개가 활성화되지만 BF16 중심 원본 체크포인트는 1.56TB, FP8 양자화판도 814GB다. H100 80GB 모델 8장은 오프로딩 없이는 부족하고 H200 141GB 8장은 단순 용량이 파일보다 크지만 실행 오버헤드가 별도로 필요함을 보여 준다.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf2f8"/>
+      <stop offset="1" stop-color="#f8efe2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1600" rx="36" fill="url(#bg2)"/>
+  <rect x="54" y="52" width="892" height="1496" rx="30" fill="#fff" stroke="#d3d9df" stroke-width="3"/>
+
+  <text x="104" y="132" fill="#1b3344" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="52" font-weight="800">
+    <tspan x="104" dy="0">‘490억만 활성’과</tspan>
+    <tspan x="104" dy="64">실제 장비 크기는 다른 얘기다</tspan>
+  </text>
+
+  <rect x="104" y="250" width="792" height="206" rx="24" fill="#e8f6f1" stroke="#86b9aa" stroke-width="3"/>
+  <text x="148" y="316" fill="#17675d" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="40" font-weight="800">1 · 매 토큰의 계산</text>
+  <text x="148" y="374" fill="#173e39" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="46" font-weight="900">백본 약 490억 개 활성</text>
+  <text x="148" y="426" fill="#48655f" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="36">활성 경로의 수치이며, 파일 크기가 아니다</text>
+
+  <rect x="104" y="486" width="792" height="238" rx="24" fill="#fff2dd" stroke="#ddb678" stroke-width="3"/>
+  <text x="148" y="552" fill="#7b4b18" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="40" font-weight="800">2 · 보관해야 하는 가중치</text>
+  <text x="148" y="612" fill="#59370f" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="42" font-weight="900">원본(BF16 중심) 약 1.56TB</text>
+  <text x="148" y="671" fill="#59370f" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="44" font-weight="900">FP8 양자화판도 약 814GB</text>
+  <text x="148" y="710" fill="#765c3e" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="34">전체 가중치는 계속 저장해야 한다</text>
+
+  <rect x="104" y="754" width="792" height="430" rx="24" fill="#eef1fb" stroke="#aeb9dc" stroke-width="3"/>
+  <text x="148" y="820" fill="#344b88" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="40" font-weight="800">3 · 8장 GPU의 단순 용량 비교</text>
+  <rect x="148" y="858" width="704" height="88" rx="18" fill="#fff" stroke="#d3d9ea" stroke-width="2"/>
+  <text x="178" y="914" fill="#5e3240" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="35" font-weight="800">H100 80GB 모델 × 8 = 640GB → 부족</text>
+  <rect x="148" y="968" width="704" height="116" rx="18" fill="#fff" stroke="#d3d9ea" stroke-width="2"/>
+  <text x="178" y="1008" fill="#245e54" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="34" font-weight="800">H200 141GB × 8 = 1,128GB</text>
+  <text x="178" y="1050" fill="#3f6e66" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="34" font-weight="700">파일보다 크지만 실행 여유는 별도</text>
+  <text x="148" y="1120" fill="#59647b" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="31">
+    <tspan x="148" dy="0">공식 최소 사양이 아닌 단순 저장 용량 계산</tspan>
+    <tspan x="148" dy="36">H100은 SXM·PCIe 80GB 모델 기준</tspan>
+  </text>
+
+  <rect x="104" y="1210" width="792" height="300" rx="24" fill="#eef5f6" stroke="#abc3c7" stroke-width="3"/>
+  <text x="148" y="1278" fill="#315d65" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="40" font-weight="800">4 · 실행할 때 더 필요한 공간</text>
+  <text x="148" y="1336" fill="#294850" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="37">실행 엔진 · 임시 값 · 입출력 자료</text>
+  <text x="148" y="1388" fill="#294850" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="34">최대 100만 토큰 문맥을 쓸 때</text>
+  <text x="148" y="1432" fill="#294850" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="34">늘어나는 작업 기억(KV 캐시)</text>
+  <text x="148" y="1478" fill="#5a6d72" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="30">입력·생성 합계이며 서비스 한도는 별도</text>
+
+</svg>

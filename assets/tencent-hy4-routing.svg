@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1420" viewBox="0 0 1000 1420" role="img" aria-labelledby="title desc">
+  <title id="title">백본 전체를 저장하고 토큰마다 필요한 전문가만 활성화하는 Hy4 구조</title>
+  <desc id="desc">토큰이 라우터를 거쳐 각 전문가 혼합 층에서 256개 중 상위 8개와 공유 전문가 1개를 사용하고, 백본 7,700억 개 중 약 490억 개가 활성화되는 관계를 보여 준다. 별도 MTP 층은 전체 100억 개, 활성 7억 개다.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f3e8"/>
+      <stop offset="1" stop-color="#e7f4f0"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#176f68"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="1420" rx="36" fill="url(#bg)"/>
+  <rect x="54" y="52" width="892" height="1316" rx="30" fill="#fffdf8" stroke="#cfdcd6" stroke-width="3"/>
+
+  <text x="104" y="132" fill="#17343b" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="52" font-weight="800">
+    <tspan x="104" dy="0">전체를 보관하고,</tspan>
+    <tspan x="104" dy="64">질문마다 필요한 부분만 깨운다</tspan>
+  </text>
+
+  <rect x="104" y="244" width="792" height="142" rx="24" fill="#edf3ff" stroke="#a9b8df" stroke-width="3"/>
+  <text x="148" y="302" fill="#263a6a" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="40" font-weight="800">입력: 다음 글자 조각(토큰)</text>
+  <text x="148" y="352" fill="#45597b" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="36">질문과 앞의 내용에 맞는 계산 경로를 찾는다</text>
+
+  <line x1="500" y1="402" x2="500" y2="476" stroke="#176f68" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <rect x="104" y="498" width="792" height="166" rx="24" fill="#e5f5f0" stroke="#84b8aa" stroke-width="3"/>
+  <circle cx="176" cy="581" r="38" fill="#176f68"/>
+  <path d="M159 580 L174 596 L198 561" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="238" y="558" fill="#17463f" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="40" font-weight="800">라우터가 전문가를 고른다</text>
+  <text x="238" y="611" fill="#42655f" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="36">각 MoE 층의 후보 256개를 살펴본다</text>
+
+  <line x1="500" y1="680" x2="500" y2="754" stroke="#176f68" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <rect x="104" y="776" width="792" height="310" rx="24" fill="#fff4df" stroke="#deb572" stroke-width="3"/>
+  <text x="148" y="842" fill="#704417" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="40" font-weight="800">각 전문가 혼합(MoE) 층에서</text>
+  <text x="148" y="900" fill="#8a551c" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="46" font-weight="900">상위 8개 + 공유 전문가 1개 활성</text>
+  <g transform="translate(148 946)">
+    <circle cx="28" cy="28" r="25" fill="#e8873f"/><circle cx="88" cy="28" r="25" fill="#e8873f"/>
+    <circle cx="148" cy="28" r="25" fill="#e8873f"/><circle cx="208" cy="28" r="25" fill="#e8873f"/>
+    <circle cx="268" cy="28" r="25" fill="#e8873f"/><circle cx="328" cy="28" r="25" fill="#e8873f"/>
+    <circle cx="388" cy="28" r="25" fill="#e8873f"/><circle cx="448" cy="28" r="25" fill="#e8873f"/>
+    <circle cx="538" cy="28" r="25" fill="#176f68"/>
+    <text x="584" y="40" fill="#425d58" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="36">공유 1개</text>
+  </g>
+  <text x="148" y="1050" fill="#6a5539" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="36">쓰지 않은 전문가 가중치도 저장된다</text>
+
+  <line x1="500" y1="1104" x2="500" y2="1166" stroke="#176f68" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <rect x="104" y="1188" width="792" height="162" rx="24" fill="#183b47"/>
+  <text x="148" y="1232" fill="#fff" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="39" font-weight="800">백본 7,700억 개 보관</text>
+  <text x="148" y="1277" fill="#cfeee4" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="33">백본에서 매 토큰 약 490억 개 활성</text>
+  <text x="148" y="1321" fill="#b7d6df" font-family="Noto Sans KR, Malgun Gothic, sans-serif" font-size="31">별도 MTP: 전체 100억 · 활성 7억</text>
+</svg>
