@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="정보탈취 악성코드가 이미 로그인된 Claude 세션을 복사해 사용량을 소진한 사건이 드러났다. 비밀번호와 2단계 인증이 멀쩡해도 가능한 이유와 안전한 대응 순서를 쉽게 설명한다.">
+  <title>Anthropic 통지: 악성코드가 Claude ‘로그인 상태’를 훔쳐 사용량을 소진했다</title>
+  <link rel="canonical" href="https://korea333333-web.github.io/posts/global-claude-session-hijacking-infostealer.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Anthropic 통지: 악성코드가 Claude ‘로그인 상태’를 훔쳐 사용량을 소진했다">
+  <meta property="og:description" content="Claude 서버 침해가 아니라 감염된 사용자 컴퓨터에서 로그인 세션이 빠져나간 사건이다. 지금 무엇을 먼저 끊고 확인해야 하는지 정리했다.">
+  <meta property="og:url" content="https://korea333333-web.github.io/posts/global-claude-session-hijacking-infostealer.html">
+  <meta property="og:image" content="https://korea333333-web.github.io/assets/claude-session-hijack-hero.png">
+  <meta property="og:image:width" content="1774">
+  <meta property="og:image:height" content="887">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="../assets/article-tools.js" defer></script>
+  <style>
+    .article-custom { --article-ink:#24333a; --article-muted:#637077; --article-accent:#1d6f78; --article-accent-soft:#e9f4f3; --article-alert:#b4573f; --article-alert-soft:#fff0e9; --article-gold:#b78335; --article-line:#d7dfdc; }
+    .article-custom h1 { font-size:clamp(2.02rem,4.2vw,3.36rem); word-break:keep-all; }
+    .article-custom a { color:#3565a5; text-decoration-thickness:1px; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .article-custom .article-figure { margin:2.75rem 0 3rem; }
+    .article-custom .article-figure > img { display:block; width:100%; height:auto; border-radius:20px; background:#f4f2eb; }
+    .article-custom .article-hero-media { margin-top:2rem; }
+    .article-custom .article-hero-media > img { aspect-ratio:2 / 1; object-fit:cover; }
+    .article-custom figcaption { margin-top:12px; color:var(--article-muted); font-size:13px; line-height:1.68; word-break:keep-all; }
+    .article-custom .fact-box { margin:2.1rem 0; padding:20px 22px; border-left:5px solid var(--article-accent); border-radius:6px 16px 16px 6px; background:var(--article-accent-soft); line-height:1.72; }
+    .article-custom .fact-box strong { display:block; margin-bottom:7px; font-size:18px; }
+    .article-custom .fact-box p { margin:0; color:#35565b; }
+    .article-custom .caution-box { margin:2.1rem 0; padding:20px 22px; border-left:5px solid var(--article-alert); border-radius:6px 16px 16px 6px; background:var(--article-alert-soft); line-height:1.72; }
+    .article-custom .caution-box strong { display:block; margin-bottom:7px; font-size:18px; }
+    .article-custom .caution-box p { margin:0; color:#684239; }
+    .article-custom .visual-board { overflow:hidden; padding:30px; border:1px solid var(--article-line); border-radius:22px; background:#f8faf8; color:var(--article-ink); }
+    .article-custom .visual-kicker { margin:0 0 8px; color:var(--article-accent); font-size:14px; font-weight:800; letter-spacing:.08em; }
+    .article-custom .visual-title { margin:0; font-size:clamp(22px,3.2vw,32px); line-height:1.28; letter-spacing:-.035em; word-break:keep-all; }
+    .article-custom .visual-deck { margin:12px 0 0; color:#56666c; font-size:16px; line-height:1.65; word-break:keep-all; }
+    .article-custom .article-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin:26px 0 0; padding:0; list-style:none; }
+    .article-custom .article-flow-step { position:relative; min-width:0; padding:20px 17px 19px; border:1px solid #d8e2df; border-radius:17px; background:#fff; box-shadow:0 8px 24px rgba(31,55,58,.06); }
+    .article-custom .article-flow-step::after { content:""; position:absolute; top:42px; right:-11px; z-index:2; width:20px; height:3px; border-radius:3px; background:var(--article-gold); }
+    .article-custom .article-flow-step:last-child::after { display:none; }
+    .article-custom .step-number { display:flex; align-items:center; justify-content:center; width:34px; height:34px; margin-bottom:15px; border-radius:50%; background:#1f5961; color:#fff; font-size:17px; font-weight:800; }
+    .article-custom .article-flow-step strong { display:block; font-size:18px; line-height:1.38; word-break:keep-all; }
+    .article-custom .article-flow-step span:last-child { display:block; margin-top:9px; color:#596970; font-size:15px; line-height:1.58; word-break:keep-all; }
+    .article-custom .visual-boundary { margin:22px 0 0; padding:16px 18px; border-radius:14px; background:#25363d; color:#fff; font-size:16px; line-height:1.6; text-align:center; word-break:keep-all; }
+    .article-custom .response-board { background:linear-gradient(145deg,#fffaf2 0%,#f7faf8 100%); }
+    .article-custom .response-board .article-flow-step:nth-child(1) .step-number { background:#b4573f; }
+    .article-custom .response-board .article-flow-step:nth-child(2) .step-number { background:#1d6f78; }
+    .article-custom .response-board .article-flow-step:nth-child(3) .step-number { background:#586ca6; }
+    .article-custom .response-board .article-flow-step:nth-child(4) .step-number { background:#8a6429; }
+    .article-custom .evidence-board { background:linear-gradient(145deg,#f3f8f6 0%,#fff8f3 100%); }
+    .article-custom .evidence-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:24px; }
+    .article-custom .evidence-column { min-width:0; padding:22px; border:1px solid #d8e2df; border-radius:18px; background:#fff; }
+    .article-custom .evidence-column.confirmed { border-top:6px solid var(--article-accent); }
+    .article-custom .evidence-column.unknown { border-top:6px solid var(--article-alert); }
+    .article-custom .evidence-column h4 { margin:0 0 15px; font-size:21px; line-height:1.35; word-break:keep-all; }
+    .article-custom .evidence-column ul { margin:0; padding-left:21px; }
+    .article-custom .evidence-column li { margin:0 0 11px; color:#4d5d64; font-size:16px; line-height:1.58; word-break:keep-all; }
+    .article-custom .evidence-column li:last-child { margin-bottom:0; }
+    .article-custom .closing { margin-top:2.6rem !important; padding:22px; border-left:5px solid var(--article-accent); border-radius:6px 16px 16px 6px; background:var(--article-accent-soft); }
+    .article-custom .sources { margin:18px 0 0; padding-left:22px; }
+    .article-custom .sources li { margin:0 0 12px; font-size:15px; line-height:1.65; overflow-wrap:anywhere; }
+    .article-custom .article-share { position:relative; margin-top:48px; padding:28px; overflow:hidden; border:1px solid #cfded7; border-radius:18px; background:radial-gradient(circle at 92% 12%,rgba(24,168,117,.17),transparent 34%),linear-gradient(135deg,#f9fcfa 0%,#edf6f1 100%); }
+    .article-custom .article-share::after { position:absolute; right:-32px; bottom:-52px; width:150px; height:150px; border:1px solid rgba(36,87,214,.16); border-radius:50%; content:""; }
+    .article-custom .article-share__copy { position:relative; z-index:1; max-width:720px; }
+    .article-custom .article-share__copy h2 { margin:2px 0 8px; }
+    .article-custom .article-share__copy p:last-child { margin:0; color:var(--muted); }
+    .article-custom .share-actions { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .article-custom .share-button { display:inline-flex; min-height:46px; align-items:center; gap:9px; padding:9px 15px 9px 10px; border:0; border-radius:999px; box-shadow:0 8px 22px rgba(22,32,28,.1); cursor:pointer; font:inherit; font-size:.93rem; font-weight:800; transition:transform 160ms ease,box-shadow 160ms ease; }
+    .article-custom .share-button:hover { box-shadow:0 11px 26px rgba(22,32,28,.16); transform:translateY(-2px); }
+    .article-custom .share-button:focus-visible { outline:3px solid rgba(36,87,214,.3); outline-offset:3px; }
+    .article-custom .share-button__mark { display:inline-grid; width:28px; height:28px; place-items:center; border-radius:50%; background:rgba(255,255,255,.82); font-family:Georgia,serif; font-size:1rem; line-height:1; }
+    .article-custom .share-button--kakao { background:#fee500; color:#191919; }
+    .article-custom .share-button--facebook { background:#1877f2; color:#fff; }
+    .article-custom .share-button--instagram { background:linear-gradient(120deg,#f9ce34,#ee2a7b 48%,#6228d7); color:#fff; }
+    .article-custom .share-button--copy { border:1px solid #c9d7d0; background:#fff; color:var(--text); }
+    .article-custom .share-status { position:relative; z-index:1; min-height:1.6em; margin:12px 0 0; color:var(--muted); font-size:.88rem; font-weight:650; }
+    .article-custom .comments-note { margin:0 0 18px; color:var(--muted); font-size:.94rem; }
+    @media (max-width:760px) {
+      .article-custom .visual-board { padding:23px 18px; }
+      .article-custom .article-flow { grid-template-columns:1fr; gap:13px; }
+      .article-custom .article-flow-step { padding:18px; }
+      .article-custom .article-flow-step::after { top:auto; right:auto; bottom:-10px; left:33px; width:3px; height:18px; }
+      .article-custom .article-flow-step strong { font-size:18px; }
+      .article-custom .article-flow-step span:last-child { font-size:16px; }
+      .article-custom .evidence-grid { grid-template-columns:1fr; gap:14px; }
+      .article-custom .article-share, .article-custom .comments-shell { padding:20px; }
+      .article-custom .share-actions { display:grid; grid-template-columns:1fr 1fr; }
+      .article-custom .share-button { justify-content:flex-start; }
+    }
+    @media (max-width:520px) {
+      .article-custom .article-figure { margin:2.25rem 0 2.55rem; }
+      .article-custom .article-figure > img { border-radius:14px; }
+      .article-custom .fact-box, .article-custom .caution-box, .article-custom .closing { padding:18px; }
+    }
+    @media (max-width:380px) { .article-custom .share-actions { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed">중국 AI 뉴스</a></nav></header>
+<main class="article-shell">
+  <article class="article article-custom">
+    <a class="back-link" href="../index.html">처음으로 돌아가기</a>
+    <div class="article-meta"><span>2026.08.31</span><span>글로벌 AI 뉴스 · 보안</span><span>by kikuke</span></div>
+    <h1>Anthropic 통지: 악성코드가 Claude ‘로그인 상태’를 훔쳐 사용량을 소진했다</h1>
+    <p class="lead">Anthropic이 일부 이용자에게 보낸 것으로 공개된 통지 이메일에 따르면, 정보탈취 악성코드가 컴퓨터에서 이미 로그인된 Claude 세션을 복사해 계정 사용량을 소진했다. 회사는 관련 세션을 끊고 저장된 결제수단을 지웠으며, 무단으로 판단한 일부 청구를 환불했다.</p>
+
+    <figure class="article-figure article-hero-media" id="visual-claude-session-hero">
+      <img src="../assets/claude-session-hijack-hero.png" width="1774" height="887" alt="밝은 방의 노트북에서 로그인 출입증이 복사되어 어두운 쪽의 다른 노트북으로 흘러가는 미니어처 장면">
+      <figcaption>이미 로그인된 세션이 감염된 컴퓨터에서 복사돼 다른 곳에서 재사용되는 상황을 표현한 편집부 제작 AI 콘셉트 이미지. 실제 Claude 화면이나 실제 피해 현장이 아니다.</figcaption>
+    </figure>
+
+    <p>피해자가 가장 먼저 알아챈 신호는 낯선 로그인 창이 아니었다. Claude를 사용하지 않았는데도 사용 한도가 다시 찬 직후 빠르게 줄었고, 추가 사용 요금이 붙은 사례도 있었다. 정상적인 고비용 작업이나 표시 오류로도 비슷한 현상이 생길 수 있지만, Anthropic은 일부 계정에서 악성코드가 훔친 로그인 세션을 원인으로 지목했다.</p>
+
+    <p><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">BleepingComputer는 8월 30일</a> 한 피해자가 공개한 통지 이메일과 Reddit 게시물을 토대로 이 사건을 보도했다. 공개된 사례 가운데에는 <a href="https://www.reddit.com/r/Anthropic/comments/1vytvzk/my_strange_but_maybe_not_so_unique_anthropic/">8월 13일 통지를 받았다는 이용자</a>도 있지만, 공격이 처음 시작된 날짜와 Anthropic이 최초로 탐지한 시점은 공개되지 않았다.</p>
+
+    <p>통지 내용은 회사가 피해 계정을 강제로 로그아웃시키고 저장된 결제수단을 제거했다고 설명한다. 이미 결제한 이용 기간은 남지만, 갱신이나 새 구매를 하려면 결제수단을 다시 등록해야 한다. 회사가 무단 사용으로 식별한 추가 청구를 돌려받았다는 사례와 사용 한도를 복구받았다는 사례도 나왔다.</p>
+
+    <p>이 조치를 모든 사용자에게 자동 적용되는 환불 약속으로 읽으면 안 된다. Anthropic의 <a href="https://support.claude.com/en/articles/12386328-request-a-refund-for-a-paid-claude-plan">일반 환불 안내</a>는 결제 유형과 지역에 따라 적격성을 따로 판단한다고 설명한다. 알지 못하는 청구가 남아 있다면 Claude 지원과 카드사에 각각 신고해야 한다.</p>
+
+    <div class="fact-box">
+      <strong>먼저 분명히 할 한 가지</strong>
+      <p>현재 공개된 자료는 Anthropic 서버가 뚫렸다는 증거가 아니다. 피해자 컴퓨터에 먼저 들어온 일반 악성코드가 브라우저에 남아 있던 Claude 로그인 세션을 함께 훔쳤다는 설명이다.</p>
+    </div>
+
+    <h2>훔친 것은 비밀번호보다 뒤쪽에 있는 열쇠였다</h2>
+
+    <p>웹사이트는 사용자가 비밀번호와 추가 인증을 통과할 때마다 모든 정보를 다시 묻지 않는다. 대신 “이 사람은 인증을 마쳤다”는 값을 브라우저에 남긴다. 이것이 로그인 세션 또는 세션 쿠키다. 놀이공원 입구에서 신분을 확인한 뒤 손목띠를 채워 주는 것과 비슷하다.</p>
+
+    <p>정보탈취 악성코드, 즉 인포스틸러는 그 손목띠를 복사한다. 브라우저에 저장된 비밀번호, 로그인 쿠키, 다른 앱의 자격정보를 한꺼번에 모아 밖으로 보낸다. 공격자는 그중 아직 유효한 Claude 세션을 골라 다른 컴퓨터에서 다시 사용할 수 있다.</p>
+
+    <figure class="article-figure" id="visual-session-copy-flow">
+      <div class="visual-board" role="img" aria-label="감염된 컴퓨터에서 Claude 로그인 세션이 복사되어 다른 기기에서 재사용되고 사용량이 소진되는 네 단계 흐름">
+        <p class="visual-kicker">세션 탈취의 흐름</p>
+        <h3 class="visual-title">비밀번호를 다시 입력하지 않아도 계정이 열릴 수 있다</h3>
+        <p class="visual-deck">이미 인증을 마친 세션이 아직 유효할 때 벌어지는 일이다.</p>
+        <ol class="article-flow">
+          <li class="article-flow-step"><span class="step-number">1</span><strong>컴퓨터 감염</strong><span>악성코드가 브라우저와 로컬 앱의 저장 정보를 읽는다.</span></li>
+          <li class="article-flow-step"><span class="step-number">2</span><strong>세션 복사</strong><span>로그인을 마쳤다는 임시 출입증 값이 밖으로 빠져나간다.</span></li>
+          <li class="article-flow-step"><span class="step-number">3</span><strong>다른 곳에서 재사용</strong><span>세션이 유효하면 새 로그인 확인을 거치지 않을 수 있다.</span></li>
+          <li class="article-flow-step"><span class="step-number">4</span><strong>사용량 소진</strong><span>서비스는 공격자를 로그인된 이용자처럼 받아들일 수 있다.</span></li>
+        </ol>
+        <p class="visual-boundary">2단계 인증 자체가 해독된 것 ≠ 인증 뒤에 받은 세션이 복사된 것</p>
+      </div>
+      <figcaption>자료: <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">BleepingComputer 보도</a>, <a href="https://attack.mitre.org/techniques/T1539/">MITRE ATT&amp;CK T1539</a>. 세션 탈취의 일반 원리를 편집부가 재구성했다.</figcaption>
+    </figure>
+
+    <p><a href="https://attack.mitre.org/techniques/T1539/">MITRE ATT&amp;CK의 세션 쿠키 탈취 설명</a>도 공격자가 유효한 쿠키를 얻으면 비밀번호 없이 이미 인증된 사용자처럼 웹서비스에 접근할 수 있다고 정리한다. 세션이 만료됐거나 서버가 폐기했거나 특정 기기에 묶여 있다면 재사용은 실패할 수 있다. 모든 쿠키가 언제나 열리는 만능 열쇠는 아니다.</p>
+
+    <p>이 때문에 “2단계 인증이 깨졌다”는 표현도 정확하지 않다. 공격자는 비밀번호와 인증번호를 새로 풀어낸 것이 아니라, 그 절차가 끝난 뒤 발급된 로그인 상태를 가져갔다. 2단계 인증은 새 로그인을 막는 데 여전히 중요하지만, 이미 빠져나간 세션은 서비스에서 따로 종료해야 한다.</p>
+
+    <h2>로그아웃은 침입을 끊지만 악성코드는 남는다</h2>
+
+    <p>Anthropic이 피해 계정의 세션을 끊은 이유는 복사된 출입증을 무효로 만들기 위해서다. Claude의 <a href="https://support.claude.com/en/articles/10310342-how-do-i-log-out-of-all-active-sessions">전체 로그아웃 안내</a>에 따르면 웹의 설정에서 로그아웃하면 브라우저, 모바일 앱, 데스크톱 앱에 남은 세션이 모두 종료된다. Claude Code로 로그인했다면 설정의 Claude Code 항목에서 인증 토큰도 별도로 지울 수 있다.</p>
+
+    <p>Claude 웹 세션은 사용하지 않을 때 기본 28일 동안 유지되고, 활동하면 주기적으로 다시 28일로 갱신된다. 편리함을 위한 긴 시간표가 공격자에게도 남을 수 있으므로, 낯선 활동이 보이면 만료를 기다리지 말고 직접 끊는 편이 안전하다.</p>
+
+    <p>다만 로그아웃은 Claude 쪽 문만 닫을 뿐 컴퓨터 안의 악성코드를 없애지 않는다. 감염된 컴퓨터에서 곧바로 다시 로그인하면 새로 발급된 세션도 같은 방식으로 빠져나갈 수 있다. 공개된 통지 이메일도 이 점을 가장 강하게 경고했다.</p>
+
+    <p>Anthropic이 통지에서 언급한 종류는 Windows의 Vidar, LummaC2, StealC, RedLine, Acreed와 macOS의 Atomic Stealer였다. 이 이름들이 Claude 전용 악성코드라는 뜻은 아니다. 일반적인 정보탈취 도구가 컴퓨터에서 수많은 계정 정보를 모았고, 그 수집물 가운데 Claude 세션이 사용된 것으로 설명됐다.</p>
+
+    <p>한 공개 사례에서는 이용자가 불법 복제 게임을 내려받은 뒤 감염을 의심했다. 그러나 이것이 모든 피해자의 감염 경로라는 증거는 없다. 악성 앱, 가짜 설치 파일, 피싱과 브라우저 확장 프로그램 등 다른 경로도 가능하므로, “나는 게임을 내려받지 않았으니 안전하다”고 결론 내릴 수는 없다.</p>
+
+    <h2>가장 먼저 할 일은 감염된 기기를 멈추는 것이다</h2>
+
+    <p>의심되는 컴퓨터가 켜져 있다면 먼저 인터넷 연결을 끊는다. 그 컴퓨터에서 새 비밀번호를 입력하거나 다시 로그인하지 않는다. 새 자격정보와 새 세션까지 악성코드가 가져갈 수 있기 때문이다.</p>
+
+    <p>다음 단계는 깨끗한 휴대전화나 다른 컴퓨터에서 Claude를 여는 것이다. 설정의 계정 메뉴에서 <a href="https://support.claude.com/en/articles/13124001-managing-your-active-sessions">활성 세션 목록</a>을 보고, 모르는 기기·브라우저·대략적인 위치가 있으면 종료한다. 확신하기 어렵다면 전체 로그아웃으로 모든 세션을 한 번에 끊는다.</p>
+
+    <p>Claude에는 현재 전용 비밀번호가 없다. <a href="https://support.claude.com/en/articles/13189465-log-in-to-your-claude-account">공식 로그인 안내</a>처럼 Google 계정으로 들어가거나 이메일로 받은 보안 링크를 사용한다. 따라서 Google 로그인을 썼다면 Google 계정의 비밀번호·세션·복구수단을, 이메일 링크를 썼다면 그 메일 계정의 비밀번호·세션·복구수단을 보호해야 한다.</p>
+
+    <p>기기 정리는 신뢰할 수 있는 보안 프로그램을 최신 상태로 만든 뒤 전체 검사를 하는 데서 시작한다. Microsoft도 <a href="https://support.microsoft.com/en-US/accounts-billing/manage/how-to-recover-a-hacked-or-compromised-microsoft-account">비밀번호를 바꾸기 전에 전체 악성코드 검사</a>를 먼저 하라고 안내한다. 감염이 확인됐거나 완전히 제거됐는지 확신할 수 없다면 중요한 파일을 살펴 백업한 뒤 초기화나 운영체제 재설치를 검토한다.</p>
+
+    <p>이 악성코드는 Claude만 골라 가져가는 도구가 아니다. 같은 브라우저에 저장한 다른 사이트의 비밀번호와 세션, 암호화폐 지갑, 개발용 열쇠도 함께 노출됐을 수 있다. 이메일 전달 규칙, 계정 복구 전화번호, 연결 앱, 저장 카드, 개발자용 API 키를 차례로 살펴야 하는 이유다.</p>
+
+    <p>마지막으로 Claude 사용량과 청구서를 확인한다. 내가 쓰지 않은 시간에 한도가 줄었는지, 모르는 추가 사용 요금이나 구독 변경이 있는지 본다. 의심 청구가 있으면 화면과 날짜를 남기고 Anthropic 지원에 알리며, 카드 승인까지 일어났다면 카드사에도 즉시 연락한다.</p>
+
+    <p>Pro와 Max 요금제는 Claude 채팅과 Claude Code가 같은 사용 한도를 나눠 쓴다. 그래서 브라우저에서 벌어진 세션 오용이 코딩 작업의 남은 한도까지 갑자기 줄어든 것처럼 보일 수 있다. 다만 <a href="https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan">공식 요금제 안내</a>가 설명하듯 이것은 구독 사용량의 관계이며, 이번 사건에서 개발자용 API 키가 탈취됐다고 확인된 것은 아니다.</p>
+
+    <figure class="article-figure" id="visual-response-order">
+      <div class="visual-board response-board" role="img" aria-label="Claude 세션 탈취가 의심될 때 감염 기기 격리부터 세션 종료, 로그인 계정 보호, 기기와 결제 점검으로 이어지는 네 단계 대응 순서">
+        <p class="visual-kicker">의심될 때의 대응 순서</p>
+        <h3 class="visual-title">감염 기기를 끊고, 깨끗한 기기에서 계정 문을 닫는다</h3>
+        <p class="visual-deck">새 비밀번호를 감염된 컴퓨터에 다시 입력하지 않는 것이 핵심이다.</p>
+        <ol class="article-flow">
+          <li class="article-flow-step"><span class="step-number">1</span><strong>의심 기기 격리</strong><span>인터넷을 끊고 그 기기에서 새 로그인을 멈춘다.</span></li>
+          <li class="article-flow-step"><span class="step-number">2</span><strong>Claude 세션 종료</strong><span>깨끗한 기기에서 낯선 세션 또는 모든 세션을 끊는다.</span></li>
+          <li class="article-flow-step"><span class="step-number">3</span><strong>로그인 계정 보호</strong><span>Google 또는 이메일 계정과 Claude Code 토큰을 확인한다.</span></li>
+          <li class="article-flow-step"><span class="step-number">4</span><strong>기기·결제 점검</strong><span>전체 검사 뒤 사용량과 카드 청구를 확인하고 신고한다.</span></li>
+        </ol>
+        <p class="visual-boundary">감염이 남은 채 다시 로그인하면 새 세션도 다시 빠져나갈 수 있다.</p>
+      </div>
+      <figcaption>자료: <a href="https://support.claude.com/en/articles/10310342-how-do-i-log-out-of-all-active-sessions">Anthropic 전체 세션 종료 안내</a>, <a href="https://support.microsoft.com/en-US/accounts-billing/manage/how-to-recover-a-hacked-or-compromised-microsoft-account">Microsoft 감염 계정 복구 안내</a>. 개인 이용자의 초기 대응을 편집부가 재구성했다.</figcaption>
+    </figure>
+
+    <p>회사 컴퓨터라면 혼자 서둘러 초기화하기 전에 사내 보안 담당자에게 알리는 편이 낫다. 담당자는 낯선 접속 시각과 기기 기록, 회사 계정의 연결 앱과 인증 토큰을 보존한 뒤 계정을 끊을 수 있다. 원인을 찾을 기록까지 먼저 지우면 같은 감염이 다른 직원에게 번졌는지 확인하기 어려워진다.</p>
+
+    <h2>이번 사건이 아직 말해 주지 않는 것</h2>
+
+    <p>8월 31일 현재 Anthropic 뉴스룸과 공개 상태 페이지에는 이 사건을 설명하는 회사 차원의 보안 공지가 보이지 않는다. 핵심 근거는 서로 비슷한 문구를 받은 여러 이용자의 통지 이메일과 이를 취재한 보도다. 그러므로 “Anthropic이 전체 피해를 공식 발표했다”고 쓰기보다 “일부 피해 계정에 통지했다”고 표현하는 것이 맞다.</p>
+
+    <p>피해 계정 수, 국가, 전체 피해액, 공격자와 공격 기간도 공개되지 않았다. Windows 악성코드 여러 종과 소수의 Mac용 악성코드가 언급됐지만 한국 이용자가 포함됐는지는 알 수 없다. 알림을 받지 않았다는 사실만으로 감염되지 않았다고 단정할 수도 없다.</p>
+
+    <p>활성 세션에 표시되는 지역도 단서일 뿐 판결문은 아니다. VPN이나 이동통신망 때문에 내가 쓴 세션이 다른 도시로 보일 수 있고, 공격자가 가까운 중계 서버를 쓰면 낯설지 않은 지역처럼 보일 수도 있다. 기기 종류, 브라우저, 최근 사용 시각과 실제 사용 기록을 함께 비교해야 한다.</p>
+
+    <p>공격자가 대화 내용, 프로젝트, 업로드 파일, 연결된 앱까지 실제로 열어봤다는 자료도 아직 없다. 유효한 세션이 있었다면 접근 가능성을 걱정할 이유는 있지만, 공개 자료가 확인한 피해는 계정 접근, 사용량 소진, 일부 부정 청구까지다. 가능성과 확인된 피해를 섞지 않아야 한다.</p>
+
+    <p>모든 갑작스러운 사용량 증가가 악성코드 때문인 것도 아니다. 긴 대화, 자동 작업, Claude Code 사용, 표시 지연이나 서비스 오류가 원인일 수 있다. 다만 사용하지 않는 동안 한도가 반복해 차고 비거나 낯선 세션·청구가 함께 보인다면 단순 오류로 기다리기보다 계정 침해 절차를 밟는 편이 낫다.</p>
+
+    <figure class="article-figure" id="visual-confirmed-unknown">
+      <div class="visual-board evidence-board" role="img" aria-label="Claude 로그인 세션 탈취 사건에서 현재 확인된 내용과 아직 공개되지 않은 내용을 나란히 비교한 판">
+        <p class="visual-kicker">사건의 경계</p>
+        <h3 class="visual-title">확인된 피해와 아직 모르는 범위를 나눠 본다</h3>
+        <p class="visual-deck">가능한 위험을 실제 피해처럼 단정하지 않기 위한 구분이다.</p>
+        <div class="evidence-grid">
+          <section class="evidence-column confirmed">
+            <h4>공개 자료가 일치하는 범위</h4>
+            <ul>
+              <li>일부 계정의 로그인 세션 오용</li>
+              <li>사용량 소진과 일부 추가 청구</li>
+              <li>세션 종료와 저장 결제수단 제거</li>
+              <li>일부 무단 청구 환불 사례</li>
+            </ul>
+          </section>
+          <section class="evidence-column unknown">
+            <h4>아직 모르는 것</h4>
+            <ul>
+              <li>전체 피해 계정 수와 국가</li>
+              <li>공격 시작일과 전체 피해액</li>
+              <li>대화·파일을 실제로 열람했는지</li>
+              <li>한국 이용자가 포함됐는지</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <figcaption>자료: <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">BleepingComputer 보도</a>, <a href="https://status.claude.com/api/v2/incidents.json">Claude 공개 사고 기록</a>. 공개 자료에서 확인된 내용과 공개되지 않은 범위를 편집부가 재구성했다.</figcaption>
+    </figure>
+
+    <div class="caution-box">
+      <strong>이메일 링크부터 누르지 않는다</strong>
+      <p>보안 경고 메일 자체를 흉내 낸 피싱도 가능하다. 메일 속 버튼 대신 주소창에 claude.ai를 직접 입력해 세션·사용량·결제를 확인하고, 지원 문의도 공식 도움말에서 시작한다.</p>
+    </div>
+
+    <p>지원에 연락할 때는 알림 메일, 사용량 화면, 청구서, 낯선 세션의 기기·위치·최근 사용 시각을 함께 남겨 두면 설명이 빨라진다. 다만 화면을 공유할 때는 로그인 링크, 결제정보, 세션 값, API 키처럼 다시 악용될 수 있는 정보가 보이지 않게 가려야 한다.</p>
+
+    <h2>AI 구독도 이제 하나의 값비싼 계정이다</h2>
+
+    <p>AI 계정에는 대화 기록만 있는 것이 아니다. 비싼 사용 한도, 저장 결제수단, 코딩 도구의 인증, 연결된 파일과 업무 서비스가 함께 묶인다. 공격자에게 Claude 세션은 훔쳐 쓸 수 있는 계산 자원이고, 경우에 따라 추가 결제를 일으킬 수 있는 통로가 된다.</p>
+
+    <p>이번 사건이 남긴 교훈은 2단계 인증을 포기하라는 것이 아니다. 2단계 인증은 새 로그인을 막고, 활성 세션 관리는 이미 발급된 출입증을 거둬들이며, 악성코드 치료는 새 출입증이 다시 빠져나가지 않게 한다. 세 방어선은 서로 다른 일을 한다.</p>
+
+    <p class="closing">Claude 사용량이 내가 쓰지 않는 동안 사라진다면 가장 먼저 할 일은 비밀번호 고민이 아니다. <strong>감염이 의심되는 기기를 멈추고, 깨끗한 기기에서 모든 로그인 세션을 끊는 것</strong>이다. 이번 사건은 AI 계정 보안도 결국 컴퓨터 안의 작은 ‘로그인 상태’에서 시작된다는 사실을 보여 줬다.</p>
+
+    <h2>더 읽을 자료</h2>
+    <ul class="sources">
+      <li><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">BleepingComputer — Anthropic의 피해자 통지와 세션 탈취 보도</a></li>
+      <li><a href="https://www.reddit.com/r/Anthropic/comments/1vytvzk/my_strange_but_maybe_not_so_unique_anthropic/">Reddit — 8월 13일 통지와 사용량·청구 피해를 공개한 이용자 사례</a></li>
+      <li><a href="https://support.claude.com/en/articles/13124001-managing-your-active-sessions">Anthropic Help Center — 활성 세션 확인과 개별 종료</a></li>
+      <li><a href="https://support.claude.com/en/articles/10310342-how-do-i-log-out-of-all-active-sessions">Anthropic Help Center — 모든 기기에서 로그아웃하는 방법</a></li>
+      <li><a href="https://support.claude.com/en/articles/13189465-log-in-to-your-claude-account">Anthropic Help Center — Google·이메일 로그인과 Claude 비밀번호 안내</a></li>
+      <li><a href="https://attack.mitre.org/techniques/T1539/">MITRE ATT&amp;CK — Steal Web Session Cookie</a></li>
+      <li><a href="https://support.microsoft.com/en-US/accounts-billing/manage/how-to-recover-a-hacked-or-compromised-microsoft-account">Microsoft Support — 감염된 계정과 PC를 복구하는 순서</a></li>
+      <li><a href="https://status.claude.com/api/v2/incidents.json">Claude Status — 공개 사고 기록 JSON</a></li>
+    </ul>
+  </article>
+</main>
+</body>
+</html>
