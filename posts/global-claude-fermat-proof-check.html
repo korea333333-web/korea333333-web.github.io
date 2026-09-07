@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="클로드가 이미 알려진 페르마의 마지막 정리 풀이를 Lean으로 옮겨 컴퓨터가 논리 단계를 검사하게 만든 과정, 확인된 범위와 남은 한계를 쉽게 설명한다.">
+  <title>클로드, 수학자의 복잡한 풀이를 컴퓨터가 한 단계씩 검사할 수 있게 바꿨다</title>
+  <link rel="canonical" href="https://korea333333-web.github.io/posts/global-claude-fermat-proof-check.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="클로드, 수학자의 복잡한 풀이를 컴퓨터가 한 단계씩 검사할 수 있게 바꿨다">
+  <meta property="og:description" content="클로드가 수학자가 이미 쓴 풀이를 컴퓨터가 한 단계씩 검사할 수 있도록 다시 작성했다. AI가 그 문제를 처음 푼 일은 아니다.">
+  <meta property="og:url" content="https://korea333333-web.github.io/posts/global-claude-fermat-proof-check.html">
+  <meta property="og:image" content="https://korea333333-web.github.io/assets/fermat-proof-check-hero.png">
+  <meta property="og:image:width" content="1774">
+  <meta property="og:image:height" content="887">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/sep03-article.css">
+  <script src="../assets/article-tools.js" defer></script>
+  <style>
+    .article-custom.theme-fermat {
+      --article-accent: #486b62;
+      --article-accent-strong: #274d45;
+      --article-accent-soft: #edf5f1;
+      --article-warm: #ad704b;
+      --article-line: #d7e1dc;
+    }
+    .article-custom .proof-route-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .article-custom .proof-route-card {
+      position: relative;
+      min-width: 0;
+      padding: 19px;
+      border: 1px solid #d4e0da;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(39, 77, 69, .06);
+    }
+    .article-custom .proof-route-card + .proof-route-card::before {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      left: -13px;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: #486b62;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 24px;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+    .article-custom .proof-route-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 12px;
+      border-radius: 9px;
+      background: #e0eee8;
+      color: #2d5a50;
+      font-size: 14px;
+      font-weight: 900;
+    }
+    .article-custom .proof-route-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #284b43;
+      font-size: 18px;
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+    .article-custom .proof-route-card p {
+      margin: 0;
+      color: #5c6e68;
+      font-size: 14px;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+    .article-custom .proof-route-verdict {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #274d45;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.65;
+      text-align: center;
+      word-break: keep-all;
+    }
+    .article-custom .trust-layer-stack {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .article-custom .trust-layer {
+      display: grid;
+      grid-template-columns: minmax(130px, .7fr) minmax(0, 1.8fr) minmax(105px, .6fr);
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border: 1px solid #d7e1dc;
+      border-radius: 15px;
+      background: #fff;
+    }
+    .article-custom .trust-layer-name {
+      color: #294b43;
+      font-size: 17px;
+      font-weight: 850;
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+    .article-custom .trust-layer-question {
+      color: #52655f;
+      font-size: 14px;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+    .article-custom .trust-layer-status {
+      padding: 9px 10px;
+      border-radius: 999px;
+      background: #e0eee8;
+      color: #28564c;
+      font-size: 13px;
+      font-weight: 850;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .article-custom .trust-layer-status.human {
+      background: #fff0e5;
+      color: #8a542f;
+    }
+    .article-custom .trust-layer-note {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #f2f6f4;
+      color: #405a53;
+      font-size: 15px;
+      line-height: 1.65;
+      text-align: center;
+      word-break: keep-all;
+    }
+    @media (max-width: 760px) {
+      .article-custom .proof-route-grid {
+        grid-template-columns: 1fr;
+      }
+      .article-custom .proof-route-card + .proof-route-card::before {
+        content: "↓";
+        top: -19px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .article-custom .trust-layer {
+        grid-template-columns: 1fr auto;
+      }
+      .article-custom .trust-layer-question {
+        grid-column: 1 / -1;
+        grid-row: 2;
+      }
+    }
+    @media (max-width: 430px) {
+      .article-custom .trust-layer {
+        grid-template-columns: 1fr;
+      }
+      .article-custom .trust-layer-question {
+        grid-column: auto;
+        grid-row: auto;
+      }
+      .article-custom .trust-layer-status {
+        justify-self: start;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed">중국 AI 뉴스</a></nav></header>
+<main class="article-shell">
+  <article class="article article-custom theme-fermat">
+    <a class="back-link" href="../index.html#ai-news">AI 뉴스 목록으로 돌아가기</a>
+    <div class="article-meta"><span>2026.09.07</span><span>글로벌 AI 뉴스 · 수학 · 풀이 검사</span><span>by kikuke</span></div>
+    <h1>클로드, 수학자의 복잡한 풀이를 컴퓨터가 한 단계씩 검사할 수 있게 바꿨다</h1>
+    <p class="lead">앤트로픽은 클로드가 이미 알려진 페르마의 마지막 정리 풀이를 컴퓨터가 확인할 수 있는 형태로 옮겼다고 발표했다. 새로 정리를 푼 사건이 아니라, 사람이 쓴 긴 풀이의 각 단계가 앞뒤로 맞게 이어지는지를 소프트웨어가 끝까지 검사하게 만든 사건이다.</p>
+
+    <figure class="article-figure article-hero-media" id="visual-fermat-hero">
+      <img src="../assets/fermat-proof-check-hero.png" width="1774" height="887" alt="도형이 그려진 펼친 책에서 나온 긴 종이 띠가 네 개의 돋보기 아래를 지나 카드 묶음으로 이어지는 미니어처 책상">
+      <figcaption>편집부가 AI로 만든 설명용 그림. 사람이 쓴 풀이를 여러 단계로 나누어 검사하는 모습을 표현했다. 실제 Lean 화면이나 앤트로픽 작업 공간이 아니다.</figcaption>
+    </figure>
+
+    <div class="fact-box">
+      <strong>가장 먼저 구분할 것</strong>
+      <p>페르마의 마지막 정리는 1990년대에 이미 증명됐다. 이번에 새로 나온 것은 그 결론이 아니라, 기존 풀이를 컴퓨터가 한 단계씩 확인할 수 있게 쓴 완결된 기록이다.</p>
+    </div>
+
+    <p>예를 들어 <strong>3×3 + 4×4 = 5×5</strong>, 곧 9+16=25는 성립한다. 하지만 같은 수를 세 번 이상 곱하는 세제곱·네제곱 등에서는 1, 2, 3처럼 0보다 큰 정수 어떤 세 개로도 이런 관계를 만들 수 없다는 것이 페르마의 마지막 정리다. 수학에서는 이렇게 입증하려는 문장을 <strong>명제</strong>라고 한다.</p>
+
+    <p>앤드루 와일스는 리처드 테일러의 도움을 받아 이 정리를 1990년대에 해결했다. 따라서 이번 작업을 “클로드가 350년 묵은 난제를 풀었다”고 부르면 사실이 달라진다. 클로드가 다룬 출발점에는 이미 수학자들이 받아들인 풀이와 그 풀이가 기대는 기존 연구가 있었다.</p>
+
+    <p>여기서 <strong>형식화</strong>는 사람이 읽는 수학 문장을 논리 규칙과 정의가 빠짐없이 적힌 컴퓨터 언어로 옮기는 일이라는 뜻이다. 논문에서는 독자가 당연히 안다고 보고 몇 단계를 건너뛸 수 있지만, 형식화된 기록에서는 그 사이를 채워야 다음 단계로 갈 수 있다.</p>
+
+    <figure class="article-figure" id="visual-fermat-what-changed">
+      <div class="visual-board">
+        <p class="visual-kicker">이번에 달라진 것</p>
+        <h3 class="visual-title">사람의 풀이를 AI가 다시 쓰고, 컴퓨터가 확인했다</h3>
+        <p class="visual-deck">사람의 풀이와 컴퓨터 검사는 서로 다른 일을 맡는다.</p>
+        <div class="proof-route-grid">
+          <div class="proof-route-card"><span class="proof-route-number">1</span><strong>수학자의 기존 풀이</strong><p>와일스와 관련 연구자들이 만든 설명이 출발점이다.</p></div>
+          <div class="proof-route-card"><span class="proof-route-number">2</span><strong>AI가 작은 단계로 다시 씀</strong><p>중간 문제를 잘게 나누고 사람이 건너뛴 연결을 채운다.</p></div>
+          <div class="proof-route-card"><span class="proof-route-number">3</span><strong>검사 프로그램이 확인</strong><p>풀이의 모든 연결이 정해진 규칙에 맞는지 확인한다.</p></div>
+        </div>
+        <p class="proof-route-verdict">AI가 처음 답을 찾은 것이 아니라, 수학자의 풀이를 컴퓨터가 확인하게 한 작업이다.</p>
+      </div>
+      <figcaption>앤트로픽 발표와 Lean의 작동 설명을 바탕으로 편집부가 직접 재구성한 흐름도. 자료: <a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">Anthropic</a>, <a href="https://lean-lang.org/">Lean</a>.</figcaption>
+    </figure>
+
+    <p>이 작업에 쓰인 <a href="https://lean-lang.org/">Lean</a>은 증명 보조 프로그램이자 프로그래밍 언어다. 여기서 <strong>증명 보조 프로그램</strong>은 입력된 정의와 논리 규칙에 따라 각 단계가 앞 단계에서 정말 따라오는지를 검사하는 소프트웨어라는 뜻이다. Lean이 결과를 받아들였다는 것은 적어 둔 명제와 증명 사이에 허용되지 않은 논리 점프가 없었다는 뜻에 가깝다.</p>
+
+    <p>이해를 위한 비유로, 사람의 논문이 목적지까지 가는 길을 중요한 교차로 중심으로 설명한 지도라면 형식화는 모든 골목과 회전을 기록한 길 안내다. Lean은 그 안내를 따라가며 길이 실제로 이어지는지 확인한다. 다만 목적지 이름을 처음부터 잘못 적었다면 길 안내만 검사해서는 그 뜻의 오류를 찾을 수 없다.</p>
+
+    <h2>회사가 말한 11일 동안 무엇을 했나</h2>
+    <p>앤트로픽은 9월 4일 공개한 <a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">연구 발표</a>에서 작업이 11일 걸렸다고 밝혔다. 이는 회사가 센 작업 기간이지 외부 기관이 따로 측정한 기록은 아니다. 발표에 따르면 여러 AI 작업 단위가 대체로 자율적으로 움직였고, 연구자는 때때로 어떤 큰 주제를 먼저 처리할지 방향을 줬다.</p>
+
+    <p>여기서 <strong>에이전트</strong>는 목표를 받고 자료 검색·코드 작성·검사를 여러 번 이어 가는 AI 작업 단위라는 뜻이다. 한 대화창이 1,300만 줄을 한 번에 쓴 것이 아니다. 여러 작업 단위가 정의를 만들고 중간 정리를 증명한 뒤, 다른 작업이 그 결과를 이어받는 방식이었다.</p>
+
+    <p>AI가 쓴 코드와 최종 합격 판정도 같은 일이 아니다. 에이전트는 틀린 시도를 여러 번 낼 수 있지만, 그 시도가 Lean의 규칙을 만족하지 못하면 완성된 증명으로 연결되지 않는다. 이번 방식의 강점은 AI가 한 번도 실수하지 않았다는 데 있지 않다. 많은 시도 가운데 검사 가능한 조각만 남겨 위쪽 결론으로 이어 붙였다는 데 있다.</p>
+
+    <p>사용된 모델의 정식 제품명은 공개되지 않았다. 앤트로픽은 한 분야에만 맞춘 모델이 아니라 여러 일을 하도록 회사 안에서 연구용으로 쓰던 모델이며, 능력은 클로드 Fable 5.1과 대략 비슷하다고만 설명했다. 그러므로 일반 이용자가 같은 이름의 공개 모델을 켜면 11일 만에 같은 결과를 얻는다고 해석할 근거는 없다.</p>
+
+    <p>회사는 이 과정에서 약 60억 개의 출력 토큰이 쓰였다고 밝혔다. 여기서 <strong>토큰</strong>은 AI가 글이나 코드를 만들 때 세는 작은 텍스트 단위라는 뜻이다. 수치는 계산량이 매우 컸다는 규모를 보여 주지만, 회사는 실제 전기 사용량이나 총비용을 공개하지 않아 가격표로 비용을 단정할 수 없다.</p>
+
+    <p>협업의 바탕은 AI들이 맡을 문제와 진행 상황을 함께 관리하는 도구인 <a href="https://arxiv.org/abs/2608.28433">Prove2Me</a>였다. 이 도구는 큰 증명을 작은 명제들로 쪼개고, 각 명제의 문장과 그 증명을 별도 항목으로 보관한다. 어떤 중간 결과가 끝나면 그 결과를 필요로 하던 상위 작업이 이어서 진행할 수 있다.</p>
+
+    <p>여기서 <strong>의존 관계</strong>는 뒤의 결론이 앞의 어떤 중간 결과를 필요로 하는지 나타내는 연결이라는 뜻이다. 요리로 치면 완성 접시 아래에 반죽·소스·굽기 단계가 매달린 조리 순서표와 비슷하다. 이런 구조 덕분에 여러 에이전트가 같은 부분을 되풀이하지 않고 서로 다른 빈칸을 맡을 수 있었다.</p>
+
+    <p>Prove2Me 논문은 같은 명제에 서로 다른 증명을 제출할 수 있도록 명제와 증명을 분리하고, 일단 등록한 항목은 움직이지 않게 만든다고 설명한다. 쉬운 말로 하면 여러 작업자가 같은 문제지를 보되 각자 풀이를 낼 수 있고, 합격한 풀이를 다른 작업이 안정적으로 가져다 쓰는 구조다. 목표가 중간에 바뀌어 이미 끝낸 작업이 무너지는 일을 줄인다.</p>
+
+    <p>앤트로픽 발표 기준으로 결과물은 약 1,300만 줄의 Lean 코드이며, 최종 증명에는 약 2만9,500개의 중간 정리가 사용됐다. 줄 수가 곧 우아함이나 새 수학의 양을 뜻하지는 않는다. 사람이 생략하던 세부 절차까지 펼치고 기계가 만든 반복 코드가 포함되면 기록은 매우 길어질 수 있다.</p>
+
+    <p>회사의 설명에는 처음부터 순조롭지만은 않았다는 대목도 있다. 초기 에이전트들은 프로젝트 전체 상태를 놓치고 협업이 흐트러졌으며, Prove2Me로 작업 구조를 바꾼 뒤 완결된 결과에 도달했다. 이는 11일이라는 숫자가 모델 능력만 재는 시험이 아님을 보여 준다. 문제를 나누고 현재 상태를 보존하는 작업 장치가 결과의 일부였다.</p>
+
+    <p>증명의 큰 길은 와일스의 증명을 다른 수학자들이 정리해 둔 1995년 해설을 따른다. 즉 클로드가 전혀 다른 풀이를 발명한 것이 아니다. 사람이 써 둔 길을 선택하고, 그 길에서 생략됐던 작은 연결을 Lean 안에서 끝까지 채웠다.</p>
+
+    <p>또한 출발점이 빈 화면은 아니었다. 결과물은 수학 용어의 뜻과 이미 검사한 풀이를 다른 작업에서도 꺼내 쓰도록 모아 둔 꾸러미인 <strong>Mathlib</strong> 위에서 돌아간다. 기존 인간 프로젝트와 다른 사람들이 작성한 풀이 코드도 일부 사용했다. 여기서 <strong>공개 저장소</strong>는 코드와 수정 기록을 누구나 볼 수 있게 공개해 둔 공동 보관함이라는 뜻이다. 이 저장소는 가져온 파일과 저작자를 별도로 기록한다.</p>
+
+    <p>따라서 11일은 수십 년의 수학과 여러 해 동안 공개된 풀이 꾸러미 위에 마지막 연결망을 만든 시간으로 읽어야 한다. 인간 프로젝트는 최종 문장의 통과뿐 아니라 새 기초 이론을 Mathlib에 넣고, 다른 수학자가 읽을 문서를 만들며, 더 최근의 풀이 길을 정리하는 일까지 목표로 삼는다. 목표가 다르면 걸린 날짜만 놓고 승패를 말할 수 없다.</p>
+
+    <figure class="article-figure" id="visual-fermat-three-checks">
+      <div class="visual-board">
+        <p class="visual-kicker">검사를 세 층으로 나눠 보기</p>
+        <h3 class="visual-title">컴퓨터가 확인한 것과 사람이 계속 판단할 것을 구분해야 한다</h3>
+        <p class="visual-deck">“검사를 통과했다”는 말이 모든 질문에 답해 주지는 않는다.</p>
+        <div class="trust-layer-stack">
+          <div class="trust-layer"><div class="trust-layer-name">맨 위 명제</div><div class="trust-layer-question">증명한 문장이 Mathlib의 페르마 정리 문장과 같은가?</div><div class="trust-layer-status">문장 비교로 확인</div></div>
+          <div class="trust-layer"><div class="trust-layer-name">논리 연결</div><div class="trust-layer-question">각 단계가 허용된 정의와 규칙만으로 이어지는가?</div><div class="trust-layer-status">두 검사기로 확인</div></div>
+          <div class="trust-layer"><div class="trust-layer-name">뜻과 설명</div><div class="trust-layer-question">중간 정의가 의도한 수학을 잘 담고 사람이 읽고 재사용하기 좋은가?</div><div class="trust-layer-status human">사람의 검토가 필요</div></div>
+        </div>
+        <p class="trust-layer-note">강한 기계 검증과 사람이 이해할 수 있는 설명은 서로 대신하지 않는다.</p>
+      </div>
+      <figcaption>공개 증명 저장소의 검사 기록과 Prove2Me 연구진이 밝힌 확인 범위를 바탕으로 편집부가 직접 재구성했다. 자료: <a href="https://github.com/anthropics/fermats-last-theorem">Anthropic 공개 저장소</a>, <a href="https://arxiv.org/abs/2608.28433">Prove2Me 논문</a>.</figcaption>
+    </figure>
+
+    <h2>검사 통과는 강한 증거지만 사람의 설명을 없애지는 않는다</h2>
+    <p><a href="https://github.com/anthropics/fermats-last-theorem">공개 증명 저장소</a>에는 확인 방법이 적혀 있다. 먼저 모든 코드를 컴퓨터가 실행하고 검사할 수 있는 형태로 처음부터 다시 준비했다. 개발자들은 이 과정을 <strong>빌드</strong>라고 부른다. 이어 별도의 비교 도구로 최종 문장이 Mathlib의 페르마 정리와 같은지, 비워 둔 증명이나 새 공리를 몰래 넣지 않았는지 대조했다. 여기서 <strong>공리</strong>는 증명을 시작할 때 기본 규칙으로 받아들이는 문장이라는 뜻이다.</p>
+
+    <p>여기서 <strong>커널</strong>은 Lean 안에서 증명의 마지막 합격 여부를 판정하는 작고 핵심적인 검사기라는 뜻이다. 저장소는 Lean 커널뿐 아니라 별도로 만든 nanoda라는 두 번째 커널에도 같은 기록을 통과시켰다고 보고한다. nanoda에는 진행 표시와 속도를 위한 네 가지 수정이 있었지만, 저장소는 판정 규칙을 약하게 만들지는 않았다고 명시했다.</p>
+
+    <p>독립 수학자의 확인도 있다. 기존 인간 주도 형식화 프로젝트를 이끄는 케빈 버저드는 <a href="https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/">9월 4일 글</a>에서 전체 코드를 실행 가능한 상태로 직접 준비하고 문장 비교 도구를 돌렸으며 문제가 없었다고 썼다. 이는 앤트로픽의 기술 결과를 회사 밖 전문가가 실제 코드로 점검했다는 뜻이다. 다만 그가 회사 내부의 작업 시간과 비용까지 독립적으로 확인했다는 뜻은 아니다.</p>
+
+    <p>여전히 남는 질문도 분명하다. Prove2Me 연구진은 검사기가 “어떤 문장을 증명했는가”는 엄격하게 확인하지만, 그 문장이 원래 사람이 뜻한 내용을 충실히 담았는지는 자동으로 보장하지 않는다고 설명한다. 그래서 목표 문장·핵심 정의·중요 중간 지점은 사람이 읽고 확인하도록 설계했다.</p>
+
+    <p>이번 저장소는 최종 문장을 Mathlib의 문장과 비교해 가장 큰 이름표 오류를 줄였다. 그러나 1,300만 줄짜리 결과가 곧 사람이 배우기 좋은 해설서라는 뜻은 아니다. 저장소 스스로도 연구용 결과물이며 유지 관리나 기여를 받는 프로젝트가 아니라고 밝힌다. 정확히 검사되는 기록과 짧고 읽기 좋은 수학 설명은 서로 다른 품질이다.</p>
+
+    <p>버저드도 수학 내용 자체에는 본질적으로 새로 얻은 것이 없다고 평가했다. 반면 수천 쪽에 걸친 기존 문헌을 AI 작업들이 짧은 기간에 끝까지 형식화할 수 있다는 사실은 중요하다고 봤다. 자신의 프로젝트가 계속 필요한 이유로 더 최근 방식의 풀이 길, Mathlib에 넣어 다른 작업에서도 쓸 기초, 사람이 탐색할 수 있는 문서를 들었다.</p>
+
+    <p><a href="https://github.com/ImperialCollegeLondon/FLT/blob/main/GENERAL.md">임피리얼 칼리지 FLT 프로젝트</a>가 2024년 본격적으로 시작될 때는 컴퓨터 검사용이 아닌, 사람이 읽도록 쓴 수천 쪽의 수학글을 Lean 언어로 옮기는 장기 작업을 내다봤다. 이 배경을 함께 보면 11일의 의미가 선명해진다. AI가 과거의 수학·공개된 풀이 꾸러미·협업 도구를 없앤 것이 아니라, 이미 쌓인 재료를 연결하는 속도를 크게 끌어올렸다는 뜻이다.</p>
+
+    <p>앞으로의 쓸모는 “AI가 수학자를 대신했다”보다 “AI가 만든 수학을 다시 검사할 통로가 넓어졌다”에 가깝다. 새 증명이 쏟아질수록 사람만으로 모든 세부를 확인하기 어려워진다. AI가 초안을 만들고 Lean 같은 도구가 논리를 검사하며, 수학자가 질문의 뜻과 설명의 가치를 판단하는 역할 분담이 현실적인 다음 단계다.</p>
+
+    <p class="closing">이번 성과의 정확한 한 줄은 이렇다. <strong>클로드가 페르마의 마지막 정리를 새로 푼 것이 아니라, 이미 알려진 복잡한 풀이를 컴퓨터가 끝까지 검사할 수 있는 Lean 기록으로 바꿨다.</strong> 11일이라는 속도는 앤트로픽 발표에 따른 수치이고, 공개 코드의 논리 검사는 독립 수학자의 실행으로도 확인됐다. 이제 남은 일은 이 거대한 기록을 사람이 이해하고 오래 재사용할 수 있는 수학 자산으로 다듬는 것이다.</p>
+
+    <h2>더 읽을 자료</h2>
+    <ul class="sources">
+      <li><a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">Anthropic — 발표일, 11일 작업, 회사 내부 연구 모델과 결과 규모</a></li>
+      <li><a href="https://github.com/anthropics/fermats-last-theorem">Anthropic 공개 저장소 — 마지막 수학 문장과 두 검사기의 확인 기록</a></li>
+      <li><a href="https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/">Xena Project · Kevin Buzzard — 회사 밖 수학자의 코드 실행 확인과 의미 평가</a></li>
+      <li><a href="https://arxiv.org/abs/2608.28433">Prove2Me 논문 — 여러 AI 작업이 큰 형식화 작업을 나누는 구조와 사람이 확인할 범위</a></li>
+      <li><a href="https://lean-lang.org/">Lean 공식 사이트 — Lean의 검증 역할과 Mathlib 설명</a></li>
+      <li><a href="https://github.com/ImperialCollegeLondon/FLT/blob/main/GENERAL.md">Imperial College London FLT 프로젝트 — 인간 주도 형식화의 목표와 범위</a></li>
+    </ul>
+  </article>
+</main>
+</body>
+</html>

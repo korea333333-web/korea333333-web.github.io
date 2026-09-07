@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="마이크로소프트가 여러 참고 사진으로 이미지를 만들고 수정하는 MAI-Image-2.6과 Flash를 개발자에게 시험 공개했다. 사진을 어떻게 참고하는지, 빠른 버전과 무엇이 다른지 쉽게 풀었다.">
+  <title>MS, 여러 참고 사진으로 그림을 만들고 고치는 AI를 개발자에게 시험 공개했다</title>
+  <link rel="canonical" href="https://korea333333-web.github.io/posts/global-microsoft-mai-image-2-6.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="MS, 여러 참고 사진으로 그림을 만들고 고치는 AI를 개발자에게 시험 공개했다">
+  <meta property="og:description" content="마이크로소프트가 여러 참고 사진으로 이미지를 만들고 수정하는 MAI-Image-2.6과 Flash를 개발자에게 시험 공개했다. 사진을 어떻게 참고하는지, 빠른 버전과 무엇이 다른지 쉽게 풀었다.">
+  <meta property="og:url" content="https://korea333333-web.github.io/posts/global-microsoft-mai-image-2-6.html">
+  <meta property="og:image" content="https://korea333333-web.github.io/assets/mai-image-2-6-hero.png">
+  <meta property="og:image:width" content="1774">
+  <meta property="og:image:height" content="887">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/sep03-article.css">
+  <script src="../assets/article-tools.js" defer></script>
+  <style>
+    .article-custom.theme-mai-image { --article-accent: #78613f; --article-accent-strong: #5d4528; --article-accent-soft: #f7f1e8; --article-line: #e3d9ca; }
+    .article-custom .mai-reference-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-top: 22px; }
+    .article-custom .mai-ref-card { min-width: 0; padding: 20px; border: 1px solid #ddd3c4; border-radius: 15px; background: #fff; }
+    .article-custom .mai-ref-label { display: block; color: #755a37; font-size: 14px; font-weight: 800; }
+    .article-custom .mai-ref-card strong { display: block; margin: 9px 0; font-size: 20px; line-height: 1.4; color: #433c32; }
+    .article-custom .mai-ref-card p { margin: 0; font-size: 16px; line-height: 1.7; color: #4b514d; word-break: keep-all; }
+    .article-custom .mai-ref-swatch { height: 54px; margin: 14px 0 0; border-radius: 10px; background: linear-gradient(110deg,#bccbab 0 33%,#ede2cd 33% 66%,#b89872 66%); }
+    .article-custom .mai-ref-card:nth-child(2) .mai-ref-swatch { background: linear-gradient(160deg,#faf6ee 0 45%,#d3b38d 45% 58%,#f0dec3 58%); }
+    .article-custom .mai-ref-card:nth-child(3) .mai-ref-swatch { background: linear-gradient(90deg,#56786d 0 33%,#d7a064 33% 66%,#eddec6 66%); }
+    .article-custom .mai-combine { margin-top: 18px; padding: 20px; border: 2px solid #917449; border-radius: 15px; background: #fffcf6; }
+    .article-custom .mai-combine strong { display: block; color: #5d4528; font-size: 20px; line-height: 1.45; word-break: keep-all; }
+    .article-custom .mai-combine p { margin: 10px 0 0; font-size: 16px; line-height: 1.7; word-break: keep-all; }
+    .article-custom .mai-split { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin-top: 22px; }
+    .article-custom .mai-split-card { min-width: 0; padding: 22px; border: 1px solid #d6dcda; border-radius: 17px; background: #fff; }
+    .article-custom .mai-split-card:last-child { border-color: #c9d7ce; background: #f8fcf9; }
+    .article-custom .mai-split-card h4 { margin: 0 0 12px; font-size: 21px; line-height: 1.4; color: #3c5349; word-break: keep-all; }
+    .article-custom .mai-split-card ul { margin: 0; padding-left: 20px; }
+    .article-custom .mai-split-card li { margin: 8px 0; font-size: 16px; line-height: 1.65; color: #3e4943; word-break: keep-all; }
+    @media(max-width:640px) { .article-custom .mai-reference-grid, .article-custom .mai-split { grid-template-columns: 1fr; } .article-custom .mai-ref-card, .article-custom .mai-split-card, .article-custom .mai-combine { padding: 18px; } .article-custom .mai-ref-swatch { height: 32px; } }
+  </style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="../index.html" aria-label="AI 인사이트 브리프 홈"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a><a href="../index.html#software">AI 소프트웨어</a><a href="../index.html#china-feed">중국 AI 뉴스</a></nav></header>
+<main class="article-shell">
+  <article class="article article-custom theme-mai-image">
+    <a class="back-link" href="../index.html#ai-news">AI 뉴스 목록으로 돌아가기</a>
+    <div class="article-meta"><span>2026.09.07</span><span>글로벌 AI 뉴스 · 그림 생성 · Microsoft AI</span><span>by kikuke</span></div>
+    <h1>MS, 여러 참고 사진으로 그림을 만들고 고치는 AI를 개발자에게 시험 공개했다</h1>
+    <p class="lead">마이크로소프트가 여러 참고 사진을 함께 넣어 새 이미지를 만들거나 기존 그림을 고치는 AI를 개발자에게 시험 공개했다. 이름은 ‘MAI-Image-2.6’과 ‘MAI-Image-2.6-Flash’다. 9월 4일 발표의 핵심은 이 두 AI를 개발자가 자기 서비스에 연결해 시험할 수 있게 했다는 것이다.</p>
+
+    <figure class="article-figure article-hero-media" id="mai-image-hero">
+      <img src="../assets/mai-image-2-6-hero.png" width="1774" height="887" alt="제품 모양과 배경, 색감을 담은 여러 참고 그림을 보고 하나의 새 제품 이미지를 만드는 따뜻한 미니어처 작업실">
+      <figcaption>AI로 만든 설명용 그림. 여러 참고 자료를 바탕으로 이미지를 만드는 장면이며, 실제 마이크로소프트 제품 화면이나 이 모델의 생성 결과가 아니다.</figcaption>
+    </figure>
+
+    <p>이번 제공 장소는 마이크로소프트의 AI 개발 서비스인 Foundry다. 여기서 Foundry는 개발자가 AI를 골라 자기 앱에 붙이고 사용량을 관리하는 작업 공간을 말한다. 정식 서비스에 앞서 이용자가 시험해 보는 ‘공개 미리보기’ 단계다. 모든 윈도 사용자에게 그림 편집 기능이 자동으로 생긴다는 발표는 아니다. <a href="https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/">마이크로소프트의 9월 4일 발표</a>가 밝힌 제공 범위다.</p>
+
+    <p>MAI-Image-2.6이라는 이름 자체가 이날 처음 등장한 것도 아니다. 마이크로소프트는 <a href="https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/">8월 10일 발표</a>에서 이 모델을 소개했다. 당시에는 그림 평가 서비스에서 시험할 수 있다고 알렸고, Foundry 제공은 뒤에 이어질 일로 설명했다. 이번 뉴스는 앞서 소개한 모델을 개발자가 사용할 경로가 열렸고, 빠른 처리에 초점을 둔 Flash도 함께 나왔다는 후속 소식이다.</p>
+
+    <p>쉬운 예로 작은 가게의 상품 사진을 생각할 수 있다. 판매자는 새로 찍은 컵 사진과 원하는 배경 사진, 가게의 색감을 보여 주는 그림을 갖고 있다. AI에게 이 자료들을 함께 주고 “컵 모양은 첫 사진을 따르고, 배경은 두 번째처럼 따뜻하게 만들어 달라”고 요청하는 식이다. 이는 기능의 의미를 설명하기 위한 가상 예시이며, 이 기사에서 해당 제품으로 직접 시험한 결과는 아니다.</p>
+
+    <p>이처럼 여러 자료를 함께 보여 주며 고치는 기능을 ‘여러 참고 이미지 편집’이라고 한다. 여기서 참고 이미지는 완성본에 무엇을 남기고 어떤 분위기를 따를지 AI에게 알려 주는 사진이나 그림이다. 마이크로소프트의 <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mai-image-2-6-and-mai-image-2-6-flash-quality-and-speed-at-production-scale/4550970">Foundry 발표</a>는 MAI-Image-2.6에 한 번의 요청으로 최대 다섯 장을 넣을 수 있다고 설명한다. 다섯 장을 넣어야 작동한다는 뜻은 아니다.</p>
+
+    <figure class="article-figure" id="mai-image-references">
+      <div class="visual-board">
+        <p class="visual-kicker">참고 사진의 역할 · 이해를 위한 예시</p>
+        <h3 class="visual-title">사진마다 무엇을 참고할지 나눠 알려 준다</h3>
+        <div class="mai-reference-grid">
+          <div class="mai-ref-card"><span class="mai-ref-label">첫 번째 사진</span><strong>제품 모양</strong><p>컵의 손잡이와 몸통이 어떻게 생겼는지 보여 준다.</p><div class="mai-ref-swatch" aria-hidden="true"></div></div>
+          <div class="mai-ref-card"><span class="mai-ref-label">두 번째 사진</span><strong>배경 분위기</strong><p>밝은 테이블과 부드러운 조명을 참고하게 한다.</p><div class="mai-ref-swatch" aria-hidden="true"></div></div>
+          <div class="mai-ref-card"><span class="mai-ref-label">세 번째 그림</span><strong>원하는 색감</strong><p>초록과 베이지처럼 함께 쓰고 싶은 색을 보여 준다.</p><div class="mai-ref-swatch" aria-hidden="true"></div></div>
+        </div>
+        <div class="mai-combine"><strong>세 자료와 요청문 → 새로운 이미지</strong><p>AI가 각 자료를 참고해 그림을 만든다. 원본을 정확히 잘라 붙이는 기능과는 다르다.</p></div>
+      </div>
+      <figcaption>자료: <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mai-image-2-6-and-mai-image-2-6-flash-quality-and-speed-at-production-scale/4550970">Microsoft Foundry 발표의 여러 참고 이미지 편집 기능</a>. 편집부가 만든 설명용 예시이며 제품의 실제 작업 화면이나 결과물이 아니다.</figcaption>
+    </figure>
+
+    <h2>긴 설명만 쓰던 자리에 사진을 함께 놓는다</h2>
+    <p>참고 사진의 장점은 말로 설명하기 어려운 모양을 직접 보여 준다는 데 있다. “손잡이가 약간 넓고 몸통 아래가 둥근 컵”이라고 적어도, 사람마다 떠올리는 모습은 다르다. 사진을 같이 주면 적어도 사용자가 어느 물건을 가리키는지는 더 분명해진다. 글로 방향을 말하고 사진으로 대상을 짚는 역할 분담이다.</p>
+
+    <p>사진이 여러 장이면 요청문도 그에 맞게 구체적이어야 한다. 예를 들어 컵은 첫 번째 사진을 따르고 배경만 두 번째 사진에서 가져오라고 적으면, 각 자료를 넣은 이유가 드러난다. 반대로 “이것들을 적당히 섞어 달라”는 말에는 컵 색까지 바꿔도 되는지 답이 없다. 무엇을 그대로 두고 무엇을 바꿀지 구분하는 일은 사진을 올린 사람에게 남는다.</p>
+
+    <p>이 기능을 사진 몇 장을 자르고 붙이는 작업과 같다고 이해하면 결과를 잘못 기대하기 쉽다. 마이크로소프트 문서가 설명하는 이미지 편집은 AI가 기존 그림과 요청을 참고해 바뀐 그림을 만들어 내는 일이다. 원본과 똑같이 잘라 붙인다고 보장하는 설명은 아니다. 보기에는 비슷한 컵이라도 손잡이 두께나 무늬 간격이 달라졌는지 보는 이유다.</p>
+
+    <p>사용자가 원하는 결과가 정확한 상품 사진인지, 분위기를 보여 주는 시안인지에 따라 이 차이의 무게도 달라진다. 여기서 시안은 최종 광고를 만들기 전에 색과 배치를 정하려고 그려 보는 초안이다. 시안에서는 따뜻한 느낌을 찾는 것이 목적일 수 있다. 실제 판매 사진에서는 컵의 모양을 잘못 보여 주지 않는 일이 더 중요하다. 같은 결과물도 어디에 쓰느냐에 따라 성공과 실패가 갈린다.</p>
+
+    <h2>웹 정보를 참고하고, 그림의 가로세로 모양도 고른다</h2>
+    <p>두 모델에는 웹 그라운딩 기능도 들어갔다. 여기서 웹 그라운딩은 그림을 그릴 때 인터넷에서 관련 정보를 찾아 참고한다는 뜻이다. 과거에 배운 내용만으로 그리는 대신, 요청과 관련된 정보를 검색해 추가로 읽는 방식이다. 마이크로소프트의 <a href="https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-mai-image">개발 문서</a>는 이 기능을 켜면 Bing 검색의 정보를 사용할 수 있고, 끄면 웹 검색을 하지 않는다고 설명한다.</p>
+
+    <p>사진을 직접 주는 일과 웹을 참고하는 일은 서로 다르다. 앞의 컵 예시에서 판매자가 올린 사진은 “바로 이 물건”을 가리킨다. 웹 검색은 요청에 등장한 장소나 대상에 관해 다른 정보를 찾아 읽는 쪽이다. 두 방법 모두 그림을 만들 재료를 더 주지만, 사용자가 고른 원본 사진과 인터넷에서 찾은 정보가 같은 신뢰도를 갖는 것은 아니다.</p>
+
+    <p>그림의 가로세로 비율을 자동으로 고르는 기능도 제공된다. 가로세로 비율은 사진이 옆으로 긴지, 위아래로 긴지, 정사각형인지 나타내는 관계다. 자동 선택을 켜면 AI가 요청한 내용과 참고 이미지를 보고 어울리는 모양을 고른다. 이름을 어렵게 읽을 필요는 없다. 그림 안에 무엇을 담을지 보고 액자의 모양도 함께 정하게 하는 기능이다.</p>
+
+    <p>액자 비유가 뜻하는 것은 가로와 세로의 관계까지다. 인쇄물 크기와 선명도, 이미지를 올릴 사이트의 규격까지 AI가 알아서 맞춘다는 뜻은 아니다. 예를 들어 물건 세 개를 가로로 늘어놓은 그림과 사람 한 명을 세워 놓은 그림은 여백을 잡는 방식이 다르다. 자동 선택은 이런 구성을 돕고, 정해진 게시 규격은 사람이 별도로 알려 주는 편이 맞다.</p>
+
+    <p>이 지점이 블로그 운영자에게도 중요하다. 본문에서 멋져 보이는 그림을 만들었다고 해서 홈페이지의 작은 대표 이미지에도 잘 보이는 것은 아니다. 대표 이미지를 가로로 잘라 보여 줄 때 주인공이 가장자리로 밀려 있으면 일부가 사라진다. 처음 요청할 때부터 “가운데에 컵을 두고 좌우에는 여백을 남겨 달라”고 구도를 정하는 일이 결과물을 줄인 뒤 다시 고치는 일을 줄인다.</p>
+
+    <h2>Flash는 여러 초안을 빠르게 살펴보는 쪽에 무게를 뒀다</h2>
+    <p>마이크로소프트는 일반 MAI-Image-2.6을 세밀한 표현에, Flash를 빠르게 많은 이미지를 만드는 작업에 맞춘 제품으로 소개했다. Flash는 여기서 별도의 편집 버튼이 아니라 다른 모델의 이름이다. 같은 요청을 받아 그림을 만드는 AI를 두 종류로 제공하고, 사용 목적에 따라 고를 수 있게 했다는 뜻이다.</p>
+
+    <p>예를 들어 가게 주인이 컵 사진의 배경을 정하려고 한다면, 처음부터 한 장의 완성본만 기다리기보다 밝은 배경과 어두운 배경을 빠르게 비교하고 싶을 수 있다. 마음에 드는 방향을 고른 뒤 손잡이와 재질 같은 부분을 자세히 살펴보는 순서다. 이는 발표의 제품 구분을 실제 작업에 적용해 본 예시이지, Flash가 모든 요청에서 먼저 끝난다는 시험 결과는 아니다.</p>
+
+    <p>회사 발표는 속도와 비용 면의 장점도 내세웠다. 다만 회사가 발표한 비교 수치를 모든 사용자의 작업에 그대로 적용할 수는 없다. 이미지를 빨리 받는 시간과 사람이 만족할 때까지 수정하는 시간은 다른 값이기 때문이다. 한 장이 빨리 나와도 원하는 컵 모양을 맞추느라 여러 번 다시 만들면 전체 작업 시간은 길어질 수 있다.</p>
+
+    <p>따라서 이 두 모델을 가르는 실용적인 질문은 단순하다. 여러 구도를 빠르게 비교하는 단계인지, 이미 고른 구도를 자세히 다듬는 단계인지다. 앞 단계에서 방향을 정하지 않은 채 세부 표현만 반복해서 고치면 손이 더 간다. 새 모델의 의미는 모든 판단을 대신해 준다는 데보다, 같은 참고 자료를 두고 만드는 방법을 고를 수 있다는 데 있다.</p>
+
+    <figure class="article-figure" id="mai-image-boundary">
+      <div class="visual-board">
+        <p class="visual-kicker">그림을 만드는 일과 완성본을 판단하는 일</p>
+        <h3 class="visual-title">AI가 바꿔 그려도, 원본과 대조하는 일은 남는다</h3>
+        <div class="mai-split">
+          <div class="mai-split-card"><h4>AI에게 맡기는 작업</h4><ul><li>여러 사진을 참고해 새 구도 만들기</li><li>요청한 배경이나 색감으로 수정하기</li><li>설정에 따라 웹 정보와 화면 비율 참고하기</li></ul></div>
+          <div class="mai-split-card"><h4>사람이 판단할 내용</h4><ul><li>제품의 모양과 무늬가 원본과 같은가</li><li>상호·가격·한글 문구가 정확한가</li><li>새로 만든 그림을 실제 촬영 사진으로 오해하지 않는가</li></ul></div>
+        </div>
+      </div>
+      <figcaption>자료: <a href="https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-mai-image">Microsoft Learn의 기능 설명</a>. 왼쪽은 발표된 기능을 요약했고, 오른쪽은 편집부가 제안하는 결과 확인 기준이다. 특정 모델의 오류율을 측정한 표가 아니다.</figcaption>
+    </figure>
+
+    <h2>시험 공개는 완성된 상용 서비스와 다르다</h2>
+    <p>현재 Foundry 제공은 공개 미리보기다. 마이크로소프트 문서는 이 단계에 서비스 수준 보장이 없으며 실제 고객 대상 운영에는 권하지 않는다고 적었다. 여기서 서비스 수준 보장은 정해진 가동 시간처럼 서비스 제공자가 약속하는 운영 조건을 말한다. 돈을 받는 서비스 전체를 바로 맡기는 일과, 별도 공간에서 결과를 살펴보는 일은 나눠 생각할 필요가 있다.</p>
+
+    <p>개발자가 Foundry에서 사용하려면 결제 수단이 연결된 Azure 계정과 이용 권한 등이 필요하다. Azure는 필요한 컴퓨터의 저장 공간과 처리 능력을 인터넷으로 빌려 쓰는 마이크로소프트 서비스다. 자기 컴퓨터에 이 AI를 내려받아 제한 없이 무료로 돌리는 공개와는 다르다. 간단히 모델을 체험할 경로로 회사가 안내한 곳은 <a href="https://playground.microsoft.ai/">MAI Playground</a>다. 체험 화면과 개발 서비스의 이용 조건이 같다고 가정해서는 안 된다.</p>
+
+    <p>여러 장을 참고한다는 말도 원본 보존을 보장하지는 않는다. 특히 실제 상품을 소개하는 그림은 전체 인상이 자연스러운지와 사실이 맞는지를 따로 보는 편이 좋다. 컵의 손잡이가 예뻐 보여도 실제 제품보다 크면 판매 정보로는 틀릴 수 있다. 배경을 바꾸는 요청을 했을 뿐인데 제품 색까지 달라졌다면, 그 결과는 같은 상품의 정확한 사진으로 쓰기 어렵다.</p>
+
+    <p>한글 문구도 마찬가지다. 회사가 글자 표현의 개선을 강조했다고 해서 상호나 가격을 언제나 정확하게 그린다는 뜻은 아니다. 작은 글씨는 큰 화면에서는 멀쩡해 보여도 휴대전화에서 뭉개질 수 있다. 상품명과 금액처럼 한 글자만 틀려도 의미가 바뀌는 정보는 그림을 만든 뒤 실제 표시 크기에서 읽어 보는 과정이 필요하다.</p>
+
+    <p>웹을 참고했다고 해서 그림이 실제 현장을 그대로 기록한 것도 아니다. 인터넷에서 관련 정보를 찾아 읽은 뒤 새로 그린 결과와, 현장에서 카메라로 촬영한 사진은 출발부터 다르다. 마찬가지로 검색 결과를 참고하는 기능이 그 자료를 마음대로 재사용할 수 있다는 허락까지 대신해 주는 것은 아니다.</p>
+
+    <p>이번 발표를 가장 작게 확인할 수 있는 작업은 원본과 결과를 바로 대조할 수 있는 한 장의 수정이다. 앞의 컵 예시라면 물건은 그대로 두고 배경의 밝기나 분위기만 바꿔 보는 식이다. 바꾸려는 부분이 분명하면 성공했는지 판단하기도 쉽다. 처음부터 제품과 인물, 글씨와 배경을 모두 바꾸면 무엇 때문에 결과가 달라졌는지 찾기 어려워진다.</p>
+
+    <p class="closing">이번 소식의 핵심은 <strong>마이크로소프트가 여러 참고 사진과 요청을 함께 받아 그림을 만들고 고치는 AI를 개발자에게 시험 제공했다는 것</strong>이다. 원하는 컵과 배경을 사진으로 짚어 줄 수 있게 됐지만, 완성된 그림이 실제 컵을 정확히 보여 주는지는 여전히 사람이 판단한다. 만들기는 AI가 맡고, 원본과 맞는지 읽고 보는 일은 사람이 맡는 변화다.</p>
+
+    <h2>더 읽을 자료</h2>
+    <ul class="sources">
+      <li><a href="https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/">Microsoft AI — 9월 4일 개발자 제공 및 Flash 발표</a></li>
+      <li><a href="https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/">Microsoft AI — 8월 10일 모델 소개와 이후 제공 일정</a></li>
+      <li><a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mai-image-2-6-and-mai-image-2-6-flash-quality-and-speed-at-production-scale/4550970">Microsoft Foundry — 참고 이미지 수와 두 모델의 용도</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-mai-image">Microsoft Learn — 실제 개발 기능, 이용 조건, 미리보기 주의사항</a></li>
+      <li><a href="https://playground.microsoft.ai/">MAI Playground — 회사가 안내하는 체험 경로</a></li>
+    </ul>
+  </article>
+</main>
+</body>
+</html>
