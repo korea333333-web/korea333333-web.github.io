@@ -1,0 +1,40 @@
+.sep18 .n18-board { padding:28px; background:#f4f6f4; border:1px solid #cdd8d1; border-radius:16px; color:#24352e; word-break:keep-all; overflow-wrap:break-word; }
+.sep18 .n18-board h3 { margin:0 0 20px; font-size:23px; line-height:1.45; color:#24352e; }
+.sep18 .n18-board p,.sep18 .n18-board li { font-size:17px; line-height:1.7; margin:8px 0; color:#24352e; }
+.sep18 .n18-board b,.sep18 .n18-board strong { color:#1c4737; font-size:18px; line-height:1.55; }
+.sep18 .n18-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.sep18 .n18-steps>div { border-top:4px solid #47745e; background:white; padding:18px; border-radius:4px 4px 10px 10px; }
+.sep18 .n18-steps .n18-alert { border-color:#a55f3b; background:#fff5eb; }
+.sep18 .n18-note { font-size:14px!important; color:#505e55!important; margin-top:18px!important; }
+.sep18 .n18-pairs { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.sep18 .n18-pairs>div { background:white; padding:20px; border-radius:10px; }
+.sep18 .n18-list { padding:0; list-style:none; margin:0; }
+.sep18 .n18-list li { display:grid; grid-template-columns:145px 1fr; gap:18px; padding:16px 0; border-bottom:1px solid #cdd8d1; }
+.sep18 .n18-list li:last-child { border-bottom:0; }
+.sep18 .n18-bar-row { margin:18px 0; }
+.sep18 .n18-bar-row p { display:flex; justify-content:space-between; gap:12px; }
+.sep18 .n18-track { height:18px; background:#dce5df; border-radius:4px; overflow:hidden; }
+.sep18 .n18-fill { height:100%; background:#47745e; }
+.sep18 .n18-fill-warm { background:#a4663d; }
+.sep18 .n18-equation { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:18px; padding:24px 12px; background:white; border-radius:12px; font-size:23px; line-height:1.6; }
+.sep18 .n18-equation strong { font-size:30px; }
+.sep18 .n18-request { padding:18px 22px; border-left:4px solid #47745e; background:#f4f6f4; margin:22px 0; }
+.sep18 .n18-request p { margin:0; }
+.sep18 .n18-source-note { font-size:15px; color:#526158; }
+.draft-index .draft-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.draft-index .draft-card { border:1px solid #d1dcd5; border-radius:14px; overflow:hidden; background:#fff; }
+.draft-index .draft-card img { width:100%; height:auto; display:block; }
+.draft-index .draft-card div { padding:20px; }
+.draft-index .draft-card h2 { margin:0 0 10px; font-size:23px; line-height:1.55; word-break:keep-all; overflow-wrap:break-word; }
+.draft-index .draft-card p { font-size:16px; line-height:1.75; }
+@media(max-width:600px) {
+.sep18 .n18-board { padding:20px 16px; border-radius:12px; }
+.sep18 .n18-board h3 { font-size:21px; }
+.sep18 .n18-steps,.sep18 .n18-pairs { grid-template-columns:1fr; gap:12px; }
+.sep18 .n18-steps>div,.sep18 .n18-pairs>div { padding:16px; }
+.sep18 .n18-board p,.sep18 .n18-board li { font-size:16px; }
+.sep18 .n18-list li { grid-template-columns:1fr; gap:4px; }
+.sep18 .n18-equation { gap:10px; font-size:20px; }
+.sep18 .n18-equation strong { font-size:26px; }
+.draft-index .draft-grid { grid-template-columns:1fr; }
+}
