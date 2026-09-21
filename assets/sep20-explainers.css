@@ -1,0 +1,25 @@
+.sep20-article .ex-board{padding:28px;border:1px solid #cbd7d1;border-radius:18px;background:#f4f7f4;color:#233a32;word-break:keep-all;overflow-wrap:anywhere}
+.sep20-article .ex-board h3{font-size:25px;line-height:1.45;margin:0 0 12px;color:#233a32}
+.sep20-article .ex-board p{font-size:17px;line-height:1.75;margin:10px 0;color:#31463d}
+.sep20-article .ex-steps{display:grid;gap:12px;margin:22px 0}
+.sep20-article .ex-step{padding:18px 20px;background:#fff;border:1px solid #d6e1d9;border-radius:12px}
+.sep20-article .ex-step strong{display:block;font-size:20px;line-height:1.5;color:#255848}
+.sep20-article .ex-step p{margin-bottom:0}
+.sep20-article .ex-tag{display:inline-block;font-size:15px;background:#fff0d9;color:#724816;border-radius:6px;padding:5px 10px;margin-bottom:12px}
+.sep20-article .ex-note{font-size:15px!important;color:#526359!important}
+.sep20-article .ex-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.sep20-article .ex-pair>div{background:#fff;padding:20px;border:1px solid #d6e1d9;border-radius:12px}
+.sep20-article .ex-number{display:block;font-size:38px;line-height:1.3;color:#255848}
+.sep20-article .ex-timeline{border-left:3px solid #719282;padding-left:22px;display:grid;gap:22px;margin:24px 0}
+.sep20-article .ex-timeline strong{font-size:21px;color:#255848}
+.sep20-article .ex-key{font-family:ui-monospace,monospace;letter-spacing:1px;overflow-wrap:anywhere}
+.sep20-preview .preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.sep20-preview .preview-card{position:relative;border:1px solid #d6e1d9;border-radius:14px;overflow:hidden;background:#fff;padding-bottom:20px}
+.sep20-preview .preview-card img{width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;display:block}
+.sep20-preview .preview-card h2{font-size:22px;line-height:1.55;margin:20px 20px 10px}
+.sep20-preview .preview-card p{font-size:16px;line-height:1.8;margin:10px 20px}
+.sep20-preview .preview-card a{text-decoration:none;color:inherit}
+.sep20-preview .preview-card a::after{content:'';position:absolute;inset:0;z-index:1}
+.sep20-preview .preview-card:focus-within{outline:3px solid #397761;outline-offset:4px}
+.sep20-preview .preview-card:hover{border-color:#397761;box-shadow:0 5px 20px #315f5212}
+@media(max-width:600px){.sep20-article .ex-board{padding:20px 16px;border-radius:12px}.sep20-article .ex-board h3{font-size:22px}.sep20-article .ex-step{padding:16px}.sep20-article .ex-pair{grid-template-columns:1fr}.sep20-preview .preview-grid{grid-template-columns:1fr}}

@@ -1,0 +1,15 @@
+/* Four September 20 drafts only. The original AI illustrations are unchanged.
+   Keep Korean copy as real text so it remains readable on a small preview card. */
+.sep20-hero-caption{position:relative;container-type:inline-size;isolation:isolate;aspect-ratio:2/1;overflow:hidden;background:#efe7d9;color:#173e36}
+.sep20-hero-caption>img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:2/1;object-fit:contain!important;margin:0!important}
+.sep20-hero-caption .hero-topic{position:absolute;left:3%;bottom:5%;max-width:94%;box-sizing:border-box;margin:0;padding:7px 11px;border:1px solid #cad3c9;border-left:4px solid #31594b;border-radius:6px;background:#fffdf7;color:#173e36;font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif;font-size:clamp(13px,2.35cqw,20px);font-weight:750;line-height:1.3;letter-spacing:-.035em;white-space:nowrap;box-shadow:0 2px 8px #233c2714}
+.sep20-hero-caption .hero-speech{position:absolute;top:4%;right:3%;width:51%;box-sizing:border-box;margin:0;padding:clamp(7px,1.7cqw,15px);border:1.5px solid #31594b;border-radius:clamp(12px,2.4cqw,22px);background:#fffdf7;color:#173e36;font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif;font-size:clamp(16px,3.55cqw,30px);font-weight:800;line-height:1.3;letter-spacing:-.04em;text-align:center;word-break:keep-all;box-shadow:0 3px 10px #233c271c}
+.sep20-hero-caption .hero-speech::after{content:"";position:absolute;left:49%;bottom:-9px;width:15px;height:15px;background:#fffdf7;border-right:1.5px solid #31594b;border-bottom:1.5px solid #31594b;transform:rotate(45deg)}
+.sep20-hero-caption .hero-speech span{display:block;white-space:nowrap}
+.sep20-hero-caption.scene-cipher .hero-speech::after{left:27%}
+.sep20-hero-caption.scene-gemini .hero-speech{right:2%;width:40%;padding-left:5px;padding-right:5px}
+.sep20-hero-caption.scene-gemini .hero-speech::after{left:28%}
+@media(max-width:420px){.sep20-hero-caption .hero-topic{padding:5px 8px}}
+
+/* Preserve the public card contract: direct img child and one native title link. */
+.post-card>.hero-card-text-only{position:absolute;inset:0 0 auto;width:100%;background:transparent;pointer-events:none}

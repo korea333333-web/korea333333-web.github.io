@@ -1,0 +1,22 @@
+.g4-article .g4-board{padding:28px;border:1px solid #cbd7d1;border-radius:18px;background:#f5f7f4;color:#233a32;word-break:keep-all;overflow-wrap:break-word}
+.g4-article .g4-board h3{margin:0 0 10px;font-size:25px;line-height:1.45;color:#233a32}
+.g4-article .g4-board p{margin:8px 0;font-size:16px;line-height:1.7;color:#31463d}
+.g4-article .g4-label{display:inline-block;padding:5px 10px;border-radius:6px;background:#fff0d9;color:#674213;font-size:14px;font-weight:700;margin-bottom:12px}
+.g4-article .g4-price-row{margin:22px 0}
+.g4-article .g4-price-line{display:flex;align-items:baseline;justify-content:space-between;gap:16px;font-size:17px;line-height:1.6;margin-bottom:7px}
+.g4-article .g4-price-line strong{font-size:24px;white-space:nowrap;color:#243c32}
+.g4-article .g4-track{height:14px;background:#e2e7e0;border-radius:4px;overflow:hidden}
+.g4-article .g4-bar{height:100%;background:#447563;border-radius:4px}
+.g4-article .g4-bar.rumor{background:#b98236}
+.g4-article .g4-price-summary{padding:16px;background:#fff;border-radius:10px}
+.g4-article .g4-board .g4-note{font-size:14px;line-height:1.7;color:#526359;margin-top:16px}
+.g4-article .g4-score-list{display:grid;gap:14px;margin-top:22px}
+.g4-article .g4-score-card{padding:18px;background:#fff;border:1px solid #d5dfd7;border-radius:12px}
+.g4-article .g4-score-card h4{font-size:18px;margin:0 0 12px;line-height:1.5;color:#233a32}
+.g4-article .g4-score-card h4 small{display:block;font-size:13px;font-weight:400;line-height:1.6;color:#56675d;margin-top:3px}
+.g4-article .g4-score-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.g4-article .g4-score-pair div{font-size:14px;line-height:1.6;color:#526359}
+.g4-article .g4-score-pair strong{display:block;font-size:29px;line-height:1.4;color:#243c32}
+.g4-article .g4-demo-link{display:inline-block;padding:12px 18px;border-radius:9px;background:#edf5f0;font-weight:700;text-decoration:none}
+.g4-preview .g4-preview-link{display:inline-block;padding:13px 20px;background:#315f52;color:white;border-radius:9px;text-decoration:none}
+@media(max-width:600px){.g4-article .g4-board{padding:20px 16px;border-radius:12px}.g4-article .g4-board h3{font-size:22px}.g4-article .g4-price-line{font-size:15px;gap:10px}.g4-article .g4-price-line strong{font-size:23px}.g4-article .g4-score-card{padding:16px}.g4-article .g4-score-pair{gap:12px}.g4-article .g4-score-pair strong{font-size:27px}}
