@@ -1,0 +1,8 @@
+.six-article .sep26-hero .cover-copy,.oct01-index .sep26-card .card-cover-copy{justify-content:center;padding:5%;background:linear-gradient(90deg,rgba(0,17,29,.20),transparent 64%)}
+.six-article .sep26-hero .cover-title,.oct01-index .sep26-card .cover-title{font-family:"Malgun Gothic",sans-serif;font-size:4.5cqw;font-weight:900;line-height:1.46;letter-spacing:-.045em;max-width:none;color:white;text-shadow:0 2px 16px #00152244;white-space:nowrap}
+.six-article .sep26-hero .cover-title em,.oct01-index .sep26-card .cover-title em{color:#ffd179;margin-top:0;white-space:nowrap}
+.six-article .visual-items.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.six-article .sep26-hero{isolation:isolate}
+.six-article .sep26-sources a{overflow-wrap:anywhere}
+.oct01-index .card-number{font-size:13px;color:#567160}
+@media(max-width:600px){.six-article .visual-items.two{grid-template-columns:1fr}.six-article .sep26-hero .cover-title,.oct01-index .sep26-card .cover-title{font-size:4.5cqw}}
