@@ -1,3 +1,7 @@
 .pro-article .sep26-hero .cover-title,.oct01-index .sep26-card .cover-title{font-size:clamp(18px,5cqw,42px);line-height:1.46}
 .pro-article .sep26-visual h3{max-width:100%}
 .pro-article .lead{word-break:keep-all;overflow-wrap:break-word}
+.pro-article .pro-personal-opinion{margin:40px 0;padding:clamp(20px,4vw,32px);border:1px solid #decdb6;border-left:5px solid #ad712e;border-radius:16px;background:#faf3e8;word-break:keep-all;overflow-wrap:break-word}
+.pro-article .pro-personal-opinion .opinion-label{display:inline-block;padding:4px 10px;border-radius:6px;background:#ead9be;color:#654216;font-size:13px;font-weight:700}
+.pro-article .pro-personal-opinion h2{margin:18px 0 20px;font-size:clamp(21px,3vw,28px);line-height:1.5}
+.pro-article .pro-personal-opinion p:last-child{margin-bottom:0}
