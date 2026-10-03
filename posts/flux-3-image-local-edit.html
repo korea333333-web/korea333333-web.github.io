@@ -1,0 +1,65 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>플럭스, 그림에서 원하는 부분을 골라 고치는 새 이미지 AI 공개</title><meta name="description" content="블랙포레스트랩스가 FLUX.3 Image를 공개했다. 바꿀 부분과 물건을 놓을 자리를 지정하고, 참고 그림 최대 10장을 함께 쓸 수 있다. 그림을 고치는 방법과 해상도별 비용을 알아본다."><link rel="canonical" href="https://korea333333-web.github.io/posts/flux-3-image-local-edit.html"><meta property="og:type" content="article"><meta property="og:title" content="플럭스, 그림에서 원하는 부분을 골라 고치는 새 이미지 AI 공개"><meta property="og:description" content="블랙포레스트랩스가 FLUX.3 Image를 공개했다. 바꿀 부분과 물건을 놓을 자리를 지정하고, 참고 그림 최대 10장을 함께 쓸 수 있다. 그림을 고치는 방법과 해상도별 비용을 알아본다."><meta property="og:image" content="https://korea333333-web.github.io/assets/flux-3-image-local-edit-cover.png"><link rel="stylesheet" href="../assets/sep26-base.css"><link rel="stylesheet" href="../assets/sep03-article.css"><link rel="stylesheet" href="../assets/sep26-articles.css"><link rel="stylesheet" href="../assets/oct03-five.css"></head><body><header class="site-header"><a class="brand" href="../index.html#ai-news"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a></nav></header><main class="article-shell"><article class="article article-custom sep26-article oct03-article"><a class="back-link" href="../index.html#ai-news">← AI 뉴스 목록</a><div class="article-meta">이미지 AI · 부분 수정 · 2026.10.03 작성</div><h1>플럭스, 그림에서 원하는 부분을 골라 고치는 새 이미지 AI 공개</h1><p class="lead">그림 속 꽃병 색을 바꾸거나, 물건을 놓을 자리를 지정하는 이미지 AI가 나왔다. 블랙포레스트랩스가 10월 1일 추가한 ‘FLUX.3 Image’다. 필요한 부분을 골라 수정하는 기능을 강조했다.</p><figure class="sep26-hero article-hero-media" id="hero-flux-3-image-local-edit" aria-describedby="hero-credit"><img src="../assets/flux-3-image-local-edit-cover.png" width="832" height="416" alt="작은 로봇이 그림 속 꽃병을 네모로 표시하고 색을 바꾸는 미니어처 장면. 플럭스 이미지 AI, 원하는 부분만 수정. 플럭스 이미지 AI, 원하는 부분만 수정"></figure>
+<p>독일의 AI 회사 블랙포레스트랩스가 새 이미지 모델 ‘플럭스 3 이미지’를 공개했다. 글로 설명해 그림을 만드는 일과 기존 그림을 고치는 일을 같은 모델로 처리한다. 플럭스 3 계열은 앞서 나왔고, 이번 소식은 그 계열에 이미지 제작·편집 모델을 추가한 것이다. <a href="https://docs.bfl.ai/release-notes">10월 1일 변경 기록</a></p>
+
+<p>예를 들어 블로그에 쓸 그림이 거의 완성됐는데 꽃병의 색만 마음에 들지 않는다고 하자. 꽃병이 있는 위치를 네모난 범위로 지정하고 “이 꽃병을 파란색으로 바꿔 줘”라고 요청하는 방식이다. 사람의 얼굴이나 책상까지 다시 만들 필요를 줄이려는 기능이다. 이 장면은 사용 방법을 설명하기 위한 가상 예시다.</p>
+
+<p>이런 기능이 필요한 이유는 수정할 대상과 지켜야 할 부분이 함께 있기 때문이다. 얼굴이 잘 나온 그림에서는 얼굴을 보존하고 싶고, 제품이 놓인 그림에서는 제품의 모양을 지키고 싶다. 플럭스는 문장으로 수정 내용을 설명하면서, 네모난 영역으로 대상의 위치까지 지정할 수 있게 했다.</p>
+
+<figure class="oct03-visual" id="flux-edit-process"><div class="oct03-board"><h3 class="oct03-vtitle">꽃병 색만 바꾸고 싶을 때</h3><div class="oct03-grid"><div class="oct03-vcard"><strong>1. 원본을 넣는다</strong><span>책상·꽃병·식물이 있는 그림</span></div><div class="oct03-vcard"><strong>2. 꽃병을 표시한다</strong><span>고칠 물건을 네모로 지정</span></div><div class="oct03-vcard"><strong>3. 원하는 수정을 쓴다</strong><span>“꽃병만 파란색으로 바꿔 줘”</span></div></div><div class="oct03-step">완성 뒤에는 주변 물건·그림자까지 함께 확인한다.</div></div><figcaption><a href="https://docs.bfl.ai/flux_3/flux3_image_layout">플럭스의 편집 안내</a>를 바탕으로 직접 구성한 가상 요청 예시다. 실제 모델로 만든 전후 비교 결과는 아니다.</figcaption></figure>
+
+<h2>“무엇을 바꿀지”와 “어디를 바꿀지”를 함께 알려 준다</h2>
+
+<p>사용 문서에서 ‘바운딩 박스’라고 부르는 것은 그림 위에 표시하는 네모난 범위다. 여기서 바운딩 박스는 AI가 어느 위치를 다뤄야 하는지 알려 주는 표시라는 뜻이다. 꽃병 색을 바꾸라는 문장만 보내는 대신 꽃병이 있는 위치도 알려 주면, AI가 수정 대상을 찾을 때 참고할 수 있다.</p>
+
+<p>글로만 요청하는 방식도 지원한다. 그림을 한 장 넣고 어떤 물건을 어떻게 바꿀지 설명하면 된다. 네모 표시를 추가하면 물건의 위치를 더 구체적으로 지정할 수 있다. 물건이 여러 개 있는 장면에서는 “왼쪽의 작은 컵”처럼 대상을 분명히 적는 것이 중요하다. 회사 문서도 수정할 대상과 위치를 구체적으로 설명하라고 안내한다. <a href="https://docs.bfl.ai/flux_3/flux3_image_layout">편집·배치 방법</a></p>
+
+<p>개발자용 연결 기능에서는 네모의 위·아래·왼쪽·오른쪽 위치를 숫자로 보낸다. 네모는 고칠 범위를 알려 주고, 그 안의 모양은 AI가 요청에 맞춰 다시 만든다. 범위를 너무 작게 잡으면 필요한 물건이 제대로 들어가지 않을 수 있다. 물건이 차지할 공간을 충분히 정하고, 색을 바꾸는지 모양을 바꾸는지부터 적어야 요청이 선명해진다. 소개 문서의 네모 그리기 시연은 저장된 편집 결과를 보여 주는 예시다.</p>
+
+<p>물건을 다른 자리로 옮길 때는 원래 위치와 도착 위치를 함께 지정할 수 있다. 예를 들어 오른쪽 구석의 화분을 책상 왼쪽으로 옮기는 요청이다. “화분을 옮겨 줘”라고만 적으면 도착할 자리가 모호하다. 먼저 어디에 있는 화분인지, 그다음 어느 자리에 놓을지 나눠 알려 주는 방식이다.</p>
+
+<p>새 그림을 만들 때도 물건의 위치를 정할 수 있다. 왼쪽에는 인물, 오른쪽에는 제품을 놓고 싶다면 각 대상이 들어갈 공간을 지정한다. 블로그 대표 이미지에 제목을 올릴 자리부터 남겨 두는 경우에도 연결해 볼 수 있다. 이 활용 예시는 편집부가 기능을 바탕으로 제안한 방법이며, 모든 요청이 정확히 재현된다는 보장은 없다. <a href="https://bfl.ai/models/flux-3-image">회사의 이미지 모델 소개</a></p>
+
+<h2>참고 그림을 최대 열 장 넣고 각각의 역할을 정한다</h2>
+
+<p>플럭스 3 이미지는 참고 이미지를 최대 열 장까지 받는다. 여기서 참고 이미지는 AI가 새 그림이나 수정 결과를 만들 때 보고 사용할 자료다. 첫 그림의 인물과 두 번째 그림의 옷을 함께 참고하게 하거나, 특정 물건의 색과 질감을 보여 주는 식으로 쓸 수 있다. <a href="https://docs.bfl.ai/flux_3/flux3_image_overview">입력 이미지와 출력 규격</a></p>
+
+<p>여러 장을 넣을 때는 어떤 그림에서 무엇을 가져올지 설명해야 한다. 가상의 요청으로 “첫 번째 그림의 책상은 유지하고, 두 번째 그림의 꽃병을 오른쪽에 놓아 줘”라고 적을 수 있다. 두 장의 역할이 분명해진다. 서로 다른 참고 자료를 같은 수준으로 섞으라고만 지시하면, 원하는 인물이나 물건이 무엇인지 알아듣기 어려워진다.</p>
+
+<p>이 기능을 제품 소개에 활용한다면 제품 사진과 배경 참고 그림을 따로 넣는 방법을 생각할 수 있다. 제품은 첫 자료, 원하는 촬영 분위기는 둘째 자료로 지정하는 것이다. 다만 판매 페이지에 쓸 결과라면 실제 제품의 단추 위치·형태·색상이 바뀌지 않았는지 확인해야 한다. AI가 그럴듯하게 만든 디테일을 실제 제품 정보처럼 보여 주면 소비자가 오해할 수 있다.</p>
+
+<p>참고 자료를 많이 넣는 것보다 자료끼리 충돌하지 않게 고르는 것이 먼저다. 같은 물건이라도 서로 다른 모양의 사진을 동시에 넣고 설명을 생략하면 요청이 복잡해진다. 물건의 형태를 보여 주는 사진과 분위기를 보여 주는 그림을 나눈 뒤 각각의 역할을 쓰는 방식이 이해하기 쉽다. 이 부분은 기능을 작업에 적용하기 위한 편집부의 제안이다.</p>
+
+<h2>네모 밖은 보존하도록 만들지만, 그림자는 달라질 수 있다</h2>
+
+<p>블랙포레스트랩스는 부분 수정과 세밀한 배치를 핵심 장점으로 내세운다. 사용 문서의 설명은 조금 더 구체적이다. 네모 밖은 대체로 유지되지만, 수정한 물건의 그림자나 반사, 주변 빛은 달라질 수 있다고 안내한다. 꽃병 색이 바뀌면 책상에 비치는 색도 조정될 수 있는 것이다.</p>
+
+<p>따라서 결과를 확인할 때는 네모 안만 확대해서 보면 부족하다. 물건의 가장자리와 맞닿은 배경, 바닥의 그림자까지 함께 비교하는 것이 좋다. 사람의 옷을 고쳤다면 얼굴·손·머리카락도 그대로인지 살펴야 한다. 이 확인 순서는 문서의 변경 가능 범위를 실제 작업에 적용한 방법이다.</p>
+
+<p>문서에 따르면 AI는 실제 그림을 만들기 전에 요청 문장을 더 자세히 정리하는 단계를 거친다. 이때 수정할 물건의 위치를 찾아 네모 표시를 제안할 수도 있다. 사용자가 위치를 직접 지정하는 방법과 모델이 위치를 찾게 하는 방법을 구분할 수 있다. 결과를 검토할 때는 요청한 수정 대상이 제대로 선택됐는지도 함께 살펴볼 수 있다.</p>
+
+<h2>해상도를 높이면 비용도 크게 달라진다</h2>
+
+<p>출력 크기는 작은 시험용부터 4K 등급까지 선택할 수 있다. 해상도는 그림을 이루는 작은 점이 얼마나 많이 들어 있는지를 뜻한다. 점이 많으면 큰 화면이나 인쇄물에서 세부를 표현할 여지가 늘지만, 잘못 그린 손이나 물건을 자동으로 바로잡아 주지는 않는다. 그림의 내용 확인과 크기 선택은 별개의 작업이다.</p>
+
+<p>이 모델의 4K 등급은 약 1,600만 개의 점으로 이루어진 출력이다. 가로·세로 길이는 선택한 그림 비율에 따라 달라진다. 모든 4K 결과가 가로 3,840, 세로 2,160인 규격으로 나오는 방식은 아니다. 문서에는 정사각형과 가로형·세로형 등 여러 비율이 안내돼 있다.</p>
+
+<figure class="oct03-visual" id="flux-pricing"><div class="oct03-board"><h3 class="oct03-vtitle">한 장 가격은 선택한 크기에 따라 달라진다</h3><table class="oct03-table"><thead><tr><th scope="col">출력 등급</th><th scope="col">그림을 이루는 점</th><th scope="col">한 장 가격</th></tr></thead><tbody><tr><th scope="row">768 정사각형</th><td>768 × 768</td><td>0.041달러</td></tr><tr><th scope="row">1K</th><td>약 100만 개</td><td>0.048달러</td></tr><tr><th scope="row">2K</th><td>약 400만 개</td><td>0.100달러</td></tr><tr><th scope="row">4K</th><td>약 1,600만 개</td><td>0.607달러</td></tr></tbody></table></div><figcaption><a href="https://docs.bfl.ai/quick_start/pricing">공식 가격표</a>의 FLUX.3 Image 항목을 직접 재구성했다. 2026년 10월 3일 확인, 웹 시험 공간과 개발자용 연결 기능에 같은 단가를 적용한다.</figcaption></figure>
+
+<p>1K 등급 한 장은 0.048달러, 4K 등급 한 장은 0.607달러다. 각각 같은 크기로 백 장을 만들면 4.80달러와 60.70달러다. 그림을 다시 요청할 때마다 비용이 쌓이므로 처음부터 가장 큰 규격만 쓰면 시험 과정의 지출도 커진다. 이 계산은 공개된 한 장 단가에 백을 곱한 비교다. <a href="https://docs.bfl.ai/quick_start/pricing">현재 사용 요금</a></p>
+
+<p>개인 블로그에서는 작은 크기로 먼저 구도와 내용을 확인한 뒤 최종 크기를 고르는 방법을 생각할 수 있다. 먼저 원하는 위치에 물건이 있는지, 잘못된 글자나 손가락은 없는지 본다. 내용이 괜찮은 결과를 찾은 다음 큰 크기가 정말 필요한지 결정하면 된다. 블로그의 작은 카드와 인쇄용 큰 그림은 필요한 크기가 다르다.</p>
+
+<p>다시 만들 결과가 원하는 대로 나오지 않으면 해상도부터 올리기보다 요청을 고치는 것이 먼저다. 수정 대상, 지킬 부분, 옮길 위치를 한 번에 섞지 말고 구분해서 적는다. 예를 들어 “컵의 색만 바꾸고 컵 모양과 책상은 유지해 줘”처럼 바꿀 조건과 지킬 조건을 함께 쓰면 의도가 분명해진다. 이 문장은 기능을 이해하기 위한 요청 예시다.</p>
+
+<h2>직접 써 보려면 웹 시험 공간에서 시작할 수 있다</h2>
+
+<p>공식 모델 페이지에는 웹에서 사용해 보는 공간으로 가는 링크가 있다. 개발자는 API로 자기 프로그램과 연결할 수도 있다. 여기서 API는 다른 앱이 플럭스에 작업을 보내고 완성 그림을 받아오는 연결 창구다. 코드를 쓰지 않고 기능을 살펴보려면 웹 경로를 먼저 확인하면 된다. <a href="https://bfl.ai/models/flux-3-image">공식 모델 페이지의 사용 링크</a></p>
+
+<p>웹 시험 공간도 공개 가격표의 단가를 적용한다. 사용할 계정과 크레딧을 준비하고, 선택한 모델과 출력 크기의 가격을 확인한 뒤 요청하는 순서다. 크레딧은 작업 비용을 미리 충전해 두는 단위이며, 이 서비스는 크레딧 하나를 0.01달러로 계산한다. 단순히 소개 페이지를 보는 일과 실제 이미지를 만드는 유료 요청은 구분해야 한다.</p>
+
+<p>직접 시작한다면 새 그림 한 장을 만드는 요청보다, 이미 가진 그림의 작은 수정 하나를 정하는 편이 비교하기 쉽다. “이 컵의 색을 바꾼다”처럼 목적이 분명하면 원본과 결과에서 무엇이 달라졌는지 볼 수 있다. 원하는 변경이 됐는지 확인한 뒤 물건 이동이나 여러 참고 자료를 쓰는 작업으로 넓혀 볼 수 있다. 이는 사용 순서를 제안한 것이며 직접 성공률을 측정한 결과는 아니다.</p>
+
+<p>다른 사람의 사진이나 캐릭터를 참고 자료로 넣으려면 사용 허락과 이용 조건을 먼저 확인해야 한다. AI가 다시 그린 결과에도 그 조건을 적용해야 할 수 있다. 내 사진을 넣는 경우에도 문서나 화면에 주소·계정 정보가 보이는지 살피는 것이 좋다. 그림 작업에 필요 없는 개인 정보는 지우고 넣는 편이 안전하다.</p>
+
+<p>이번 플럭스 소식에서 눈여겨볼 변화는 수정할 범위를 더 자세히 알려 줄 수 있다는 점이다. 좋은 그림을 한 장 얻은 뒤 마음에 들지 않는 부분만 고치는 과정과 연결된다. 물건 위치 지정, 참고 자료의 역할 나누기, 출력 크기 선택을 함께 쓸 수 있지만, 완성 결과와 비용을 확인하는 일은 여전히 사용자가 맡아야 한다.</p>
+<section class="sep26-sources"><h2>출처와 더 읽을 자료</h2><ul><li><a href="https://docs.bfl.ai/release-notes" target="_blank" rel="noopener noreferrer">블랙포레스트랩스: 10월 1일 이미지 모델 추가 기록</a></li><li><a href="https://bfl.ai/models/flux-3-image" target="_blank" rel="noopener noreferrer">블랙포레스트랩스: 모델 소개와 웹 사용 링크</a></li><li><a href="https://docs.bfl.ai/flux_3/flux3_image_layout" target="_blank" rel="noopener noreferrer">공식 문서: 부분 수정·물건 배치·주변 변화 안내</a></li><li><a href="https://docs.bfl.ai/flux_3/flux3_image_overview" target="_blank" rel="noopener noreferrer">공식 문서: 참고 이미지와 출력 크기</a></li><li><a href="https://docs.bfl.ai/quick_start/pricing" target="_blank" rel="noopener noreferrer">공식 가격표: 해상도별 한 장 가격</a></li></ul><p id="hero-credit">대표 그림은 AI로 직접 만든 설명 그림이다. 실제 제품 화면이나 시험 장면을 촬영한 사진과 다르다. 한국어 제목은 그림과 분리해 배치했다. 본문 도표는 연결한 자료를 바탕으로 직접 구성했다.</p></section><nav class="sep26-related" aria-label="기사 이동"><a href="gemini-guided-vision.html">함께 읽기: 제미나이, 카메라로 작은 글씨를 읽고 떨어진 물건 찾기를 돕는다 →</a></nav></article></main></body></html>
