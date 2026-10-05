@@ -1,0 +1,101 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>뉴럴링크, 뇌 신호 학습한 AI로 마우스 조작 기록 개선</title><meta name="description" content="뇌 신호 AI를 개선하자 참가자 6명이 최고 커서 기록을 깼다. 일부는 교정 시간도 줄었다."><link rel="canonical" href="https://korea333333-web.github.io/posts/neuralink-brain-ai-cursor.html"><meta property="og:type" content="article"><meta property="og:title" content="뉴럴링크, 뇌 신호 학습한 AI로 마우스 조작 기록 개선"><meta property="og:description" content="뇌 신호 AI를 개선하자 참가자 6명이 최고 커서 기록을 깼다. 일부는 교정 시간도 줄었다."><meta property="og:image" content="https://korea333333-web.github.io/assets/neuralink-brain-ai-cursor-cover.png"><link rel="stylesheet" href="../assets/sep26-base.css"><link rel="stylesheet" href="../assets/sep03-article.css"><link rel="stylesheet" href="../assets/sep26-articles.css"><link rel="stylesheet" href="../assets/oct05-four.css"></head><body><header class="site-header"><a class="brand" href="../index.html#ai-news"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a></nav></header><main class="article-shell"><article class="article article-custom sep26-article oct05-article"><a class="back-link" href="../index.html#ai-news">← AI 뉴스 목록</a><div class="article-meta">뇌·컴퓨터 연결 · 연구 시험 · 2026.10.05 작성</div><h1>뉴럴링크, 뇌 신호 학습한 AI로 마우스 조작 기록 개선</h1><style>
+.oct05-neuralink-viz { margin: 28px 0; padding: clamp(18px, 4vw, 28px); border: 1px solid #c7d8d2; border-radius: 18px; background: #f4f8f5; color: #183c35; }
+.oct05-neuralink-viz .nl-viz-title { display: block; margin-bottom: 20px; font-size: clamp(20px, 3vw, 25px); line-height: 1.4; }
+.oct05-neuralink-viz .nl-steps { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.oct05-neuralink-viz .nl-step { padding: 16px; border: 1px solid #c7d8d2; border-radius: 12px; background: #fff; }
+.oct05-neuralink-viz .nl-step b { display: block; margin-bottom: 8px; font-size: 18px; }
+.oct05-neuralink-viz .nl-step span { display: block; font-size: 16px; line-height: 1.65; }
+.oct05-neuralink-viz .nl-bar-row { margin-top: 20px; }
+.oct05-neuralink-viz .nl-bar-label { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 9px; font-size: 17px; line-height: 1.5; }
+.oct05-neuralink-viz .nl-track { width: 100%; height: 26px; border-radius: 5px; background: #e0e8e3; overflow: hidden; }
+.oct05-neuralink-viz .nl-bar { height: 100%; background: #6b7f8c; border-radius: 0 5px 5px 0; }
+.oct05-neuralink-viz .nl-bar-new { background: #147467; }
+.oct05-neuralink-viz .nl-axis { position: relative; height: 24px; margin-top: 8px; color: #365b52; font-size: 14px; font-variant-numeric: tabular-nums; }
+.oct05-neuralink-viz .nl-axis span { position: absolute; left: var(--tick); transform: translateX(-50%); white-space: nowrap; }
+.oct05-neuralink-viz .nl-axis span:first-child { transform: none; }
+.oct05-neuralink-viz .nl-axis span:last-child { transform: translateX(-100%); }
+.oct05-neuralink-viz .nl-note { margin: 15px 0 0; font-size: 15px; line-height: 1.7; }
+.oct05-neuralink-viz .nl-official-link { display: inline-block; padding: 14px 18px; border: 1px solid #147467; border-radius: 10px; background: #fff; color: #075c50; font-size: 18px; font-weight: 700; line-height: 1.5; text-decoration: none; }
+.oct05-neuralink-viz .nl-official-link:focus-visible { outline: 3px solid #bd6600; outline-offset: 4px; }
+.oct05-neuralink-viz figcaption { margin-top: 16px; font-size: 14px; line-height: 1.7; color: #365b52; }
+@media (max-width: 620px) { .oct05-neuralink-viz .nl-steps { grid-template-columns: 1fr; } }
+</style>
+
+<p data-source="neuralink-update">뉴럴링크가 뇌 신호를 읽는 AI를 개선해 임상시험 참가자 6명의 개인 최고 커서 조작 기록을 얻었다고 밝혔다. 10월 1일 공개한 <a href="https://neuralink.com/updates/pretraining-on-50000-hours/" target="_blank" rel="noopener noreferrer">회사 연구 결과</a>다.</p>
+<figure class="sep26-hero article-hero-media" id="hero-neuralink-brain-ai-cursor" aria-describedby="hero-credit"><img src="../assets/neuralink-brain-ai-cursor-cover.png" width="832" height="416" alt="손을 무릎에 둔 사람이 커서 화면을 보고 로봇이 뇌 모형을 살펴보는 연구 설명 그림. 뇌 신호 AI 개선, 조작 기록 향상"></figure>
+
+<p class="lead">손을 움직이지 못하는 사람이 컴퓨터를 쓰려고 앉았다고 생각해 보자. 커서를 뜻대로 움직이기 전에 긴 준비 작업부터 해야 한다면 매일 부담이 된다. 이번 소식에서 눈여겨볼 것은 조작 속도와 준비 시간의 변화다.</p>
+
+<h2>손을 움직이려는 뇌 신호를 커서 이동으로 바꾼다</h2>
+
+<p>이 장치는 움직이려는 의도를 나타내는 뇌 신호를 읽고, 무선으로 앱에 보낸다. 앱이 신호를 해석해 컴퓨터를 조작하는 명령으로 바꾼다. 뉴럴링크는 <a href="https://neuralink.com/technology/" target="_blank" rel="noopener noreferrer">기술 안내</a>에서 이 연결 과정을 설명한다. 여기서 커서는 마우스로 움직이는 화면의 작은 표시다.</p>
+
+<figure class="oct05-viz oct05-neuralink-viz">
+  <strong class="nl-viz-title">뇌 신호를 컴퓨터 명령으로 바꾸는 과정</strong>
+  <div class="nl-steps oct05-flow" role="list">
+    <div class="nl-step oct05-step" role="listitem"><b>1. 장치가 신호를 읽는다</b><span>움직이려는 의도를 나타내는 뇌 신호를 기록한다.</span></div>
+    <div class="nl-step oct05-step" role="listitem"><b>2. 무선으로 앱에 보낸다</b><span>장치의 칩이 기록한 신호를 앱에 전달한다.</span></div>
+    <div class="nl-step oct05-step" role="listitem"><b>3. 조작 명령으로 바꾼다</b><span>앱이 신호를 해석해 컴퓨터에 명령을 보낸다.</span></div>
+  </div>
+  <figcaption>출처: 뉴럴링크 기술 안내. 공개한 작동 원리를 바탕으로 직접 그렸다.</figcaption>
+</figure>
+
+<p>AI가 처음부터 사람마다 다른 신호를 정확히 알아듣기는 어렵다. 그래서 참가자는 정해진 과제를 수행하며 자기 신호와 움직임을 맞춘다. 여기서 ‘교정’은 AI에게 “이 신호가 나올 때는 이렇게 움직이려는 것”이라고 다시 익히게 하는 작업이다. 안경의 초점을 자기 눈에 맞추듯, 조작하는 사람에게 맞춰 AI를 조정한다.</p>
+
+<h2>자기 뇌 신호를 미리 익힌 AI로 조작한다</h2>
+
+<p data-source="neuralink-update">AI는 참가자마다 자기 뇌 신호를 미리 익혔다.</p>
+
+<p>화면에 나타난 버튼을 커서로 누르는 상황을 생각해 보자. 빨리 움직여도 엉뚱한 곳을 누르면 원하는 일을 하기 어렵다. 빠르게 가면서 정확한 위치를 골라야 한다. 조작 성능을 볼 때 속도와 정확도를 함께 살펴보는 이유다.</p>
+
+<h2>커서를 빠르고 정확하게 움직였는지 비교했다</h2>
+
+<p data-source="neuralink-update">3명은 회사의 종전 최고 기록을 넘었다. BPS는 커서 선택의 속도와 정확도를 함께 반영한 점수로, 같은 시험에서는 높을수록 좋다.</p>
+
+<figure class="oct05-viz oct05-neuralink-viz" data-source="neuralink-update">
+  <strong class="nl-viz-title">커서 조작 최고 기록 비교</strong>
+  <div class="oct05-bars" role="img" aria-label="뉴럴링크의 종전 최고 기록은 10.39 BPS, 이번 최고 기록은 11.32 BPS다. 가로축은 0에서 12 BPS까지다.">
+    <div class="nl-bar-row"><div class="nl-bar-label"><span>종전 최고 기록</span><strong>10.39 BPS</strong></div><div class="nl-track"><div class="nl-bar oct05-bar" style="width:86.5833%"></div></div></div>
+    <div class="nl-bar-row"><div class="nl-bar-label"><span>이번 최고 기록</span><strong>11.32 BPS</strong></div><div class="nl-track"><div class="nl-bar nl-bar-new oct05-bar" style="width:94.3333%"></div></div></div>
+    <div class="nl-axis" aria-hidden="true"><span style="--tick:0%">0</span><span style="--tick:33.3333%">4</span><span style="--tick:66.6667%">8</span><span style="--tick:100%">12 BPS</span></div>
+  </div>
+  <p class="nl-note">참가자 평균·개인별 전후 값은 미공개다.</p>
+  <figcaption>출처: 뉴럴링크 연구 설명(10월 1일). 직접 제작. 축: 0~12 BPS.</figcaption>
+</figure>
+
+<aside class="oct05-neuralink-viz" aria-label="공식 시연 영상 안내">
+  <strong class="nl-viz-title">실제 뇌 신호와 커서 조작을 나란히 보기</strong>
+  <a class="nl-official-link" href="https://neuralink.com/updates/pretraining-on-50000-hours/" target="_blank" rel="noopener noreferrer">▶ 뉴럴링크 공식 시연 영상 보기</a>
+  <p class="nl-note">공식 글의 Figure 3에서 실제 커서 조작 시연을 볼 수 있다.</p>
+</aside>
+
+<h2>매일 쓰는 사람에게 중요한 것은 준비 시간이다</h2>
+
+<p data-source="neuralink-update">일부 참가자는 교정 시간이 하루 10분에서 주 10분으로 줄었다.</p>
+
+<figure class="oct05-viz oct05-neuralink-viz" data-source="neuralink-update">
+  <strong class="nl-viz-title">일부 참가자의 교정 시간:<br><span style="white-space:nowrap">주 70분 → 10분</span></strong>
+  <div class="oct05-bars" role="img" aria-label="일부 참가자의 교정 시간은 하루 10분에서 일주일 10분으로 줄었다. 7일 환산 비교는 이전 주 70분, 이후 주 10분이다. 가로축은 주당 0에서 70분이다.">
+    <div class="nl-bar-row"><div class="nl-bar-label"><span>이전 · 하루 10분 × 7일</span><strong>주 70분</strong></div><div class="nl-track"><div class="nl-bar oct05-bar" style="width:100%"></div></div></div>
+    <div class="nl-bar-row"><div class="nl-bar-label"><span>이후 · 일주일에 10분</span><strong>주 10분</strong></div><div class="nl-track"><div class="nl-bar nl-bar-new oct05-bar" style="width:14.2857%"></div></div></div>
+    <div class="nl-axis" aria-hidden="true"><span style="--tick:0%">0</span><span style="--tick:50%">35</span><span style="--tick:100%">70분/주</span></div>
+  </div>
+  <p class="nl-note">주 70분은 하루 10분을 7일로 환산했다. 일부 참가자의 변화다.</p>
+  <figcaption>출처: 뉴럴링크 연구 설명. 직접 환산·제작.</figcaption>
+</figure>
+
+<h2>아직은 참가자에게 맞춘 임상시험 기술이다</h2>
+
+<p>장치는 임상시험 단계다. 연구에 참여하는 사람에게 장치를 이식하고 조작 성능과 안전성을 살펴본다. 연구 대상과 참여 절차는 <a href="https://neuralink.com/trials/" target="_blank" rel="noopener noreferrer">공식 임상시험 안내</a>에서 확인할 수 있다.</p>
+
+<p>준비 시간이 줄면 컴퓨터로 하려던 일을 더 빨리 시작할 수 있다. 조작 점수와 함께 교정 시간을 보는 이유다. 앞으로도 실제 사용자가 얼마나 자주 조정해야 하는지, 일상에서 편하게 쓸 수 있는지를 함께 살펴볼 만하다.</p>
+
+<h2>자료 더 보기</h2>
+<ul>
+  <li><a href="https://neuralink.com/updates/pretraining-on-50000-hours/" target="_blank" rel="noopener noreferrer">뉴럴링크 연구 설명과 실제 시연 영상 · 2026년 10월 1일</a></li>
+  <li><a href="https://neuralink.com/technology/" target="_blank" rel="noopener noreferrer">장치가 뇌 신호를 읽고 컴퓨터 명령으로 바꾸는 과정</a></li>
+  <li><a href="https://neuralink.com/trials/" target="_blank" rel="noopener noreferrer">현재 임상시험 안내</a></li>
+  <li><a href="https://neuralink.com/terms-of-use/" target="_blank" rel="noopener noreferrer">공식 사진·영상의 이용 조건</a></li>
+</ul>
+<p class="article-credit">수치는 뉴럴링크 발표 기준이다. 본문 도식과 그래프는 직접 만들었다.</p>
+<p id="hero-credit">대표 그림은 AI로 직접 만든 설명 그림이다. 한국어 문구는 그림과 분리해 배치했다. 본문 그래프와 도식은 연결한 원문에 근거해 직접 만들었다.</p><nav class="sep26-related" aria-label="기사 이동"><a href="../index.html#ai-news">AI 뉴스 목록으로 →</a></nav></article></main></body></html>

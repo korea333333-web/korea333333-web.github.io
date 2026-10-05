@@ -1,0 +1,53 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>클로드 코드, 금지한 파일 읽기·명령 실행 허점 수정</title><meta name="description" content="앤트로픽이 사용자가 막아 둔 파일 읽기나 명령 실행이 특정 상황에서 차단되지 않던 문제를 고쳤다. 수정 버전은 2.1.289다."><link rel="canonical" href="https://korea333333-web.github.io/posts/claude-code-permission-fixes.html"><meta property="og:type" content="article"><meta property="og:title" content="클로드 코드, 금지한 파일 읽기·명령 실행 허점 수정"><meta property="og:description" content="앤트로픽이 사용자가 막아 둔 파일 읽기나 명령 실행이 특정 상황에서 차단되지 않던 문제를 고쳤다. 수정 버전은 2.1.289다."><meta property="og:image" content="https://korea333333-web.github.io/assets/claude-code-permission-fixes-cover.png"><link rel="stylesheet" href="../assets/sep26-base.css"><link rel="stylesheet" href="../assets/sep03-article.css"><link rel="stylesheet" href="../assets/sep26-articles.css"><link rel="stylesheet" href="../assets/oct05-four.css"></head><body><header class="site-header"><a class="brand" href="../index.html#ai-news"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a></nav></header><main class="article-shell"><article class="article article-custom sep26-article oct05-article"><a class="back-link" href="../index.html#ai-news">← AI 뉴스 목록</a><div class="article-meta">AI 도구 · 보안 업데이트 · 2026.10.05 작성</div><h1>클로드 코드, 금지한 파일 읽기·명령 실행 허점 수정</h1><p class="lead">앤트로픽이 컴퓨터에서 파일을 읽고 프로그램을 고치는 AI 도구 ‘클로드 코드’의 허점을 수정했다. 사용자가 금지한 파일 읽기나 명령 실행이 특정 상황에서 차단되지 않던 문제다. 수정 버전은 2.1.289이며, 한국 시간 10월 4일 아침 공개됐다. <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.289" target="_blank" rel="noopener noreferrer">공식 수정 내역</a></p>
+<figure class="sep26-hero article-hero-media" id="hero-claude-code-permission-fixes" aria-describedby="hero-credit"><img src="../assets/claude-code-permission-fixes-cover.png" width="832" height="416" alt="로봇이 잠긴 파일 서랍에 접근하고 사람이 열쇠를 관리하는 설명 그림. 금지한 파일·명령, 차단 허점 수정"></figure>
+<p>클로드 코드는 답변만 쓰는 챗봇보다 많은 일을 한다. 작업 폴더에서 파일을 찾고, 프로그램을 고치고, 고친 프로그램이 제대로 돌아가는지 명령을 실행해 확인한다. 그만큼 사용자가 정한 ‘여기까지만 해도 된다’는 제한이 중요하다. 이번 수정은 그 제한을 검사하는 프로그램의 문제를 다뤘다. <a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">클로드 코드 소개</a></p>
+
+<h2>금지한 파일로 이어지는 다른 길도 막는다</h2>
+<p>첫 번째 문제는 파일에 도달하는 길에서 생겼다. 컴퓨터에서는 다른 위치에 있는 파일이나 폴더로 이어지는 연결을 만들 수 있다. 이를 ‘심볼릭 링크’라고 부른다. 예를 들어 작업 폴더 안의 ‘참고 자료’라는 이름을 열었는데, 실제로는 다른 폴더의 문서가 열리는 식이다.</p>
+<p>수정 내역에 따르면, 이런 연결을 통해 선택한 파일을 개발 프로그램에서 클로드에 전달할 때 파일 읽기 금지 규칙이 적용되지 않던 경우가 있었다. 여기서 개발 프로그램은 코드를 열고 고치는 프로그램이다. 파일 이름을 대화에 붙이거나, 바꾼 파일·선택한 파일을 전달하는 경로가 수정 대상이었다.</p>
+
+<figure class="oct05-viz" id="claude-linked-file">
+  <div class="oct05-board">
+    <h3>파일 이름이 달라도<br>실제로 읽는 파일을 확인한다</h3>
+    <div class="oct05-flow">
+      <div class="oct05-step"><strong>작업 폴더의 연결</strong><span>‘참고 자료’라는 이름으로 전달</span></div>
+      <div class="oct05-arrow" aria-hidden="true">↓</div>
+      <div class="oct05-step"><strong>실제 문서 위치</strong><span>다른 폴더의 금지된 문서로 연결</span></div>
+      <div class="oct05-arrow" aria-hidden="true">↓</div>
+      <div class="oct05-step oct05-stop"><strong>파일 읽기 차단</strong><span>연결된 실제 위치에도 금지 규칙 적용</span></div>
+    </div>
+  </div>
+  <figcaption>파일 이름은 이해를 위한 예시다. <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.289" target="_blank" rel="noopener noreferrer">수정 내역</a>과 <a href="https://code.claude.com/docs/en/permissions#symlinks" target="_blank" rel="noopener noreferrer">공식 권한 설명</a>을 바탕으로 직접 그렸다.</figcaption>
+</figure>
+
+<p>공식 권한 문서는 연결을 거쳐 파일을 열 때 요청한 경로와 실제 파일 위치를 함께 검사한다고 설명한다. 다른 이름이나 연결 경로로 접근해도 금지된 문서는 금지된 문서다. 이런 검사를 화면에서 파일을 전달하는 경로에도 제대로 적용하도록 고친 것이다.</p>
+
+<h2>명령 앞에 설정이 붙어도 금지 규칙을 검사한다</h2>
+<p>또 다른 문제는 명령을 쓰는 모양에서 생겼다. 컴퓨터 명령 앞에는 그 실행에만 적용할 설정을 붙일 수 있다. 예를 들어 프로그램을 실행하기 전에 시간대나 임시 설정값을 지정하는 식이다. 명령 하나에 여러 작업을 이어 적는 경우도 있다.</p>
+<p>이번에는 자동 실행이 허용된 제한 공간에서, 명령 앞에 변수 설정이 붙으면 일부 금지·승인 규칙을 놓치던 문제를 고쳤다. 변수는 프로그램이 사용할 값을 이름에 담아 두는 방식이다. 설정을 붙이는 문법이 달라져도 뒤에서 실제로 실행하는 명령의 허용 여부를 검사하게 만든 것이다.</p>
+<p>예를 들어 어떤 명령은 실행 전에 사람에게 물어보도록 정했다고 하자. 그 명령 앞에 시간대 설정을 붙였다는 이유로 바로 실행되면 사용자가 정한 제한을 건너뛴다. ‘반드시 물어볼 것’과 ‘실행 금지’를 명령의 겉모양과 관계없이 지켜야 하는 이유다. 이 상황은 수정 내용을 이해하기 위한 예시다.</p>
+<p>회사에서 관리하는 컴퓨터의 복합 명령 검사도 수정됐다. 사용자가 설치한 추가 기능이 작업을 승인했더라도, 그 안의 일부 명령에 금지 규칙이나 승인 요청 규칙이 걸려 있으면 이를 먼저 적용한다. 여러 작업을 한 번에 묶었을 때도 각 작업에 걸린 제한을 지키는 문제다.</p>
+
+<h2>‘하지 마’라는 말과 프로그램의 차단 설정은 다르다</h2>
+<p>대화에서 “이 파일은 읽지 마”라고 쓰면 AI가 따를 지시가 된다. 파일 읽기 금지를 설정하면 클로드의 내장 파일 읽기 도구가 그 파일을 열지 못하게 막는다. 파이썬 같은 다른 프로그램을 실행해서 파일을 여는 행동까지 제한하려면, 아래의 샌드박스도 함께 설정해야 한다. <a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener noreferrer">허용·승인 요청·금지 규칙</a></p>
+<p>클로드 코드의 권한 규칙은 금지, 승인 요청, 허용 순서로 검사한다. 금지된 행동은 막고, 사람이 결정하도록 정한 행동은 먼저 물어본다. 나머지 허용된 행동을 실행한다. 이번에 고친 것은 이런 검사에서 특정 명령 형태나 파일 전달 경로를 놓치던 부분이다.</p>
+<p>파일과 인터넷 접근을 별도로 제한하는 기능도 있다. 흔히 ‘샌드박스’라고 부르는 제한 공간이다. AI가 실행하는 프로그램이 어느 폴더를 읽고 고칠 수 있는지, 어느 인터넷 주소에 접속할 수 있는지 미리 정한다. 대화 지시를 따르는 AI와 실제 접근을 막는 프로그램을 함께 쓰는 방식이다. <a href="https://code.claude.com/docs/en/sandboxing" target="_blank" rel="noopener noreferrer">파일·인터넷 접근 제한 안내</a></p>
+<p>이 제한 공간 안에서 자동 실행을 허용하면 작업마다 승인 버튼을 누르는 횟수를 줄일 수 있다. 그래서 자동 실행과 함께 쓰는 금지 규칙의 검사가 더 중요해진다. 일을 편하게 맡기려면, 사람이 막아 둔 행동은 자동 실행 중에도 그대로 막혀야 한다.</p>
+
+<h2>추가 기능이 회사의 로그인 도구 설명을 바꾸던 문제도 수정</h2>
+<p>이번 버전은 사용자가 설치한 추가 기능이 회사에서 관리하는 외부 연결 도구의 로그인 설명을 바꿀 수 있던 문제도 수정했다. 외부 연결 도구는 클로드가 다른 서비스의 기능을 사용할 때 쓰는 연결 프로그램이다. 공식 수정 내역에서는 이런 연결에 쓰는 MCP라는 이름이 나온다.</p>
+<p>로그인 도구의 설명은 AI가 그 도구를 언제, 어떻게 사용할지 판단하는 자료다. 회사에서 관리하는 도구의 설명을 개인이 설치한 추가 기능이 마음대로 바꾸면, 관리자가 정한 안내와 AI가 실제로 읽는 안내가 달라진다. 이 수정은 그 설명을 바꾸는 경로를 막았다.</p>
+
+<h2>사용자는 설치된 버전부터 확인하면 된다</h2>
+<p>클로드 코드를 쓰는 사람은 <code>claude --version</code>으로 설치된 버전이 2.1.289 이상인지 확인하면 된다. 업데이트 방법은 설치 방식마다 다르다. 직접 설치한 버전은 <code>claude update</code>, 윈도우의 WinGet으로 설치한 버전은 <code>winget upgrade Anthropic.ClaudeCode</code>를 쓴다. 다른 설치 방식이나 회사가 관리하는 설치본은 공식 안내와 담당자가 정한 방법을 따르면 된다. <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener noreferrer">설치 방식별 업데이트 안내</a></p>
+<p>수정 내역은 허점이 발생한 조건과 고친 내용을 공개했다. 피해 계정 수나 실제 유출 규모는 이 문서에 제시되지 않았다. 사용자가 지금 할 일은 수정 버전을 쓰고, 중요한 파일과 실행 명령의 금지·승인 규칙이 어떻게 설정돼 있는지 살펴보는 것이다.</p>
+<p>클로드 코드의 이번 업데이트는 새로운 기능을 더하는 소식보다, 사용자가 이미 정한 제한을 제대로 지키게 고친 소식이다. 파일에 붙인 다른 이름, 명령 앞의 설정, 개인이 설치한 추가 기능 때문에 금지 규칙이 건너뛰어지던 경로를 수정했다. AI에게 일을 더 맡길수록 이런 차단 검사가 함께 중요해진다.</p>
+
+<section class="sep26-sources"><h2>출처와 더 읽을 자료</h2><ul>
+<li><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.289" target="_blank" rel="noopener noreferrer">2.1.289 공식 수정 내역 · 이번 뉴스의 원문</a></li>
+<li><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">클로드 코드가 하는 일</a></li>
+<li><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener noreferrer">파일과 명령의 권한 규칙</a></li>
+<li><a href="https://code.claude.com/docs/en/sandboxing" target="_blank" rel="noopener noreferrer">파일·인터넷 접근을 제한하는 방법</a></li>
+<li><a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener noreferrer">버전 확인과 업데이트 방법</a></li>
+</ul></section>
+<p id="hero-credit">대표 그림은 AI로 직접 만든 설명 그림이다. 한국어 문구는 그림과 분리해 배치했다. 본문 그래프와 도식은 연결한 원문에 근거해 직접 만들었다.</p><nav class="sep26-related" aria-label="기사 이동"><a href="../index.html#ai-news">AI 뉴스 목록으로 →</a></nav></article></main></body></html>
