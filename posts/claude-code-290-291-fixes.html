@@ -1,0 +1,51 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>클로드 코드, 금지한 파일을 읽던 문제와 사라지던 대화를 고쳤다</title><meta name="description" content="2.1.290은 파일 연결이 바뀌거나 이미지를 붙일 때 읽기 제한이 빠지던 문제를 고쳤다. 2.1.291은 승인 답변 누락과 마지막 대화 유실을 수정했다."><link rel="canonical" href="https://korea333333-web.github.io/posts/claude-code-290-291-fixes.html"><meta property="og:type" content="article"><meta property="og:title" content="클로드 코드, 금지한 파일을 읽던 문제와 사라지던 대화를 고쳤다"><meta property="og:description" content="2.1.290은 파일 연결이 바뀌거나 이미지를 붙일 때 읽기 제한이 빠지던 문제를 고쳤다. 2.1.291은 승인 답변 누락과 마지막 대화 유실을 수정했다."><meta property="og:image" content="https://korea333333-web.github.io/assets/claude-code-290-291-fixes-cover.png"><link rel="stylesheet" href="../assets/sep26-base.css"><link rel="stylesheet" href="../assets/sep03-article.css"><link rel="stylesheet" href="../assets/sep26-articles.css"><link rel="stylesheet" href="../assets/oct06-eight.css"></head><body><header class="site-header"><a class="brand" href="../index.html#ai-news"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a></nav></header><main class="article-shell"><article class="article article-custom sep26-article oct06-article"><a class="back-link" href="../index.html#ai-news">← AI 뉴스 목록</a><div class="article-meta">클로드 코드 · 보안과 오류 수정 · 2026.10.06 작성</div><h1>클로드 코드, 금지한 파일을 읽던 문제와 사라지던 대화를 고쳤다</h1><p class="lead">앤트로픽이 클로드 코드에서 금지한 파일을 읽을 수 있던 문제와 대화 기록 오류를 고쳤다. 수정 버전은 v2.1.290·v2.1.291이다.</p>
+<figure class="sep26-hero article-hero-media" id="hero-claude-code-290-291-fixes" aria-describedby="hero-credit"><img src="../assets/claude-code-290-291-fixes-cover.png" width="1664" height="832" alt="서랍으로 이어지는 연결을 확인하는 로봇으로 실제 파일 위치를 검사하는 작업을 표현한 그림. 클로드 코드 수정, 파일 접근 허점 보완"></figure>
+
+<p>클로드 코드는 AI가 컴퓨터의 파일을 읽고 고치며 프로그램을 만드는 도구다. 이용자는 읽을 수 있는 폴더와 사람에게 물어봐야 할 행동을 정할 수 있다.</p>
+
+<p>컴퓨터에는 다른 파일의 위치를 가리키는 연결이 있다. 기술 문서에서는 ‘심볼릭 링크’라고 부른다. 예를 들어 ‘참고 자료’라는 이름을 눌렀는데 다른 폴더의 문서가 열리는 식이다. <a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener noreferrer">공식 권한 설명</a>은 요청한 파일 이름과 연결 끝의 실제 파일을 모두 검사한다고 안내한다. 허용 규칙은 두 경로가 모두 맞아야 적용되고, 금지 규칙은 어느 한 경로라도 해당하면 적용된다.</p>
+
+<h2>파일 연결이 바뀌던 허점</h2>
+
+<p>v2.1.290은 맥·윈도에서 이미지를 읽는 중 연결이 바뀌어 승인 밖 파일을 읽던 허점을 고쳤다. 작업 폴더 밖 읽기를 막았거나, 파일 읽기를 제한한 모드에서 파일을 대화에 직접 언급할 때도 같은 문제가 있었다.</p>
+
+<figure class="oct06-viz">
+  <div class="oct06-board">
+    <h3>파일 이름과 실제 대상이 달랐다</h3>
+    <div class="oct06-flow">
+      <div class="oct06-step"><span>1</span><strong>허용한 파일</strong><p>AI가 파일을 요청한다.</p></div>
+      <div class="oct06-step"><span>2</span><strong>연결 대상 변경</strong><p>읽는 중 다른 파일을 가리킨다.</p></div>
+      <div class="oct06-step"><span>3</span><strong>다시 검사</strong><p>실제 대상의 접근 허용 여부를 확인한다.</p></div>
+    </div>
+  </div>
+  <figcaption><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.290" target="_blank" rel="noopener noreferrer">앤트로픽 v2.1.290 수정 내역</a>으로 직접 그린 개념도다.</figcaption>
+</figure>
+
+<p>이미지를 붙이거나 끌어 넣을 때 읽기 금지 규칙이 빠지던 부분도 보완했다. 폴더를 대화에 언급할 때 금지한 파일 이름이 나오던 문제도 고쳤다.</p>
+
+<h2>개인 기능보다 회사 규칙을 지킨다</h2>
+
+<p>개인 확장 기능이 회사의 확장 기능이나 안전 검사를 꺼 버리거나 건너뛰던 문제도 수정했다. 확장 기능은 별도 기능을 더하는 프로그램이다. 충돌하는 개인 기능을 내려 회사 규칙을 유지한다.</p>
+
+<h2>290에서 생긴 승인 답변 오류도 291에서 고쳤다</h2>
+
+<p>뒤이어 나온 <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.291" target="_blank" rel="noopener noreferrer">v2.1.291의 수정 항목</a>은 두 가지다. 하나는 v2.1.290의 클라우드 작업에서 권한 요청에 대한 답변이 누락될 수 있던 오류다. 다른 하나는 v2.1.288에서 생긴, 프로그램을 종료할 때 대화의 마지막 메시지를 잃을 수 있던 오류다.</p>
+
+<p>클라우드 작업은 회사 서버에서 AI가 일을 처리하는 방식이다. AI가 작업 승인을 기다리는데 이용자의 답변이 전달되지 않으면 일이 진행되지 않거나 같은 질문에서 막힐 수 있다. 승인 창을 제대로 만드는 것뿐 아니라, 사람이 보낸 답변을 끝까지 전달하는 일도 필요하다.</p>
+
+<p>마지막 메시지가 사라지면 종료 직전에 남긴 수정 요구를 다음에 찾지 못할 수 있다. v2.1.291은 종료할 때의 유실을 고친다. 이미 잃은 메시지의 복구 방법은 발표하지 않았다.</p>
+
+<h2>사용 중인 버전부터 확인하면 된다</h2>
+
+<p>개발자를 위한 확인 방법은 간단하다. 명령을 입력하는 창인 터미널에서 <code>claude --version</code>을 입력하면 설치 버전이 나온다. 공식 <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener noreferrer">설치·업데이트 안내</a>는 지원되는 설치 방식에서 <code>claude update</code>로 수동 업데이트하는 방법을 제공한다. 회사가 설치 버전을 관리하거나 다른 설치 도구를 썼다면 해당 관리 방식으로 업데이트한다.</p>
+
+<h2>자료와 그림 안내</h2>
+<p>한국 시간으로 v2.1.290은 10월 6일 오전 8시 33분에 공개됐다.</p>
+<p>v2.1.291은 같은 날 낮 12시 55분에 공개됐다. 대표 그림은 이 글을 위해 만든 AI 콘셉트 이미지다.</p>
+<ul>
+  <li><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.290" target="_blank" rel="noopener noreferrer">클로드 코드 v2.1.290 변경 기록</a></li>
+  <li><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.291" target="_blank" rel="noopener noreferrer">클로드 코드 v2.1.291 변경 기록</a></li>
+  <li><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener noreferrer">공식 파일 접근·권한 규칙 설명</a></li>
+  <li><a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener noreferrer">공식 버전 확인·업데이트 안내</a></li>
+</ul>
+<p id="hero-credit">대표 그림은 AI로 직접 만든 설명 그림이다. 한국어 문구는 그림과 분리해 배치했다. 본문 도식·그래프는 연결한 원문에 근거해 직접 제작했다.</p><nav class="sep26-related" aria-label="기사 이동"><a href="../index.html#ai-news">AI 뉴스 목록으로 →</a></nav></article></main></body></html>

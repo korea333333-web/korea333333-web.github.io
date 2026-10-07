@@ -1,0 +1,39 @@
+.oct06-article>p{font-size:18px;line-height:1.95;word-break:keep-all;overflow-wrap:anywhere;margin:0 0 24px}
+.oct06-article>h2{font-size:26px;line-height:1.5;word-break:keep-all;letter-spacing:-.025em;margin:44px 0 20px}
+.oct06-article code{font-size:.9em;overflow-wrap:anywhere;white-space:normal}
+.oct06-viz{margin:32px 0 38px;border:1px solid #ccd9d3;border-radius:14px;overflow:hidden;background:#f1f6f3;color:#254f41}
+.oct06-viz .oct06-board{padding:26px}
+.oct06-viz h3{font-size:25px;line-height:1.5;font-weight:800;word-break:keep-all;margin:0 0 22px;color:#173f35}
+.oct06-viz p{font-size:16px;line-height:1.8;word-break:keep-all;margin:12px 0 18px}
+.oct06-viz figcaption{padding:16px 24px;background:#e6eee9;border-top:1px solid #ccd9d3;font-size:14px;line-height:1.8;color:#42574c;word-break:keep-all;overflow-wrap:anywhere;margin:0}
+.oct06-flow{display:flex;flex-direction:column;align-items:stretch;gap:10px}
+.oct06-step{background:white;border:1px solid #cfdfd7;border-radius:10px;padding:17px 20px;font-size:17px;line-height:1.75;word-break:keep-all;overflow-wrap:anywhere;margin-bottom:10px}
+.oct06-step:last-child{margin-bottom:0}
+.oct06-step strong{display:block;font-size:19px;margin-bottom:5px}
+.oct06-step span{display:block}
+.oct06-step p{margin:6px 0 0}
+.oct06-arrow{align-self:center;font-size:18px;line-height:1.5;color:#37735e;margin:0 0 6px}
+.oct06-steps{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:flowstep}
+.oct06-steps>li{counter-increment:flowstep;background:white;border:1px solid #cfdfd7;border-radius:10px;padding:17px 20px;font-size:17px;line-height:1.75;word-break:keep-all}
+.oct06-steps>li:before{content:counter(flowstep);display:block;font-size:15px;font-weight:800;color:#267561;margin-bottom:6px}
+.oct06-steps strong,.oct06-steps span{display:block}
+.oct06-steps strong{font-size:19px;margin-bottom:5px}
+.oct06-bar-rows{display:grid;gap:22px;margin-top:24px}
+.oct06-bar-label{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:17px;line-height:1.65;margin-bottom:8px;word-break:keep-all}
+.oct06-bar-label strong{font-size:23px;white-space:nowrap;color:#173f35}
+.oct06-bar-track{width:100%;height:32px;background:#dfe9e2;border-left:2px solid #667f73;background-image:linear-gradient(to right,transparent calc(100% - 1px),#b2c6ba 1px);background-size:25% 100%;box-sizing:border-box}
+.oct06-bar-fill{display:block;height:100%;background:#267561;border-radius:0 3px 3px 0}
+.oct06-bar-row:nth-child(2) .oct06-bar-fill{background:#b8793f}
+.oct06-bar-row:nth-child(3) .oct06-bar-fill{background:#5d7493}
+.oct06-axis{display:flex;justify-content:space-between;font-size:14px;line-height:1.65;margin-top:8px;color:#52685d}
+.oct06-note{font-size:15px!important;line-height:1.75;margin-top:20px!important;color:#426050}
+.oct06-sources li{font-size:16px;line-height:1.8;margin:8px 0;word-break:keep-all;overflow-wrap:anywhere}
+.oct06-index .post-card{position:relative}
+.oct06-index .post-card h3 a:after{content:'';position:absolute;inset:0;z-index:1;border-radius:inherit}
+.oct06-index .post-card:focus-within{outline:3px solid #167959;outline-offset:4px}
+.oct06-cover{position:relative;width:1664px;height:832px;overflow:hidden}
+.oct06-cover>img{width:100%;height:100%;object-fit:cover;display:block}
+.oct06-cover-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:5%;align-items:flex-start;color:#fff;background:linear-gradient(90deg,#071f2940,transparent 57%)}
+.oct06-cover-copy strong{font-family:'Malgun Gothic',sans-serif;font-size:76px;font-weight:900;line-height:1.5;letter-spacing:-.035em;text-shadow:0 2px 14px #00101966;white-space:nowrap}
+.oct06-cover-copy em{font-style:normal;color:#ffd17b;display:block}
+@media(max-width:600px){.oct06-article>p{font-size:17px;line-height:1.9}.oct06-article>h2{font-size:23px}.oct06-viz .oct06-board{padding:18px}.oct06-viz h3{font-size:21px}.oct06-viz figcaption{padding:14px 18px}.oct06-step,.oct06-steps>li{padding:15px}.oct06-bar-label strong{font-size:21px}.oct06-bar-label{font-size:16px}}

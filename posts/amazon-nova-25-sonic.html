@@ -1,0 +1,40 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>아마존, 대화 중 주문·반품 처리 돕는 음성 AI ‘노바 2.5 소닉’ 출시</title><meta name="description" content="말로 답하면서 연결된 회사 시스템을 사용해 주문을 조회하고 반품 처리까지 요청한다. 개발 서비스의 이용 방식과 한국어 지원 여부를 정리했다."><link rel="canonical" href="https://korea333333-web.github.io/posts/amazon-nova-25-sonic.html"><meta property="og:type" content="article"><meta property="og:title" content="아마존, 대화 중 주문·반품 처리 돕는 음성 AI ‘노바 2.5 소닉’ 출시"><meta property="og:description" content="말로 답하면서 연결된 회사 시스템을 사용해 주문을 조회하고 반품 처리까지 요청한다. 개발 서비스의 이용 방식과 한국어 지원 여부를 정리했다."><meta property="og:image" content="https://korea333333-web.github.io/assets/amazon-nova-25-sonic-cover.png"><link rel="stylesheet" href="../assets/sep26-base.css"><link rel="stylesheet" href="../assets/sep03-article.css"><link rel="stylesheet" href="../assets/sep26-articles.css"><link rel="stylesheet" href="../assets/oct06-eight.css"></head><body><header class="site-header"><a class="brand" href="../index.html#ai-news"><span class="brand-mark">AI</span><span>AI 인사이트 브리프</span></a><nav class="nav" aria-label="주요 메뉴"><a href="../index.html#ai-news">AI 뉴스</a></nav></header><main class="article-shell"><article class="article article-custom sep26-article oct06-article"><a class="back-link" href="../index.html#ai-news">← AI 뉴스 목록</a><div class="article-meta">음성 AI · 업무 처리 · 2026.10.06 작성</div><h1>아마존, 대화 중 주문·반품 처리 돕는 음성 AI ‘노바 2.5 소닉’ 출시</h1><p class="lead">AWS가 대화 중 주문·반품 처리를 돕는 음성 AI ‘노바 2.5 소닉’을 정식 출시했다. 개발자가 연결한 회사 프로그램을 사용하며, 아마존 베드록에서 제공된다. <a href="https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-nova-2.5-Sonic/" target="_blank" rel="noopener noreferrer">출시 발표</a></p>
+<figure class="sep26-hero article-hero-media" id="hero-amazon-nova-25-sonic" aria-describedby="hero-credit"><img src="../assets/amazon-nova-25-sonic-cover.png" width="1664" height="832" alt="헤드셋을 낀 로봇이 상담대에서 고객과 택배 상자를 확인하는 모습으로 음성 상담과 업무 처리를 설명한 그림. 아마존 음성 AI, 주문·반품 처리 개선"></figure>
+
+<h2>말로 부탁한 일을 회사 시스템에 전달한다</h2>
+<p>여기서 ‘도구 사용’은 AI가 회사의 프로그램을 호출하는 기능이다. AI가 주문 번호를 넘기면 주문 조회 프로그램이 실제 기록을 찾아 돌려주는 식이다. 반품 가능 여부를 판단하는 규칙과 고객 계정에 접근할 권한은 서비스 운영자가 마련한다. AI는 연결해 준 범위에서만 일을 진행한다.</p>
+<figure class="oct06-viz" aria-labelledby="nova-flow-title">
+  <div class="oct06-board">
+    <h3 class="oct06-viz-title" id="nova-flow-title">반품 상담을 이어 가는 순서</h3>
+    <ol class="oct06-steps">
+      <li><strong>고객의 말을 듣는다</strong><span>반품할 주문을 확인한다.</span></li>
+      <li><strong>주문 기록을 조회한다</strong><span>연결된 프로그램을 사용한다.</span></li>
+      <li><strong>반품 조건을 확인한다</strong><span>회사의 규칙을 적용한다.</span></li>
+      <li><strong>반품 처리를 요청한다</strong><span>허용된 기능을 사용한다.</span></li>
+    </ol>
+  </div>
+  <figcaption>AWS의 활용 예시로 직접 그린 순서도다. <a href="https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-nova-2.5-Sonic/" target="_blank" rel="noopener noreferrer">예시 원문</a></figcaption>
+</figure>
+<p>이 연결이 없으면 AI는 특정 고객의 실제 주문을 조회할 수 없다. 고객센터에서 쓰려면 주문 조회가 성공했는지, 반품 신청이 실제로 접수됐는지를 프로그램의 결과로 확인하도록 만들어야 한다. “처리해 드렸습니다”라는 말과 회사 시스템의 처리 결과가 일치해야 상담이 끝난다.</p>
+
+<h2>상대가 말을 끊거나 조회가 오래 걸려도 대화를 잇는다</h2>
+<p>노바 소닉은 음성을 받아 음성으로 답하는 모델이다. 고객이 말한 내용과 말투를 받아들이고, 대화의 앞부분을 참고해 다음 답을 만든다. 개발자는 마이크와 스피커를 연결해 사람이 말을 주고받는 상담 프로그램을 구성할 수 있다.</p>
+<p>대화에서는 말이 끝나는 순간을 잘 판단하는 것도 중요하다. 사용자가 잠깐 생각하느라 멈췄는데 AI가 답부터 하면 대화가 겹친다. 반대로 사용자가 질문을 끝냈는데 오래 기다리면 답답하다. 공식 음성 안내는 상대의 말이 끝났는지 판단하는 기능과 AI가 말하는 도중 사용자가 끼어드는 기능을 설명한다. <a href="https://docs.aws.amazon.com/nova/latest/nova2-userguide/using-conversational-speech.html" target="_blank" rel="noopener noreferrer">아마존 노바 음성 사용 안내</a></p>
+<p>회사 시스템이 정보를 찾는 동안에도 대화를 이어 갈 수 있다. 예를 들어 조회를 기다리는 중에 사용자가 다른 주문 번호를 알려 주면, 프로그램은 그 말을 받아 다음 일을 정할 수 있다. 이런 기능을 비동기 도구 사용이라고 부른다. 자료를 찾는 작업이 끝날 때까지 모든 대화를 멈추지 않는 방법이다.</p>
+<p>AWS는 답변 속도와 지시를 따르고 도구를 쓰는 능력을 개선했다고 밝혔다. 속도 개선 비율은 제시하지 않았다. 실제 상담 시간에는 회사의 조회 시스템과 통신 속도도 영향을 준다.</p>
+
+<h2>긴 통화를 연결하는 개발 도구도 함께 나왔다</h2>
+<p>음성 AI 개발 도구 ‘스트랜즈 Bidi Agents’도 같은 날 정식 제공을 시작했다. 이 도구는 마이크로 받은 소리를 AI에 보내고, AI의 응답을 스피커로 재생하는 일을 묶어 준다. 개발자는 여기에 주문 조회처럼 필요한 업무 기능을 추가할 수 있다. <a href="https://strandsagents.com/blog/bidi-agents-now-ga/" target="_blank" rel="noopener noreferrer">스트랜즈 Bidi Agents 발표와 실행 예제</a></p>
+<p>긴 통화에서는 연결 시간이 끝나 대화가 끊기는 문제도 생긴다. 스트랜즈는 연결 제한에 도달하기 전에 뒤에서 새 연결을 만들고, 지원되는 방법으로 이전 대화 내용을 이어 주는 기능을 설명했다. 사람은 같은 상담을 계속하고, 프로그램이 연결을 관리하는 방식이다.</p>
+<p>개발자가 확인할 수 있는 기록도 제공한다. AI가 언제 답했는지, 주문 조회에 얼마나 걸렸는지, 중간에 연결을 새로 만들었는지가 기록에 남는다. 상담이 느리거나 잘못됐을 때 마지막 답변만 보는 대신 어느 단계에서 문제가 났는지 찾을 수 있다.</p>
+
+<h2>한국어와 서비스 이용 조건은 별도로 살펴보자</h2>
+<p>공식 음성 안내에 적힌 언어는 영어, 프랑스어, 이탈리아어, 독일어, 스페인어, 포르투갈어, 힌디어다. 새 모델의 출시 공지도 일곱 언어의 음성을 제공한다고 안내한다. 한국어는 이 공식 지원 목록에 없다. 한국어 고객센터에 도입하려는 회사라면 한국어 지원이 확인된 모델과 먼저 비교하는 것이 실용적이다.</p>
+<p>제공 서버 지역은 미국 버지니아 북부·오리건, 스웨덴 스톡홀름, 일본 도쿄다. 서울은 제공 목록에 없다. 서버 지역은 프로그램을 실행하는 장소이며, 회사는 자료를 보낼 나라를 운영 조건에 맞춰 정하게 된다.</p>
+<p>개발자는 AWS 계정으로 아마존 베드록에 접속해 모델을 자기 프로그램에 연결한다. 베드록은 여러 AI 모델을 이용할 수 있도록 AWS가 운영하는 개발 서비스다. 개인용 챗봇 앱을 설치하는 과정과 달리, 회사의 음성 화면과 업무 기능을 개발자가 함께 구성한다. <a href="https://docs.aws.amazon.com/nova/latest/nova2-userguide/what-is-nova-2.html" target="_blank" rel="noopener noreferrer">노바 개발 서비스의 이용 방식</a></p>
+<p>가격은 이전 노바 2 소닉과 같은 수준이다. 회사는 모델 사용료와 함께 주문 조회 프로그램, 통신 등 전체 운영비를 고려하게 된다. 짧은 상담부터 주문 조회와 처리 결과가 정확한지 시험하는 편이 실용적이다.</p>
+<p>음성 상담의 완성도는 말투와 업무 결과를 함께 보고 판단할 수 있다. 고객이 요청한 일이 정확히 처리됐는지까지 확인하면, 회사가 자기 상담에 맞는 서비스를 고르기 쉽다.</p>
+
+<h2>자료 안내</h2>
+<p>AWS 발표일은 2026년 10월 5일이다. 이 기사는 10월 6일 확인한 자료로 썼다. 대표 그림은 자체 제작 AI 콘셉트 이미지이며, 본문 순서도도 직접 제작했다.</p>
+<p id="hero-credit">대표 그림은 AI로 직접 만든 설명 그림이다. 한국어 문구는 그림과 분리해 배치했다. 본문 도식·그래프는 연결한 원문에 근거해 직접 제작했다.</p><nav class="sep26-related" aria-label="기사 이동"><a href="../index.html#ai-news">AI 뉴스 목록으로 →</a></nav></article></main></body></html>
