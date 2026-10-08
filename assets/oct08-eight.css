@@ -1,0 +1,38 @@
+.oct08-article>p{font-size:18px;line-height:1.95;word-break:keep-all;overflow-wrap:anywhere;margin:0 0 24px}
+.oct08-article>h2{font-size:26px;line-height:1.5;word-break:keep-all;letter-spacing:-.025em;margin:44px 0 20px}
+.oct08-article code{font-size:.9em;overflow-wrap:anywhere;white-space:normal}
+.oct08-visual{margin:32px 0 38px;border:1px solid #ccd9d3;border-radius:14px;overflow:hidden;background:#f1f6f3;color:#254f41}
+.oct08-visual>.oct08-board,.oct08-visual>.oct08-panel,.oct08-visual>.oct08-flow,.oct08-visual>.oct08-compare,.oct08-visual>.oct08-bars{padding:26px}
+.oct08-visual h3{font-size:25px;line-height:1.5;font-weight:800;word-break:keep-all;margin:0 0 22px;color:#173f35}
+.oct08-visual>h3{margin:24px 24px 18px}
+.oct08-visual>p{margin:12px 24px 18px}
+.oct08-visual h4{font-size:19px;line-height:1.6;margin:0 0 12px;word-break:keep-all}
+.oct08-bars>.oct08-panel{background:#fff;border:1px solid #cfdfd7;border-radius:10px;padding:18px}
+.oct08-visual p{font-size:17px;line-height:1.8;word-break:keep-all;margin:12px 0 18px;overflow-wrap:anywhere}
+.oct08-visual figcaption{padding:16px 24px;background:#e6eee9;border-top:1px solid #ccd9d3;font-size:14px;line-height:1.8;color:#42574c;word-break:keep-all;overflow-wrap:anywhere;margin:0}
+.oct08-flow{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+.oct08-step,.oct08-compare>.oct08-panel{background:#fff;border:1px solid #cfdfd7;border-radius:10px;padding:17px 20px;font-size:17px;line-height:1.75;word-break:keep-all;overflow-wrap:anywhere}
+.oct08-step strong,.oct08-panel>strong{display:block;font-size:19px;margin-bottom:5px}
+.oct08-step span{display:block}
+.oct08-arrow{align-self:center;font-size:18px;color:#37735e;line-height:1.5}
+.oct08-compare{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.oct08-bars{display:grid;gap:20px}
+.oct08-bar-row{font-size:17px;line-height:1.6;word-break:keep-all}
+.oct08-bar-row>span,.oct08-bar-row>strong{display:block;margin:0 0 8px}
+.oct08-bar-row .oct08-track{display:block;position:relative;width:100%;height:30px;background:#dce8df;border-left:2px solid #557764;box-sizing:border-box}
+.oct08-track i{display:block;height:100%;background:#267561;border-radius:0 3px 3px 0}
+.oct08-bar-row:nth-child(even) .oct08-track i{background:#b8793f}
+.oct08-axis{display:flex;justify-content:space-between;font-size:14px;line-height:1.7;color:#52685d}
+.oct08-note{font-size:15px!important;line-height:1.75;color:#426050}
+.oct08-sources li,.oct08-article>ul li{font-size:17px;line-height:1.8;margin:8px 0;word-break:keep-all;overflow-wrap:anywhere}
+.oct08-embed{display:block;width:100%;height:auto;aspect-ratio:16/9;border:0;background:#14252b}
+.oct08-visual iframe{display:block;width:100%;height:auto;aspect-ratio:16/9;border:0;background:#14252b}
+.oct08-index .post-card{position:relative}
+.oct08-index .post-card h3 a:after{content:'';position:absolute;inset:0;z-index:1;border-radius:inherit}
+.oct08-index .post-card:focus-within{outline:3px solid #167959;outline-offset:4px}
+.oct08-cover{position:relative;width:1664px;height:832px;overflow:hidden}
+.oct08-cover>img{width:100%;height:100%;object-fit:cover;display:block}
+.oct08-cover-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:5%;align-items:flex-start;color:#fff;background:linear-gradient(90deg,#071f29f2 0%,#071f29e6 39%,#071f2970 50%,transparent 60%)}
+.oct08-cover-copy strong{font-family:'Malgun Gothic',sans-serif;font-size:82px;font-weight:900;line-height:1.5;letter-spacing:-.035em;text-shadow:0 2px 14px #00101966;white-space:nowrap}
+.oct08-cover-copy em{font-style:normal;color:#ffd17b;display:block}
+@media(max-width:600px){.oct08-article>p{font-size:17px;line-height:1.9}.oct08-article>h2{font-size:23px}.oct08-visual>.oct08-board,.oct08-visual>.oct08-panel,.oct08-visual>.oct08-flow,.oct08-visual>.oct08-compare,.oct08-visual>.oct08-bars{padding:18px}.oct08-visual h3{font-size:21px}.oct08-visual figcaption{padding:14px 18px}.oct08-step,.oct08-compare>.oct08-panel{padding:15px}.oct08-compare{grid-template-columns:1fr}.oct08-bar-row{font-size:16px}}
