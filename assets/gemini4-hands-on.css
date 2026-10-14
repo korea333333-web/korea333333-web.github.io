@@ -1,0 +1,28 @@
+.hands-on-article .lesson-summary,.hands-on-article .lesson-next{padding:24px;border:1px solid #b9d3c7;border-radius:12px;background:#eef6f0;margin:28px 0}
+.hands-on-article .lesson-summary h2,.hands-on-article .lesson-next h2{margin-top:0}
+.hands-on-article .lesson-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+.hands-on-article .lesson-actions a{display:inline-block;padding:12px 16px;border:1px solid #518772;border-radius:8px;background:#fff;font-size:16px;line-height:1.6}
+.hands-on-article .prompt-box{margin:28px 0;border:1px solid #b9d3c7;border-radius:12px;overflow:hidden;background:#eff5f1}
+.hands-on-article .prompt-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 18px;border-bottom:1px solid #c8d8d0}
+.hands-on-article .prompt-toolbar p,.hands-on-article .prompt-toolbar h3{margin:0;font-size:17px;line-height:1.6}
+.hands-on-article .prompt-copy{border:1px solid #34715c;background:#fff;color:#174d3b;border-radius:7px;padding:10px 16px;min-height:44px;font:inherit;font-size:15px;cursor:pointer}
+.hands-on-article .prompt-copy:hover{background:#dceee3}
+.hands-on-article .prompt-copy:focus-visible,.hands-on-article a:focus-visible{outline:3px solid #ed9e55;outline-offset:4px}
+.hands-on-article .prompt-box pre{margin:0;border:0;border-radius:0}
+.hands-on-article .copy-status{display:block;font-size:14px;line-height:1.7;color:#225c46;padding:0 18px 12px;min-height:24px}
+.hands-on-article .practice-screen{margin:32px 0}
+.hands-on-article .practice-screen img{max-width:100%;width:100%;height:auto;background:#fff}
+.hands-on-article .practice-screen figcaption{line-height:1.85}
+.hands-on-article .mix-chart{margin:30px 0;padding:24px;border:1px solid #c6d8d1;border-radius:12px;background:#f4f8f5}
+.hands-on-article .mix-chart h3{font-size:23px;line-height:1.5;margin:0 0 18px}
+.hands-on-article .mix-chart figcaption{font-size:14px;line-height:1.8;color:#48645b}
+.hands-on-article .mix-bar{display:flex;height:38px;margin:10px 0 18px;border-radius:5px;overflow:hidden}
+.hands-on-article .mix-new{background:#168468}.hands-on-article .mix-return{background:#a3c1b5}
+.hands-on-article .mix-legend{font-size:15px;line-height:1.8}
+.hands-on-article .mix-row{margin:20px 0}.hands-on-article .mix-track{display:flex;height:36px;border-radius:5px;overflow:hidden}.hands-on-article .mix-track>span{display:block;height:100%}.hands-on-article .mix-label{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:16px;line-height:1.7;margin-bottom:8px}
+.hands-on-article .prompt-block{margin:28px 0;border:1px solid #b9d3c7;border-radius:12px;overflow:hidden;background:#eff5f1}.hands-on-article .prompt-block pre{margin:0;border:0;border-radius:0}.hands-on-article .report-example{margin:28px 0;padding:20px 24px;background:#f0f6f1;border-left:4px solid #247452}.hands-on-article .report-example p:last-child{margin-bottom:0}
+.hands-on-card{position:relative}
+.hands-on-card h2 a::after,.hands-on-card h3 a::after{content:"";position:absolute;inset:0;border-radius:14px}
+.hands-on-card:focus-within{outline:3px solid #277657;outline-offset:3px}
+.hands-on-card:hover{box-shadow:0 5px 18px #16463617}
+@media(max-width:600px){.hands-on-article .lesson-summary,.hands-on-article .lesson-next,.hands-on-article .mix-chart{padding:18px 16px}.hands-on-article .prompt-toolbar{padding:12px 16px}.hands-on-article .lesson-actions{flex-direction:column}.hands-on-article .lesson-actions a{width:100%;box-sizing:border-box}.hands-on-article .mix-chart h3{font-size:20px}}

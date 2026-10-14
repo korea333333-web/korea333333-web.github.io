@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">그룹은 올랐는데, 전체는 왜 떨어질까?</title><desc id="desc">전체 가입률은 29%에서 26%로 내려갔지만 두 집단의 가입률은 오른 예제 자료를 설명하는 개념 그림</desc>
+<rect width="1600" height="800" fill="#123e35"/><circle cx="1470" cy="80" r="320" fill="#1a5145"/><circle cx="30" cy="800" r="250" fill="#1a5145"/>
+<g font-family="Malgun Gothic, sans-serif"><text x="100" y="150" fill="#a8d7c0" font-size="60" font-weight="700">AI 배우기</text>
+<text x="100" y="330" fill="#fff9ed" font-size="78" font-weight="700">그룹은 올랐는데</text><text x="100" y="450" fill="#ffbe80" font-size="78" font-weight="700">전체는 왜 떨어질까?</text>
+<text x="104" y="640" fill="#c9e0d3" font-size="60">제미나이 4 실습</text>
+<rect x="975" y="155" width="525" height="500" rx="36" fill="#f8f3e7"/>
+<text x="1025" y="265" fill="#496557" font-size="60">전체 가입률</text><text x="1015" y="380" fill="#9b4c31" font-size="66" font-weight="700">29% → 26%</text>
+<path d="M1025 425h425" stroke="#d1cab8" stroke-width="2"/>
+<text x="1020" y="550" fill="#175e47" font-size="60" font-weight="700">두 집단은 상승</text></g></svg>

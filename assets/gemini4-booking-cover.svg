@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">말로 만든 예약 화면, 바꿔 보고 고치기</title><desc id="desc">예약 인원을 3명에서 4명으로 바꾸면 12만 원에서 16만 원으로 달라지는 연습을 나타낸 개념 그림</desc>
+<rect width="1600" height="800" fill="#123e35"/><circle cx="1470" cy="80" r="320" fill="#1a5145"/><circle cx="30" cy="800" r="250" fill="#1a5145"/>
+<g font-family="Malgun Gothic, sans-serif"><text x="100" y="150" fill="#a8d7c0" font-size="60" font-weight="700">AI 배우기</text>
+<text x="100" y="330" fill="#fff9ed" font-size="78" font-weight="700">말로 만든 예약 화면</text><text x="100" y="450" fill="#ffbe80" font-size="78" font-weight="700">바꿔 보고 고치기</text>
+<text x="104" y="640" fill="#c9e0d3" font-size="60">제미나이 4 실습</text>
+<rect x="975" y="155" width="525" height="500" rx="36" fill="#f8f3e7"/>
+<path d="M1115 255h245q-12 120-122 120t-123-120z" fill="#d39d72"/><ellipse cx="1238" cy="255" rx="123" ry="24" fill="#b67d54"/><ellipse cx="1238" cy="252" rx="105" ry="13" fill="#efd4b5"/>
+<path d="M1130 395h204" stroke="#d1cab8" stroke-width="8" stroke-linecap="round"/>
+<text x="1025" y="485" fill="#496557" font-size="70" font-weight="700">3명</text><text x="1194" y="485" fill="#ba7339" font-size="64">→</text><text x="1310" y="485" fill="#175e47" font-size="70" font-weight="700">4명</text>
+<text x="1004" y="585" fill="#496557" font-size="60">12만 원</text><text x="1260" y="585" fill="#175e47" font-size="60" font-weight="700">16만 원</text></g></svg>
