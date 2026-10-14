@@ -1,0 +1,44 @@
+.special-article .special-chart{margin:36px 0;padding:26px;border:1px solid #c6d8d1;border-radius:14px;background:#f4f8f5;color:#163b36}
+.special-article .special-chart h3{font-size:24px;line-height:1.5;margin:0 0 14px;word-break:keep-all}
+.special-article .special-chart h4{font-size:18px;line-height:1.55;margin:0 0 12px;overflow-wrap:anywhere}
+.special-article .special-chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
+.special-article .special-chart-panel{min-width:0;padding:16px 0;border-top:1px solid #ccdcd5}
+.special-article .special-chart-legend,.special-article .special-chart-unit{font-size:14px;line-height:1.75;margin:0 0 20px;overflow-wrap:anywhere}
+.special-article .special-bar-row{margin:0 0 16px}
+.special-article .special-bar-label{display:flex;align-items:baseline;justify-content:space-between;gap:16px;font-size:17px;line-height:1.5;margin-bottom:7px}
+.special-article .special-bar-label span{min-width:0;overflow-wrap:anywhere}
+.special-article .special-bar-label strong{white-space:nowrap;font-variant-numeric:tabular-nums}
+.special-article .special-bar-track{height:15px;background:#e0e8e3;border-radius:3px;overflow:hidden}
+.special-article .special-bar-fill{display:block;height:100%;border-radius:3px}
+.special-article .special-bar-fill.argon{background:#16745d}
+.special-article .special-bar-fill.comparison{background:#82958e}
+.special-article .special-axis{display:flex;justify-content:space-between;font-size:13px;line-height:1.5;color:#52655e;font-variant-numeric:tabular-nums;margin-top:-7px;margin-bottom:16px}
+.special-article .special-chart figcaption{font-size:14px;line-height:1.8;color:#48645b;margin-top:20px;word-break:keep-all;overflow-wrap:anywhere}
+.special-article .special-hero img{display:block;width:100%;height:auto;object-fit:contain}
+.special-article .table-wrap{width:100%;margin:24px 0}
+.special-article .special-responsive-table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.75;table-layout:fixed}
+.special-article .special-responsive-table caption{font-size:17px;font-weight:700;text-align:left;margin-bottom:12px}
+.special-article .special-responsive-table th,.special-article .special-responsive-table td{border:1px solid #c8d8d0;padding:12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:keep-all}
+.special-article .special-responsive-table th{background:#edf4ef}
+.special-article pre{padding:22px;background:#eff5f1;border:1px solid #c8d8d0;border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:16px;line-height:1.85}
+.special-article pre code{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}
+.special-article li{font-size:17px;line-height:1.9;margin-bottom:10px;overflow-wrap:anywhere}
+.special-article .article-note,.special-article .special-preview-note{font-size:14px;line-height:1.8;color:#5c6e66;margin-top:28px}
+.special-article figure:not(.special-chart):not(.special-hero) img{display:block;max-width:100%;height:auto;margin:auto}
+.special-article figure:not(.special-chart):not(.special-hero) figcaption{font-size:14px;line-height:1.8;margin-top:12px;color:#586c61;overflow-wrap:anywhere}
+.special-article .practice-screen,.special-article .office-live-capture{margin:30px 0}
+.special-article .practice-screen>a,.special-article .office-live-capture>a{display:block;cursor:zoom-in}
+.special-article .practice-screen img,.special-article .office-live-capture img{width:100%;border:1px solid #d2ded7;border-radius:8px}
+.special-index{max-width:1120px;margin:40px auto;padding:0 24px 60px}
+.special-index-intro{max-width:750px;margin-bottom:36px}
+.special-index-intro h1{font-size:40px;line-height:1.4;letter-spacing:-.035em;margin:12px 0 24px;word-break:keep-all}
+.special-index-intro>p{font-size:18px;line-height:1.85;word-break:keep-all}
+.special-index-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.special-index-card{min-width:0;border:1px solid #d1dfd6;background:#fff;border-radius:14px;overflow:hidden}
+.special-index-card>div{padding:26px}
+.special-index-card img{display:block;width:100%;height:auto}
+.special-index-card h2{font-size:24px;line-height:1.6;margin:10px 0 18px;word-break:keep-all}
+.special-index-card p{font-size:17px;line-height:1.85;margin:0 0 20px;word-break:keep-all}
+.special-index-card .special-category,.special-index .special-category{font-size:14px;color:#526b60;margin-bottom:8px}
+.special-pending{font-size:16px;line-height:1.8;margin-top:28px}
+@media(max-width:600px){.special-article .special-chart{padding:20px 16px;margin:28px 0}.special-article .special-chart h3{font-size:21px}.special-article .special-chart h4{font-size:17px}.special-article .special-chart-grid{grid-template-columns:1fr;gap:10px}.special-article .special-bar-label{font-size:16px;gap:10px}.special-article .special-chart-legend,.special-article .special-chart-unit,.special-article .special-chart figcaption{font-size:13px}.special-article .special-responsive-table{display:block;font-size:16px}.special-article .special-responsive-table caption{display:block}.special-article .special-responsive-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.special-article .special-responsive-table tbody,.special-article .special-responsive-table tr,.special-article .special-responsive-table td,.special-article .special-responsive-table tbody th{display:block;width:100%}.special-article .special-responsive-table tr{margin-bottom:16px;border:1px solid #c8d8d0;border-radius:8px;overflow:hidden}.special-article .special-responsive-table td,.special-article .special-responsive-table tbody th{border:0;border-bottom:1px solid #e0e8e3;padding:12px 14px}.special-article .special-responsive-table td:last-child{border:0}.special-article .special-responsive-table [data-label]::before{content:attr(data-label);display:block;font-size:13px;font-weight:700;color:#526b60;margin-bottom:3px}.special-article pre{padding:16px;font-size:16px}.special-article li{font-size:16px}.special-index{padding:0 18px 40px;margin-top:28px}.special-index-intro h1{font-size:30px}.special-index-intro>p{font-size:17px}.special-index-grid{grid-template-columns:1fr}.special-index-card>div{padding:22px}.special-index-card h2{font-size:23px}}
