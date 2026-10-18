@@ -1,0 +1,45 @@
+.oct18-article{color:#143c44;overflow-wrap:anywhere}
+.oct18-article .lead{font-size:21px;line-height:1.9;color:#103d49}
+.oct18-article p{line-height:1.95;margin:1.2em 0;word-break:keep-all}
+.oct18-article h2{margin:2.4em 0 .8em;line-height:1.5;letter-spacing:-.035em}
+.oct18-article h3{line-height:1.6}
+.oct18-article a{color:#176759;text-underline-offset:4px}
+.oct18-article .article-hero-media{margin:28px 0 38px}
+.oct18-article figure{max-width:100%;margin:32px 0}
+.oct18-article figure img{display:block;width:100%;height:auto;border-radius:12px}
+.oct18-article figcaption{font-size:14px;line-height:1.8;color:#52716e;margin:12px 0 0;word-break:keep-all}
+.oct18-article .news-source-figure{padding:16px;border:1px solid #ccdcd8;background:#fff;border-radius:16px}
+.oct18-article .news-source-figure img{max-height:650px;object-fit:contain}
+.oct18-article .news-note,.oct18-article .source-media,.oct18-article .source-demo,.oct18-article .article-note{background:#edf5f1;border-left:4px solid #32836b;padding:18px 22px;font-size:16px}
+.oct18-article .news-explainer{padding:24px;background:#f1f6f4;border:1px solid #c5d9d1;border-radius:16px}
+.oct18-article .news-triple{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.oct18-article .news-triple>div{padding:18px 12px;border:1px solid #aac8be;border-radius:12px;background:white;text-align:center;min-width:0}
+.oct18-article .news-triple strong,.oct18-article .news-triple span,.oct18-article .news-triple b{display:block}
+.oct18-article .news-triple span{font-size:14px;margin:12px 0}
+.oct18-article .news-triple b{font-size:30px;color:#087b65}
+.oct18-article .news-flow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-left:22px}
+.oct18-article .news-flow li{padding:12px;background:#fff}
+.oct18-article .news-flow span{display:block;font-size:15px;margin-top:8px}
+.oct18-article table{border-collapse:collapse;width:100%;table-layout:fixed;margin:26px 0;font-size:16px;line-height:1.8}
+.oct18-article th,.oct18-article td{padding:13px 10px;border:1px solid #cadbd5;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.oct18-article th{background:#edf5f1;font-weight:700}
+.oct18-article caption{text-align:left;font-size:16px;line-height:1.8;margin-bottom:12px;font-weight:700}
+.oct18-article pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef4f2;border:1px solid #cadbd5;padding:20px;font-size:15px;line-height:1.8;border-radius:12px}
+.oct18-article blockquote{border-left:4px solid #e29a56;padding:10px 20px;margin:24px 0;background:#fff8ed;line-height:1.9}
+.oct18-article .official-media{background:#122f3a;color:#fff;border-radius:16px;padding:24px}
+.oct18-article .official-media a{color:#a9eadb}
+.oct18-article .official-media p{margin:0 0 16px;font-size:17px;line-height:1.8;color:#f2fff9}
+.oct18-article .official-media button{padding:13px 20px;font:700 17px/1.5 'Malgun Gothic',sans-serif;background:#b6ebd6;color:#103c33;border:0;border-radius:8px;cursor:pointer}
+.oct18-article .official-media iframe{width:100%;aspect-ratio:16/9;border:0;display:block;background:#000;border-radius:10px}
+.oct18-article .official-media figcaption{color:#c6d9d6}
+.oct18-article #hero-credit{font-size:14px;line-height:1.8;color:#658078;border-top:1px solid #cbded7;padding-top:20px}
+.oct18-article .news-sources{padding-left:23px;font-size:16px;line-height:1.9}
+.oct18-article .news-sources li{margin:8px 0}
+.oct18-preview{max-width:1200px;margin:40px auto;padding:0 24px}
+.oct18-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.oct18-grid article{min-width:0;border:1px solid #c6dad2;border-radius:18px;overflow:hidden;background:#fff}
+.oct18-grid img{width:100%;height:auto;display:block}
+.oct18-grid .card-copy{padding:24px}
+.oct18-grid h2{font-size:24px;line-height:1.6}
+.oct18-grid p{line-height:1.9}
+@media(max-width:650px){.oct18-article .lead{font-size:19px}.oct18-article p{font-size:18px}.oct18-article h2{font-size:24px}.oct18-article .news-explainer,.oct18-article .news-source-figure{padding:14px}.oct18-article .news-triple{grid-template-columns:1fr}.oct18-article .news-flow{grid-template-columns:1fr}.oct18-article table{font-size:14px}.oct18-article th,.oct18-article td{padding:10px 7px}.oct18-grid{grid-template-columns:1fr}.oct18-article .official-media{padding:18px}}
